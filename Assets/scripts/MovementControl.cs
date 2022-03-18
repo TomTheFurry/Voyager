@@ -54,6 +54,11 @@ namespace Voyager
 
         }
 
+        private bool isValidFloat(float f)
+        {
+            return !float.IsNaN(f) && !float.IsInfinity(f);
+        }
+
         void Update()
         {
             if (childObject == null || targetIndicator == null)
@@ -88,7 +93,7 @@ namespace Voyager
                 {
                     currentSpeed *= 0.01f;
                     childObject.GetComponent<Rigidbody>().AddForce(Vector3.ClampMagnitude(Vector3.Scale(childObject.GetComponent<Rigidbody>().velocity,
-                        new Vector3(-currentSpeed,-currentSpeed,-currentSpeed)), movementSpeed),
+                        new Vector3(-currentSpeed, -currentSpeed, -currentSpeed)), movementSpeed),
                         ForceMode.Acceleration);
                 }
 
@@ -111,7 +116,11 @@ namespace Voyager
             errorQuat.ToAngleAxis(out angle, out axis);
 
             angle = Mathf.DeltaAngle(0f, angle);
-
+            if (!isValidFloat(axis.x) || !isValidFloat(axis.y) || !isValidFloat(axis.z))
+            {
+                Debug.Log("Invalid axis: " + angle + " " + axis);
+                Debug.Log("Error euler: " + errorQuat.eulerAngles);
+            }
             Debug.Log("RotationError: " + angle + " " + axis);
 
             // Calculate PID
