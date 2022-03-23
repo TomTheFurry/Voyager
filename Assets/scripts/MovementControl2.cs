@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Voyager
 {
-    public class MovementControl : MonoBehaviour
+    public class MovementControl2 : MonoBehaviour
     {
         // Child Object. Requires a Rigidbody component
         public GameObject childObject = null;
@@ -40,7 +40,7 @@ namespace Voyager
         private float lastAngleError = 0f;
 
         private bool mouseLocked = false;
-        private void focus()
+        private void lockMouse()
         {
             if (!mouseLocked)
             {
@@ -50,7 +50,7 @@ namespace Voyager
             }
         }
 
-        private void unfocus()
+        private void unlockMouse()
         {
             if (mouseLocked)
             {
@@ -70,6 +70,7 @@ namespace Voyager
             {
                 Debug.LogError("Target indicator not set");
             }
+            lockMouse();
 
         }
 
@@ -78,11 +79,12 @@ namespace Voyager
             return !float.IsNaN(f) && !float.IsInfinity(f);
         }
 
-        private void rotateTarget(Vector3 inputRotate)
+        private void rotateTargetCamera(Vector3 inputRotate)
         {
-            // Rotate target indicator
-            Quaternion inputRot = Quaternion.Euler(targetIndicator.transform.TransformVector(inputRotate * inputRotationSpeed));
+            // Rotate target indicator relative to camera
+            Quaternion inputRot = Quaternion.Euler(childCamera.transform.TransformVector(inputRotate * inputRotationSpeed));
             targetIndicator.transform.rotation = inputRot * targetIndicator.transform.rotation;
+            childCamera.transform.rotation = inputRot * childCamera.transform.rotation;
         }
         private void rotateCamera(Vector3 inputRotate)
         {
@@ -94,12 +96,45 @@ namespace Voyager
         private void snapPositionToChild()
         {
             // Snap position to child
-            childCamera.transform.position = childObject.transform.position;
             targetIndicator.transform.position = childObject.transform.position;
+            childCamera.transform.position = childObject.transform.position;
         }
 
-        private void snapCameraToTarget() {
+        private void snapCameraToTarget()
+        {
             childCamera.transform.rotation = targetIndicator.transform.rotation;
+        }
+
+        private void snapTargetToCamera()
+        {
+            targetIndicator.transform.rotation = childCamera.transform.rotation;
+            //targetIndicator.transform.rotation *= childCamera.transform.rotation;
+            
+        }
+
+        private void stop(float inputStop)
+        {
+            // Stop
+            if (inputStop > 0)
+            {
+                float currentSpeed = childObject.GetComponent<Rigidbody>().velocity.magnitude;
+                if (currentSpeed > 0)
+                {
+                    currentSpeed *= 0.01f;
+                    childObject.GetComponent<Rigidbody>().AddForce(Vector3.ClampMagnitude(Vector3.Scale(childObject.GetComponent<Rigidbody>().velocity,
+                        new Vector3(-currentSpeed, -currentSpeed, -currentSpeed)), movementSpeed),
+                        ForceMode.Acceleration);
+                }
+            }
+        }
+
+        private void move(Vector3 inputMove)
+        {
+            // Move child relative to camera
+            inputMove *= movementSpeed;
+            childObject.GetComponent<Rigidbody>().AddForce(childCamera.transform.TransformVector(inputMove),
+                ForceMode.Acceleration);
+            //childObject.GetComponent<Rigidbody>().AddRelativeForce(inputMove, ForceMode.Acceleration);
         }
 
         private void updateRotation()
@@ -109,22 +144,23 @@ namespace Voyager
             float angle;
             Quaternion errorQuat = targetIndicator.transform.rotation * Quaternion.Inverse(childObject.transform.rotation);
 
+
             errorQuat.ToAngleAxis(out angle, out axis);
 
             angle = Mathf.DeltaAngle(0f, angle);
             if (!isValidFloat(axis.x) || !isValidFloat(axis.y) || !isValidFloat(axis.z))
             {
-                Debug.Log("Invalid axis: " + angle + " " + axis);
-                Debug.Log("Error euler: " + errorQuat.eulerAngles);
+                lastAngleError = 0;
+                return;
             }
-            Debug.Log("RotationError: " + angle + " " + axis);
+            //Debug.Log("RotationError: " + angle + " " + axis);
 
             // Calculate PID
             angle = calculatePD(rotationP, rotationD, angle, lastAngleError, Time.deltaTime);
 
             angle = Mathf.DeltaAngle(0f, angle);
 
-            Debug.Log("RotationCorrection: " + angle + " " + axis);
+            //Debug.Log("RotationCorrection: " + angle + " " + axis);
 
             // Update last error
             lastAngleError = angle;
@@ -156,42 +192,42 @@ namespace Voyager
                 -input.actions["Roll"].ReadValue<float>());
             float inputFocus = input.actions["Focus"].ReadValue<float>();
             float inputStop = input.actions["Stop"].ReadValue<float>();
-            //Debug.Log(inputMove);
-            Debug.Log(inputRotate);
-
-
-            // Move
-            inputMove *= movementSpeed;
-            childObject.GetComponent<Rigidbody>().AddRelativeForce(inputMove, ForceMode.Acceleration);
-
-            // Stop
-            if (inputStop > 0)
+            bool inputTab = input.actions["Tab"].triggered;
+            bool inputMiddle = input.actions["Middle"].ReadValue<float>() > 0;
+            bool inputEscape = input.actions["Escape"].triggered;
+            bool inputClick = input.actions["Click"].triggered;
+            if (inputEscape)
             {
-                float currentSpeed = childObject.GetComponent<Rigidbody>().velocity.magnitude;
-                if (currentSpeed > 0)
-                {
-                    currentSpeed *= 0.01f;
-                    childObject.GetComponent<Rigidbody>().AddForce(Vector3.ClampMagnitude(Vector3.Scale(childObject.GetComponent<Rigidbody>().velocity,
-                        new Vector3(-currentSpeed, -currentSpeed, -currentSpeed)), movementSpeed),
-                        ForceMode.Acceleration);
-                }
+                unlockMouse();
+            } else if (inputClick)
+            {
+                lockMouse();
             }
 
+            //Debug.Log(inputMove);
+            //Debug.Log(inputRotate);
             
+            // stop
+            stop(inputStop);
+            // move
+            move(inputMove);
             // Copy position to all children
             snapPositionToChild();
             updateRotation();
-
-            if (inputFocus == 1f)
+            // tab snap
+            if (inputMiddle) snapTargetToCamera();
+            if (inputTab) snapCameraToTarget();
+            // rotate target or camera based on focus
+            if (mouseLocked)
             {
-                focus();
-                rotateTarget(inputRotate);
-                snapCameraToTarget();
-            }
-            else
-            {
-                unfocus();
-                rotateCamera(inputRotate);
+                if (inputFocus == 1f)
+                {
+                    rotateTargetCamera(inputRotate);
+                }
+                else
+                {
+                    rotateCamera(inputRotate);
+                }
             }
         }
     }
