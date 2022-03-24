@@ -7,13 +7,14 @@ public class ArrowIndicator : MonoBehaviour
     public float unitScale = 1f;
     public Vector3 valueScale = Vector3.one;
     public float arrowScale = 1f;
+    public char arrowChar = '>';
     private GameObject arrowLeft;
     private GameObject arrowRight;
     private GameObject arrowUp;
     private GameObject arrowDown;
     private GameObject arrowForward;
     private GameObject arrowBack;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +26,56 @@ public class ArrowIndicator : MonoBehaviour
         arrowBack = transform.Find("ArrowBack").gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    private string repeatChar(char c, int count)
     {
-        
+        string s = "";
+        for (int i = 0; i < count; i++)
+        {
+            s += c;
+        }
+        return s;
     }
+
+    public void setValue(Vector3 value)
+    {
+        value.Scale(valueScale);
+        arrowLeft.SetActive(value.x < 0);
+        arrowRight.SetActive(value.x > 0);
+        arrowUp.SetActive(value.y > 0);
+        arrowDown.SetActive(value.y < 0);
+        arrowForward.SetActive(value.z > 0);
+        arrowBack.SetActive(value.z < 0);
+        
+        if (arrowLeft.activeSelf)
+        {
+            int numOfArrow = value.x < 0 ? (int)(value.x * -1) : (int)value.x;
+            arrowLeft.GetComponent<TextMesh>().text = repeatChar(arrowChar, numOfArrow);
+        }
+        if (arrowRight.activeSelf)
+        {
+            int numOfArrow = value.x > 0 ? (int)value.x : (int)(value.x * -1);
+            arrowRight.GetComponent<TextMesh>().text = repeatChar(arrowChar, numOfArrow);
+        }
+        if (arrowUp.activeSelf)
+        {
+            int numOfArrow = value.y > 0 ? (int)value.y : (int)(value.y * -1);
+            arrowUp.GetComponent<TextMesh>().text = repeatChar(arrowChar, numOfArrow);
+        }
+        if (arrowDown.activeSelf)
+        {
+            int numOfArrow = value.y < 0 ? (int)(value.y * -1) : (int)value.y;
+            arrowDown.GetComponent<TextMesh>().text = repeatChar(arrowChar, numOfArrow);
+        }
+        if (arrowForward.activeSelf)
+        {
+            int numOfArrow = value.z > 0 ? (int)value.z : (int)(value.z * -1);
+            arrowForward.GetComponent<TextMesh>().text = repeatChar(arrowChar, numOfArrow);
+        }
+        if (arrowBack.activeSelf)
+        {
+            int numOfArrow = value.z < 0 ? (int)(value.z * -1) : (int)value.z;
+            arrowBack.GetComponent<TextMesh>().text = repeatChar(arrowChar, numOfArrow);
+        }
+    }
+
 }
