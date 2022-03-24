@@ -19,10 +19,13 @@ namespace Voyager
          *  Rotation speed is in radians per second
          *  The target will be rotated using a PID controller (without I term)
          */
-        public float inputRotationSpeed = 0.8f;
+        public float inputRotationSpeed = 0.3f;
         public float rotationP = 0.02f;
         public float rotationD = 0.02f;
         public float targetRotationSpeed = 0.05f;
+
+        public Vector3 maxForce;
+        public Vector3 maxNegForce;
 
         /*
          *  Movement speed is in units per second
@@ -60,6 +63,16 @@ namespace Voyager
             }
         }
 
+        private Vector2 mouseDelta = Vector2.zero;
+
+        public void OnRotate(InputValue value)
+        {
+            if (!mouseLocked) return;
+            Vector2 delta = value.Get<Vector2>();
+            mouseDelta += delta;
+        }
+
+
         private void Start()
         {
             if (childObject == null)
@@ -70,7 +83,14 @@ namespace Voyager
             {
                 Debug.LogError("Target indicator not set");
             }
-            lockMouse();
+            if (maxForce.x < 0f || maxForce.y < 0f || maxForce.z < 0f)
+            {
+                Debug.LogError("Max force must be positive");
+            }
+            if (maxNegForce.x > 0f || maxNegForce.y > 0f || maxNegForce.z > 0f)
+            {
+                Debug.LogError("Max negative force must be negative");
+            }
 
         }
 
@@ -132,9 +152,23 @@ namespace Voyager
         {
             // Move child relative to camera
             inputMove *= movementSpeed;
-            childObject.GetComponent<Rigidbody>().AddForce(childCamera.transform.TransformVector(inputMove),
+            // Transform the vector from relative to cam into world space
+            inputMove = childObject.transform.InverseTransformVector(childCamera.transform.TransformVector(inputMove));
+            // Clamp the input based on the max force we can apply on one of the axis
+            float rx = inputMove.x / maxForce.x;
+            float ry = inputMove.y / maxForce.y;
+            float rz = inputMove.z / maxForce.z;
+            float nrx = inputMove.x / maxNegForce.x;
+            float nry = inputMove.y / maxNegForce.y;
+            float nrz = inputMove.z / maxNegForce.z;
+            float max = Mathf.Max(rx, ry, rz, nrx, nry, nrz);
+            if (max > 1)
+            {
+                //Debug.Log("Max force exceeded. Max ratio: " + max);
+                inputMove /= max;
+            }
+            childObject.GetComponent<Rigidbody>().AddForce(childObject.transform.TransformVector(inputMove),
                 ForceMode.Acceleration);
-            //childObject.GetComponent<Rigidbody>().AddRelativeForce(inputMove, ForceMode.Acceleration);
         }
 
         private void updateRotation()
@@ -187,9 +221,10 @@ namespace Voyager
             Vector3 inputMove = input.actions["Move"].ReadValue<Vector3>();
             // X,Y normalized. z clamped.
             Vector3 inputRotate = new Vector3(
-                Mathf.Clamp(-input.actions["Rotate"].ReadValue<Vector2>().y / 10, -1, 1),
-                Mathf.Clamp(input.actions["Rotate"].ReadValue<Vector2>().x / 10, -1, 1),
+                Mathf.Clamp(-mouseDelta.y, -20, 20),
+                Mathf.Clamp(mouseDelta.x, -20, 20),
                 -input.actions["Roll"].ReadValue<float>());
+            mouseDelta = Vector2.zero;
             float inputFocus = input.actions["Focus"].ReadValue<float>();
             float inputStop = input.actions["Stop"].ReadValue<float>();
             bool inputTab = input.actions["Tab"].triggered;
@@ -222,11 +257,11 @@ namespace Voyager
             {
                 if (inputFocus == 1f)
                 {
-                    rotateTargetCamera(inputRotate);
+                    rotateCamera(inputRotate);
                 }
                 else
                 {
-                    rotateCamera(inputRotate);
+                    rotateTargetCamera(inputRotate);
                 }
             }
         }
