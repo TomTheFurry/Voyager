@@ -104,7 +104,7 @@ namespace Voyager
             // Rotate target indicator relative to camera
             Quaternion inputRot = Quaternion.Euler(childCamera.transform.TransformVector(inputRotate * inputRotationSpeed));
             targetIndicator.transform.rotation = inputRot * targetIndicator.transform.rotation;
-            childCamera.transform.rotation = inputRot * childCamera.transform.rotation;
+            //childCamera.transform.rotation = inputRot * childCamera.transform.rotation;
         }
         private void rotateCamera(Vector3 inputRotate)
         {
@@ -153,7 +153,7 @@ namespace Voyager
             // Move child relative to camera
             inputMove *= movementSpeed;
             // Transform the vector from relative to cam into world space
-            inputMove = childObject.transform.InverseTransformVector(childCamera.transform.TransformVector(inputMove));
+            // inputMove = childObject.transform.InverseTransformVector(childCamera.transform.TransformVector(inputMove));
             // Clamp the input based on the max force we can apply on one of the axis
             float rx = inputMove.x / maxForce.x;
             float ry = inputMove.y / maxForce.y;
@@ -257,11 +257,11 @@ namespace Voyager
             {
                 if (inputFocus == 1f)
                 {
-                    rotateCamera(inputRotate);
+                    rotateTargetCamera(inputRotate);
                 }
                 else
                 {
-                    rotateTargetCamera(inputRotate);
+                    rotateCamera(inputRotate);
                 }
             }
         }
