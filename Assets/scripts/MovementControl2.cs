@@ -27,10 +27,15 @@ namespace Voyager
         public Vector3 maxForce;
         public Vector3 maxNegForce;
 
-        /*
-         *  Movement speed is in units per second
-         */
-        public float movementSpeed = 5f;
+        private bool readInput = true;
+        public void OnPausePlayerInput()
+        {
+            readInput = false;
+        }
+        public void OnResumePlayerInput()
+        {
+            readInput = true;
+        }
 
         // P and D values as in per second
         private static float calculatePD(float p, float d,
@@ -133,30 +138,34 @@ namespace Voyager
             
         }
 
-        private void stop(float inputStop)
+        private void moveAndStop(Vector3 inputMove, float inputStop)
         {
+            Vector3 stopForce = Vector3.zero;
             // Stop
             if (inputStop > 0)
             {
-                float currentSpeed = childObject.GetComponent<Rigidbody>().velocity.magnitude;
-                if (currentSpeed > 0)
-                {
-                    currentSpeed *= 0.01f;
-                    childObject.GetComponent<Rigidbody>().AddForce(Vector3.ClampMagnitude(Vector3.Scale(childObject.GetComponent<Rigidbody>().velocity,
-                        new Vector3(-currentSpeed, -currentSpeed, -currentSpeed)), movementSpeed),
-                        ForceMode.Acceleration);
-                }
+                    stopForce = -childObject.GetComponent<Rigidbody>().velocity;
+                    stopForce = childObject.transform.InverseTransformVector(stopForce);
             }
-        }
-
-        private void move(Vector3 inputMove)
-        {
+            
             // Move child relative to camera
-            inputMove *= movementSpeed;
+            Vector3 moveForce = new Vector3(0, 0, 0);
+            moveForce.x = inputMove.x == 0 ? 0 : inputMove.x > 0 ? maxForce.x : maxNegForce.x;
+            moveForce.y = inputMove.y == 0 ? 0 : inputMove.y > 0 ? maxForce.y : maxNegForce.y;
+            moveForce.z = inputMove.z == 0 ? 0 : inputMove.z > 0 ? maxForce.z : maxNegForce.z;
+
+            stopForce.x = stopForce.x > 0 ? Mathf.Min(maxForce.x, stopForce.x) : Mathf.Max(maxNegForce.x, stopForce.x);
+            stopForce.y = stopForce.y > 0 ? Mathf.Min(maxForce.y, stopForce.y) : Mathf.Max(maxNegForce.y, stopForce.y);
+            stopForce.z = stopForce.z > 0 ? Mathf.Min(maxForce.z, stopForce.z) : Mathf.Max(maxNegForce.z, stopForce.z);
+
+            if (moveForce.x == 0f) moveForce.x = stopForce.x * inputStop;
+            if (moveForce.y == 0f) moveForce.y = stopForce.y * inputStop;
+            if (moveForce.z == 0f) moveForce.z = stopForce.z * inputStop;
+
             // Transform the vector from relative to cam into world space
             //inputMove = childObject.transform.InverseTransformVector(childCamera.transform.TransformVector(inputMove));
             // Clamp the input based on the max force we can apply on one of the axis
-            float rx = inputMove.x / maxForce.x;
+            /*float rx = inputMove.x / maxForce.x;
             float ry = inputMove.y / maxForce.y;
             float rz = inputMove.z / maxForce.z;
             float nrx = inputMove.x / maxNegForce.x;
@@ -167,9 +176,12 @@ namespace Voyager
             {
                 //Debug.Log("Max force exceeded. Max ratio: " + max);
                 inputMove /= max;
-            }
-            childObject.GetComponent<Rigidbody>().AddForce(childObject.transform.TransformVector(inputMove),
+            }*/ // Note: This is not needed for now because the value is already scaled to maxForce
+            childObject.GetComponent<Rigidbody>().AddForce(childObject.transform.TransformVector(moveForce),
                 ForceMode.Acceleration);
+
+            // Send Message OnForce for other scripts to use if needed
+            SendMessage("OnForce", moveForce, SendMessageOptions.DontRequireReceiver);
         }
 
         private void updateRotation()
@@ -215,9 +227,30 @@ namespace Voyager
                 return;
             }
 
-
-
             PlayerInput input = GetComponent<PlayerInput>();
+            bool inputEscape = input.actions["Escape"].triggered;
+            bool inputClick = input.actions["Click"].triggered;
+            bool inputTab = input.actions["Tab"].triggered;
+            if (inputTab) snapCameraToTarget();
+
+            if (inputEscape)
+            {
+                unlockMouse();
+            }
+            else if (inputClick)
+            {
+                lockMouse();
+            }
+
+            if (!readInput)
+            {
+                snapPositionToChild();
+                updateRotation();
+                return;
+            }
+
+
+
             // Normalized
             Vector3 inputMove = input.actions["Move"].ReadValue<Vector3>();
             // X,Y normalized. z clamped.
@@ -228,31 +261,19 @@ namespace Voyager
             mouseDelta = Vector2.zero;
             float inputFocus = input.actions["Focus"].ReadValue<float>();
             float inputStop = input.actions["Stop"].ReadValue<float>();
-            bool inputTab = input.actions["Tab"].triggered;
             bool inputMiddle = input.actions["Middle"].ReadValue<float>() > 0;
-            bool inputEscape = input.actions["Escape"].triggered;
-            bool inputClick = input.actions["Click"].triggered;
-            if (inputEscape)
-            {
-                unlockMouse();
-            } else if (inputClick)
-            {
-                lockMouse();
-            }
+
 
             //Debug.Log(inputMove);
             //Debug.Log(inputRotate);
             
-            // stop
-            stop(inputStop);
-            // move
-            move(inputMove);
+            // move and stop
+            moveAndStop(inputMove, inputStop);
             // Copy position to all children
             snapPositionToChild();
             updateRotation();
             // tab snap
             if (inputMiddle) snapTargetToCamera();
-            if (inputTab) snapCameraToTarget();
             // rotate target or camera based on focus
             if (mouseLocked)
             {
