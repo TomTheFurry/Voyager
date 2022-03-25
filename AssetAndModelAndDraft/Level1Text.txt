@@ -1,0 +1,19 @@
+介紹:
+Friction is the force resisting the relative motion of solid surfaces, fluid layers, and material elements sliding against each other. In Space, no influence of friction therefore our ship can keep increasing its speed to reach our goal easily.And Gravity,it is a natural phenomenon by which all things with mass or energy, including planets, stars, galaxies and even light, are attracted to one another.  Gravity is proportional to the mass of objects and theirs distance. So our spacecraft can use friction to fly over other planets and stars to accelerate.
+
+交代環境:
+Hello Captain,We are now in a simulation space.First,I need you to familiarize yourself with the operation of your ship.
+
+介紹(關卡內):
+Press "W" to move forward.
+(等待玩家操作後約1~2秒)
+
+(箭頭指向速度顥示)
+
+Press "S" to decelerate.
+
+In Space, no influence of air resistance(換行)
+therefore our ship can keep increasing its speed.
+(同時/等待數秒 顥示動圖)
+When we are far away from the planet, 
+we are less influence by gravity.
