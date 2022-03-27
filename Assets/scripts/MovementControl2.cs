@@ -27,6 +27,8 @@ namespace Voyager
         public Vector3 maxForce;
         public Vector3 maxNegForce;
 
+        public bool qeAsRoll = true;
+
         private bool readInput = true;
         public void OnPausePlayerInput()
         {
@@ -233,6 +235,7 @@ namespace Voyager
             bool inputTab = input.actions["Tab"].triggered;
             if (inputTab) snapCameraToTarget();
 
+
             if (inputEscape)
             {
                 unlockMouse();
@@ -241,6 +244,7 @@ namespace Voyager
             {
                 lockMouse();
             }
+            qeAsRoll = !input.actions["Click"].IsPressed();
 
             if (!readInput)
             {
@@ -254,10 +258,22 @@ namespace Voyager
             // Normalized
             Vector3 inputMove = input.actions["Move"].ReadValue<Vector3>();
             // X,Y normalized. z clamped.
-            Vector3 inputRotate = new Vector3(
-                Mathf.Clamp(-mouseDelta.y, -20, 20),
-                Mathf.Clamp(mouseDelta.x, -20, 20),
-                -input.actions["Roll"].ReadValue<float>());
+            Vector3 inputRotate;
+            if (qeAsRoll)
+            {
+                inputRotate = new Vector3(
+                    Mathf.Clamp(-mouseDelta.y, -20, 20),
+                    Mathf.Clamp(mouseDelta.x, -20, 20),
+                    -input.actions["Roll"].ReadValue<float>());
+            }
+            else
+            {
+                inputRotate = new Vector3(
+                    Mathf.Clamp(-mouseDelta.y, -20, 20),
+                    input.actions["Roll"].ReadValue<float>(),
+                    -Mathf.Clamp(mouseDelta.x, -20, 20));
+
+            }
             mouseDelta = Vector2.zero;
             float inputFocus = input.actions["Focus"].ReadValue<float>();
             float inputStop = input.actions["Stop"].ReadValue<float>();
