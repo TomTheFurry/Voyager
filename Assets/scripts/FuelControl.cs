@@ -10,11 +10,18 @@ public class FuelControl : MonoBehaviour
     public float fuelPerForce = 0.002f;
     public float fuelExpValue = 2.0f;
 
-    public Text textObj;
+    public Text textObj = null;
+    public UIBar bar = null;
 
     void Update()
     {
-        textObj.text = "Fuel: " + fuel + " / " + maxFuel;
+        if (textObj != null) textObj.text = "Fuel: " + fuel.ToString("F2") + " / " + maxFuel.ToString();
+        if (bar != null)
+        {
+            bar.SetValue(fuel);
+            bar.SetMinValue(0);
+            bar.SetMaxValue(maxFuel);
+        }
     }
 
     public void OnForce(Vector3 force) {

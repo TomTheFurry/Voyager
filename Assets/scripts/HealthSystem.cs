@@ -11,12 +11,19 @@ public class HealthSystem : MonoBehaviour
     public float healthPerForce = 0.1f;
     public float healthExpValue = 2.0f;
 
-    public Text textObj;
+    public Text textObj = null;
+    public UIBar bar = null;
     public GameObject player;
 
     void Update()
     {
-        textObj.text = "Health: " + health + " / " + maxHealth;
+        if (textObj != null) textObj.text = "Health: " + health.ToString("F2") + " / " + maxHealth.ToString();
+        if (bar != null)
+        {
+            bar.SetValue(health);
+            bar.SetMinValue(0);
+            bar.SetMaxValue(maxHealth);
+        }
     }
     
     public void OnCollision(Collision collision)
