@@ -41,6 +41,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (value.isPressed)
         {
+            Debug.Log("Healed!");
             if (health <= 0)
             {
                 health = maxHealth;

@@ -40,6 +40,7 @@ public class FuelControl : MonoBehaviour
         if (value.isPressed)
         {
             fuel = maxFuel;
+            Debug.Log("Refueled!");
             SendMessage("OnResumePlayerInput");
         }
     }

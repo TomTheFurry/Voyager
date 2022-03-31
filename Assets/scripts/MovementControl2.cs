@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace Voyager
 {
@@ -11,6 +13,9 @@ namespace Voyager
         public GameObject targetIndicator = null;
         // Camera to use for the child object
         public GameObject childCamera = null;
+        public Camera childActualCamera = null;
+
+        public PauseScript pauseScript = null;
 
         // Body direction is [Left/Right, Up/Down, Forward/Backward]
         // Body rotation is [negative pitch, yaw, negative roll]
@@ -23,6 +28,13 @@ namespace Voyager
         public float rotationP = 0.02f;
         public float rotationD = 0.02f;
         public float targetRotationSpeed = 0.05f;
+
+        public float zoomMin = 1.0f;
+        public float zoomMax = 20.0f;
+        public float zoomSpeed = 0.1f;
+        public float zoomP = 0.02f;
+        public float zoomD = 0.02f;
+        public float zoomTarget = 5.0f;
 
         public Vector3 maxForce;
         public Vector3 maxNegForce;
@@ -222,34 +234,67 @@ namespace Voyager
             //hildObject.transform.Rotate(axis, angle, Space.World);
         }
 
+        float lastZoomError = 0;
+        private void updateZoom(float inputZoom) {
+            zoomTarget = Mathf.Clamp(zoomTarget + inputZoom * zoomSpeed, zoomMin, zoomMax);
+
+            float currentZoom = -childActualCamera.transform.localPosition.z;
+            // Calculate zoom error
+            float zoomError = zoomTarget - currentZoom;
+
+            // Calculate PID
+            zoomError = calculatePD(zoomP, zoomD, zoomError, lastZoomError, Time.deltaTime);
+            lastZoomError = zoomError;
+
+            // Apply zoom
+            childActualCamera.transform.localPosition = new Vector3(0, 0, -currentZoom - zoomError);
+            
+        }
+
+        public void toggleFullScreen()
+        {
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+            Screen.fullScreen = !Screen.fullScreen;
+            Debug.Log("Toggled fullscreen to " + Screen.fullScreen);
+        }
+
+        public void OnFullScreen(InputValue value)
+        {
+            if (value.isPressed)
+            {
+                toggleFullScreen();
+            }
+        }
+
+        public void OnEscape(InputValue value)
+        {
+            if (value.isPressed)
+            {
+                Debug.Log("Toggled pause menu");
+                pauseScript.TogglePause();
+            }
+        }
+
         void Update()
         {
-            if (childObject == null || targetIndicator == null)
+            PlayerInput input = GetComponent<PlayerInput>();
+
+            if (childObject == null || targetIndicator == null || Time.timeScale == 0)
             {
                 return;
             }
 
-            PlayerInput input = GetComponent<PlayerInput>();
-            bool inputEscape = input.actions["Escape"].triggered;
-            bool inputClick = input.actions["Click"].triggered;
             bool inputTab = input.actions["Tab"].triggered;
+            float inputZoom = -input.actions["Zoom"].ReadValue<float>();
             if (inputTab) snapCameraToTarget();
-
-
-            if (inputEscape)
-            {
-                unlockMouse();
-            }
-            else if (inputClick)
-            {
-                lockMouse();
-            }
+            
             qeAsRoll = !input.actions["Click"].IsPressed();
 
             if (!readInput)
             {
                 snapPositionToChild();
                 updateRotation();
+                updateZoom(inputZoom);
                 return;
             }
 
@@ -282,12 +327,13 @@ namespace Voyager
 
             //Debug.Log(inputMove);
             //Debug.Log(inputRotate);
-            
+
             // move and stop
             moveAndStop(inputMove, inputStop);
             // Copy position to all children
             snapPositionToChild();
             updateRotation();
+            updateZoom(inputZoom);
             // tab snap
             if (inputMiddle) snapTargetToCamera();
             // rotate target or camera based on focus
@@ -302,6 +348,17 @@ namespace Voyager
                     rotateTargetCamera(inputRotate);
                 }
             }
+        }
+
+        private bool lastMouseLocked = true;
+        public void OnPauseMenuStart()
+        {
+            lastMouseLocked = mouseLocked;
+            unlockMouse();
+        }
+        public void OnPauseMenuEnd()
+        {
+            if (lastMouseLocked) lockMouse(); else unlockMouse();
         }
     }
 }
