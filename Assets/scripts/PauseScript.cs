@@ -49,4 +49,8 @@ public class PauseScript : MonoBehaviour
         isPaused = pause;
         stateChanged = true;
     }
+
+    public void OnSceneExit() {
+        Time.timeScale = 1;
+    }
 }
