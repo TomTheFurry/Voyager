@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace Voyager
 {
@@ -40,6 +41,8 @@ namespace Voyager
         public Vector3 maxNegForce;
 
         public bool qeAsRoll = true;
+
+        public UnityEvent onLeftTrigger;
 
         private bool readInput = true;
         public void OnPausePlayerInput()
@@ -285,10 +288,12 @@ namespace Voyager
             }
 
             bool inputTab = input.actions["Tab"].triggered;
+            bool inputClick = input.actions["Click"].triggered;
+            if (inputClick) onLeftTrigger.Invoke();
             float inputZoom = -input.actions["Zoom"].ReadValue<float>();
             if (inputTab) snapCameraToTarget();
             
-            qeAsRoll = !input.actions["Click"].IsPressed();
+            qeAsRoll = input.actions["Focus"].ReadValue<float>() != 1.0f;
 
             if (!readInput)
             {
@@ -320,7 +325,7 @@ namespace Voyager
 
             }
             mouseDelta = Vector2.zero;
-            float inputFocus = input.actions["Focus"].ReadValue<float>();
+            float inputFocus = 0f; // input.actions["Focus"].ReadValue<float>();
             float inputStop = input.actions["Stop"].ReadValue<float>();
             bool inputMiddle = input.actions["Middle"].ReadValue<float>() > 0;
 

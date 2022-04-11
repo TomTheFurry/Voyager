@@ -15,7 +15,7 @@ public class TextAnimator : MonoBehaviour
         "'$s0.3$': set the speed of the animation to 0.3 times of default\n" +
         "'$p0.3$': Pause for 0.3 seconds.\n" +
         "'$v0.3$': Set volume to 30%\n" +
-        "'$k$': Wait for keypress (NOT IMPL YET!)\n";
+        "'$k$': Wait for keypress\n";
 
     // The per char delay in seconds
     public float defaultTextDelay = 0.1f;
@@ -26,6 +26,7 @@ public class TextAnimator : MonoBehaviour
     public Image panel;
 
     private Coroutine _currentAnimation = null;
+    public int _currentTriggerIndex = 0;
     void Start()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
@@ -147,12 +148,30 @@ public class TextAnimator : MonoBehaviour
         return true;
     }
 
+    private int getIndex() {
+        return _currentTriggerIndex;
+    }
+
+    private CustomYieldInstruction waitTilIndex(int index, float timeout) {
+        if (index < getIndex()) return null;
+        if (timeout <= 0)
+        {
+            return new WaitUntil(() => index < getIndex());
+        }
+        else {
+            float startTime = Time.time;
+            return new WaitUntil(() => (index < getIndex()) || (Time.time - startTime >= timeout));
+        }
+    }
+
     // the animate coroutine
     IEnumerator animate(AnimationMessage msg, AnimatorTag[] tags, int[] indexer)
     {
         textMesh.maxVisibleCharacters = 0;
         int tagRead = 0;
         int charRead = 0;
+        int triggerIndex = 0;
+        _currentTriggerIndex = 0;
         float textDelay = defaultTextDelay;
         while (charRead < textMesh.textInfo.characterCount)
         {
@@ -166,7 +185,8 @@ public class TextAnimator : MonoBehaviour
                         textDelay = defaultTextDelay * float.Parse(tag.arg);
                         break;
                     case 'p':
-                        yield return new WaitForSeconds(float.Parse(tag.arg));
+                        CustomYieldInstruction y = waitTilIndex(triggerIndex, float.Parse(tag.arg));
+                        if (y != null) yield return y;
                         doDelay = false;
                         break;
                     case 'v':
@@ -176,7 +196,11 @@ public class TextAnimator : MonoBehaviour
                         }
                         break;
                     case 'k':
-                        Debug.Log("TODO: Wait for keypress");
+                        CustomYieldInstruction y2 = waitTilIndex(triggerIndex, 0f);
+                        if (y2 != null) yield return y2;
+                        if (_currentTriggerIndex < triggerIndex) _currentTriggerIndex = triggerIndex;
+                        triggerIndex++;
+                        doDelay = false;
                         break;
                     default:
                         Debug.LogError("Invalid animator tag: " + tag.type + " " + tag.arg);
@@ -186,7 +210,8 @@ public class TextAnimator : MonoBehaviour
             }
             if (doDelay)
             {
-                yield return new WaitForSeconds(textDelay);
+                CustomYieldInstruction y = waitTilIndex(triggerIndex, textDelay);
+                if (y != null) yield return y;
             }
             textMesh.maxVisibleCharacters = ++charRead;
             if (audioSource != null)
@@ -195,20 +220,19 @@ public class TextAnimator : MonoBehaviour
             }
         }
         if (msg.onAnimationComplete != null) msg.onAnimationComplete.Invoke(msg);
+        triggerIndex++;
         if (msg.autoClose > 0)
         {
-            yield return new WaitForSeconds(msg.autoClose);
+            yield return waitTilIndex(triggerIndex, msg.autoClose);
         }
-        if (msg.autoClose < 0)
+        else if (msg.autoClose < 0)
         {
-            _currentAnimation = null;
+            yield return waitTilIndex(triggerIndex, 0);
         }
-        else
-        {
-            if (msg.onBoxClose != null) msg.onBoxClose.Invoke(msg);
-            _msg = null;
-            msgPopdown();
-        }
+        
+        if (msg.onBoxClose != null) msg.onBoxClose.Invoke(msg);
+        _msg = null;
+        msgPopdown();
         _currentAnimation = null;
     }
 
@@ -219,6 +243,11 @@ public class TextAnimator : MonoBehaviour
     private void msgPopdown() {
         panel.enabled = false;
         textMesh.enabled = false;
+    }
+
+    public void OnTrigger() {
+        if (_msg == null) return;
+        _currentTriggerIndex++;
     }
 
 }
