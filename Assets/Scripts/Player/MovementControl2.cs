@@ -238,20 +238,37 @@ namespace Voyager
         }
 
         float lastZoomError = 0;
-        private void updateZoom(float inputZoom) {
+        private void updateZoom(float inputZoom)
+        {
+
             zoomTarget = Mathf.Clamp(zoomTarget + inputZoom * zoomSpeed, zoomMin, zoomMax);
+            
+            float zoomTrueTarget = zoomTarget;
+
 
             float currentZoom = -childActualCamera.transform.localPosition.z;
             // Calculate zoom error
-            float zoomError = zoomTarget - currentZoom;
+            float zoomError = zoomTrueTarget - currentZoom;
 
             // Calculate PID
             zoomError = calculatePD(zoomP, zoomD, zoomError, lastZoomError, Time.deltaTime);
             lastZoomError = zoomError;
 
-            // Apply zoom
-            childActualCamera.transform.localPosition = new Vector3(0, 0, -currentZoom - zoomError);
+            float value = currentZoom + zoomError;
             
+            // Raycast to check if camera is not colliding with something
+            Vector3 back = childActualCamera.transform.TransformDirection(Vector3.back);
+            RaycastHit hit;
+            // Raycast but ignore player & UI layer
+            if (Physics.Raycast(childCamera.transform.position, back, out hit, value + 1f,
+                ~LayerMask.GetMask("Player", "UI", "Ignore Raycast")))
+            {
+                //Debug.Log("Zoom collision: " + hit.distance);
+                value = hit.distance - 1f;
+            }
+
+            // Apply zoom
+            childActualCamera.transform.localPosition = new Vector3(0, 0, -value);
         }
 
         public void toggleFullScreen()

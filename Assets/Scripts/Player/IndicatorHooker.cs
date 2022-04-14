@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class IndicatorHooker : MonoBehaviour
 {
-    public GameObject indicator;
+    public ArrowIndicator indicator;
+    public RotationBar speedBar;
     public GameObject target;
     
     void Update()
     {
-        indicator.GetComponent<ArrowIndicator>().setValue(target.transform.InverseTransformVector(target.GetComponent<Rigidbody>().velocity));
-
+        indicator.setValue(target.transform.InverseTransformVector(target.GetComponent<Rigidbody>().velocity));
+        speedBar.SetValue(target.transform.InverseTransformVector(target.GetComponent<Rigidbody>().velocity).magnitude);
     }
 }
