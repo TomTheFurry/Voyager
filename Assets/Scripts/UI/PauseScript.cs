@@ -4,36 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class PauseScript : MonoBehaviour
 {
     public bool isPaused = false;
     private bool stateChanged = true;
-    public GameObject pauseMenu;
-    
+
+    public UnityEvent onPauseMenuStart;
+    public UnityEvent onPauseMenuEnd;
+
     // Update is called once per frame
     void LateUpdate()
     {
         if (!stateChanged) return;
         stateChanged = false;
         if (isPaused) {
-            pauseMenu.SetActive(true);
             Time.timeScale = 0;
-            // Loop over all root game objects in current scene and broadcast OnPauseMenuStart event
-            foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
-            {
-                go.BroadcastMessage("OnPauseMenuStart", SendMessageOptions.DontRequireReceiver);
-            }
+            onPauseMenuStart.Invoke();
         }
         else
         {
-            pauseMenu.SetActive(false);
             Time.timeScale = 1;
-            // Loop over all root game objects in current scene and broadcast OnPauseMenuEnd event
-            foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
-            {
-                go.BroadcastMessage("OnPauseMenuEnd", SendMessageOptions.DontRequireReceiver);
-            }
+            onPauseMenuEnd.Invoke();
         }
     }
 

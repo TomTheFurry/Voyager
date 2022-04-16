@@ -11,12 +11,14 @@ namespace Voyager
         // Child Object. Requires a Rigidbody component
         public GameObject childObject = null;
         // Target position for the child object. Doesn't need a Rigidbody component
-        public GameObject targetIndicator = null;
+        public Transform targetIndicator = null;
         // Camera to use for the child object
         public GameObject childCamera = null;
         public Camera childActualCamera = null;
 
         public PauseScript pauseScript = null;
+
+        public UnityEvent<Vector3> onForceApplied;
 
         // Body direction is [Left/Right, Up/Down, Forward/Backward]
         // Body rotation is [negative pitch, yaw, negative roll]
@@ -44,14 +46,23 @@ namespace Voyager
 
         public UnityEvent onLeftTrigger;
 
-        private bool readInput = true;
-        public void OnPausePlayerInput()
+        private bool readSpaceshipInput = true;
+        public void DisableSpaceshipInput()
         {
-            readInput = false;
+            readSpaceshipInput = false;
         }
-        public void OnResumePlayerInput()
+        public void EnableSpaceshipInput()
         {
-            readInput = true;
+            readSpaceshipInput = true;
+        }
+        private bool pauseAllowed = true;
+        public void DisablePause()
+        {
+            pauseAllowed = false;
+        }
+        public void EnablePause()
+        {
+            pauseAllowed = true;
         }
 
         // P and D values as in per second
@@ -125,7 +136,7 @@ namespace Voyager
         {
             // Rotate target indicator relative to camera
             Quaternion inputRot = Quaternion.Euler(childCamera.transform.TransformVector(inputRotate * inputRotationSpeed));
-            targetIndicator.transform.rotation = inputRot * targetIndicator.transform.rotation;
+            targetIndicator.rotation = inputRot * targetIndicator.rotation;
             childCamera.transform.rotation = inputRot * childCamera.transform.rotation;
         }
         private void rotateCamera(Vector3 inputRotate)
@@ -133,24 +144,24 @@ namespace Voyager
             // Rotate camera
             Quaternion inputRot = Quaternion.Euler(childCamera.transform.TransformVector(inputRotate * inputRotationSpeed));
             //childCamera.transform.rotation = inputRot * childCamera.transform.rotation;
-            targetIndicator.transform.rotation = inputRot * targetIndicator.transform.rotation;
+            targetIndicator.rotation = inputRot * targetIndicator.rotation;
         }
         
         private void snapPositionToChild()
         {
             // Snap position to child
-            targetIndicator.transform.position = childObject.transform.position;
+            targetIndicator.position = childObject.transform.position;
             childCamera.transform.position = childObject.transform.position;
         }
 
         private void snapCameraToTarget()
         {
-            childCamera.transform.rotation = targetIndicator.transform.rotation;
+            childCamera.transform.rotation = targetIndicator.rotation;
         }
 
         private void snapTargetToCamera()
         {
-            targetIndicator.transform.rotation = childCamera.transform.rotation;
+            targetIndicator.rotation = childCamera.transform.rotation;
             //targetIndicator.transform.rotation *= childCamera.transform.rotation;
             
         }
@@ -197,8 +208,8 @@ namespace Voyager
             childObject.GetComponent<Rigidbody>().AddForce(childObject.transform.TransformVector(moveForce),
                 ForceMode.Acceleration);
 
-            // Send Message OnForce for other scripts to use if needed
-            SendMessage("OnForce", moveForce, SendMessageOptions.DontRequireReceiver);
+            // Send event OnForceApplied for other scripts to use if needed
+            onForceApplied.Invoke(moveForce);
         }
 
         private void updateRotation()
@@ -206,7 +217,7 @@ namespace Voyager
             // Calculate rotation error angle
             Vector3 axis;
             float angle;
-            Quaternion errorQuat = targetIndicator.transform.rotation * Quaternion.Inverse(childObject.transform.rotation);
+            Quaternion errorQuat = targetIndicator.rotation * Quaternion.Inverse(childObject.transform.rotation);
 
 
             errorQuat.ToAngleAxis(out angle, out axis);
@@ -290,6 +301,11 @@ namespace Voyager
         {
             if (value.isPressed)
             {
+                if (!pauseAllowed && !pauseScript.isPaused)
+                {
+                    Debug.Log("Pause requested but not allowed");
+                    return;
+                }
                 Debug.Log("Toggled pause menu");
                 pauseScript.TogglePause();
             }
@@ -312,7 +328,7 @@ namespace Voyager
             
             qeAsRoll = input.actions["Focus"].ReadValue<float>() != 1.0f;
 
-            if (!readInput)
+            if (!readSpaceshipInput)
             {
                 snapPositionToChild();
                 updateRotation();
@@ -331,13 +347,13 @@ namespace Voyager
                 inputRotate = new Vector3(
                     Mathf.Clamp(-mouseDelta.y, -20, 20),
                     Mathf.Clamp(mouseDelta.x, -20, 20),
-                    -input.actions["Roll"].ReadValue<float>());
+                    0);//-input.actions["Roll"].ReadValue<float>());
             }
             else
             {
                 inputRotate = new Vector3(
                     Mathf.Clamp(-mouseDelta.y, -20, 20),
-                    input.actions["Roll"].ReadValue<float>(),
+                    0,//input.actions["Roll"].ReadValue<float>(),
                     -Mathf.Clamp(mouseDelta.x, -20, 20));
 
             }
@@ -373,12 +389,12 @@ namespace Voyager
         }
 
         private bool lastMouseLocked = true;
-        public void OnPauseMenuStart()
+        public void OverrideMouseControl()
         {
             lastMouseLocked = mouseLocked;
             unlockMouse();
         }
-        public void OnPauseMenuEnd()
+        public void ReleaseMouseControl()
         {
             if (lastMouseLocked) lockMouse(); else unlockMouse();
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class HealthSystem : MonoBehaviour
     public Text textObj = null;
     public UIBar bar = null;
     public GameObject player;
+    public UnityEvent onDeath;
+    public UnityEvent onRespawn;
 
     void Update()
     {
@@ -26,18 +29,18 @@ public class HealthSystem : MonoBehaviour
         }
     }
     
-    public void OnCollision(Collision collision)
+    public void RecordCollision(Collision collision) // Public facing function
     {
         float damage = collision.relativeVelocity.magnitude * healthPerForce;
         health -= Mathf.Pow(damage, healthExpValue);
         if (health <= 0)
         {
-            BroadcastMessage("OnDeath", SendMessageOptions.DontRequireReceiver);
             player.SetActive(false);
+            onDeath.Invoke();
         }
     }
 
-    public void OnCheatHeal(InputValue value)
+    public void OnCheatHeal(InputValue value) //InputSystem event
     {
         if (value.isPressed)
         {
@@ -45,15 +48,14 @@ public class HealthSystem : MonoBehaviour
             if (health <= 0)
             {
                 health = maxHealth;
-                BroadcastMessage("OnReset", SendMessageOptions.DontRequireReceiver);
                 player.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 player.SetActive(true);
+                onRespawn.Invoke();
             }
             else
             {
                 health = maxHealth;
-                BroadcastMessage("OnHeal", SendMessageOptions.DontRequireReceiver);
             }
         }
     }

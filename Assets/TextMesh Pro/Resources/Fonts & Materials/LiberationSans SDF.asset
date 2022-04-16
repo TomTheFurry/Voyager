@@ -35,7 +35,7 @@ Material:
     - _PerspectiveFilter: 0.875
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 1
-    - _ScaleRatioC: 0.5543973
+    - _ScaleRatioC: 0.5113636
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -50,7 +50,7 @@ Material:
     - _UnderlayDilate: 0
     - _UnderlayOffsetX: -1
     - _UnderlayOffsetY: -1
-    - _UnderlaySoftness: 0.319
+    - _UnderlaySoftness: 0.43
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
