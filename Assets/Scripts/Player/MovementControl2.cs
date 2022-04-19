@@ -8,6 +8,26 @@ namespace Voyager
 {
     public class MovementControl2 : MonoBehaviour
     {
+
+        private void OnEnable()
+        {
+            if (mouseLocked) {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                mouseLocked = true;
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (mouseLocked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                mouseLocked = false;
+            }
+        }
+
         // Child Object. Requires a Rigidbody component
         public GameObject childObject = null;
         // Target position for the child object. Doesn't need a Rigidbody component
@@ -75,7 +95,7 @@ namespace Voyager
 
         private float lastAngleError = 0f;
 
-        private bool mouseLocked = false;
+        private bool mouseLocked = true;
         private void lockMouse()
         {
             if (!mouseLocked)
