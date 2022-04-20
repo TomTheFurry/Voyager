@@ -21,9 +21,10 @@ public class CollisionSound : MonoBehaviour
         float randPitch = Random.Range(minPitch, maxPitch);
         Debug.Log("CollisionSound recieved force of " + force + ", volume " + volume + ", pitch " + randPitch);
 
-        AudioSource child = Instantiate(collisionEffect, transform, true);
+        AudioSource child = Instantiate(collisionEffect, transform.position, transform.rotation);
         child.volume = volume;
         child.pitch = randPitch;
+        child.gameObject.SetActive(true);
         child.Play();
     }
 }
