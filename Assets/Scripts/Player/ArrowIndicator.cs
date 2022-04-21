@@ -7,6 +7,7 @@ public class ArrowIndicator : MonoBehaviour
     public float unitScale = 1f;
     public Vector3 valueScale = Vector3.one;
     public float arrowScale = 1f;
+    public float arrowOffset = 1f;
     public char arrowChar = '>';
     private GameObject arrowLeft;
     private GameObject arrowRight;
@@ -24,6 +25,20 @@ public class ArrowIndicator : MonoBehaviour
         arrowDown = transform.Find("ArrowDown").gameObject;
         arrowForward = transform.Find("ArrowForward").gameObject;
         arrowBack = transform.Find("ArrowBack").gameObject;
+        
+        arrowLeft.transform.localScale = new Vector3(arrowScale, arrowScale, arrowScale);
+        arrowRight.transform.localScale = new Vector3(arrowScale, arrowScale, arrowScale);
+        arrowUp.transform.localScale = new Vector3(arrowScale, arrowScale, arrowScale);
+        arrowDown.transform.localScale = new Vector3(arrowScale, arrowScale, arrowScale);
+        arrowForward.transform.localScale = new Vector3(arrowScale, arrowScale, arrowScale);
+        arrowBack.transform.localScale = new Vector3(arrowScale, arrowScale, arrowScale);
+        
+        arrowLeft.transform.localPosition = arrowLeft.transform.localPosition * arrowOffset;
+        arrowRight.transform.localPosition = arrowRight.transform.localPosition * arrowOffset;
+        arrowUp.transform.localPosition = arrowUp.transform.localPosition * arrowOffset;
+        arrowDown.transform.localPosition = arrowDown.transform.localPosition * arrowOffset;
+        arrowForward.transform.localPosition = arrowForward.transform.localPosition * arrowOffset;
+        arrowBack.transform.localPosition = arrowBack.transform.localPosition * arrowOffset;
     }
 
     private string repeatChar(char c, int count)

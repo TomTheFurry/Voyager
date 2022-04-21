@@ -126,7 +126,7 @@ public class TextAnimator : MonoBehaviour
 
     bool triggerAnimation(AnimationMessage msg)
     {
-        Debug.Log("Triggering animation for text: " + msg);
+        Debug.Log("Triggering animation for text: " + msg.text);
         if (_currentAnimation != null)
         {
             if ((msg.lowPriority && msg.priority <= _msg.priority) ||
