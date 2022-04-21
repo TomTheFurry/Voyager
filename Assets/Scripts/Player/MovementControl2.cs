@@ -340,19 +340,28 @@ namespace Voyager
                 return;
             }
 
-            bool inputTab = input.actions["Tab"].triggered;
+            bool inputMiddle = input.actions["Middle"].triggered;
+            if (inputMiddle)
+            {
+                if (mouseLocked) unlockMouse(); else lockMouse();
+            }
+
+            // bool inputTab = input.actions["Tab"].triggered;
             bool inputClick = input.actions["Click"].triggered;
             if (inputClick) onLeftTrigger.Invoke();
             float inputZoom = -input.actions["Zoom"].ReadValue<float>();
-            if (inputTab) snapCameraToTarget();
+            float inputStop = input.actions["Stop"].ReadValue<float>();
+
             
+            //if (inputTab) snapCameraToTarget();
+
             qeAsRoll = input.actions["Focus"].ReadValue<float>() != 1.0f;
 
             if (!readSpaceshipInput)
             {
                 snapPositionToChild();
                 updateRotation();
-                updateZoom(inputZoom);
+                updateZoom(mouseLocked ? inputZoom : 0);
                 return;
             }
 
@@ -362,25 +371,31 @@ namespace Voyager
             Vector3 inputMove = input.actions["Move"].ReadValue<Vector3>();
             // X,Y normalized. z clamped.
             Vector3 inputRotate;
-            if (qeAsRoll)
+            if (!mouseLocked)
             {
-                inputRotate = new Vector3(
-                    Mathf.Clamp(-mouseDelta.y, -20, 20),
-                    Mathf.Clamp(mouseDelta.x, -20, 20),
-                    0);//-input.actions["Roll"].ReadValue<float>());
+                inputRotate = Vector3.zero;
             }
             else
             {
-                inputRotate = new Vector3(
-                    Mathf.Clamp(-mouseDelta.y, -20, 20),
-                    0,//input.actions["Roll"].ReadValue<float>(),
-                    -Mathf.Clamp(mouseDelta.x, -20, 20));
 
+                if (qeAsRoll)
+                {
+                    inputRotate = new Vector3(
+                        Mathf.Clamp(-mouseDelta.y, -20, 20),
+                        Mathf.Clamp(mouseDelta.x, -20, 20),
+                        0);//-input.actions["Roll"].ReadValue<float>());
+                }
+                else
+                {
+                    inputRotate = new Vector3(
+                        Mathf.Clamp(-mouseDelta.y, -20, 20),
+                        0,//input.actions["Roll"].ReadValue<float>(),
+                        -Mathf.Clamp(mouseDelta.x, -20, 20));
+
+                }
             }
             mouseDelta = Vector2.zero;
             float inputFocus = 0f; // input.actions["Focus"].ReadValue<float>();
-            float inputStop = input.actions["Stop"].ReadValue<float>();
-            bool inputMiddle = input.actions["Middle"].ReadValue<float>() > 0;
 
 
             //Debug.Log(inputMove);
@@ -391,9 +406,17 @@ namespace Voyager
             // Copy position to all children
             snapPositionToChild();
             updateRotation();
-            updateZoom(inputZoom);
+            if (mouseLocked)
+            {
+                updateZoom(inputZoom);
+            }
+            else
+            {
+                updateZoom(0);
+            }
             // tab snap
-            if (inputMiddle) snapTargetToCamera();
+            // if (inputMiddle) snapTargetToCamera();
+            
             // rotate target or camera based on focus
             if (mouseLocked)
             {

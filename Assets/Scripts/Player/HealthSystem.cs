@@ -12,7 +12,7 @@ public class HealthSystem : MonoBehaviour
     public float healthPerForce = 0.1f;
     public float healthExpValue = 2.0f;
 
-    public Text textObj = null;
+    public Tooltip textObj = null;
     public UIBar bar = null;
     public GameObject player;
     public UnityEvent onDeath;

@@ -7,13 +7,11 @@ using TMPro;
 
 [RequireComponent(typeof(TextResizer))]
 [RequireComponent(typeof(Image))]
-[RequireComponent(typeof(PlayerInput))]
 public class TooltipManager : MonoBehaviour
 {
     public static TooltipManager Instance;
 
     public Tooltip currentTooltip = null;
-    public InputAction inputAction;
 
     private TextResizer rs;
     private Image img;
@@ -44,7 +42,7 @@ public class TooltipManager : MonoBehaviour
             tmpObj.GetComponent<TextMeshProUGUI>().text = currentTooltip.text;
             rs.ResizeText(rect, tmpObj.GetComponent<TextMeshProUGUI>());
             // Get MousePos using new InputSystem
-            Vector2 mousePos = GetComponent<PlayerInput>().actions["PointerPosition"].ReadValue<Vector2>();
+            Vector2 mousePos = Mouse.current.position.ReadValue();
             transform.position = mousePos;
             Vector3 pos = rect.position;
             //Debug.Log("mouse:"+mousePos+",min:" + rect.offsetMin + ",max:" + rect.offsetMax);

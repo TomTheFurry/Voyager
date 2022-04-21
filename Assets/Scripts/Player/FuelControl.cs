@@ -11,7 +11,7 @@ public class FuelControl : MonoBehaviour
     public float fuelPerForce = 0.002f;
     public float fuelExpValue = 2.0f;
 
-    public Text textObj = null;
+    public Tooltip textObj = null;
     public UIBar bar = null;
 
     public UnityEvent onOutOfFuel;
