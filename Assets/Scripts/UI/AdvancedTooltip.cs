@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Tooltip : UICallback {
-    [TextArea(1, 10)]
-    public string text;
-    void Start() {
+public class AdvancedTooltip : Tooltip
+{
+    public GameObject customTooltip;
+
+    void Start()
+    {
         onHoverEnter.AddListener(_OnPointerEnter);
         onHoverExit.AddListener(_OnPointerExit);
     }
