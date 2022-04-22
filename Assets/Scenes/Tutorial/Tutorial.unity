@@ -825,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxFuel: 1000
   fuel: 1000
-  fuelPerForce: 0.004
+  fuelPerForce: 0.002
   fuelExpValue: 1.5
   textObj: {fileID: 488751725}
   bar: {fileID: 488751724}
