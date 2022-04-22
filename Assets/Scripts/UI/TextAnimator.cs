@@ -32,7 +32,7 @@ public class TextAnimator : MonoBehaviour
         textMesh = GetComponent<TextMeshProUGUI>();
         message = new AnimationMessage()
         {
-            text = textMesh.text,
+            texts = new string[] { textMesh.text },
             caller = gameObject,
             autoClose = 0,
             priority = int.MinValue,
@@ -140,13 +140,10 @@ public class TextAnimator : MonoBehaviour
         }
         if (_msg == null) msgPopup();
         _msg = msg;
-        AnimatorTag[] tags = stripAnimatorTag(msg.text, out string rawText);
-        textMesh.SetText(rawText);
-        textMesh.ForceMeshUpdate();
-        int[] indexer = computeIndexerToRawString(textMesh.textInfo.characterInfo);
-        _currentAnimation = StartCoroutine(animate(msg, tags, indexer));
+        _currentAnimation = StartCoroutine(animate(msg));
         return true;
     }
+
 
     private int getIndex() {
         return _currentTriggerIndex;
@@ -165,71 +162,81 @@ public class TextAnimator : MonoBehaviour
     }
 
     // the animate coroutine
-    IEnumerator animate(AnimationMessage msg, AnimatorTag[] tags, int[] indexer)
+    IEnumerator animate(AnimationMessage msg)
     {
-        textMesh.maxVisibleCharacters = 0;
-        int tagRead = 0;
-        int charRead = 0;
-        int triggerIndex = 0;
-        _currentTriggerIndex = 0;
-        float textDelay = defaultTextDelay;
-        while (charRead < textMesh.textInfo.characterCount)
+        int page = 0;
+        while (page < msg.texts.Length)
         {
-            bool doDelay = true;
-            while (tagRead < tags.Length && tags[tagRead].rawStringIndex <= indexer[charRead])
+            AnimatorTag[] tags = stripAnimatorTag(msg.texts[page], out string rawText);
+            textMesh.SetText(rawText);
+            textMesh.ForceMeshUpdate();
+            int[] indexer = computeIndexerToRawString(textMesh.textInfo.characterInfo);
+            _currentTriggerIndex = 0;
+            int triggerIndex = 0;
+            float textDelay = defaultTextDelay;
+            textMesh.maxVisibleCharacters = 0;
+            int tagRead = 0;
+            int charRead = 0;
+
+            while (charRead < textMesh.textInfo.characterCount)
             {
-                AnimatorTag tag = tags[tagRead];
-                switch (tag.type)
+                bool doDelay = true;
+                while (tagRead < tags.Length && tags[tagRead].rawStringIndex <= indexer[charRead])
                 {
-                    case 's':
-                        textDelay = defaultTextDelay * float.Parse(tag.arg);
-                        break;
-                    case 'p':
-                        CustomYieldInstruction y = waitTilIndex(triggerIndex, float.Parse(tag.arg));
-                        if (y != null) yield return y;
-                        doDelay = false;
-                        break;
-                    case 'v':
-                        if (audioSource != null)
-                        {
-                            audioSource.volume = float.Parse(tag.arg);
-                        }
-                        break;
-                    case 'k':
-                        CustomYieldInstruction y2 = waitTilIndex(triggerIndex, 0f);
-                        if (y2 != null) yield return y2;
-                        if (_currentTriggerIndex < triggerIndex) _currentTriggerIndex = triggerIndex;
-                        triggerIndex++;
-                        doDelay = false;
-                        break;
-                    default:
-                        Debug.LogError("Invalid animator tag: " + tag.type + " " + tag.arg);
-                        break;
+                    AnimatorTag tag = tags[tagRead];
+                    switch (tag.type)
+                    {
+                        case 's':
+                            textDelay = defaultTextDelay * float.Parse(tag.arg);
+                            break;
+                        case 'p':
+                            CustomYieldInstruction y = waitTilIndex(triggerIndex, float.Parse(tag.arg));
+                            if (y != null) yield return y;
+                            doDelay = false;
+                            break;
+                        case 'v':
+                            if (audioSource != null)
+                            {
+                                audioSource.volume = float.Parse(tag.arg);
+                            }
+                            break;
+                        case 'k':
+                            CustomYieldInstruction y2 = waitTilIndex(triggerIndex, 0f);
+                            if (y2 != null) yield return y2;
+                            if (_currentTriggerIndex < triggerIndex) _currentTriggerIndex = triggerIndex;
+                            triggerIndex++;
+                            doDelay = false;
+                            break;
+                        default:
+                            Debug.LogError("Invalid animator tag: " + tag.type + " " + tag.arg);
+                            break;
+                    }
+                    tagRead++;
                 }
-                tagRead++;
+                if (doDelay)
+                {
+                    CustomYieldInstruction y = waitTilIndex(triggerIndex, textDelay);
+                    if (y != null) yield return y;
+                }
+                textMesh.maxVisibleCharacters = ++charRead;
+                if (audioSource != null)
+                {
+                    audioSource.Play();
+                }
             }
-            if (doDelay)
+            triggerIndex++;
+            if (_currentTriggerIndex < triggerIndex) _currentTriggerIndex = triggerIndex;
+            if (msg.autoClose > 0)
             {
-                CustomYieldInstruction y = waitTilIndex(triggerIndex, textDelay);
-                if (y != null) yield return y;
+                yield return waitTilIndex(triggerIndex, msg.autoClose);
             }
-            textMesh.maxVisibleCharacters = ++charRead;
-            if (audioSource != null)
+            else if (msg.autoClose < 0)
             {
-                audioSource.Play();
+                yield return waitTilIndex(triggerIndex, 0);
             }
+            page++;
         }
         if (msg.onAnimationComplete != null) msg.onAnimationComplete.Invoke(msg);
-        triggerIndex++;
-        if (msg.autoClose > 0)
-        {
-            yield return waitTilIndex(triggerIndex, msg.autoClose);
-        }
-        else if (msg.autoClose < 0)
-        {
-            yield return waitTilIndex(triggerIndex, 0);
-        }
-        
         if (msg.onBoxClose != null) msg.onBoxClose.Invoke(msg);
         _msg = null;
         msgPopdown();

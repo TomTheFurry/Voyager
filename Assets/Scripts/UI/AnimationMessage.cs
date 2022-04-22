@@ -16,8 +16,10 @@ public class AnimationMessage : ICloneable
     public UnityEvent<AnimationMessage> onAnimationComplete;
     public UnityEvent<AnimationMessage> onBoxClose;
     public UnityEvent<AnimationMessage, AnimationMessage> onReplaced;
-    [TextArea(15, 20)]
+    [TextArea(4, 4)]
     public string text;
+    [TextArea(2, 4)]
+    public string[] texts;
     public object Clone()
     {
         return MemberwiseClone();
