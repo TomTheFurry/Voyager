@@ -48,16 +48,14 @@ namespace Voyager
          *  The target will be rotated using a PID controller (without I term)
          */
         public float inputRotationSpeed = 0.3f;
-        public float rotationP = 0.02f;
-        public float rotationD = 0.02f;
+        public PDController rotationPD = new PDController();
         public float targetRotationSpeed = 0.05f;
 
         public float zoomMin = 1.0f;
         public float zoomMax = 20.0f;
         public float zoomSpeed = 0.1f;
-        public float zoomP = 0.02f;
-        public float zoomD = 0.02f;
         public float zoomTarget = 5.0f;
+        public PDController zoomPD = new PDController();
 
         public Vector3 maxForce;
         public Vector3 maxNegForce;
@@ -65,6 +63,8 @@ namespace Voyager
         public bool qeAsRoll = true;
 
         public UnityEvent onLeftTrigger;
+
+        public EmissionHookup engineEmission;
 
         private bool readSpaceshipInput = true;
         public void DisableSpaceshipInput()
@@ -93,9 +93,7 @@ namespace Voyager
             return p * currentError + d * (currentError - lastError);
         }
 
-        private float lastAngleError = 0f;
-
-        private bool mouseLocked = true;
+        private bool mouseLocked = false;
         private void lockMouse()
         {
             if (!mouseLocked)
@@ -144,7 +142,7 @@ namespace Voyager
             {
                 Debug.LogError("Max negative force must be negative");
             }
-
+            lockMouse();
         }
 
         private bool isValidFloat(float f)
@@ -227,7 +225,16 @@ namespace Voyager
             }*/ // Note: This is not needed for now because the value is already scaled to maxForce
             childObject.GetComponent<Rigidbody>().AddForce(childObject.transform.TransformVector(moveForce),
                 ForceMode.Acceleration);
-
+            float percent = 0;
+            if (moveForce.z > 0) {
+                percent = moveForce.z / maxForce.z;
+                if (percent > 1)
+                {
+                    Debug.LogWarning("move force rate > 1!");
+                    percent = 1;
+                }
+            }
+            engineEmission.SetEmissionRate(percent);
             // Send event OnForceApplied for other scripts to use if needed
             onForceApplied.Invoke(moveForce);
         }
@@ -245,20 +252,16 @@ namespace Voyager
             angle = Mathf.DeltaAngle(0f, angle);
             if (!isValidFloat(axis.x) || !isValidFloat(axis.y) || !isValidFloat(axis.z))
             {
-                lastAngleError = 0;
+                rotationPD.reset();
                 return;
             }
             //Debug.Log("RotationError: " + angle + " " + axis);
 
             // Calculate PID
-            angle = calculatePD(rotationP, rotationD, angle, lastAngleError, Time.deltaTime);
-
+            angle = (float)rotationPD.tick(angle);
             angle = Mathf.DeltaAngle(0f, angle);
 
             //Debug.Log("RotationCorrection: " + angle + " " + axis);
-
-            // Update last error
-            lastAngleError = angle;
             Vector3 targetAngularVelocity = axis * angle;
             Vector3 currentAngularVelocity = childObject.GetComponent<Rigidbody>().angularVelocity;
             // Calculate torque to apply
@@ -268,7 +271,6 @@ namespace Voyager
             //hildObject.transform.Rotate(axis, angle, Space.World);
         }
 
-        float lastZoomError = 0;
         private void updateZoom(float inputZoom)
         {
 
@@ -282,9 +284,7 @@ namespace Voyager
             float zoomError = zoomTrueTarget - currentZoom;
 
             // Calculate PID
-            zoomError = calculatePD(zoomP, zoomD, zoomError, lastZoomError, Time.deltaTime);
-            lastZoomError = zoomError;
-
+            zoomError = (float)zoomPD.tick(zoomError);
             float value = currentZoom + zoomError;
             
             // Raycast to check if camera is not colliding with something
