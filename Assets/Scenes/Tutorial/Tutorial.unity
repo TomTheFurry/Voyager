@@ -678,8 +678,18 @@ MonoBehaviour:
     onReplaced:
       m_PersistentCalls:
         m_Calls: []
-    text: 
-    texts: []
+    texts:
+    - Greetings, Caption! You are in a virtual world designed for space flight training.$p1$
+      <color=grey>(Left click to continue)</color>
+    - You shall familiarize yourself with the basic controls of spaceship driving,
+      and also the pitfalls new comers will get themselves in.
+    - "First, the most basic control, <color=yellow>\u2018W\u2019</color>, <color=yellow>\u2019A\u2019</color>,
+      <color=yellow>\u2019S\u2019</color>, <color=yellow>\u2019D\u2019</color> to
+      move forwards, left, back, and right. Additionally, <color=yellow>\u2018Shift\u2019</color>
+      and <color=yellow>\u2018Space\u2019</color> to move up and down."
+    - Note that <color=red><b>any</color> accelerations will drain your fuel.$p1$
+      (See the yellow bar at the bottom? That's your fuel gage.)
+    - 
   triggerOnce: 0
 --- !u!64 &134439614
 MeshCollider:
@@ -33651,7 +33661,6 @@ MonoBehaviour:
     onReplaced:
       m_PersistentCalls:
         m_Calls: []
-    text: 
     texts:
     - Good job!$p0.2$ You have reached the <color=yellow><b>end of the level</b></color>!
     - "You can complete the level by stopping at that\n<color=yellow><b>end marker</b></color>
@@ -45904,7 +45913,6 @@ MonoBehaviour:
     onReplaced:
       m_PersistentCalls:
         m_Calls: []
-    text: 
     texts:
     - "In space,$p0.2$ there is no atmospheric drag.$p0.2$ Following the Newton\u2019s
       law of motion,$p0.2$ without external force,"
@@ -46845,7 +46853,6 @@ MonoBehaviour:
     onReplaced:
       m_PersistentCalls:
         m_Calls: []
-    text: 
     texts: []
   triggerOnce: 1
 --- !u!23 &1675981424
@@ -57178,7 +57185,6 @@ MonoBehaviour:
     onReplaced:
       m_PersistentCalls:
         m_Calls: []
-    text: 
     texts:
     - Good job! Now, you may have noticed already. The acceleration for your spaceship
       is different in each axis.
