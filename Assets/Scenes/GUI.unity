@@ -1161,8 +1161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -146.61089, y: 457.48486}
-  m_SizeDelta: {x: -1387.4606, y: -469.7083}
+  m_AnchoredPosition: {x: 36.161, y: 461.801}
+  m_SizeDelta: {x: -1083.48, y: -556.021}
   m_Pivot: {x: 0.5, y: -0.05}
 --- !u!114 &332175428
 MonoBehaviour:
@@ -1784,8 +1784,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
+  m_AnchoredPosition: {x: 196.23499, y: -1.0359802}
+  m_SizeDelta: {x: -412.48, y: -22.071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415558772
 MonoBehaviour:
@@ -1807,8 +1807,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Can call it weightlessness, earth have the gravity it will pull the object
-    to center of the earth.
+  m_text: "<color=#00FFFF><size=28><b><u>Gravity-Free</u></b></size></color>\nCan
+    call it weightlessness, earth have the gravity it will pull the object to center
+    of the earth. \r\nBut when we far the earth the gravity will be decreased, so
+    that the spaceship and the astronsuts will not be affected by gravity, to achieving
+    a floating state."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1835,15 +1838,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6398,7 +6401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Gravity-Free Fraining</u></b></size></color>
+  m_text: '<color=#00FFFF><size=28><b><u>Gravity-Free Training</u></b></size></color>
 
     Since
     it is difficult to achieve a gravity environment on earth, there are 2 ways to
@@ -8267,8 +8270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 55}
-  m_SizeDelta: {x: -40, y: -150}
+  m_AnchoredPosition: {x: -216.7559, y: 0.684021}
+  m_SizeDelta: {x: -462.37, y: -41.368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956030978
 MonoBehaviour:
