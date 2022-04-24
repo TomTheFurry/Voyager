@@ -9,6 +9,7 @@ public class EmissionHookup : MonoBehaviour
     private float rate;
     private float rate2;
     private AudioSource audioSource; // Nullable
+    private float maxVolume;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class EmissionHookup : MonoBehaviour
         ems.rateOverDistance = rod;
         if (audioSource != null)
         {
+            maxVolume = audioSource.volume;
             audioSource.volume = 0;
         }
     }
@@ -39,7 +41,7 @@ public class EmissionHookup : MonoBehaviour
         rod.constant = percent * rate2;
         ems.rateOverDistance = rod;
         if (audioSource != null) {
-            audioSource.volume = percent;
+            audioSource.volume = maxVolume * percent;
         }
     }
 }
