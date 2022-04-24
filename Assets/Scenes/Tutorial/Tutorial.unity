@@ -679,17 +679,38 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     texts:
-    - Greetings, Caption! You are in a virtual world designed for space flight training.$p1$
-      <color=grey>(Left click to continue)</color>
+    - 'Greetings, Caption! You are in a virtual world designed for space flight training.$p1$
+
+      <color=grey>(Left
+      click to continue)</color>'
     - You shall familiarize yourself with the basic controls of spaceship driving,
       and also the pitfalls new comers will get themselves in.
     - "First, the most basic control, <color=yellow>\u2018W\u2019</color>, <color=yellow>\u2019A\u2019</color>,
       <color=yellow>\u2019S\u2019</color>, <color=yellow>\u2019D\u2019</color> to
-      move forwards, left, back, and right. Additionally, <color=yellow>\u2018Shift\u2019</color>
+      move forwards, left, back, and right.\r\nAdditionally, <color=yellow>\u2018Shift\u2019</color>
       and <color=yellow>\u2018Space\u2019</color> to move up and down."
-    - Note that <color=red><b>any</color> accelerations will drain your fuel.$p1$
-      (See the yellow bar at the bottom? That's your fuel gage.)
-    - 
+    - 'Note that <color=red><b>any</color> accelerations will drain your fuel.
+
+      $p1$
+      (See the yellow bar at the bottom? That''s your fuel gage.)'
+    - <color=red>Drag</color> the <color=yellow>mouse</color> to change the direction
+      of the spaceship.
+    - <color=red>Press</color> the <color=yellow>right mouse button</color> and drag
+      to rotate the ship.
+    - 'The columns on the lower left indicate the <color=#FF2222>ship''s damage distance
+      (red bar)</color>, <color=green>skill bad</color>, <color=yellow>fuel bad (yellow
+      bar)</color>, and <color=#00FFFF>speed dial</color>.
+
+      You can <color=red>press</color>
+      the <color=yellow>middle mouse button</color> and point to them to see detailed
+      values.'
+    - 'Now, press the <color=yellow>[w] key</color> to accelerate forward.
+
+      And
+      move to the next checkpoint
+
+      Then press the <color=yellow>[ctrl] key</color>
+      to decelerate the ship to a standstill.'
   triggerOnce: 0
 --- !u!64 &134439614
 MeshCollider:
@@ -46981,7 +47002,11 @@ MonoBehaviour:
     onReplaced:
       m_PersistentCalls:
         m_Calls: []
-    texts: []
+    texts:
+    - 'Well you have mastered the basic operation.
+
+      Now, try to get through
+      this training segment.'
   triggerOnce: 1
 --- !u!23 &1675981424
 MeshRenderer:
