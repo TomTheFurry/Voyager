@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6118,7 +6118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6375,8 +6375,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 196.235, y: -5}
-  m_SizeDelta: {x: -412.48, y: -30}
+  m_AnchoredPosition: {x: 196.23499, y: -1.0359802}
+  m_SizeDelta: {x: -412.48, y: -22.071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579087143
 MonoBehaviour:
@@ -6398,12 +6398,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Since it is difficult to achieve a gravity environment on earth, there
-    are 2 ways to simulate this situation. \r\nThe first is using the aircraft diving
-    into the ground to cancel the gravitational force. \r\nThe second is to practice
-    underwater, simulating an environment where the influence of gravity is relatively
-    low. \r\nIt is more common to practice underwater, and it is also one of the
-    exercises that astronauts must perform."
+  m_text: '<color=#00FFFF><size=28><b><u>Gravity-Free Fraining</u></b></size></color>
+
+    Since
+    it is difficult to achieve a gravity environment on earth, there are 2 ways to
+    simulate this situation. The first is using the aircraft diving into the ground
+    to cancel the gravitational force. The second is to practice underwater, simulating
+    an environment where the influence of gravity is relatively low. It is more common
+    to practice underwater, and it is also one of the exercises that astronauts must
+    perform.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7372,8 +7375,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 196.235, y: -5}
-  m_SizeDelta: {x: -412.48, y: -30}
+  m_AnchoredPosition: {x: 196.23499, y: -1.0359802}
+  m_SizeDelta: {x: -412.48, y: -22.071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1724004621
 MonoBehaviour:
@@ -7395,11 +7398,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Most time of the space  is a vacuum, without matter including air.\r\nObject
-    do not slow down when no force is applied, also they will continue to accelerate
-    when a small amount of force is applied. \r\nTherefore,it is possible to achieve
-    faster speed in space, such as the fastest man-made object ever, the Parker Solar
-    Probe with a speed of up to 200km/s, which s a spaceship."
+  m_text: "<color=#00FFFF><size=28><b><u>No Friction Status</u></b></size></color>\r\nMost
+    time of the space  is a vacuum, without matter including air.\r\nObject do not
+    slow down when no force is applied, also they will continue to accelerate when
+    a small amount of force is applied. \r\nTherefore,it is possible to achieve faster
+    speed in space, such as the fastest man-made object ever, the Parker Solar Probe
+    with a speed of up to 200km/s, which s a spaceship."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
