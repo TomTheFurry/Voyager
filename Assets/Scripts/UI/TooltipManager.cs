@@ -39,6 +39,8 @@ public class TooltipManager : MonoBehaviour
 
     private void Update()
     {
+        RectTransform thisRt = GetComponent<RectTransform>();
+
         if (currentTooltip == null)
         {
             img.enabled = false;
@@ -55,12 +57,13 @@ public class TooltipManager : MonoBehaviour
             Vector2 mousePos = Mouse.current.position.ReadValue();
             ui.transform.position = mousePos;
             //Debug.Log("mouse:"+mousePos+",min:" + rect.offsetMin + ",max:" + rect.offsetMax);
-            if (rect.offsetMin.x < 0)
+
+            if (rect.offsetMin.x + rect.anchorMin.x < thisRt.anchorMin.x)
             {
                 rect.offsetMax = new Vector2(rect.offsetMax.x - rect.offsetMin.x, rect.offsetMax.y);
                 rect.offsetMin = new Vector2(0, rect.offsetMin.y);
             }
-            else if (rect.offsetMax.x > 0)
+            else if (rect.offsetMax.x + rect.anchorMax.x > thisRt.anchorMax.x)
             {
                 rect.offsetMin = new Vector2(rect.offsetMin.x - rect.offsetMax.x, rect.offsetMin.y);
                 rect.offsetMax = new Vector2(0, rect.offsetMax.y);
