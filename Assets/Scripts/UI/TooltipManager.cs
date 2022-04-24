@@ -40,6 +40,7 @@ public class TooltipManager : MonoBehaviour
     private void Update()
     {
         RectTransform thisRt = GetComponent<RectTransform>();
+        Canvas canvas = thisRt.parent.GetComponent<Canvas>();
 
         if (currentTooltip == null)
         {
@@ -57,16 +58,25 @@ public class TooltipManager : MonoBehaviour
             Vector2 mousePos = Mouse.current.position.ReadValue();
             ui.transform.position = mousePos;
             //Debug.Log("mouse:"+mousePos+",min:" + rect.offsetMin + ",max:" + rect.offsetMax);
+            Vector2 maxWidths = canvas.renderingDisplaySize;
+            Vector2 minRect = rect.rect.min;
+            Vector2 maxRect = rect.rect.max;
+            Debug.Log("A!maxWidth: " + maxWidths + ",minRect: " + minRect + ",maxRect" + maxRect);
+            minRect = rect.localToWorldMatrix * new Vector4(minRect.x, minRect.y, 0, 1);
+            maxRect = rect.localToWorldMatrix * new Vector4(maxRect.x, maxRect.y, 0, 1);
+            Debug.Log("maxWidth: " + maxWidths + ",minRect: " + minRect + ",maxRect" + maxRect);
 
-            if (rect.offsetMin.x + rect.anchorMin.x < thisRt.anchorMin.x)
+            if (minRect.x < 0)
             {
-                rect.offsetMax = new Vector2(rect.offsetMax.x - rect.offsetMin.x, rect.offsetMax.y);
-                rect.offsetMin = new Vector2(0, rect.offsetMin.y);
+                Vector3 pos = rect.position;
+                pos.x -= minRect.x;
+                rect.position = pos;
             }
-            else if (rect.offsetMax.x + rect.anchorMax.x > thisRt.anchorMax.x)
+            else if (maxRect.x > maxWidths.x)
             {
-                rect.offsetMin = new Vector2(rect.offsetMin.x - rect.offsetMax.x, rect.offsetMin.y);
-                rect.offsetMax = new Vector2(0, rect.offsetMax.y);
+                Vector3 pos = rect.position;
+                pos.x -= maxRect.x-maxWidths.x;
+                rect.position = pos;
             }
         }
         else
