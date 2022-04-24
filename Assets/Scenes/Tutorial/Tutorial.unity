@@ -57350,9 +57350,10 @@ MonoBehaviour:
       surface of the spaceship. Those are called Reaction Control System, or RCS
       in short. They help you to rotate and move in directions that aren\u2019t forward."
     - 'Fun fact: RCS thrusters are quite different from the main engine, in that
-      they are tiny. Due to the space limitation, and the small thrust requirements,
-      they sometimes use cold gas thrusters. It is basically thrusters that operates
-      purely based on pressure, instead of combustible fuel. '
+      they are tiny.'
+    - 'Due to the space limitation, and the small thrust requirements, they sometimes
+      use cold gas thrusters. It is basically thrusters that operates purely based
+      on pressure, instead of combustible fuel. '
   triggerOnce: 1
 --- !u!23 &1757525504
 MeshRenderer:
