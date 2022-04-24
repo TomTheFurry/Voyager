@@ -481,6 +481,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "FullScreen",
+                    "type": "Button",
+                    "id": "eb4686a2-2793-46a6-96a7-2feee235f57b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -932,6 +941,17 @@
                     "processors": "",
                     "groups": "Touch",
                     "action": "PointerPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f970b81f-ad95-44f7-882c-bb5494f7f7f2",
+                    "path": "<Keyboard>/f11",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "FullScreen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
