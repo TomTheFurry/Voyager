@@ -64,8 +64,13 @@ namespace Voyager
 
         public UnityEvent onLeftTrigger;
 
-        public EmissionHookup engineEmission;
-
+        public EmissionHookup[] upEmissionHookup;
+        public EmissionHookup[] downEmissionHookup;
+        public EmissionHookup[] leftEmissionHookup;
+        public EmissionHookup[] rightEmissionHookup;
+        public EmissionHookup[] forwardEmissionHookup;
+        public EmissionHookup[] backwardEmissionHookup;
+        
         private bool readSpaceshipInput = true;
         public void DisableSpaceshipInput()
         {
@@ -181,7 +186,23 @@ namespace Voyager
         {
             targetIndicator.rotation = childCamera.transform.rotation;
             //targetIndicator.transform.rotation *= childCamera.transform.rotation;
-            
+        }
+
+        private static void setEmission(EmissionHookup[] hookups, float force, float max) {
+            float percent = Mathf.Clamp01(force / max);
+            for (int i = 0; i < hookups.Length; i++)
+            {
+                hookups[i].SetEmissionRate(percent);
+            }
+        }
+        private void setAllEmissionHookups(Vector3 value)
+        {
+            setEmission(upEmissionHookup, value.y, maxForce.y);
+            setEmission(downEmissionHookup, value.y, maxNegForce.y);
+            setEmission(leftEmissionHookup, value.x, maxNegForce.x);
+            setEmission(rightEmissionHookup, value.x, maxForce.x);
+            setEmission(forwardEmissionHookup, value.z, maxForce.z);
+            setEmission(backwardEmissionHookup, value.z, maxNegForce.z);
         }
 
         private void moveAndStop(Vector3 inputMove, float inputStop)
@@ -225,17 +246,8 @@ namespace Voyager
             }*/ // Note: This is not needed for now because the value is already scaled to maxForce
             childObject.GetComponent<Rigidbody>().AddForce(childObject.transform.TransformVector(moveForce),
                 ForceMode.Acceleration);
-            float percent = 0;
-            if (moveForce.z > 0) {
-                percent = moveForce.z / maxForce.z;
-                if (percent > 1)
-                {
-                    Debug.LogWarning("move force rate > 1!");
-                    percent = 1;
-                }
-            }
-            engineEmission.SetEmissionRate(percent);
             // Send event OnForceApplied for other scripts to use if needed
+            setAllEmissionHookups(moveForce);
             onForceApplied.Invoke(moveForce);
         }
 
@@ -362,6 +374,8 @@ namespace Voyager
                 snapPositionToChild();
                 updateRotation();
                 updateZoom(mouseLocked ? inputZoom : 0);
+                setAllEmissionHookups(Vector3.zero);
+                onForceApplied.Invoke(Vector3.zero);
                 return;
             }
 

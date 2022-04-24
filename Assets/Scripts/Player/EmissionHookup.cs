@@ -8,9 +8,12 @@ public class EmissionHookup : MonoBehaviour
     ParticleSystem ps;
     private float rate;
     private float rate2;
+    private AudioSource audioSource; // Nullable
+
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
+        audioSource = GetComponent<AudioSource>();
         var ems = ps.emission;
         var rot = ems.rateOverTime;
         var rod = ems.rateOverDistance;
@@ -20,6 +23,10 @@ public class EmissionHookup : MonoBehaviour
         rod.constant = 0;
         ems.rateOverTime = rot;
         ems.rateOverDistance = rod;
+        if (audioSource != null)
+        {
+            audioSource.volume = 0;
+        }
     }
 
 
@@ -31,5 +38,8 @@ public class EmissionHookup : MonoBehaviour
         ems.rateOverTime = rot;
         rod.constant = percent * rate2;
         ems.rateOverDistance = rod;
+        if (audioSource != null) {
+            audioSource.volume = percent;
+        }
     }
 }
