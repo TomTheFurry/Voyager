@@ -498,8 +498,8 @@ MonoBehaviour:
   zoomPD:
     p: 0.01
     d: 0.002
-  maxForce: {x: 1, y: 5, z: 10}
-  maxNegForce: {x: -1, y: -5, z: -8}
+  maxForce: {x: 1, y: 3, z: 5}
+  maxNegForce: {x: -1, y: -3, z: -4}
   qeAsRoll: 1
   onLeftTrigger:
     m_PersistentCalls:
