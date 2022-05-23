@@ -9,7 +9,9 @@ public class SkillTreeInformation : MonoBehaviour
     public string objName;
     public GameObject icon;
     public Sprite image;
-    public GameObject description;
+    public int size = 24;
+    [TextArea(1, 10)]
+    public string description;
 
     public void showInformation()
     {
@@ -33,7 +35,8 @@ public class SkillTreeInformation : MonoBehaviour
             }
             else if (string.Equals(childName, "Description"))
             {
-                child.GetComponent<Text>().text = gameObject.GetComponent<Text>().text;
+                child.GetComponent<Text>().text = description;
+                child.GetComponent<Text>().fontSize = size;
             }
         }
         
