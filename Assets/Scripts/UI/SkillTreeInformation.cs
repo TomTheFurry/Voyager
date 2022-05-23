@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SkillTreeInformation : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class SkillTreeInformation : MonoBehaviour
     public int size = 24;
     [TextArea(1, 10)]
     public string description;
+    public GameObject highlighter;
 
     public void showInformation()
     {
@@ -35,8 +37,29 @@ public class SkillTreeInformation : MonoBehaviour
             }
             else if (string.Equals(childName, "Description"))
             {
-                child.GetComponent<Text>().text = description;
-                child.GetComponent<Text>().fontSize = size;
+                child.GetComponent<TextMeshProUGUI>().text = description;
+                child.GetComponent<TextMeshProUGUI>().fontSize = size;
+
+                if (child.childCount > 0)
+                {
+                    for (int i = 0; i < child.childCount; i++)
+                    {
+                        var temp = child.GetChild(i).GetComponent<SkillTreeTooltipsHighligher>();
+                        if (temp != null)
+                        {
+                            temp.resetParent();
+                        }
+                    }
+                }
+
+                do
+                {
+                    if (highlighter == null)
+                        break;
+
+                    highlighter.gameObject.SetActive(true);
+                    highlighter.GetComponent<SkillTreeTooltipsHighligher>().setParent(child);
+                } while (false);
             }
         }
         
