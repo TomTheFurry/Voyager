@@ -61,10 +61,10 @@ public class TooltipManager : MonoBehaviour
             Vector2 maxWidths = canvas.renderingDisplaySize;
             Vector2 minRect = rect.rect.min;
             Vector2 maxRect = rect.rect.max;
-            Debug.Log("A!maxWidth: " + maxWidths + ",minRect: " + minRect + ",maxRect" + maxRect);
+            //Debug.Log("A!maxWidth: " + maxWidths + ",minRect: " + minRect + ",maxRect" + maxRect);
             minRect = rect.localToWorldMatrix * new Vector4(minRect.x, minRect.y, 0, 1);
             maxRect = rect.localToWorldMatrix * new Vector4(maxRect.x, maxRect.y, 0, 1);
-            Debug.Log("maxWidth: " + maxWidths + ",minRect: " + minRect + ",maxRect" + maxRect);
+            //Debug.Log("maxWidth: " + maxWidths + ",minRect: " + minRect + ",maxRect" + maxRect);
 
             if (minRect.x < 0)
             {

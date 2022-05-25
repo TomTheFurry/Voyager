@@ -13,12 +13,12 @@ public class SkillTreeTooltipsHighligher : MonoBehaviour
 
     public void resetParent()
     {
-        gameObject.transform.parent = myParent.transform;
+        gameObject.transform.SetParent(myParent.transform, false);
         gameObject.SetActive(false);
     }
 
     public void setParent(Transform newParent)
     {
-        gameObject.transform.parent = newParent;
+        gameObject.transform.SetParent(newParent, false);
     }
 }
