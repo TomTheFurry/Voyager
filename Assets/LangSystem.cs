@@ -29,7 +29,7 @@ public class LangSystem
     {
         if (activeLang == null) return _ErrorLang("NOLANG", file, key);
         if (!LoadSubFile(file)) return _ErrorLang("NOFILE", file, key);
-        //if (!activeLang[file].ContainsKey(key)) return _ErrorLang("NOKEY", file, key);
+        if (!activeLang[file].ContainsKey(key)) return _ErrorLang("NOKEY", file, key);
         return activeLang[file][key];
     }
 
@@ -96,7 +96,10 @@ public class LangSystem
         {
             int start = text.IndexOf("$lang/");
             int end = text.IndexOf("$", start + 6);
-            if (end == -1) end = text.Length;
+            if (end == -1) {
+                Debug.LogWarning("Missing '$' in the end of '$lang' tag! Ignoring...");
+                break;
+            }
 
             int fileEnd = text.IndexOf("/", start + 6);
             string file = text.Substring(start + 6, fileEnd - start - 6);
