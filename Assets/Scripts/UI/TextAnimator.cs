@@ -167,7 +167,7 @@ public class TextAnimator : MonoBehaviour
         int page = 0;
         while (page < msg.texts.Length)
         {
-            AnimatorTag[] tags = stripAnimatorTag(msg.texts[page], out string rawText);
+            AnimatorTag[] tags = stripAnimatorTag(LangSystem.parseText(msg.texts[page]), out string rawText);
             textMesh.SetText(rawText);
             textMesh.ForceMeshUpdate();
             int[] indexer = computeIndexerToRawString(textMesh.textInfo.characterInfo);

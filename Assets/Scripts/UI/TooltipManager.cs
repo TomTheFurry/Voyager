@@ -84,7 +84,7 @@ public class TooltipManager : MonoBehaviour
             img.enabled = true;
             tmpObj.SetActive(true);
             RectTransform rect = GetComponent<RectTransform>();
-            tmpObj.GetComponent<TextMeshProUGUI>().text = currentTooltip.text;
+            tmpObj.GetComponent<TextMeshProUGUI>().text = LangSystem.parseText(currentTooltip.text);
             rs.ResizeText(rect, tmpObj.GetComponent<TextMeshProUGUI>());
             // Get MousePos using new InputSystem
             Vector2 mousePos = Mouse.current.position.ReadValue();

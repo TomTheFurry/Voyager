@@ -45082,7 +45082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 'Skill: None avalible'
+  text: 'Skill: None avalible$lang/test/test2$'
 --- !u!1 &1393088236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7640723504399777887, guid: d94ad1d418cf1fe458e3ec1acad85286, type: 3}
@@ -45614,7 +45614,10 @@ MonoBehaviour:
     ''$v0.3$'':
     Set volume to 30%
 
-    ''$k$'': Wait for keypress'
+    ''$k$'': Wait for keypress
+
+    ''$lang/FILE/KEY$'': Use
+    lang system and replace string'
   defaultTextDelay: 0.03
   audioSource: {fileID: 0}
   panel: {fileID: 1735494544}
