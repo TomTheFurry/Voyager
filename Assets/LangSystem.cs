@@ -29,7 +29,7 @@ public class LangSystem
     {
         if (activeLang == null) return _ErrorLang("NOLANG", file, key);
         if (!LoadSubFile(file)) return _ErrorLang("NOFILE", file, key);
-        //if (!activeLang[file].ContainsKey(key)) return _ErrorLang("NOKEY", file, key);
+        if (!activeLang[file].ContainsKey(key)) return _ErrorLang("NOKEY", file, key);
         return activeLang[file][key];
     }
 
