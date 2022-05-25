@@ -15,6 +15,12 @@ public class SkillTreeInformation : MonoBehaviour
     public string description;
     public GameObject highlighter;
 
+    private string langPath;
+    private void Start()
+    {
+        langPath = "$lang/SkillTreeInfo/" + gameObject.name;
+    }
+
     public void showInformation()
     {
         Transform[] children = information.GetComponentsInChildren<Transform>();
@@ -37,8 +43,14 @@ public class SkillTreeInformation : MonoBehaviour
             }
             else if (string.Equals(childName, "Description"))
             {
+                
                 child.GetComponent<TextMeshProUGUI>().text = description;
-                child.GetComponent<TextMeshProUGUI>().fontSize = size;
+
+                int size;
+                //int.TryParse((LangSystem.parseText(langPath + "_FontSize$")), out size);
+                //child.GetComponent<TextMeshProUGUI>().fontSize = size;
+                LangSystem.parseText(langPath + "_FontSize$");
+                Debug.Log("Size");
 
                 if (child.childCount > 0)
                 {
