@@ -96,7 +96,10 @@ public class LangSystem
         {
             int start = text.IndexOf("$lang/");
             int end = text.IndexOf("$", start + 6);
-            if (end == -1) end = text.Length;
+            if (end == -1) {
+                Debug.LogWarning("Missing '$' in the end of '$lang' tag! Ignoring...");
+                break;
+            }
 
             int fileEnd = text.IndexOf("/", start + 6);
             string file = text.Substring(start + 6, fileEnd - start - 6);
