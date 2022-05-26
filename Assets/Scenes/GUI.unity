@@ -1212,7 +1212,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1053800570}
-  - {fileID: 1707255855}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1234,13 +1233,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Ablation Material
   icon: {fileID: 1286688996}
   image: {fileID: 21300000, guid: 88ee3e131d99bc648931f0e343523a4f, type: 3}
-  size: 24
-  description: A process of removing impurities from objects, improve protection,
-    Ablation material often use in spacecraft with <br><u>re-entry</u> requirements.
-  highlighter: {fileID: 1707255854}
+  customTooltips:
+  - {fileID: 138805175}
 --- !u!222 &72472510
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1319,11 +1315,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Absolute Zero</u></b></size></color>
-
-    Temperature
-    is based on particle vibration, when the particle of the kinetic energy reduced
-    to a minimum that is the absolute zero come form, this temperature around -273<sup>o</sup>C.'
+  m_text: "Use aluminum wire and steek wire to make it and using magnetic force collects
+    <u>space garbage</u>. After collecting a certain amount of <u>space garbage</u>,
+    it will enter the atmosphere due to the earth\u2019s gravity and burn out through
+    the atmosphere, thereby disposing of <u>space garbage</u>. The advantage is that
+    it is cheap, however it is difficult to accurately handle <u>space garbage</u>
+    and when there is an excess of <u>space garbage</u> falling into the atmosphere
+    with it, there is a chance that it will not burn out and hit the ground."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1350,8 +1348,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1400,55 +1398,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77576054}
   m_CullTransparentMesh: 1
---- !u!1 &88732973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 88732974}
-  - component: {fileID: 88732975}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &88732974
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88732973}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1284024766}
-  m_Father: {fileID: 1787647263}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183.00021, y: 401.99976}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &88732975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88732973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &93277025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138805176}
   - component: {fileID: 138805178}
+  - component: {fileID: 138805179}
   - component: {fileID: 138805177}
   m_Layer: 5
   m_Name: TooltipKeyword_Re-entry
@@ -1879,56 +1829,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138805175}
   m_CullTransparentMesh: 1
---- !u!1 &145038902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 145038903}
-  - component: {fileID: 145038904}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &145038903
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145038902}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 483071874}
-  - {fileID: 528392503}
-  m_Father: {fileID: 1363416859}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 731.9998, y: 535.9998}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &145038904
+--- !u!114 &138805179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145038902}
+  m_GameObject: {fileID: 138805175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &149652493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +1873,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1014763205}
-  - {fileID: 613821509}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1982,14 +1894,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Ion Thruster
   icon: {fileID: 2015054651}
   image: {fileID: 21300000, guid: 823a197c0c804304f869b5c5f5a1407b, type: 3}
-  size: 24
-  description: The rocket is powered by ejecting <u>ionization</u> gas. Even though
-    it can be driven by electricity without using fuel, its energy is very weak and
-    not suitable for large spaceships.
-  highlighter: {fileID: 613821508}
+  customTooltips:
+  - {fileID: 1692969505}
 --- !u!222 &149652496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2021,6 +1929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151984400}
   - component: {fileID: 151984402}
+  - component: {fileID: 151984403}
   - component: {fileID: 151984401}
   m_Layer: 5
   m_Name: TooltipKeyword_AbsoluteZero
@@ -2088,6 +1997,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151984399}
   m_CullTransparentMesh: 1
+--- !u!114 &151984403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151984399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &187395399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,56 +2357,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205273510}
   m_CullTransparentMesh: 1
---- !u!1 &209634056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 209634057}
-  - component: {fileID: 209634058}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &209634057
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209634056}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 708715244}
-  - {fileID: 2119799543}
-  m_Father: {fileID: 511120264}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.99982, y: 267.99982}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &209634058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209634056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &221468779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,15 +2576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Monopropellant Rocket
   icon: {fileID: 929560301}
   image: {fileID: 21300000, guid: f324a04c825b5fd4eb91f43cb4a57d98, type: 3}
-  size: 24
-  description: Since a single-propellant rocket only needs to use a single fuel for
-    propulsion, its structure is extremely simple, and its cost is very low. Even
-    if its reliability is low, it is still an important research direction to reduce
-    the cost of rocket launch.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &240393465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2731,6 +2597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 253444200}
   - component: {fileID: 253444202}
+  - component: {fileID: 253444203}
   - component: {fileID: 253444201}
   m_Layer: 5
   m_Name: TooltipKeyword_SpaceGarbage
@@ -2798,6 +2665,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253444199}
   m_CullTransparentMesh: 1
+--- !u!114 &253444203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253444199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &256197449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,14 +2943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Space garbage</u></b></size></color>
-
-    With
-    the exploration of space by human beings, the problem of junk left in the exploration
-    map has an increasing impact on space exploration itself. These space junk include
-    not only the junk brought by the life of astronauts, but also the residual parts
-    of the spacecraft, and even the remaining parts of the spacecraft. Destroyed
-    artificial satellites, these also pose a threat to space safety.'
+  m_text: $lang/SkillTreeInfo/SpaceGarbage$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3278,14 +3151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Fusion Rocket
   icon: {fileID: 510763814}
   image: {fileID: 21300000, guid: 1dba2cb6d9b60d04694295418ce50a0a, type: 3}
-  size: 24
-  description: Powering rockets through nuclear fusion. Since nuclear fusion is already
-    a very complex project, the complexity of fusion rockets cannot be solved by
-    current technology.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &274391918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3722,186 +3590,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 766573b549a01e04d82ff74a4a3b022c, type: 2}
---- !u!1 &323712641
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 323712642}
-  - component: {fileID: 323712645}
-  - component: {fileID: 323712644}
-  - component: {fileID: 323712643}
-  m_Layer: 5
-  m_Name: Highlighter_SpaceGarbage1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &323712642
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323712641}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 927412298}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 720.08, y: -424.56888}
-  m_SizeDelta: {x: -33.831, y: -77.374}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &323712643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323712641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &323712644
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323712641}
-  m_CullTransparentMesh: 1
---- !u!114 &323712645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323712641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 253444199}
---- !u!1 &326761539
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 326761540}
-  - component: {fileID: 326761544}
-  - component: {fileID: 326761543}
-  - component: {fileID: 326761542}
-  m_Layer: 5
-  m_Name: Highlighter_SpaceGarbage1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &326761540
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326761539}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1502190280}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 680.3744, y: -496.2343}
-  m_SizeDelta: {x: -36.214, y: -77.161}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &326761542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326761539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &326761543
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326761539}
-  m_CullTransparentMesh: 1
---- !u!114 &326761544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326761539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 253444199}
 --- !u!1 &328099736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4305,14 +3993,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Nuclear Thermal Rocket
   icon: {fileID: 1990561022}
   image: {fileID: 21300000, guid: a8f5cb04358d6704aa9d28f47153423f, type: 3}
-  size: 24
-  description: By heating the object in a nuclear reactor and then ejecting it to
-    power the rocket, but it will produce radioactive particles at the end, making
-    the nuclear thermal rocket unsuitable for use in people's places.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &355322581
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4334,145 +4017,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Nuclear Thermal Rocket
---- !u!1 &364292936
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 364292937}
-  - component: {fileID: 364292938}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &364292937
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364292936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1376599893}
-  m_Father: {fileID: 1529734626}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00018310547, y: 267.99982}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &364292938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364292936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &365635980
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 365635981}
-  - component: {fileID: 365635985}
-  - component: {fileID: 365635984}
-  - component: {fileID: 365635983}
-  m_Layer: 5
-  m_Name: Highlighter_SpaceGarbage2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &365635981
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365635980}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1502190280}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 384.19305, y: -520.9255}
-  m_SizeDelta: {x: -16.492, y: -75.794}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &365635983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365635980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &365635984
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365635980}
-  m_CullTransparentMesh: 1
---- !u!114 &365635985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365635980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 253444199}
 --- !u!1 &366443991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4525,16 +4069,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Carbon Fiber
   icon: {fileID: 580695214}
   image: {fileID: 21300000, guid: 9a029053690a834438e301f1d97ef544, type: 3}
-  size: 20
-  description: Is a high hardness, high strength, light weight, high chemical resistance,
-    high temperature resistance and low thermal expansion material, this material
-    is transparent Composed by weaving carbon atoms, this material is widely used
-    where high strength but lightweight materials are required. In aircraft and aerospace
-    gases, it will also be used in medical, automotive, and textile applications.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &366443994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5388,14 +4925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Sputnik 1</u></b></size></color>
-
-    is
-    the first artificial satellite in human history to enter planetary orbit and
-    was used by the Soviet Union on October4, 1957 Sputnik launched to space with
-    rocket, and crashed after 22 days in orbit. This artificial satellite also witnessed
-    the space race. And then the development of human space progressed by leaps and
-    bounds until landing on the moon.'
+  m_text: $lang/SkillTreeInfo/Sputnik1$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5524,15 +5054,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Bipropellant Rocket
   icon: {fileID: 836776868}
   image: {fileID: 21300000, guid: 574ebeeda73add74687623f355cabe1f, type: 3}
-  size: 24
-  description: As the name implies, the rocket is powered by a mixture of two fuels.
-    Since the power provided by the mixture of two fuels can effectively increase
-    the proportion of fuel used, it is more complicated, and if it goes wrong, it
-    will cause a major accident.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &424040742
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5811,96 +5335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438174371}
   m_CullTransparentMesh: 1
---- !u!1 &442698943
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 442698944}
-  - component: {fileID: 442698947}
-  - component: {fileID: 442698946}
-  - component: {fileID: 442698945}
-  m_Layer: 5
-  m_Name: Highlighter_Juno
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &442698944
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442698943}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1039275507}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 749.95074, y: -522.79016}
-  m_SizeDelta: {x: -55.126, y: -77.555}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &442698945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442698943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &442698946
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442698943}
-  m_CullTransparentMesh: 1
---- !u!114 &442698947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442698943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1233005692}
 --- !u!1 &454380391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5912,6 +5346,7 @@ GameObject:
   - component: {fileID: 454380392}
   - component: {fileID: 454380394}
   - component: {fileID: 454380393}
+  - component: {fileID: 454380395}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -5958,11 +5393,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is a composite material is based on carbon fiber and then reinforced
-    material, even it is a fragile material, but his heat resistant is more powerful,
-    for example, the <u>Parker Solar Probe</u> is made of a reinforced carbon composite
-    material with a diameter of 2.3 meters and a thickness of 11.4 cm as a material
-    to withstand sunlight photo material.
+  m_text: "Use aluminum wire and steek wire to make it and using magnetic force collects
+    space garbage. After collecting a certain amount of space garbage, it will enter
+    the atmosphere due to the earth\u2019s gravity and burn out through the atmosphere,
+    thereby disposing of space garbage. The advantage is that it is cheap, however
+    it is difficult to accurately handle space garbage and when there is an excess
+    of space garbage falling into the atmosphere with it, there is a chance that
+    it will not burn out and hit the ground.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5989,8 +5426,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6038,7 +5475,21 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454380391}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
+--- !u!114 &454380395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454380391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bb8b77fce8e654d9239d4bee10c80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlighterPrefab: {fileID: 6252223433345306116, guid: 90d11b7dcc9184949a7c0fd9293f8932, type: 3}
+  temp: {fileID: 253444199}
 --- !u!1 &454979235
 GameObject:
   m_ObjectHideFlags: 0
@@ -6276,6 +5727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466072994}
   - component: {fileID: 466072996}
+  - component: {fileID: 466072997}
   - component: {fileID: 466072995}
   m_Layer: 5
   m_Name: TooltipKeyword_MarsPathfinder
@@ -6343,6 +5795,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466072993}
   m_CullTransparentMesh: 1
+--- !u!114 &466072997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466072993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &480352590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6542,96 +6007,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482659636}
   m_CullTransparentMesh: 1
---- !u!1 &483071873
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 483071874}
-  - component: {fileID: 483071877}
-  - component: {fileID: 483071876}
-  - component: {fileID: 483071875}
-  m_Layer: 5
-  m_Name: Highlighter_MarsPathfinder1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &483071874
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483071873}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 145038903}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 705.39105, y: -451.0938}
-  m_SizeDelta: {x: -45.321, y: -73.533}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &483071875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483071873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &483071876
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483071873}
-  m_CullTransparentMesh: 1
---- !u!114 &483071877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483071873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 466072993}
 --- !u!1 &501242707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6955,7 +6330,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 796257685}
-  - {fileID: 209634057}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6977,16 +6351,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: VASMIR Engine
   icon: {fileID: 7385318}
   image: {fileID: 21300000, guid: 8f6526c473ca62f43bc942e6ba0b1aec, type: 3}
-  size: 24
-  description: Using <u>plasma</u> with a <u>magnetic field</u> to generate thrust,
-    in theory, the rocket's design is simpler, and only requires electric power,
-    but one of the bigger problems is that the magnetic field it produces may affect
-    the spacecraft's electronics, requiring additional equipment to offset the effect
-    of the magnetic field it produces.
-  highlighter: {fileID: 209634056}
+  customTooltips:
+  - {fileID: 1029938864}
+  - {fileID: 1842667145}
 --- !u!222 &511120266
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7337,96 +6706,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516100911}
   m_CullTransparentMesh: 1
---- !u!1 &528392502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 528392503}
-  - component: {fileID: 528392506}
-  - component: {fileID: 528392505}
-  - component: {fileID: 528392504}
-  m_Layer: 5
-  m_Name: Highlighter_MarsPathfinder2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &528392503
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528392502}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 145038903}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 399.4739, y: -477.85284}
-  m_SizeDelta: {x: 11.845, y: -72.955}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &528392504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528392502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &528392505
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528392502}
-  m_CullTransparentMesh: 1
---- !u!114 &528392506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528392502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 466072993}
 --- !u!1 &532022824
 GameObject:
   m_ObjectHideFlags: 0
@@ -7484,15 +6763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Shuttle</u></b></size></color>
-
-    Shuttle
-    is a reusable low-Earth orbit spacecraft. The main function is put the spacecraft
-    into space and return to the ground for repeated use. So far there are 5 shuttles
-    has created all produced in the United States. However, the cost of shuttle is
-    extremely high and a large number of precision parts are required to cooperate,
-    otherwise it will easily lead to the destruction of the machine, so it was eliminated
-    after completing the last mission in 2011.'
+  m_text: $lang/SkillTreeInfo/Shuttle$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7626,13 +6897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Reusable rocket</u></b></size></color>
-
-    For
-    example, the Falcon Heavy Launch Vehicle is a reusable rocket. On the one hand,
-    the design of the rocket is simpler than that of the shuttle, which can save
-    production costs. On the other hand, the recyclable design of the rocket not
-    only replaces the shuttle, but also reduces the cost of space transportation.'
+  m_text: $lang/SkillTreeInfo/ReusableRocket$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7766,14 +7031,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Magnetic field</u></b></size></color>
-
-    Any
-    magnet will also generate a magnetic field, and any magnetic object and current
-    will also change direction due to the magnetic field. As for the earth''s magnetic
-    field, it can effectively prevent the charged particles in the solar wind and
-    cosmic rays from destroying the upper atmosphere of the earth, providing sufficient
-    conditions for the birth of life.'
+  m_text: $lang/SkillTreeInfo/MagneticField$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8548,55 +7806,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608007077}
   m_CullTransparentMesh: 1
---- !u!1 &613821508
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 613821509}
-  - component: {fileID: 613821510}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &613821509
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613821508}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1728841445}
-  m_Father: {fileID: 149652494}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.99992, y: 133.99994}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &613821510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613821508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &615110607
 GameObject:
   m_ObjectHideFlags: 0
@@ -8649,16 +7858,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Nuclear Fusion Battery
   icon: {fileID: 1747670478}
   image: {fileID: 21300000, guid: 6f26e6c7a2ea132408fa5909582c9560, type: 3}
-  size: 22
-  description: Even the general large-scale nuclear fusion reactor has not yet been
-    put into operation. The current problem is that it requires extremely high temperature
-    to carry out nuclear fusion. Scientists need to use magnetic force or other non-contact
-    methods to carry out nuclear fusion. But successfully invented, can produce more
-    energy than nuclear fission.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &615110610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8680,57 +7882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Nuclear Fusion Battery
---- !u!1 &621183359
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 621183360}
-  - component: {fileID: 621183361}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &621183360
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621183359}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1640493804}
-  - {fileID: 1897315010}
-  - {fileID: 2130669993}
-  m_Father: {fileID: 2109891327}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 914.9999, y: 267.99988}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &621183361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621183359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &621664724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9405,7 +8556,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 256197450}
-  - {fileID: 2034104363}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9427,16 +8577,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Maintenance System
   icon: {fileID: 1318314587}
   image: {fileID: 21300000, guid: ada5c88fcf4ab2748a9c6d8e70cb307d, type: 3}
-  size: 22
-  description: This technology was used as early as 2001. It is a well-known mechanical
-    device in the International Space Station. It can bring astronauts or manipulators
-    to repair the spacecraft, and astronauts on the <u>International Space Station</u>
-    must also learn to use this technology to become Astronauts, this technology
-    also extends the service life of international space.
-  highlighter: {fileID: 2034104362}
+  customTooltips:
+  - {fileID: 820952745}
 --- !u!222 &692783536
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9458,96 +8602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Maintenance System
---- !u!1 &708715243
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 708715244}
-  - component: {fileID: 708715247}
-  - component: {fileID: 708715246}
-  - component: {fileID: 708715245}
-  m_Layer: 5
-  m_Name: Highlighter_Plasma
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &708715244
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708715243}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 209634057}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 451.599, y: -395.549}
-  m_SizeDelta: {x: -18.118, y: -70.904}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &708715245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708715243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &708715246
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708715243}
-  m_CullTransparentMesh: 1
---- !u!114 &708715247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708715243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1029938864}
 --- !u!1 &741454761
 GameObject:
   m_ObjectHideFlags: 0
@@ -10008,7 +9062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &762655778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10759,13 +9813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Parker Solar Probe</u></b></size></color>
-
-    This
-    is an unmanned solar exploration spacecraft. The goal of this spacecraft is to
-    study the sun''s magnetic field, solar wind and other information about the sun.
-    Because it needs to be very close to the sun for research, this spacecraft has
-    a strong ability to withstand aging.'
+  m_text: $lang/SkillTreeInfo/ParkerSolarProbe$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10990,6 +10038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820952746}
   - component: {fileID: 820952748}
+  - component: {fileID: 820952749}
   - component: {fileID: 820952747}
   m_Layer: 5
   m_Name: TooltipKeyword_InternationalSpaceStation
@@ -11057,6 +10106,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820952745}
   m_CullTransparentMesh: 1
+--- !u!114 &820952749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820952745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &829807061
 GameObject:
   m_ObjectHideFlags: 0
@@ -11457,6 +10519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869306234}
   - component: {fileID: 869306236}
+  - component: {fileID: 869306237}
   - component: {fileID: 869306235}
   m_Layer: 5
   m_Name: TooltipKeyword_ReusableRocket
@@ -11524,55 +10587,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869306233}
   m_CullTransparentMesh: 1
---- !u!1 &873947276
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 873947277}
-  - component: {fileID: 873947278}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &873947277
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873947276}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1223301235}
-  m_Father: {fileID: 1829880501}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 914.99976, y: 669.99976}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &873947278
+--- !u!114 &869306237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873947276}
+  m_GameObject: {fileID: 869306233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &903757995
 GameObject:
   m_ObjectHideFlags: 0
@@ -11765,56 +10792,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926685742}
   m_CullTransparentMesh: 1
---- !u!1 &927412297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 927412298}
-  - component: {fileID: 927412299}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &927412298
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927412297}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 323712642}
-  - {fileID: 1926919758}
-  m_Father: {fileID: 1059165476}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183.00015, y: 133.9999}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &927412299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927412297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &929560301
 GameObject:
   m_ObjectHideFlags: 0
@@ -12595,14 +11572,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Tripropellant Rocket
   icon: {fileID: 1486359122}
   image: {fileID: 21300000, guid: 59259c159bd0bc042a11bf441ddaf739, type: 3}
-  size: 24
-  description: A rocket engine propelled by a mixture of three fuels can further
-    improve energy efficiency and reduce the weight of spacecraft, but its complexity
-    is lower because of its complexity and fault tolerance.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &1014825315
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12921,6 +11893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029938865}
   - component: {fileID: 1029938867}
+  - component: {fileID: 1029938868}
   - component: {fileID: 1029938866}
   m_Layer: 5
   m_Name: TooltipKeyword_Plasma
@@ -12988,6 +11961,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029938864}
   m_CullTransparentMesh: 1
+--- !u!114 &1029938868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029938864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1033274517
 GameObject:
   m_ObjectHideFlags: 0
@@ -12998,6 +11984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033274518}
   - component: {fileID: 1033274520}
+  - component: {fileID: 1033274521}
   - component: {fileID: 1033274519}
   m_Layer: 5
   m_Name: TooltipKeyword_ParkerSolarProbe
@@ -13065,6 +12052,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033274517}
   m_CullTransparentMesh: 1
+--- !u!114 &1033274521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033274517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1033343506
 GameObject:
   m_ObjectHideFlags: 0
@@ -13144,57 +12144,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033343506}
   m_CullTransparentMesh: 1
---- !u!1 &1039275506
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1039275507}
-  - component: {fileID: 1039275508}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1039275507
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039275506}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1847015158}
-  - {fileID: 442698944}
-  - {fileID: 1885637073}
-  m_Father: {fileID: 2059425409}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000091552734, y: 133.99994}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1039275508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039275506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1040845876
 GameObject:
   m_ObjectHideFlags: 0
@@ -13509,7 +12458,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1015508638}
-  - {fileID: 927412298}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13531,14 +12479,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Small Magnetic Satellite
   icon: {fileID: 1889443296}
   image: {fileID: 21300000, guid: d27c8b473b5f11b4fa959d5fd823bcc5, type: 3}
-  size: 24
-  description: This is use the small artificial satellites to add the magnets for
-    disposal of <u>space garbage</u>, with the development of space, the price of
-    small artificial satellites is extremely low.
-  highlighter: {fileID: 927412297}
+  customTooltips:
+  - {fileID: 253444199}
 --- !u!222 &1059165478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13560,96 +12504,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Small Magnetic Satellite
---- !u!1 &1090584698
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1090584699}
-  - component: {fileID: 1090584702}
-  - component: {fileID: 1090584701}
-  - component: {fileID: 1090584700}
-  m_Layer: 5
-  m_Name: Highlighter_InternationalSpaceStation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1090584699
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090584698}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2034104363}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 476.376, y: -520.31445}
-  m_SizeDelta: {x: 165.247, y: -74.741}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1090584700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090584698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1090584701
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090584698}
-  m_CullTransparentMesh: 1
---- !u!114 &1090584702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090584698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 820952745}
 --- !u!1 &1092157292
 GameObject:
   m_ObjectHideFlags: 0
@@ -14987,96 +13841,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170007923}
   m_CullTransparentMesh: 1
---- !u!1 &1178103446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1178103447}
-  - component: {fileID: 1178103450}
-  - component: {fileID: 1178103449}
-  - component: {fileID: 1178103448}
-  m_Layer: 5
-  m_Name: Highlighter_Re-entry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1178103447
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178103446}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1707255855}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 385.92, y: -478.6}
-  m_SizeDelta: {x: -13.512, y: -74.741}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1178103448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178103446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1178103449
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178103446}
-  m_CullTransparentMesh: 1
---- !u!114 &1178103450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178103446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 138805175}
 --- !u!1 &1194237139
 GameObject:
   m_ObjectHideFlags: 0
@@ -15087,6 +13851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194237140}
   - component: {fileID: 1194237142}
+  - component: {fileID: 1194237143}
   - component: {fileID: 1194237141}
   m_Layer: 5
   m_Name: TooltipKeyword_Shuttle
@@ -15154,6 +13919,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194237139}
   m_CullTransparentMesh: 1
+--- !u!114 &1194237143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194237139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1195062245
 GameObject:
   m_ObjectHideFlags: 0
@@ -15747,96 +14525,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216307750}
   m_CullTransparentMesh: 1
---- !u!1 &1223301234
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1223301235}
-  - component: {fileID: 1223301238}
-  - component: {fileID: 1223301237}
-  - component: {fileID: 1223301236}
-  m_Layer: 5
-  m_Name: Highlighter_ParkerSolarProbe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1223301235
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223301234}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 873947277}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 437.949, y: -495.318}
-  m_SizeDelta: {x: 89.821, y: -74.768}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1223301236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223301234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1223301237
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223301234}
-  m_CullTransparentMesh: 1
---- !u!114 &1223301238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223301234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1033274517}
 --- !u!1 &1224200617
 GameObject:
   m_ObjectHideFlags: 0
@@ -15894,12 +14582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Ionization</u></b></size></color>
-
-    Ionization
-    is also an effective way to improve the properties of objects by turning atoms
-    into positive or negative charges through various methods and can also change
-    the properties of objects.'
+  m_text: $lang/SkillTreeInfo/Ionization$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15986,6 +14669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231642105}
   - component: {fileID: 1231642107}
+  - component: {fileID: 1231642108}
   - component: {fileID: 1231642106}
   m_Layer: 5
   m_Name: TooltipKeyword_Voyager1
@@ -16053,6 +14737,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231642104}
   m_CullTransparentMesh: 1
+--- !u!114 &1231642108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231642104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1233005692
 GameObject:
   m_ObjectHideFlags: 0
@@ -16063,6 +14760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1233005693}
   - component: {fileID: 1233005695}
+  - component: {fileID: 1233005696}
   - component: {fileID: 1233005694}
   m_Layer: 5
   m_Name: TooltipKeyword_Juno
@@ -16130,55 +14828,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233005692}
   m_CullTransparentMesh: 1
---- !u!1 &1234390549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1234390550}
-  - component: {fileID: 1234390551}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1234390550
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234390549}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1696700763}
-  m_Father: {fileID: 2044684157}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 914.99994, y: 133.9999}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1234390551
+--- !u!114 &1233005696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234390549}
+  m_GameObject: {fileID: 1233005692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1248115987
 GameObject:
   m_ObjectHideFlags: 0
@@ -16352,96 +15014,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253751919}
   m_CullTransparentMesh: 1
---- !u!1 &1284024765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1284024766}
-  - component: {fileID: 1284024769}
-  - component: {fileID: 1284024768}
-  - component: {fileID: 1284024767}
-  m_Layer: 5
-  m_Name: Highlighter_ReusableRockets
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1284024766
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284024765}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 88732974}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 553.5252, y: -553.69}
-  m_SizeDelta: {x: 49.697, y: -76.921}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1284024767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284024765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1284024768
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284024765}
-  m_CullTransparentMesh: 1
---- !u!114 &1284024769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284024765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 869306233}
 --- !u!1 &1286688996
 GameObject:
   m_ObjectHideFlags: 0
@@ -17626,7 +16198,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 68671596}
-  - {fileID: 145038903}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17648,15 +16219,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Aerogel
   icon: {fileID: 1216220980}
   image: {fileID: 21300000, guid: 7bcf5804d4d8cb245bccec5634b66386, type: 3}
-  size: 24
-  description: It also call solid air, because it weighs three times as much as air,
-    and also is an excellent insulator, such as, <u>Mars Pathfinder</u> is using
-    this material, but this kind of object contains carcinogens and toxins and should
-    not be touched directly.
-  highlighter: {fileID: 145038902}
+  customTooltips:
+  - {fileID: 466072993}
 --- !u!222 &1363416861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17735,14 +16301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Mars Pathfinder</u></b></size></color>
-
-    This
-    is a mechanical rover. In addition to increasing human knowledge of Mars, this
-    space mission also proved that human beings can greatly reduce the cost of space
-    exploration through technological progress. The cost of this space exploration
-    together with the launch vehicle is about 280,000 Ten thousand dollars, one-fifteenth
-    of the cost of another Mars exploration Viking.'
+  m_text: $lang/SkillTreeInfo/MarsPathfinder$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18325,96 +16884,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375137181}
   m_CullTransparentMesh: 1
---- !u!1 &1376599892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1376599893}
-  - component: {fileID: 1376599896}
-  - component: {fileID: 1376599895}
-  - component: {fileID: 1376599894}
-  m_Layer: 5
-  m_Name: Highlighter_Voyager1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1376599893
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376599892}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 364292937}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 486.766, y: -616.47656}
-  m_SizeDelta: {x: 11.577, y: -72.444}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1376599894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376599892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1376599895
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376599892}
-  m_CullTransparentMesh: 1
---- !u!114 &1376599896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376599892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1231642104}
 --- !u!1 &1422476467
 GameObject:
   m_ObjectHideFlags: 0
@@ -18596,7 +17065,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435674401}
-  - {fileID: 2111826095}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18618,18 +17086,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Metal Magnetic Mesh
   icon: {fileID: 587918560}
   image: {fileID: 21300000, guid: 6fcc716b865012d479e54c9a06445288, type: 3}
-  size: 18
-  description: "Use aluminum wire and steek wire to make it and using magnetic force
-    collects space garbage. After collecting a certain amount of <u>space garbage</u>,
-    it will enter the atmosphere due to the earth\u2019s gravity and burn out through
-    the atmosphere, thereby disposing of space garbage. The advantage is that it
-    is cheap, however it is difficult to accurately handle space garbage and when
-    there is an excess of space garbage falling into the atmosphere with it, there
-    is a chance that it will not burn out and hit the ground."
-  highlighter: {fileID: 2111826094}
+  customTooltips:
+  - {fileID: 253444199}
 --- !u!222 &1426186107
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19773,56 +18233,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487935026}
   m_CullTransparentMesh: 1
---- !u!1 &1502190279
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1502190280}
-  - component: {fileID: 1502190281}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1502190280
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502190279}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 326761540}
-  - {fileID: 365635981}
-  m_Father: {fileID: 1784175392}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183.00006, y: -0.000030517578}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1502190281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502190279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1502622802
 GameObject:
   m_ObjectHideFlags: 0
@@ -20088,13 +18498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Vanguard 1</u></b></size></color>
-
-    It
-    was the first spacecraft to be successfully launched by the United States, with
-    the goal of exploring the magnetic fields of the Earth and the Moon, but after
-    the probe failed to reach the theoretical maximum speed, Pioneer 1 crashed into
-    the South Pacific after 43 hours of operation.'
+  m_text: $lang/SkillTreeInfo/Vanguard1$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20433,7 +18837,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1110997860}
-  - {fileID: 364292937}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20455,16 +18858,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Atomic Battery
   icon: {fileID: 1319000444}
   image: {fileID: 21300000, guid: aa53e905260f8f2499c74a6db0edbee1, type: 3}
-  size: 24
-  description: These nuclear batteries do not use nuclear reactors to generate electricity
-    in the traditional sense. They generate electricity through the energy of atomic
-    decay. The lifespan is much longer than ordinary batteries, but the cost is relatively
-    high. They are suitable for space probes with some light sources, such as <u>Voyager
-    1</u>.
-  highlighter: {fileID: 364292936}
+  customTooltips:
+  - {fileID: 1231642104}
 --- !u!222 &1529734628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20676,12 +19073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Plasma</u></b></size></color>
-
-    A state
-    other than solid, liquid, and gas, such as the sun, is basically composed of
-    plasma, which conducts electricity almost perfectly and has many physical properties
-    that other states fail to achieve.'
+  m_text: $lang/SkillTreeInfo/Plasma$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20768,6 +19160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551969846}
   - component: {fileID: 1551969848}
+  - component: {fileID: 1551969849}
   - component: {fileID: 1551969847}
   m_Layer: 5
   m_Name: TooltipKeyword_Sputnik1
@@ -20835,6 +19228,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551969845}
   m_CullTransparentMesh: 1
+--- !u!114 &1551969849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551969845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1560669805
 GameObject:
   m_ObjectHideFlags: 0
@@ -21492,96 +19898,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601897323}
   m_CullTransparentMesh: 1
---- !u!1 &1640493803
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1640493804}
-  - component: {fileID: 1640493807}
-  - component: {fileID: 1640493806}
-  - component: {fileID: 1640493805}
-  m_Layer: 5
-  m_Name: Highlighter_AbsoluteZero1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1640493804
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640493803}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 621183360}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 703.9166, y: -505.58127}
-  m_SizeDelta: {x: -6.521, y: -72.655}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1640493805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640493803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1640493806
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640493803}
-  m_CullTransparentMesh: 1
---- !u!114 &1640493807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640493803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 151984399}
 --- !u!1 &1657823103
 GameObject:
   m_ObjectHideFlags: 0
@@ -21789,14 +20105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Juno</u></b></size></color>
-
-    Juno is
-    a Jupiter probe that was launched in 2011 and reached Jupiter''s orbit in 2016
-    to study Jupiter''s composition, gravitational field, magnetic field, magnetosphere
-    and magnetic poles and other information about Jupiter, greatly improving human
-    understanding of Jupiter, one of the findings is that Jupiter has a lot of water,
-    which is likely to be related to the birth of the solar system.'
+  m_text: $lang/SkillTreeInfo/Juno$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22227,6 +20536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692969506}
   - component: {fileID: 1692969508}
+  - component: {fileID: 1692969509}
   - component: {fileID: 1692969507}
   m_Layer: 5
   m_Name: TooltipKeyword_Ionization
@@ -22294,96 +20604,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692969505}
   m_CullTransparentMesh: 1
---- !u!1 &1696700762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1696700763}
-  - component: {fileID: 1696700766}
-  - component: {fileID: 1696700765}
-  - component: {fileID: 1696700764}
-  m_Layer: 5
-  m_Name: Highlighter_Sputnik1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1696700763
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696700762}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1234390550}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 555.2189, y: -562.64044}
-  m_SizeDelta: {x: -9.996, y: -75.637}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1696700764
+--- !u!114 &1692969509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696700762}
+  m_GameObject: {fileID: 1692969505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1696700765
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696700762}
-  m_CullTransparentMesh: 1
---- !u!114 &1696700766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696700762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1551969845}
+  switch1: 0
 --- !u!1 &1705214434
 GameObject:
   m_ObjectHideFlags: 0
@@ -22521,16 +20754,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Stainless Steel
   icon: {fileID: 257899348}
   image: {fileID: 21300000, guid: 1229ffe18e925cb4c9f648457961469d, type: 3}
-  size: 24
-  description: Mix different elements to make steel harder to oxidize, because of
-    stainless steel is a Corrosion-resistant high-strength material, so that the
-    strength is not high as other material that came later, but the cost is cheaper,
-    so many aircraft and spacecraft would select the stainless steel to become the
-    second choose.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &1705485322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22539,55 +20765,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705485317}
   m_CullTransparentMesh: 1
---- !u!1 &1707255854
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1707255855}
-  - component: {fileID: 1707255856}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1707255855
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707255854}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1178103447}
-  m_Father: {fileID: 72472508}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 914.99976, y: 401.99976}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1707255856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707255854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1716106217
 GameObject:
   m_ObjectHideFlags: 0
@@ -22645,14 +20822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>International Space Station</u></b></size></color>
-
-    The
-    International Space Station started construction in 1998 and was officially put
-    into use in 2000. The International Space Station has many scientific research
-    facilities. One of the research projects is to study whether the long-term life
-    of various creatures in space will affect it, to conduct long-term space for
-    future human beings. Explore Paving.'
+  m_text: $lang/SkillTreeInfo/InternationalSpaceStation$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23096,96 +21266,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726707605}
   m_CullTransparentMesh: 1
---- !u!1 &1728841444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1728841445}
-  - component: {fileID: 1728841448}
-  - component: {fileID: 1728841447}
-  - component: {fileID: 1728841446}
-  m_Layer: 5
-  m_Name: Highlighter_Ionization
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1728841445
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728841444}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 613821509}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 394.6173, y: -423.44705}
-  m_SizeDelta: {x: 3.949, y: -70.06}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1728841446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728841444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1728841447
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728841444}
-  m_CullTransparentMesh: 1
---- !u!114 &1728841448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728841444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1692969505}
 --- !u!1 &1747670478
 GameObject:
   m_ObjectHideFlags: 0
@@ -23591,7 +21671,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1502622803}
-  - {fileID: 1502190280}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23613,16 +21692,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Laser
   icon: {fileID: 1460339056}
   image: {fileID: 21300000, guid: b1c93e5807646504aa5f0dcbc9484afe, type: 3}
-  size: 22
-  description: Laser weapons are energy weapons that use high-energy lasers to accurately
-    shoot long-distance targets or to defend against missiles. The same kind of technology
-    can be applied to the processing of <u>space garbage</u>, and through this technology,
-    some physical objects can be refined. Smaller space garbage, but the power consumption
-    of laser technology is high.
-  highlighter: {fileID: 1502190279}
+  customTooltips:
+  - {fileID: 253444199}
 --- !u!222 &1784175394
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23675,7 +21748,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1682369854}
-  - {fileID: 88732974}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23697,17 +21769,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: 3D Printer
   icon: {fileID: 330548613}
   image: {fileID: 21300000, guid: 5bf6e030e7350834f9d0d543062c2d10, type: 3}
-  size: 20
-  description: Because the spacecraft may be damaged to varying degrees, but in the
-    past, it needed special parts for the launch vehicle to be repaired. With the
-    invention of the 3D printer, the necessary parts can be produced in space by
-    itself, which greatly reduces the cost of the launch vehicle. Use requirements,
-    and at the same time cooperate with <u>reusable rockets</u>, the cost of space
-    exploration can be further reduced.
-  highlighter: {fileID: 88732973}
+  customTooltips:
+  - {fileID: 869306233}
 --- !u!222 &1787647265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23739,6 +21804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796124607}
   - component: {fileID: 1796124609}
+  - component: {fileID: 1796124610}
   - component: {fileID: 1796124608}
   m_Layer: 5
   m_Name: TooltipKeyword_Rosetta
@@ -23806,6 +21872,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796124606}
   m_CullTransparentMesh: 1
+--- !u!114 &1796124610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796124606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1799346462
 GameObject:
   m_ObjectHideFlags: 0
@@ -24008,17 +22087,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Antimatter Rocket
   icon: {fileID: 93757910}
   image: {fileID: 21300000, guid: a2777c2aaf4c59f49bc413af7af89fd1, type: 3}
-  size: 19
-  description: The rocket is powered by the huge energy in the collision of antimatter.
-    Antimatter refers to a substance with the same mass, lifespan, and spin as normal
-    particles, but with completely opposite charge, baryon number, singularity, etc.
-    If normal particles and antiparticles collide, it will disappear and generate
-    extremely huge energy, but antimatter hardly appears in nature, so the production
-    of antimatter is the difficulty of antimatter engine.
-  highlighter: {fileID: 0}
+  customTooltips: []
 --- !u!222 &1805421468
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24161,7 +22232,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1307451858}
-  - {fileID: 873947277}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24183,16 +22253,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Reinforced Carbon-carbon
   icon: {fileID: 958859658}
   image: {fileID: 21300000, guid: d821e9144e29339419b7022a772fa9af, type: 3}
-  size: 22
-  description: This is a composite material is based on carbon fiber and then reinforced
-    material, even it is a fragile material, but his heat resistant is more powerful,
-    for example, the <u>Parker Solar Probe</u> is made of a reinforced carbon composite
-    material with a diameter of 2.3 meters and a thickness of 11.4 cm as a material
-    to withstand sunlight photo material.
-  highlighter: {fileID: 873947276}
+  customTooltips:
+  - {fileID: 1033274517}
 --- !u!222 &1829880503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24249,7 +22313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26.2229, y: -51.257767}
+  m_AnchoredPosition: {x: 26.2229, y: -51.257812}
   m_SizeDelta: {x: -1611.4526, y: -958.1895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830179337
@@ -24314,6 +22378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1842667146}
   - component: {fileID: 1842667148}
+  - component: {fileID: 1842667149}
   - component: {fileID: 1842667147}
   m_Layer: 5
   m_Name: TooltipKeyword_MagneticField
@@ -24381,6 +22446,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842667145}
   m_CullTransparentMesh: 1
+--- !u!114 &1842667149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842667145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1844570465
 GameObject:
   m_ObjectHideFlags: 0
@@ -24514,96 +22592,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844570465}
   m_CullTransparentMesh: 1
---- !u!1 &1847015157
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1847015158}
-  - component: {fileID: 1847015161}
-  - component: {fileID: 1847015160}
-  - component: {fileID: 1847015159}
-  m_Layer: 5
-  m_Name: Highlighter_Vanguard1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1847015158
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847015157}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1039275507}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 506.54175, y: -457.7912}
-  m_SizeDelta: {x: 0.764, y: -78.887}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1847015159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847015157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1847015160
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847015157}
-  m_CullTransparentMesh: 1
---- !u!114 &1847015161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847015157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1852486220}
 --- !u!1 &1852486220
 GameObject:
   m_ObjectHideFlags: 0
@@ -24614,6 +22602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852486221}
   - component: {fileID: 1852486223}
+  - component: {fileID: 1852486224}
   - component: {fileID: 1852486222}
   m_Layer: 5
   m_Name: TooltipKeyword_Vanguard1
@@ -24681,6 +22670,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852486220}
   m_CullTransparentMesh: 1
+--- !u!114 &1852486224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852486220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: 0
 --- !u!1 &1859141132
 GameObject:
   m_ObjectHideFlags: 0
@@ -24760,186 +22762,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859141132}
   m_CullTransparentMesh: 1
---- !u!1 &1880759985
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1880759986}
-  - component: {fileID: 1880759989}
-  - component: {fileID: 1880759988}
-  - component: {fileID: 1880759987}
-  m_Layer: 5
-  m_Name: Highlighter_SpaceGarbage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1880759986
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880759985}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2111826095}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 660.473, y: -436.55426}
-  m_SizeDelta: {x: 29.865, y: -79.373}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1880759987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880759985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1880759988
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880759985}
-  m_CullTransparentMesh: 1
---- !u!114 &1880759989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880759985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 253444199}
---- !u!1 &1885637072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1885637073}
-  - component: {fileID: 1885637076}
-  - component: {fileID: 1885637075}
-  - component: {fileID: 1885637074}
-  m_Layer: 5
-  m_Name: Highlighter_Rosetta
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1885637073
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885637072}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1039275507}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 493.313, y: -545.0581}
-  m_SizeDelta: {x: -33.176, y: -80.063}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1885637074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885637072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1885637075
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885637072}
-  m_CullTransparentMesh: 1
---- !u!114 &1885637076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885637072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1796124606}
 --- !u!1 &1887777958
 GameObject:
   m_ObjectHideFlags: 0
@@ -25133,96 +22955,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1897315009
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1897315010}
-  - component: {fileID: 1897315013}
-  - component: {fileID: 1897315012}
-  - component: {fileID: 1897315011}
-  m_Layer: 5
-  m_Name: Highlighter_AbsoluteZero2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1897315010
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897315009}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 621183360}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 367.48328, y: -535.17786}
-  m_SizeDelta: {x: -50.687, y: -76.688}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1897315011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897315009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1897315012
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897315009}
-  m_CullTransparentMesh: 1
---- !u!114 &1897315013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897315009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 151984399}
 --- !u!1 &1897752450
 GameObject:
   m_ObjectHideFlags: 0
@@ -25338,96 +23070,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903271501}
   m_CullTransparentMesh: 1
---- !u!1 &1926919757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1926919758}
-  - component: {fileID: 1926919761}
-  - component: {fileID: 1926919760}
-  - component: {fileID: 1926919759}
-  m_Layer: 5
-  m_Name: Highlighter_SpaceGarbage2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1926919758
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926919757}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 927412298}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 387.8687, y: -450.316}
-  m_SizeDelta: {x: -9.915, y: -73.195}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1926919759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926919757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1926919760
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926919757}
-  m_CullTransparentMesh: 1
---- !u!114 &1926919761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926919757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 253444199}
 --- !u!1 &1937504848
 GameObject:
   m_ObjectHideFlags: 0
@@ -25869,12 +23511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Re-entry</u></b></size></color>
-
-    It
-    means that the object leaves the atmosphere and then returns to the atmosphere.
-    The ideal object that can re-enter the atmosphere is to have a stronger protective
-    layer, otherwise it will be burned out by the atmosphere.'
+  m_text: $lang/SkillTreeInfo/Re-entry$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26831,55 +24468,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2034104362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2034104363}
-  - component: {fileID: 2034104364}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2034104363
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034104362}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1090584699}
-  m_Father: {fileID: 692783534}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183.00021, y: 267.99982}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2034104364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034104362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2036164553
 GameObject:
   m_ObjectHideFlags: 0
@@ -26937,14 +24525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Voyager 1</u></b></size></color>
-
-    Voyager
-    1 is the farthest space probe in human history. Launched in 1977, it is accelerated
-    by the gravity of Jupiter and Saturn. At present, it continues to move towards
-    the center of the Milky Way. This space exploration has greatly improved human
-    beings. Knowing about Jupiter, Saturn, Uranus, and Neptune, he took many of the
-    planetary photos we are still looking at.'
+  m_text: $lang/SkillTreeInfo/Voyager1$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27052,7 +24633,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 692265118}
-  - {fileID: 1234390550}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27074,16 +24654,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Titanium Alloy
   icon: {fileID: 2013948071}
   image: {fileID: 21300000, guid: 80fee46cba1cf894396c4c523c8cb7cc, type: 3}
-  size: 21
-  description: Is a high-strength material started in the 1950s. until 1970s the
-    technology is constantly being upgraded the strength of Titanium alloy have a
-    further strengthen to widely use in aviation such as wings and aerospace technology,
-    Titanium alloy compared to other metals are more corrosion and withstand higher
-    temperature. The <u>Sputnik 1</u> is using titanium alloy for outer casing.
-  highlighter: {fileID: 1234390549}
+  customTooltips:
+  - {fileID: 1551969845}
 --- !u!222 &2044684160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27309,7 +24883,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 625069297}
-  - {fileID: 1039275507}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27331,18 +24904,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: Solar Battery
   icon: {fileID: 1692130720}
   image: {fileID: 21300000, guid: f4450645671c2c748ba5c1139426bb6a, type: 3}
-  size: 19
-  description: in 1954 the efficiency only has 6%, but with the development of science
-    and technology, the efficiency has become higher and higher. For example, the
-    <u>Vanguard 1</u> in the United States was the first artificial satellite equipped
-    with solar panels, and more and more after that. spaceship Also installed solar
-    panels, including Jupiter probe <u>Juno</u>, comet lander <u>Rosetta</u>, but
-    for some deep-space exploration spacecraft, solar cells are not used in places
-    far from the sun.
-  highlighter: {fileID: 1039275506}
+  customTooltips:
+  - {fileID: 1852486220}
+  - {fileID: 1233005692}
+  - {fileID: 1796124606}
 --- !u!222 &2059425411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27657,13 +25224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=#00FFFF><size=28><b><u>Rosetta</u></b></size></color>
-
-    This
-    is a comet probe. The Philae lander successfully achieved the first soft landing
-    on a comet in human history. This space exploration found that the comet has
-    many complex organic compounds, and life on Earth is very likely to be brought
-    by the comet.'
+  m_text: $lang/SkillTreeInfo/Rosetta$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27846,7 +25407,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 946660374}
-  - {fileID: 621183360}
   m_Father: {fileID: 1349243149}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27868,15 +25428,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 1903271501}
-  objName: HRSI
   icon: {fileID: 187395399}
   image: {fileID: 21300000, guid: 289a05ceaa31fa243829c08805596500, type: 3}
-  size: 24
-  description: HRSI is consists of high-purity silica fibers, very light, HRSI material
-    is like plastic foam, but it has strong ability to withstand extreme temperatures,
-    can ability temperatures between <u>absolute zero</u> and 1600 , widely used
-    on <u>shuttles</u> but it is a fragile material, so it must extremely care.
-  highlighter: {fileID: 621183359}
+  customTooltips:
+  - {fileID: 151984399}
+  - {fileID: 1194237139}
 --- !u!222 &2109891329
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27898,55 +25454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: HRSI
---- !u!1 &2111826094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2111826095}
-  - component: {fileID: 2111826096}
-  m_Layer: 5
-  m_Name: Highlighter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2111826095
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111826094}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1880759986}
-  m_Father: {fileID: 1426186105}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2111826096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111826094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1660dc5698f7a64a91695e7f8cc3999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2112019845
 GameObject:
   m_ObjectHideFlags: 0
@@ -28159,186 +25666,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115447829}
   m_CullTransparentMesh: 1
---- !u!1 &2119799542
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2119799543}
-  - component: {fileID: 2119799546}
-  - component: {fileID: 2119799545}
-  - component: {fileID: 2119799544}
-  m_Layer: 5
-  m_Name: Highlighter_MagneticField
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &2119799543
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119799542}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 209634057}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 640.4243, y: -395.5503}
-  m_SizeDelta: {x: 53.373, y: -70.907}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2119799544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119799542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2119799545
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119799542}
-  m_CullTransparentMesh: 1
---- !u!114 &2119799546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119799542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1842667145}
---- !u!1 &2130669992
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2130669993}
-  - component: {fileID: 2130669996}
-  - component: {fileID: 2130669995}
-  - component: {fileID: 2130669994}
-  m_Layer: 5
-  m_Name: Highlighter_Shuttles
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &2130669993
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130669992}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 621183360}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 723.9257, y: -533.04}
-  m_SizeDelta: {x: -13.992, y: -72.424}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2130669994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130669992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2130669995
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130669992}
-  m_CullTransparentMesh: 1
---- !u!114 &2130669996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130669992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
-  customTooltip: {fileID: 1194237139}
 --- !u!1 &2144927645
 GameObject:
   m_ObjectHideFlags: 0
