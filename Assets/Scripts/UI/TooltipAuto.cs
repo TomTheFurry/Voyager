@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TooltipsAuto : MonoBehaviour
+public class TooltipAuto : MonoBehaviour
 {
     public GameObject highlighterPrefab;
     private List<GameObject> highlighters;
+    private List<GameObject> customTooltips;
     public GameObject temp;
 
     private void Start()
     {
         highlighters = new List<GameObject>();
-        addTooltips("space garbage", temp);
+        customTooltips = new List<GameObject>();
+        //addTooltips("space garbage", temp);
     }
 
     public void addTooltips(string keyword, GameObject customTooltip)
@@ -49,7 +51,7 @@ public class TooltipsAuto : MonoBehaviour
 
                     if (!line.Equals(cInfo.baseLine))
                     {
-                        highlighter = instantiateHighlighter(customTooltip);
+                        highlighter = instantiateTooltip(customTooltip);
                         highlighterTransform = highlighter.GetComponent<RectTransform>();
                         
                         cEnd = text.textInfo.characterInfo[i - 1];
@@ -72,7 +74,7 @@ public class TooltipsAuto : MonoBehaviour
 
                 } // end for
 
-                highlighter = instantiateHighlighter(customTooltip);
+                highlighter = instantiateTooltip(customTooltip);
                 highlighterTransform = highlighter.GetComponent<RectTransform>();
                 
                 Vector3 newPos = new Vector3((cStart.topLeft.x + cEnd.bottomRight.x) / 2, (top + bottom) / 2, 0);
@@ -82,11 +84,14 @@ public class TooltipsAuto : MonoBehaviour
         } while (startIndex != -1 && endIndex <= textLength);
     } //end start()
 
-    public GameObject instantiateHighlighter(GameObject customTooltip)
+    public GameObject instantiateTooltip(GameObject customTooltip)
     {
-        GameObject highlighter = Instantiate(highlighterPrefab);
+        GameObject highlighter = Instantiate(highlighterPrefab, gameObject.transform);
         highlighters.Add(highlighter);
-        highlighter.transform.parent = gameObject.transform;
+
+        //GameObject customTooltipTemp = Instantiate(temp, gameObject.transform);
+        //customTooltips.Add(customTooltipTemp);
+
         highlighter.transform.localScale = Vector3.one;
         highlighter.GetComponent<AdvancedTooltip>().customTooltip = customTooltip;
 
@@ -95,10 +100,15 @@ public class TooltipsAuto : MonoBehaviour
 
     public void clearTooltips()
     {
+        foreach (GameObject customTooltip in customTooltips)
+        {
+            Destroy(customTooltip);
+        }
         foreach (GameObject highlighter in highlighters)
         {
             Destroy(highlighter);
         }
         highlighters.Clear();
+        customTooltips.Clear();
     }
 }

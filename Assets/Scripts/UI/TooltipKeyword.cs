@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TooltipsKeyword : MonoBehaviour
+public class TooltipKeyword : MonoBehaviour
 {
     public bool switch1 = false;
     // Start is called before the first frame update

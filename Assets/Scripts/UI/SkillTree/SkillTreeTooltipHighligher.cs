@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillTreeTooltipsHighligher : MonoBehaviour
+public class SkillTreeTooltipHighligher : MonoBehaviour
 {
     private GameObject myParent;
     void Start()

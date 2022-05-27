@@ -1,15 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class Tech : IComparable
+public class Tech : MonoBehaviour, IComparable
 {
     public string identifier;
-    [SerializeReference]
     public Tech[] prerequisites;
     public int starCost;
+
+    public void Start()
+    {
+        if (TechTree.instance == null) throw new Exception();
+        TechTree.registorTech(this);
+        if (identifier == null || identifier.Length==0) identifier = gameObject.name;
+    }
 
     public int CompareTo(object obj)
     {

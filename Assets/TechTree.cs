@@ -7,8 +7,11 @@ using UnityEngine.Events;
 public class TechTree : MonoBehaviour
 {
     public static TechTree instance;
+    public static List<Tech> teches; // should be sorted by identifier for fast access
 
-    public Tech[] teches; // should be sorted by identifier for fast access
+    public static void registorTech(Tech tech) {
+        teches.Add(tech);
+    }
 
     public UnityEvent onTechStatusChanged;
     
@@ -47,7 +50,6 @@ public class TechTree : MonoBehaviour
 
     public void initTechs()
     {
-        Array.Sort(teches);
         techTable = new Hashtable();
         foreach (Tech tech in teches)
         {
@@ -57,9 +59,9 @@ public class TechTree : MonoBehaviour
         }
     }
 
-    private Tech getTechByIdentifier(string identifier)
+    public Tech getTechByIdentifier(string identifier)
     {
-        return teches[Array.BinarySearch(teches, identifier)];
+        return teches.Find((t) => t.identifier==identifier);
     }
 
     public void importTechData(TechData techData)
@@ -105,7 +107,7 @@ public class TechTree : MonoBehaviour
             instance = null;
         }
     }
-
+    
     public TechState getTechState(Tech tech)
     {
         return (TechState)techTable[tech];

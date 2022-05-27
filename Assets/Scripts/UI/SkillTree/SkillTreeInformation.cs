@@ -10,6 +10,7 @@ public class SkillTreeInformation : MonoBehaviour
     public GameObject icon;
     public Sprite image;
     public GameObject[] customTooltips;
+    public GameObject temp;
 
     private string langPath;
     private string myLangPath;
@@ -22,6 +23,7 @@ public class SkillTreeInformation : MonoBehaviour
     public void showInformation()
     {
         Transform[] children = information.GetComponentsInChildren<Transform>();
+        if (temp != null) Debug.Log(temp.GetComponent<Test1>().temp);
 
         foreach (Transform child in children)
         {
@@ -48,12 +50,12 @@ public class SkillTreeInformation : MonoBehaviour
                 int.TryParse(LangSystem.parseText(myLangPath + "_FontSize$"), out size);
                 child.GetComponent<TextMeshProUGUI>().fontSize = (size != 0 ? size : 24);
 
-                child.GetComponent<TooltipsAuto>().clearTooltips();
+                child.GetComponent<TooltipAuto>().clearTooltips();
                 foreach (GameObject tooltips in customTooltips)
                 {
                     //TooltipKeyword_ 
                     string keyword = LangSystem.parseText(langPath + tooltips.name.Substring(15).Trim() + "_Keyword$").ToLower().Replace("\r","").Replace("\n","");
-                    child.GetComponent<TooltipsAuto>().addTooltips(keyword, tooltips);
+                    child.GetComponent<TooltipAuto>().addTooltips(keyword, tooltips);
                 }
             }
         }
