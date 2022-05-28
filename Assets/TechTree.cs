@@ -8,6 +8,7 @@ public class TechTree : MonoBehaviour
 {
     public static TechTree instance;
     public static List<Tech> teches; // should be sorted by identifier for fast access
+    public Sprite[] connecterIcons;
 
     public static void registorTech(Tech tech) {
         teches.Add(tech);
@@ -50,6 +51,7 @@ public class TechTree : MonoBehaviour
 
     public void initTechs()
     {
+        teches = new List<Tech>();
         techTable = new Hashtable();
         foreach (Tech tech in teches)
         {
@@ -81,6 +83,7 @@ public class TechTree : MonoBehaviour
     
     void Start()
     {
+        Debug.Log("TechTree creacted: " + this);
         if (instance == null)
         {
             instance = this;
@@ -117,6 +120,14 @@ public class TechTree : MonoBehaviour
     {
         return getTechState(tech).isUnlocked;
     }
+    public static bool isTechsUnlocked(Tech[] techs)
+    {
+        foreach (Tech tech in techs)
+            if(!instance.isTechUnlocked(tech))
+                return false;
+
+        return true;
+    }
 
     public bool canTechBeUnlocked(Tech tech)
     {
@@ -144,6 +155,16 @@ public class TechTree : MonoBehaviour
         techState.isUnlocked = true;
         techTable[tech] = techState;
         onTechStatusChanged.Invoke();
+        tech.updateConnectLine(); //added
         return true;
     }
+
+    public Sprite getConnecterIcon(int index)
+    {
+        if (index < 0 || index > connecterIcons.Length) 
+            return null;
+
+        return connecterIcons[index];
+    }
+
 }

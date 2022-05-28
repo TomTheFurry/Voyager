@@ -5,9 +5,9 @@ using TMPro;
 
 public class TooltipKeyword : MonoBehaviour
 {
-    public bool switch1 = false;
-    // Start is called before the first frame update
-    void Start()
+    public string keyword;
+    public string langFile = "Information";
+    private void Start()
     {
         Transform[] transforms = GetComponentsInChildren<Transform>();
         foreach (Transform t in transforms)
@@ -15,7 +15,7 @@ public class TooltipKeyword : MonoBehaviour
             if (t.name.Equals("Text (TMP)"))
             {
                 TextMeshProUGUI text = t.gameObject.GetComponent<TextMeshProUGUI>();
-                text.text = LangSystem.parseText((string)text.text);
+                text.text = LangSystem.parseText("$lang/" + langFile + "/" + keyword.Replace(" ", "") + "$");
             }
         }
     }

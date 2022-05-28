@@ -5,7 +5,7 @@ Since a single-propellant rocket only needs to use a single fuel for propulsion,
 `~MetalMagneticMesh_FontSize
 18
 `~MetalMagneticMesh_Description
-Use aluminum wire and steek wire to make it and using magnetic force collects <u>space garbage</u>. After collecting a certain amount of <u>space garbage</u>, it will enter the atmosphere due to the earth’s gravity and burn out through the atmosphere, thereby disposing of <u>space garbage</u>. The advantage is that it is cheap, however it is difficult to accurately handle <u>space garbage</u> and when there is an excess of <u>space garbage</u> falling into the atmosphere with it, there is a chance that it will not burn out and hit the ground.
+Use aluminum wire and steek wire to make it and using magnetic force collects <u>space garbage</u>. After collecting a certain amount of space garbage, it will enter the atmosphere due to the earth’s gravity and burn out through the atmosphere, thereby disposing of space garbage. The advantage is that it is cheap, however it is difficult to accurately handle space garbage and when there is an excess of space garbage falling into the atmosphere with it, there is a chance that it will not burn out and hit the ground.
 `~Laser_FontSize
 22
 `~Laser_Description
@@ -35,7 +35,7 @@ These nuclear batteries do not use nuclear reactors to generate electricity in t
 `~MaintenanceSystem_FontSize
 22
 `~MaintenanceSystem_Description
-This technology was used as early as 2001. It is a well-known mechanical device in the International Space Station. It can bring astronauts or manipulators to repair the spacecraft, and astronauts on the <u>International Space Station</u> must also learn to use this technology to become Astronauts, this technology also extends the service life of international space.
+This technology was used as early as 2001. It is a well-known mechanical device in the <u>International Space Station</u>. It can bring astronauts or manipulators to repair the spacecraft, and astronauts on the International Space Station must also learn to use this technology to become Astronauts, this technology also extends the service life of international space.
 `~AblationMaterial_Description
 A process of removing impurities from objects, improve protection, Ablation material often use in spacecraft with <br><u>re-entry</u> requirements.
 `~CarbonFiber_FontSize
@@ -64,83 +64,51 @@ This is a composite material is based on carbon fiber and then reinforced materi
 19
 `~AntimatterRocket_Description
 The rocket is powered by the huge energy in the collision of antimatter. Antimatter refers to a substance with the same mass, lifespan, and spin as normal particles, but with completely opposite charge, baryon number, singularity, etc. If normal particles and antiparticles collide, it will disappear and generate extremely huge energy, but antimatter hardly appears in nature, so the production of antimatter is the difficulty of antimatter engine.
-`~AbsoluteZero_Keyword
-Absolute Zero
 `~AbsoluteZero
 <color=#00FFFF><size=28><b><u>Absolute Zero</u></b></size></color>
 Temperature is based on particle vibration, when the particle of the kinetic energy reduced to a minimum that is the absolute zero come form, this temperature around -273<sup>o</sup>C.
-`~InternationalSpaceStation_Keyword
-International Space Station
 `~InternationalSpaceStation
 <color=#00FFFF><size=28><b><u>International Space Station</u></b></size></color>
 The International Space Station started construction in 1998 and was officially put into use in 2000. The International Space Station has many scientific research facilities. One of the research projects is to study whether the long-term life of various creatures in space will affect it, to conduct long-term space for future human beings. Explore Paving.
-`~Ionization_Keyword
-Ionization
 `~Ionization
 <color=#00FFFF><size=28><b><u>Ionization</u></b></size></color>
 Ionization is also an effective way to improve the properties of objects by turning atoms into positive or negative charges through various methods and can also change the properties of objects.
-`~Juno_Keyword
-Juno
 `~Juno
 <color=#00FFFF><size=28><b><u>Juno</u></b></size></color>
 Juno is a Jupiter probe that was launched in 2011 and reached Jupiter's orbit in 2016 to study Jupiter's composition, gravitational field, magnetic field, magnetosphere and magnetic poles and other information about Jupiter, greatly improving human understanding of Jupiter, one of the findings is that Jupiter has a lot of water, which is likely to be related to the birth of the solar system.
-`~MagneticField_Keyword
-Magnetic Field
 `~MagneticField
 <color=#00FFFF><size=28><b><u>Magnetic field</u></b></size></color>
 Any magnet will also generate a magnetic field, and any magnetic object and current will also change direction due to the magnetic field. As for the earth's magnetic field, it can effectively prevent the charged particles in the solar wind and cosmic rays from destroying the upper atmosphere of the earth, providing sufficient conditions for the birth of life.
-`~MarsPathfinder_Keyword
-Mars Pathfinder
 `~MarsPathfinder
 <color=#00FFFF><size=28><b><u>Mars Pathfinder</u></b></size></color>
 This is a mechanical rover. In addition to increasing human knowledge of Mars, this space mission also proved that human beings can greatly reduce the cost of space exploration through technological progress. The cost of this space exploration together with the launch vehicle is about 280,000 Ten thousand dollars, one-fifteenth of the cost of another Mars exploration Viking.
-`~Plasma_Keyword
-Plasma
 `~Plasma
 <color=#00FFFF><size=28><b><u>Plasma</u></b></size></color>
 A state other than solid, liquid, and gas, such as the sun, is basically composed of plasma, which conducts electricity almost perfectly and has many physical properties that other states fail to achieve.
-`~ParkerSolarProbe_Keyword
-Parker Solar Probe
 `~ParkerSolarProbe
 <color=#00FFFF><size=28><b><u>Parker Solar Probe</u></b></size></color>
 This is an unmanned solar exploration spacecraft. The goal of this spacecraft is to study the sun's magnetic field, solar wind and other information about the sun. Because it needs to be very close to the sun for research, this spacecraft has a strong ability to withstand aging.
-`~Re-entry_Keyword
-Re-entry
 `~Re-entry
 <color=#00FFFF><size=28><b><u>Re-entry</u></b></size></color>
 It means that the object leaves the atmosphere and then returns to the atmosphere. The ideal object that can re-enter the atmosphere is to have a stronger protective layer, otherwise it will be burned out by the atmosphere.
-`~ReusableRocket_Keyword
-Reusable Rocket
 `~ReusableRocket
 <color=#00FFFF><size=28><b><u>Reusable rocket</u></b></size></color>
 For example, the Falcon Heavy Launch Vehicle is a reusable rocket. On the one hand, the design of the rocket is simpler than that of the shuttle, which can save production costs. On the other hand, the recyclable design of the rocket not only replaces the shuttle, but also reduces the cost of space transportation.
-`~Rosetta_Keyword
-Rosetta
 `~Rosetta
 <color=#00FFFF><size=28><b><u>Rosetta</u></b></size></color>
 This is a comet probe. The Philae lander successfully achieved the first soft landing on a comet in human history. This space exploration found that the comet has many complex organic compounds, and life on Earth is very likely to be brought by the comet.
-`~Shuttle_Keyword
-Shuttle
 `~Shuttle
 <color=#00FFFF><size=28><b><u>Shuttle</u></b></size></color>
 Shuttle is a reusable low-Earth orbit spacecraft. The main function is put the spacecraft into space and return to the ground for repeated use. So far there are 5 shuttles has created all produced in the United States. However, the cost of shuttle is extremely high and a large number of precision parts are required to cooperate, otherwise it will easily lead to the destruction of the machine, so it was eliminated after completing the last mission in 2011.
-`~SpaceGarbage_Keyword
-Space Garbage
 `~SpaceGarbage
 <color=#00FFFF><size=28><b><u>Space garbage</u></b></size></color>
 With the exploration of space by human beings, the problem of junk left in the exploration map has an increasing impact on space exploration itself. These space junk include not only the junk brought by the life of astronauts, but also the residual parts of the spacecraft, and even the remaining parts of the spacecraft. Destroyed artificial satellites, these also pose a threat to space safety.
-`~Sputnik1_Keyword
-Sputnik 1
 `~Sputnik1
 <color=#00FFFF><size=28><b><u>Sputnik 1</u></b></size></color>
 is the first artificial satellite in human history to enter planetary orbit and was used by the Soviet Union on October4, 1957 Sputnik launched to space with rocket, and crashed after 22 days in orbit. This artificial satellite also witnessed the space race. And then the development of human space progressed by leaps and bounds until landing on the moon.
-`~Vanguard1_Keyword
-Vanguard 1
 `~Vanguard1
 <color=#00FFFF><size=28><b><u>Vanguard 1</u></b></size></color>
 It was the first spacecraft to be successfully launched by the United States, with the goal of exploring the magnetic fields of the Earth and the Moon, but after the probe failed to reach the theoretical maximum speed, Pioneer 1 crashed into the South Pacific after 43 hours of operation.
-`~Voyager1_Keyword
-Voyager 1
 `~Voyager1
 <color=#00FFFF><size=28><b><u>Voyager 1</u></b></size></color>
 Voyager 1 is the farthest space probe in human history. Launched in 1977, it is accelerated by the gravity of Jupiter and Saturn. At present, it continues to move towards the center of the Milky Way. This space exploration has greatly improved human beings. Knowing about Jupiter, Saturn, Uranus, and Neptune, he took many of the planetary photos we are still looking at.

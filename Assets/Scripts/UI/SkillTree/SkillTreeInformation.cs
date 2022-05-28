@@ -16,14 +16,13 @@ public class SkillTreeInformation : MonoBehaviour
     private string myLangPath;
     private void Start()
     {
-        langPath = "$lang/SkillTreeInfo/";
+        langPath = "$lang/Information/";
         myLangPath = langPath + gameObject.name;
     }
 
     public void showInformation()
     {
         Transform[] children = information.GetComponentsInChildren<Transform>();
-        if (temp != null) Debug.Log(temp.GetComponent<Test1>().temp);
 
         foreach (Transform child in children)
         {
@@ -49,14 +48,8 @@ public class SkillTreeInformation : MonoBehaviour
                 int size = 0;
                 int.TryParse(LangSystem.parseText(myLangPath + "_FontSize$"), out size);
                 child.GetComponent<TextMeshProUGUI>().fontSize = (size != 0 ? size : 24);
-
-                child.GetComponent<TooltipAuto>().clearTooltips();
-                foreach (GameObject tooltips in customTooltips)
-                {
-                    //TooltipKeyword_ 
-                    string keyword = LangSystem.parseText(langPath + tooltips.name.Substring(15).Trim() + "_Keyword$").ToLower().Replace("\r","").Replace("\n","");
-                    child.GetComponent<TooltipAuto>().addTooltips(keyword, tooltips);
-                }
+                
+                child.GetComponent<TooltipAuto>().addTooltips(customTooltips);
             }
         }
     }

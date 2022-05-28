@@ -1316,13 +1316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Use aluminum wire and steek wire to make it and using magnetic force collects
-    <u>space garbage</u>. After collecting a certain amount of <u>space garbage</u>,
-    it will enter the atmosphere due to the earth\u2019s gravity and burn out through
-    the atmosphere, thereby disposing of <u>space garbage</u>. The advantage is that
-    it is cheap, however it is difficult to accurately handle <u>space garbage</u>
-    and when there is an excess of <u>space garbage</u> falling into the atmosphere
-    with it, there is a chance that it will not burn out and hit the ground."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1839,7 +1833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Re-entry
+  langFile: Information
 --- !u!1 &149652493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,7 +2003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Absolute Zero
+  langFile: Information
 --- !u!1 &187395399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,7 +2518,6 @@ GameObject:
   - component: {fileID: 240393462}
   - component: {fileID: 240393463}
   - component: {fileID: 240393465}
-  - component: {fileID: 240393464}
   m_Layer: 5
   m_Name: MonopropellantRocket
   m_TagString: Untagged
@@ -2580,21 +2575,6 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: f324a04c825b5fd4eb91f43cb4a57d98, type: 3}
   customTooltips: []
   temp: {fileID: 0}
---- !u!114 &240393464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240393460}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
 --- !u!222 &240393465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2693,7 +2673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Space Garbage
+  langFile: Information
 --- !u!1 &256197449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,7 +2940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/SpaceGarbage$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4944,7 +4925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Sputnik1$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5413,13 +5394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Use aluminum wire and steek wire to make it and using magnetic force collects
-    space garbage. After collecting a certain amount of space garbage, it will enter
-    the atmosphere due to the earth\u2019s gravity and burn out through the atmosphere,
-    thereby disposing of space garbage. The advantage is that it is cheap, however
-    it is difficult to accurately handle space garbage and when there is an excess
-    of space garbage falling into the atmosphere with it, there is a chance that
-    it will not burn out and hit the ground.\r"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5446,8 +5421,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5509,7 +5484,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlighterPrefab: {fileID: 6252223433345306116, guid: 90d11b7dcc9184949a7c0fd9293f8932, type: 3}
-  temp: {fileID: 253444199}
 --- !u!1 &454979235
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,7 +5801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Mars Pathfinder
+  langFile: Information
 --- !u!1 &480352590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6642,7 +6617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Shuttle$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6776,7 +6751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/ReusableRocket$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6910,7 +6885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/MagneticField$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9404,7 +9379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/ParkerSolarProbe$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9709,7 +9684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: International Space Station
+  langFile: Information
 --- !u!1 &829807061
 GameObject:
   m_ObjectHideFlags: 0
@@ -10190,7 +10166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Reusable Rocket
+  langFile: Information
 --- !u!1 &929560301
 GameObject:
   m_ObjectHideFlags: 0
@@ -11298,7 +11275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Plasma
+  langFile: Information
 --- !u!1 &1033274517
 GameObject:
   m_ObjectHideFlags: 0
@@ -11389,7 +11367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Parker Solar Probe
+  langFile: Information
 --- !u!1 &1033343506
 GameObject:
   m_ObjectHideFlags: 0
@@ -12205,7 +12184,6 @@ RectTransform:
   - {fileID: 1551969846}
   - {fileID: 1852486221}
   - {fileID: 1231642105}
-  - {fileID: 2122767440}
   m_Father: {fileID: 2055631418}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13029,7 +13007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Shuttle
+  langFile: Information
 --- !u!1 &1195062245
 GameObject:
   m_ObjectHideFlags: 0
@@ -13680,7 +13659,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Ionization$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13847,7 +13826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Voyager 1
+  langFile: Information
 --- !u!1 &1233005692
 GameObject:
   m_ObjectHideFlags: 0
@@ -13938,7 +13918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Juno
+  langFile: Information
 --- !u!1 &1248115987
 GameObject:
   m_ObjectHideFlags: 0
@@ -13977,7 +13958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -22.000732}
+  m_AnchoredPosition: {x: 0, y: -22.000793}
   m_SizeDelta: {x: -720, y: -146.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1248115989
@@ -15400,7 +15381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/MarsPathfinder$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17504,7 +17485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Vanguard1$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18080,7 +18061,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Plasma$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18247,7 +18228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Sputnik 1
+  langFile: Information
 --- !u!1 &1560669805
 GameObject:
   m_ObjectHideFlags: 0
@@ -19112,7 +19094,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Juno$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19698,7 +19680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Ionization
+  langFile: Information
 --- !u!1 &1705214434
 GameObject:
   m_ObjectHideFlags: 0
@@ -19783,7 +19766,6 @@ GameObject:
   - component: {fileID: 1705485319}
   - component: {fileID: 1705485320}
   - component: {fileID: 1705485322}
-  - component: {fileID: 1705485321}
   m_Layer: 5
   m_Name: StainlessSteel
   m_TagString: Untagged
@@ -19840,23 +19822,7 @@ MonoBehaviour:
   icon: {fileID: 257899348}
   image: {fileID: 21300000, guid: 1229ffe18e925cb4c9f648457961469d, type: 3}
   customTooltips: []
-  temp: {fileID: 2122767439}
---- !u!114 &1705485321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705485317}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 0}
-  starCost: 0
+  temp: {fileID: 0}
 --- !u!222 &1705485322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19922,7 +19888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/InternationalSpaceStation$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20729,11 +20695,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782104351}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aa8eb19274ab8346aa2cf1d16199bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connecterIcon: []
   onTechStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -20983,7 +20950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Rosetta
+  langFile: Information
 --- !u!1 &1799346462
 GameObject:
   m_ObjectHideFlags: 0
@@ -21469,7 +21437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Magnetic Field
+  langFile: Information
 --- !u!1 &1844570465
 GameObject:
   m_ObjectHideFlags: 0
@@ -21693,7 +21662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch1: 0
+  keyword: Vanguard 1
+  langFile: Information
 --- !u!1 &1859141132
 GameObject:
   m_ObjectHideFlags: 0
@@ -22446,7 +22416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Re-entry$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23385,7 +23355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Voyager1$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23557,33 +23527,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa8eb19274ab8346aa2cf1d16199bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connecterIcon:
+  - {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  - {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  - {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
+  - {fileID: 21300000, guid: 30d7d0e85a0af7b4f83081b083db9a53, type: 3}
+  - {fileID: 21300000, guid: bba3649ec432fa048a2f9fe7a1e62b6b, type: 3}
+  - {fileID: 21300000, guid: 2da34adba2c707448af4144b22ae6062, type: 3}
+  - {fileID: 21300000, guid: e265edb15ace36244b745066051f5bf4, type: 3}
+  - {fileID: 21300000, guid: 5475aa852c149c843aac0130d1731e49, type: 3}
+  - {fileID: 21300000, guid: 080ed9cd1e5e61f4a8f3a2e47bdcd9d6, type: 3}
   onTechStatusChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2055247341
 GameObject:
   m_ObjectHideFlags: 0
@@ -24130,7 +24086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $lang/SkillTreeInfo/Rosetta$
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24573,99 +24529,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115447829}
   m_CullTransparentMesh: 1
---- !u!1 &2122767439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2122767440}
-  - component: {fileID: 2122767442}
-  - component: {fileID: 2122767441}
-  - component: {fileID: 2122767443}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2122767440
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122767439}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1110026669}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2122767441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122767439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 11111111
---- !u!222 &2122767442
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122767439}
-  m_CullTransparentMesh: 1
---- !u!114 &2122767443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122767439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07bd020881d62e640af80b0b76cebd73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  temp: 2222222s
 --- !u!1 &2144927645
 GameObject:
   m_ObjectHideFlags: 0
