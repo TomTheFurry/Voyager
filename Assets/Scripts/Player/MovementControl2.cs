@@ -55,6 +55,7 @@ namespace Voyager
         public float zoomMax = 20.0f;
         public float zoomSpeed = 0.1f;
         public float zoomTarget = 5.0f;
+        public float camOffset = 1.0f;
         public PDController zoomPD = new PDController();
 
         public Vector3 maxForce;
@@ -303,11 +304,11 @@ namespace Voyager
             Vector3 back = childActualCamera.transform.TransformDirection(Vector3.back);
             RaycastHit hit;
             // Raycast but ignore player & UI layer
-            if (Physics.Raycast(childCamera.transform.position, back, out hit, value + 1f,
+            if (Physics.Raycast(childCamera.transform.position, back, out hit, value + camOffset,
                 ~LayerMask.GetMask("Player", "UI", "Ignore Raycast")))
             {
                 //Debug.Log("Zoom collision: " + hit.distance);
-                value = hit.distance - 1f;
+                value = hit.distance - camOffset;
             }
 
             // Apply zoom
