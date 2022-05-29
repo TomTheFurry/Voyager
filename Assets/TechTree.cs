@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class TechTree : MonoBehaviour
 {
     public static TechTree instance;
-    public static List<Tech> teches; // should be sorted by identifier for fast access
+    public static List<Tech> teches = new List<Tech>(); // should be sorted by identifier for fast access
     public Sprite[] connecterIcons;
 
     public static void registorTech(Tech tech) {
@@ -120,7 +120,7 @@ public class TechTree : MonoBehaviour
     {
         return getTechState(tech).isUnlocked;
     }
-    public static bool isTechsUnlocked(Tech[] techs)
+    public bool isTechsUnlocked(Tech[] techs)
     {
         foreach (Tech tech in techs)
             if(!instance.isTechUnlocked(tech))
