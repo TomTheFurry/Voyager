@@ -12,7 +12,7 @@ public class Tech : MonoBehaviour, IComparable
 
     public void Start()
     {
-        if (TechTree.instance == null) throw new Exception();
+        //if (TechTree.instance == null) throw new Exception();
         TechTree.registorTech(this);
         if (identifier == null || identifier.Length==0) identifier = gameObject.name;
     }

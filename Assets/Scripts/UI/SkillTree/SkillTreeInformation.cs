@@ -12,20 +12,18 @@ public class SkillTreeInformation : MonoBehaviour
     public GameObject[] customTooltips;
     public GameObject temp;
 
-    private string langPath;
-    private string myLangPath;
+    public string langFile = "Information";
+    private Tech myTech;
     private void Start()
     {
-        langPath = "$lang/Information/";
-        myLangPath = langPath + gameObject.name;
+        myTech = GetComponent<Tech>();
     }
 
     public void showInformation()
     {
-        Transform[] children = information.GetComponentsInChildren<Transform>();
-
-        foreach (Transform child in children)
+        for (int i = 0; i < information.transform.childCount; ++i)
         {
+            Transform child = information.transform.GetChild(i);
             string childName = child.gameObject.name;
 
             if (string.Equals(childName, "Name"))
@@ -43,13 +41,22 @@ public class SkillTreeInformation : MonoBehaviour
             else if (string.Equals(childName, "Description"))
             {
 
-                child.GetComponent<TextMeshProUGUI>().text = LangSystem.parseText(myLangPath + "_Description$");
+                child.GetComponent<TextMeshProUGUI>().text = LangSystem.parseText(Global.langPath(langFile, name + "_Description"));
 
                 int size = 0;
-                int.TryParse(LangSystem.parseText(myLangPath + "_FontSize$"), out size);
+                int.TryParse(LangSystem.parseText(Global.langPath(langFile, name + "_FontSize")), out size);
                 child.GetComponent<TextMeshProUGUI>().fontSize = (size != 0 ? size : 24);
-                
+
                 child.GetComponent<TooltipAuto>().addTooltips(customTooltips);
+            }
+            else if (string.Equals(childName, "UnlockedButton"))
+            {
+                bool canBeUnlock = true;
+                if (TechTree.instance.isTechUnlocked(myTech) || !TechTree.instance.canTechBeUnlocked(myTech))
+                {
+                    canBeUnlock = false;
+                }
+                child.GetComponent<TechUnlockButton>().updateState(canBeUnlock);
             }
         }
     }
