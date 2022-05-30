@@ -37,12 +37,12 @@ public class TechStorage : MonoBehaviour
             entries = new TechData.EntryPair[techTable.Count]
         };
         int i = 0;
-        foreach (KeyValuePair<Tech, TechState> pair in techTable)
-        {
-            techData.entries[i] = new TechData.EntryPair();
-            techData.entries[i].identifier = pair.Key.identifier;
-            techData.entries[i].state = pair.Value;
-        }
+        //foreach (KeyValuePair<Tech, TechState> pair in techTable)
+        //{
+        //    techData.entries[i] = new TechData.EntryPair();
+        //    techData.entries[i].identifier = pair.Key.identifier;
+         //   techData.entries[i].state = pair.Value;
+        //}
         return techData;
     }
 
