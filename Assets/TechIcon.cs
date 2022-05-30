@@ -10,7 +10,7 @@ public class TechIcon : MonoBehaviour
     public Sprite sprite0;
     public Sprite sprite1;
     public Sprite sprite2;
-    private int state = 0;
+    private int state = -1;
 
     public void Start()
     {
@@ -19,9 +19,10 @@ public class TechIcon : MonoBehaviour
 
         TechStorage.instance.onTechStatusChanged.AddListener(Refresh);
 
-        bgButton = GetComponent<Button>();
-        icon = transform.GetChild(0).gameObject.GetComponent<Image>();
+        bgButton = transform.GetChild(0).GetComponent<Button>();
+        icon = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Image>();
         icon.sprite = reference.icon;
+        Refresh();
     }
 
     void Refresh()
