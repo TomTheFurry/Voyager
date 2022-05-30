@@ -16,7 +16,7 @@ public class SkillTreeInformation : MonoBehaviour
     private Tech myTech;
     private void Start()
     {
-        myTech = GetComponent<Tech>();
+        myTech = GetComponent<TechIcon>().reference;
     }
 
     public void showInformation()
@@ -49,14 +49,10 @@ public class SkillTreeInformation : MonoBehaviour
 
                 child.GetComponent<TooltipAuto>().addTooltips(customTooltips);
             }
-            else if (string.Equals(childName, "UnlockedButton"))
+            else if (string.Equals(childName, "TechUnlockButton"))
             {
-                bool canBeUnlock = true;
-                if (TechStorage.instance.isTechUnlocked(myTech) || !TechStorage.instance.canTechBeUnlocked(myTech))
-                {
-                    canBeUnlock = false;
-                }
-                child.GetComponent<TechUnlockButton>().updateState(canBeUnlock);
+                bool canBeUnlocked = TechStorage.instance.canTechBeUnlocked(myTech);
+                child.GetComponent<TechUnlockButton>().updateState(canBeUnlocked, myTech);
             }
         }
     }

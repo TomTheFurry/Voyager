@@ -28,7 +28,7 @@ public class TechStorage : MonoBehaviour
         public EntryPair[] entries;
     }
 
-    Hashtable techTable; // Hashtable<Tech,TechState>
+    Dictionary<Tech,TechState> techTable; // Hashtable<Tech,TechState>
 
     public TechData collectTechData()
     {
@@ -37,19 +37,21 @@ public class TechStorage : MonoBehaviour
             entries = new TechData.EntryPair[techTable.Count]
         };
         int i = 0;
-        //foreach (KeyValuePair<Tech, TechState> pair in techTable)
-        //{
-        //    techData.entries[i] = new TechData.EntryPair();
-        //    techData.entries[i].identifier = pair.Key.identifier;
-         //   techData.entries[i].state = pair.Value;
-        //}
+        foreach (KeyValuePair<Tech, TechState> pair in techTable)
+        {
+            TechData.EntryPair ePair = new TechData.EntryPair();
+
+            ePair.identifier = pair.Key.identifier;
+            ePair.state = pair.Value;
+            techData.entries[i++] = ePair;
+        }
         return techData;
     }
 
     public void initTechs()
     {
         teches = new List<Tech>();
-        techTable = new Hashtable();
+        techTable = new Dictionary<Tech, TechState>();
 
         teches.AddRange(transform.GetComponentsInChildren<Tech>());
 
@@ -69,7 +71,10 @@ public class TechStorage : MonoBehaviour
 
     public void importTechData(TechData techData)
     {
-        if (techData.entries == null) return;
+        if (techData.entries == null) {
+            Debug.Log("No player tech data detected.");
+            return;
+        }
         foreach (TechData.EntryPair pair in techData.entries)
         {
             Tech tech = getTechByIdentifier(pair.identifier);
@@ -79,7 +84,9 @@ public class TechStorage : MonoBehaviour
                 continue;
             }
             techTable[tech] = pair.state;
+            Debug.Log("Loaded " + pair.identifier + ": " + pair.state);
         }
+        Debug.Log("Loaded " + techData.entries.Length + " tech data entries.");
     }
 
     void Start()
