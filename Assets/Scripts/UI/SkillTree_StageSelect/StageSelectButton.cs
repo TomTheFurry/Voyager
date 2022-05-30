@@ -1,20 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class StageSelectButton : MonoBehaviour
 {
     public bool enable;
+    public string langFile;
+    public string level;
+    public GameObject stageSelect;
     void Start()
     {
-        if (!enable)
-        {
-            changeButtonState(false);
-        }
+        updateButtonState();
+    }
+
+    public void changeToSelectUI()
+    {
+        stageSelect.SetActive(true);
+        GameObject information = Global.getChildByName(stageSelect, "Information");
+        information = Global.getChildByName(information, "Text");
+        information.GetComponent<TextMeshProUGUI>().text =
+            LangSystem.parseText(Global.langPath(langFile, level + "_Information"));
+        information.GetComponent<TooltipAuto>().addMyTooltips();
     }
 
     private void changeButtonState(bool btnState)
     {
+        GetComponent<Button>().interactable = btnState;
         int childNum = gameObject.transform.childCount;
         if (childNum > 0)
         {
@@ -23,10 +36,7 @@ public class StageSelectButton : MonoBehaviour
                 Transform child = gameObject.transform.GetChild(i);
                 if (string.Equals(child.name, "Image"))
                 {
-                    if (btnState)
-                        child.gameObject.SetActive(true);
-                    else
-                        child.gameObject.SetActive(false);
+                    child.gameObject.SetActive(!btnState);
                 }
             }
         }

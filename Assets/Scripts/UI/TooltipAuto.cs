@@ -5,14 +5,16 @@ using TMPro;
 
 public class TooltipAuto : MonoBehaviour
 {
+    public bool createWhenStart = false;
+    public GameObject[] myCustomTooltips;
     public GameObject highlighterPrefab;
-    private List<GameObject> highlighters;
-    private List<GameObject> customTooltips;
+    private List<GameObject> highlighters = new List<GameObject>();
+    private List<GameObject> customTooltips = new List<GameObject>();
 
     private void Start()
     {
-        highlighters = new List<GameObject>();
-        customTooltips = new List<GameObject>();
+        if (createWhenStart)
+            addMyTooltips();
     }
 
     private void addTooltip(GameObject customTooltip)
@@ -91,6 +93,10 @@ public class TooltipAuto : MonoBehaviour
         {
             addTooltip(customTooltip);
         }
+    }
+    public void addMyTooltips()
+    {
+        addTooltips(myCustomTooltips);
     }
 
 

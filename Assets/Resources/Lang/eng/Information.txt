@@ -1,3 +1,4 @@
+~`Skill_Tree
 `~StainlessSteel_Description
 Mix different elements to make steel harder to oxidize, because of stainless steel is a Corrosion-resistant high-strength material, so that the strength is not high as other material that came later, but the cost is cheaper, so many aircraft and spacecraft would select the stainless steel to become the second choose.
 `~MonopropellantRocket_Description
@@ -112,3 +113,21 @@ It was the first spacecraft to be successfully launched by the United States, wi
 `~Voyager1
 <color=#00FFFF><size=28><b><u>Voyager 1</u></b></size></color>
 Voyager 1 is the farthest space probe in human history. Launched in 1977, it is accelerated by the gravity of Jupiter and Saturn. At present, it continues to move towards the center of the Milky Way. This space exploration has greatly improved human beings. Knowing about Jupiter, Saturn, Uranus, and Neptune, he took many of the planetary photos we are still looking at.
+`~Tutorial
+`~Tutorial_Information
+In space frequently in the <u>gravity-free</u> and <u>no friction status</u>.  
+Before you conduct the space mission, You must finish the <u>gravity-free training</u>.
+
+In this mission you need to follow the instruction to control the spaceship reach the destination, After you finish course you can select exit or higher level maze to earn rewards.
+`~Gravity-Free
+<color=#00FFFF><size=28><b><u>Gravity-Free</u></b></size></color>
+Can call it weightlessness, earth have the gravity it will pull the object to center of the earth. 
+But when we far the earth the gravity will be decreased, so that the spaceship and the astronsuts will not be affected by gravity, to achieving a floating state.
+`~FrictionStatus
+<color=#00FFFF><size=28><b><u>No Friction Status</u></b></size></color>
+Most time of the space  is a vacuum, without matter including air.
+Object do not slow down when no force is applied, also they will continue to accelerate when a small amount of force is applied. 
+Therefore,it is possible to achieve faster speed in space, such as the fastest man-made object ever, the Parker Solar Probe with a speed of up to 200km/s, which s a spaceship.
+`~Gravity-FreeTraining
+<color=#00FFFF><size=28><b><u>Gravity-Free Training</u></b></size></color>
+Since it is difficult to achieve a gravity environment on earth, there are 2 ways to simulate this situation. The first is using the aircraft diving into the ground to cancel the gravitational force. The second is to practice underwater, simulating an environment where the influence of gravity is relatively low. It is more common to practice underwater, and it is also one of the exercises that astronauts must perform.
