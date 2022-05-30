@@ -11,7 +11,8 @@ public class UiInfo : MonoBehaviour
 
     public static void moveBack(string key)
     {
-        UiInfo location = getUiInfo(key);
+        if (!uiInfos.ContainsKey(key)) return;
+        UiInfo location = uiInfos[key];
         location.moveBack();
     }
 
