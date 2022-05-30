@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 13158820}
   - component: {fileID: 13158822}
   - component: {fileID: 13158821}
+  - component: {fileID: 13158823}
   m_Layer: 5
   m_Name: Connector_From5_c
   m_TagString: TECH_c
@@ -273,6 +274,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13158819}
   m_CullTransparentMesh: 1
+--- !u!114 &13158823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13158819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &19587367
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,8 +729,8 @@ GameObject:
   m_Component:
   - component: {fileID: 65097840}
   - component: {fileID: 65097842}
-  - component: {fileID: 65097843}
   - component: {fileID: 65097841}
+  - component: {fileID: 65097843}
   m_Layer: 5
   m_Name: Connector_3_1_c
   m_TagString: TECH_c
@@ -788,12 +804,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 65097839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 240393460}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &68671595
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +954,7 @@ GameObject:
   - component: {fileID: 68735354}
   - component: {fileID: 68735356}
   - component: {fileID: 68735355}
+  - component: {fileID: 68735357}
   m_Layer: 5
   m_Name: Connector_From6_c
   m_TagString: TECH_c
@@ -1002,6 +1019,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68735353}
   m_CullTransparentMesh: 1
+--- !u!114 &68735357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68735353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &72472507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,8 +1045,8 @@ GameObject:
   - component: {fileID: 72472508}
   - component: {fileID: 72472511}
   - component: {fileID: 72472509}
-  - component: {fileID: 72472512}
   - component: {fileID: 72472510}
+  - component: {fileID: 72472512}
   m_Layer: 5
   m_Name: AblationMaterial
   m_TagString: Untagged
@@ -1091,14 +1123,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 72472507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 2109891331}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &77576054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1337,7 @@ GameObject:
   - component: {fileID: 93277026}
   - component: {fileID: 93277028}
   - component: {fileID: 93277027}
+  - component: {fileID: 93277029}
   m_Layer: 5
   m_Name: Connector_From4_c
   m_TagString: TECH_c
@@ -1370,6 +1402,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93277025}
   m_CullTransparentMesh: 1
+--- !u!114 &93277029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93277025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &93757910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,8 +1781,8 @@ GameObject:
   - component: {fileID: 149652494}
   - component: {fileID: 149652497}
   - component: {fileID: 149652495}
-  - component: {fileID: 149652498}
   - component: {fileID: 149652496}
+  - component: {fileID: 149652498}
   m_Layer: 5
   m_Name: IonThruster
   m_TagString: Untagged
@@ -1812,13 +1859,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 149652493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &151984399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,8 +2429,8 @@ GameObject:
   - component: {fileID: 240393461}
   - component: {fileID: 240393462}
   - component: {fileID: 240393463}
-  - component: {fileID: 240393464}
   - component: {fileID: 240393465}
+  - component: {fileID: 240393464}
   m_Layer: 5
   m_Name: MonopropellantRocket
   m_TagString: Untagged
@@ -2451,13 +2498,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 240393460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!222 &240393465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3248,8 +3295,8 @@ GameObject:
   - component: {fileID: 274391916}
   - component: {fileID: 274391919}
   - component: {fileID: 274391917}
-  - component: {fileID: 274391920}
   - component: {fileID: 274391918}
+  - component: {fileID: 274391920}
   m_Layer: 5
   m_Name: FusionRocket
   m_TagString: Untagged
@@ -3325,15 +3372,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 274391915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 355322583}
-  - {fileID: 615110612}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &280476970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,6 +3678,7 @@ GameObject:
   - component: {fileID: 328099737}
   - component: {fileID: 328099739}
   - component: {fileID: 328099738}
+  - component: {fileID: 328099740}
   m_Layer: 5
   m_Name: Connector_To4_c
   m_TagString: TECH_c
@@ -3697,6 +3743,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328099736}
   m_CullTransparentMesh: 1
+--- !u!114 &328099740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328099736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &330548613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,8 +4269,8 @@ GameObject:
   - component: {fileID: 355322579}
   - component: {fileID: 355322582}
   - component: {fileID: 355322580}
-  - component: {fileID: 355322583}
   - component: {fileID: 355322581}
+  - component: {fileID: 355322583}
   m_Layer: 5
   m_Name: NuclearThermalRocket
   m_TagString: Untagged
@@ -4285,16 +4346,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 355322578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 1014825317}
-  - {fileID: 511120268}
-  - {fileID: 1529734630}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &366443991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,8 +4364,8 @@ GameObject:
   - component: {fileID: 366443992}
   - component: {fileID: 366443995}
   - component: {fileID: 366443993}
-  - component: {fileID: 366443996}
   - component: {fileID: 366443994}
+  - component: {fileID: 366443996}
   m_Layer: 5
   m_Name: CarbonFiber
   m_TagString: Untagged
@@ -4383,14 +4441,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 366443991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 2044684159}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &380819143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,8 +4779,8 @@ GameObject:
   m_Component:
   - component: {fileID: 385406178}
   - component: {fileID: 385406180}
-  - component: {fileID: 385406181}
   - component: {fileID: 385406179}
+  - component: {fileID: 385406181}
   m_Layer: 5
   m_Name: Connector_6_2_c
   m_TagString: TECH_c
@@ -4797,12 +4854,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 385406177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 2059425408}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &391500896
 GameObject:
   m_ObjectHideFlags: 0
@@ -5327,8 +5384,8 @@ GameObject:
   - component: {fileID: 424040740}
   - component: {fileID: 424040743}
   - component: {fileID: 424040741}
-  - component: {fileID: 424040744}
   - component: {fileID: 424040742}
+  - component: {fileID: 424040744}
   m_Layer: 5
   m_Name: BipropellantRocket
   m_TagString: Untagged
@@ -5404,14 +5461,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 424040739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 240393464}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &435674400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,6 +6089,7 @@ GameObject:
   - component: {fileID: 455448940}
   - component: {fileID: 455448942}
   - component: {fileID: 455448941}
+  - component: {fileID: 455448943}
   m_Layer: 5
   m_Name: Connector_From3_t
   m_TagString: TECH_t
@@ -6097,6 +6154,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455448939}
   m_CullTransparentMesh: 1
+--- !u!114 &455448943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455448939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: e265edb15ace36244b745066051f5bf4, type: 3}
+  sprite1: {fileID: 21300000, guid: 5475aa852c149c843aac0130d1731e49, type: 3}
+  sprite2: {fileID: 21300000, guid: 080ed9cd1e5e61f4a8f3a2e47bdcd9d6, type: 3}
 --- !u!1 &460169219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6491,8 +6563,8 @@ GameObject:
   m_Component:
   - component: {fileID: 482659637}
   - component: {fileID: 482659639}
-  - component: {fileID: 482659640}
   - component: {fileID: 482659638}
+  - component: {fileID: 482659640}
   m_Layer: 5
   m_Name: Connector_2_4_c
   m_TagString: TECH_c
@@ -6512,7 +6584,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160846829}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6566,12 +6638,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 482659636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 366443991}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &501242707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6582,8 +6654,8 @@ GameObject:
   m_Component:
   - component: {fileID: 501242708}
   - component: {fileID: 501242710}
-  - component: {fileID: 501242711}
   - component: {fileID: 501242709}
+  - component: {fileID: 501242711}
   m_Layer: 5
   m_Name: Connector_To_4_f*
   m_TagString: TECH_f
@@ -6657,16 +6729,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 501242707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject: []
-  groupConnecter:
-  - {fileID: 93277025}
-  - {fileID: 68735353}
-  - {fileID: 602162902}
-  - {fileID: 1156439346}
-  - {fileID: 1077996663}
+  sprite0: {fileID: 21300000, guid: 30d7d0e85a0af7b4f83081b083db9a53, type: 3}
+  sprite1: {fileID: 21300000, guid: bba3649ec432fa048a2f9fe7a1e62b6b, type: 3}
+  sprite2: {fileID: 21300000, guid: 2da34adba2c707448af4144b22ae6062, type: 3}
 --- !u!1 &506670290
 GameObject:
   m_ObjectHideFlags: 0
@@ -6678,6 +6746,7 @@ GameObject:
   - component: {fileID: 506670293}
   - component: {fileID: 506670292}
   - component: {fileID: 506670291}
+  - component: {fileID: 506670294}
   m_Layer: 5
   m_Name: Connector_2_3_c
   m_TagString: TECH_c
@@ -6742,6 +6811,21 @@ RectTransform:
   m_AnchoredPosition: {x: -797, y: 141.252}
   m_SizeDelta: {x: 26.3, y: 19.96}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &506670294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506670290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &508329505
 GameObject:
   m_ObjectHideFlags: 0
@@ -6869,8 +6953,8 @@ GameObject:
   - component: {fileID: 511120264}
   - component: {fileID: 511120267}
   - component: {fileID: 511120265}
-  - component: {fileID: 511120268}
   - component: {fileID: 511120266}
+  - component: {fileID: 511120268}
   m_Layer: 5
   m_Name: VASMIREngine
   m_TagString: Untagged
@@ -6948,14 +7032,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 511120263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 149652498}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &511419030
 GameObject:
   m_ObjectHideFlags: 0
@@ -7222,6 +7305,7 @@ GameObject:
   - component: {fileID: 516100914}
   - component: {fileID: 516100915}
   - component: {fileID: 516100913}
+  - component: {fileID: 516100916}
   m_Layer: 5
   m_Name: Connector_7_3_c
   m_TagString: TECH_c
@@ -7301,6 +7385,21 @@ MonoBehaviour:
   prerequisitesObject:
   - {fileID: 692783533}
   groupConnecter: []
+--- !u!114 &516100916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516100911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &532022824
 GameObject:
   m_ObjectHideFlags: 0
@@ -8241,6 +8340,7 @@ GameObject:
   - component: {fileID: 592917626}
   - component: {fileID: 592917628}
   - component: {fileID: 592917627}
+  - component: {fileID: 592917629}
   m_Layer: 5
   m_Name: Connector_2_3_t
   m_TagString: TECH_t
@@ -8305,6 +8405,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592917625}
   m_CullTransparentMesh: 1
+--- !u!114 &592917629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592917625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: e265edb15ace36244b745066051f5bf4, type: 3}
+  sprite1: {fileID: 21300000, guid: 5475aa852c149c843aac0130d1731e49, type: 3}
+  sprite2: {fileID: 21300000, guid: 080ed9cd1e5e61f4a8f3a2e47bdcd9d6, type: 3}
 --- !u!1 &596973022
 GameObject:
   m_ObjectHideFlags: 0
@@ -8315,8 +8430,8 @@ GameObject:
   m_Component:
   - component: {fileID: 596973023}
   - component: {fileID: 596973025}
-  - component: {fileID: 596973026}
   - component: {fileID: 596973024}
+  - component: {fileID: 596973026}
   m_Layer: 5
   m_Name: Connector_To4_f*
   m_TagString: TECH_f
@@ -8390,24 +8505,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 596973022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 1014825312}
-  - {fileID: 511120263}
-  - {fileID: 1529734625}
-  groupConnecter:
-  - {fileID: 829807061}
-  - {fileID: 835686074}
-  - {fileID: 455448939}
-  - {fileID: 1588283569}
-  - {fileID: 674641955}
-  - {fileID: 1155799357}
-  - {fileID: 631555726}
-  - {fileID: 13158819}
-  - {fileID: 1439675038}
-  - {fileID: 328099736}
+  sprite0: {fileID: 21300000, guid: 30d7d0e85a0af7b4f83081b083db9a53, type: 3}
+  sprite1: {fileID: 21300000, guid: bba3649ec432fa048a2f9fe7a1e62b6b, type: 3}
+  sprite2: {fileID: 21300000, guid: 2da34adba2c707448af4144b22ae6062, type: 3}
 --- !u!1 &601942177
 GameObject:
   m_ObjectHideFlags: 0
@@ -8494,6 +8597,7 @@ GameObject:
   - component: {fileID: 602162903}
   - component: {fileID: 602162905}
   - component: {fileID: 602162904}
+  - component: {fileID: 602162906}
   m_Layer: 5
   m_Name: Connector_From6_c
   m_TagString: TECH_c
@@ -8558,6 +8662,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602162902}
   m_CullTransparentMesh: 1
+--- !u!114 &602162906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602162902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &608007077
 GameObject:
   m_ObjectHideFlags: 0
@@ -8648,8 +8767,8 @@ GameObject:
   - component: {fileID: 615110608}
   - component: {fileID: 615110611}
   - component: {fileID: 615110609}
-  - component: {fileID: 615110612}
   - component: {fileID: 615110610}
+  - component: {fileID: 615110612}
   m_Layer: 5
   m_Name: NuclearFusionBbattery
   m_TagString: Untagged
@@ -8725,14 +8844,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 615110607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 1529734630}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &621664724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9031,6 +9149,7 @@ GameObject:
   - component: {fileID: 631555727}
   - component: {fileID: 631555729}
   - component: {fileID: 631555728}
+  - component: {fileID: 631555730}
   m_Layer: 5
   m_Name: Connector_From5_c
   m_TagString: TECH_c
@@ -9095,6 +9214,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631555726}
   m_CullTransparentMesh: 1
+--- !u!114 &631555730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631555726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &664556726
 GameObject:
   m_ObjectHideFlags: 0
@@ -9183,6 +9317,7 @@ GameObject:
   - component: {fileID: 674641956}
   - component: {fileID: 674641958}
   - component: {fileID: 674641957}
+  - component: {fileID: 674641959}
   m_Layer: 5
   m_Name: Connector_From6_c
   m_TagString: TECH_c
@@ -9247,6 +9382,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674641955}
   m_CullTransparentMesh: 1
+--- !u!114 &674641959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674641955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &685752190
 GameObject:
   m_ObjectHideFlags: 0
@@ -9257,8 +9407,8 @@ GameObject:
   m_Component:
   - component: {fileID: 685752191}
   - component: {fileID: 685752193}
-  - component: {fileID: 685752194}
   - component: {fileID: 685752192}
+  - component: {fileID: 685752194}
   m_Layer: 5
   m_Name: Connector_1_5_c
   m_TagString: TECH_c
@@ -9278,7 +9428,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160846829}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9332,12 +9482,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 685752190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 72472507}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &688645913
 GameObject:
   m_ObjectHideFlags: 0
@@ -9545,8 +9695,8 @@ GameObject:
   - component: {fileID: 692783534}
   - component: {fileID: 692783537}
   - component: {fileID: 692783535}
-  - component: {fileID: 692783538}
   - component: {fileID: 692783536}
+  - component: {fileID: 692783538}
   m_Layer: 5
   m_Name: MaintenanceSystem
   m_TagString: Untagged
@@ -9623,13 +9773,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 692783533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &717319400
 GameObject:
   m_ObjectHideFlags: 0
@@ -10448,6 +10598,7 @@ GameObject:
   - component: {fileID: 785578721}
   - component: {fileID: 785578723}
   - component: {fileID: 785578722}
+  - component: {fileID: 785578724}
   m_Layer: 5
   m_Name: Connector_2_3_c
   m_TagString: TECH_c
@@ -10512,6 +10663,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785578720}
   m_CullTransparentMesh: 1
+--- !u!114 &785578724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785578720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &786790825
 GameObject:
   m_ObjectHideFlags: 0
@@ -11359,6 +11525,7 @@ GameObject:
   - component: {fileID: 829807062}
   - component: {fileID: 829807064}
   - component: {fileID: 829807063}
+  - component: {fileID: 829807065}
   m_Layer: 5
   m_Name: Connector_From3_c
   m_TagString: TECH_c
@@ -11423,6 +11590,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829807061}
   m_CullTransparentMesh: 1
+--- !u!114 &829807065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829807061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &835686074
 GameObject:
   m_ObjectHideFlags: 0
@@ -11434,6 +11616,7 @@ GameObject:
   - component: {fileID: 835686075}
   - component: {fileID: 835686077}
   - component: {fileID: 835686076}
+  - component: {fileID: 835686078}
   m_Layer: 5
   m_Name: Connector_From3_c
   m_TagString: TECH_c
@@ -11498,6 +11681,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835686074}
   m_CullTransparentMesh: 1
+--- !u!114 &835686078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835686074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &836776868
 GameObject:
   m_ObjectHideFlags: 0
@@ -12694,8 +12892,8 @@ GameObject:
   - component: {fileID: 1014825313}
   - component: {fileID: 1014825316}
   - component: {fileID: 1014825314}
-  - component: {fileID: 1014825317}
   - component: {fileID: 1014825315}
+  - component: {fileID: 1014825317}
   m_Layer: 5
   m_Name: TripropellantRocket
   m_TagString: Untagged
@@ -12771,14 +12969,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1014825312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 424040744}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1015508637
 GameObject:
   m_ObjectHideFlags: 0
@@ -13472,6 +13669,7 @@ GameObject:
   - component: {fileID: 1042834237}
   - component: {fileID: 1042834238}
   - component: {fileID: 1042834236}
+  - component: {fileID: 1042834239}
   m_Layer: 5
   m_Name: Connector_4_5_c
   m_TagString: TECH_c
@@ -13550,6 +13748,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prerequisitesObject: []
   groupConnecter: []
+--- !u!114 &1042834239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042834234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1053800569
 GameObject:
   m_ObjectHideFlags: 0
@@ -13694,8 +13907,8 @@ GameObject:
   - component: {fileID: 1059165476}
   - component: {fileID: 1059165479}
   - component: {fileID: 1059165477}
-  - component: {fileID: 1059165480}
   - component: {fileID: 1059165478}
+  - component: {fileID: 1059165480}
   m_Layer: 5
   m_Name: SmallMagneticSatellite
   m_TagString: Untagged
@@ -13772,13 +13985,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059165475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1063598544
 GameObject:
   m_ObjectHideFlags: 0
@@ -13888,6 +14101,7 @@ GameObject:
   - component: {fileID: 1077996666}
   - component: {fileID: 1077996665}
   - component: {fileID: 1077996664}
+  - component: {fileID: 1077996667}
   m_Layer: 5
   m_Name: Connector_To4_c
   m_TagString: TECH_c
@@ -13952,6 +14166,21 @@ RectTransform:
   m_AnchoredPosition: {x: -269, y: -159.285}
   m_SizeDelta: {x: 26.3, y: 15.894}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1077996667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077996663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1092157292
 GameObject:
   m_ObjectHideFlags: 0
@@ -14678,6 +14907,7 @@ GameObject:
   - component: {fileID: 1155799358}
   - component: {fileID: 1155799360}
   - component: {fileID: 1155799359}
+  - component: {fileID: 1155799361}
   m_Layer: 5
   m_Name: Connector_From6_t
   m_TagString: TECH_t
@@ -14742,6 +14972,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155799357}
   m_CullTransparentMesh: 1
+--- !u!114 &1155799361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155799357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: e265edb15ace36244b745066051f5bf4, type: 3}
+  sprite1: {fileID: 21300000, guid: 5475aa852c149c843aac0130d1731e49, type: 3}
+  sprite2: {fileID: 21300000, guid: 080ed9cd1e5e61f4a8f3a2e47bdcd9d6, type: 3}
 --- !u!1 &1156439346
 GameObject:
   m_ObjectHideFlags: 0
@@ -14753,6 +14998,7 @@ GameObject:
   - component: {fileID: 1156439347}
   - component: {fileID: 1156439349}
   - component: {fileID: 1156439348}
+  - component: {fileID: 1156439350}
   m_Layer: 5
   m_Name: Connector_From6_t
   m_TagString: TECH_t
@@ -14817,6 +15063,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156439346}
   m_CullTransparentMesh: 1
+--- !u!114 &1156439350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156439346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: e265edb15ace36244b745066051f5bf4, type: 3}
+  sprite1: {fileID: 21300000, guid: 5475aa852c149c843aac0130d1731e49, type: 3}
+  sprite2: {fileID: 21300000, guid: 080ed9cd1e5e61f4a8f3a2e47bdcd9d6, type: 3}
 --- !u!1 &1160846828
 GameObject:
   m_ObjectHideFlags: 0
@@ -14844,7 +15105,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1529453598}
   - {fileID: 1799346463}
   - {fileID: 1434921412}
   - {fileID: 2065745530}
@@ -17488,8 +17748,8 @@ GameObject:
   - component: {fileID: 1363416859}
   - component: {fileID: 1363416862}
   - component: {fileID: 1363416860}
-  - component: {fileID: 1363416863}
   - component: {fileID: 1363416861}
+  - component: {fileID: 1363416863}
   m_Layer: 5
   m_Name: Aerogel
   m_TagString: Untagged
@@ -17566,14 +17826,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1363416858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 366443996}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1369895890
 GameObject:
   m_ObjectHideFlags: 0
@@ -17718,8 +17977,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1370516942}
   - component: {fileID: 1370516944}
-  - component: {fileID: 1370516945}
   - component: {fileID: 1370516943}
+  - component: {fileID: 1370516945}
   m_Layer: 5
   m_Name: Connector_3_2_c
   m_TagString: TECH_c
@@ -17793,12 +18052,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1370516941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 424040739}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1371522327
 GameObject:
   m_ObjectHideFlags: 0
@@ -18143,8 +18402,8 @@ GameObject:
   - component: {fileID: 1426186105}
   - component: {fileID: 1426186108}
   - component: {fileID: 1426186106}
-  - component: {fileID: 1426186109}
   - component: {fileID: 1426186107}
+  - component: {fileID: 1426186109}
   m_Layer: 5
   m_Name: MetalMagneticMesh
   m_TagString: Untagged
@@ -18221,13 +18480,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1426186104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1426778703
 GameObject:
   m_ObjectHideFlags: 0
@@ -18415,7 +18674,7 @@ RectTransform:
   - {fileID: 592917626}
   - {fileID: 1887777959}
   m_Father: {fileID: 1160846829}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18433,6 +18692,7 @@ GameObject:
   - component: {fileID: 1439675039}
   - component: {fileID: 1439675041}
   - component: {fileID: 1439675040}
+  - component: {fileID: 1439675042}
   m_Layer: 5
   m_Name: Connector_From5_f
   m_TagString: TECH_f
@@ -18497,6 +18757,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439675038}
   m_CullTransparentMesh: 1
+--- !u!114 &1439675042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439675038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: 30d7d0e85a0af7b4f83081b083db9a53, type: 3}
+  sprite1: {fileID: 21300000, guid: bba3649ec432fa048a2f9fe7a1e62b6b, type: 3}
+  sprite2: {fileID: 21300000, guid: 2da34adba2c707448af4144b22ae6062, type: 3}
 --- !u!1 &1456227368
 GameObject:
   m_ObjectHideFlags: 0
@@ -18984,6 +19259,7 @@ RectTransform:
   - {fileID: 1160846829}
   - {fileID: 794430305}
   - {fileID: 1897752451}
+  - {fileID: 1776453812}
   m_Father: {fileID: 2055631418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19938,7 +20214,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1160846829}
+  m_Father: {fileID: 1776453812}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -19993,12 +20269,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529453597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 1705485317}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1529734625
 GameObject:
   m_ObjectHideFlags: 0
@@ -20010,8 +20286,8 @@ GameObject:
   - component: {fileID: 1529734626}
   - component: {fileID: 1529734629}
   - component: {fileID: 1529734627}
-  - component: {fileID: 1529734630}
   - component: {fileID: 1529734628}
+  - component: {fileID: 1529734630}
   m_Layer: 5
   m_Name: AtomicBattery
   m_TagString: Untagged
@@ -20088,14 +20364,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529734625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 2059425413}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1533145288
 GameObject:
   m_ObjectHideFlags: 0
@@ -20950,6 +21225,7 @@ GameObject:
   - component: {fileID: 1588283570}
   - component: {fileID: 1588283572}
   - component: {fileID: 1588283571}
+  - component: {fileID: 1588283573}
   m_Layer: 5
   m_Name: Connector_From6_c
   m_TagString: TECH_c
@@ -21014,6 +21290,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588283569}
   m_CullTransparentMesh: 1
+--- !u!114 &1588283573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588283569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1589567274
 GameObject:
   m_ObjectHideFlags: 0
@@ -21907,7 +22198,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1673325427}
   - component: {fileID: 1673325429}
-  - component: {fileID: 1673325430}
   - component: {fileID: 1673325428}
   m_Layer: 5
   m_Name: Connector__6_3_c
@@ -21973,21 +22263,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673325426}
   m_CullTransparentMesh: 1
---- !u!114 &1673325430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673325426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 1529734625}
-  groupConnecter: []
 --- !u!1 &1680260833
 GameObject:
   m_ObjectHideFlags: 0
@@ -22476,8 +22751,8 @@ GameObject:
   - component: {fileID: 1705485318}
   - component: {fileID: 1705485319}
   - component: {fileID: 1705485320}
-  - component: {fileID: 1705485321}
   - component: {fileID: 1705485322}
+  - component: {fileID: 1705485321}
   m_Layer: 5
   m_Name: StainlessSteel
   m_TagString: Untagged
@@ -22545,13 +22820,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1705485317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!222 &1705485322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23411,8 +23686,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1752251225}
   - component: {fileID: 1752251227}
-  - component: {fileID: 1752251228}
   - component: {fileID: 1752251226}
+  - component: {fileID: 1752251228}
   m_Layer: 5
   m_Name: Connector_5_2_c
   m_TagString: TECH_c
@@ -23486,12 +23761,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752251224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 149652493}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1760694227
 GameObject:
   m_ObjectHideFlags: 0
@@ -23640,6 +23915,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309e33dddb598a4f9b829022e638eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1776453811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1776453812}
+  - component: {fileID: 1776453813}
+  m_Layer: 5
+  m_Name: StainlessSteel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1776453812
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776453811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1529453598}
+  m_Father: {fileID: 1472778810}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1776453813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776453811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165111fffb9e9de4585ba311f0f9c4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTech: {fileID: 1921246773}
 --- !u!1 &1777212518
 GameObject:
   m_ObjectHideFlags: 0
@@ -23930,8 +24255,8 @@ GameObject:
   - component: {fileID: 1784175392}
   - component: {fileID: 1784175395}
   - component: {fileID: 1784175393}
-  - component: {fileID: 1784175396}
   - component: {fileID: 1784175394}
+  - component: {fileID: 1784175396}
   m_Layer: 5
   m_Name: Laser
   m_TagString: Untagged
@@ -24008,13 +24333,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784175391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1787647262
 GameObject:
   m_ObjectHideFlags: 0
@@ -24026,8 +24351,8 @@ GameObject:
   - component: {fileID: 1787647263}
   - component: {fileID: 1787647266}
   - component: {fileID: 1787647264}
-  - component: {fileID: 1787647267}
   - component: {fileID: 1787647265}
+  - component: {fileID: 1787647267}
   m_Layer: 5
   m_Name: 3DPrinter
   m_TagString: Untagged
@@ -24104,14 +24429,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1787647262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 692783538}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1796124606
 GameObject:
   m_ObjectHideFlags: 0
@@ -24235,7 +24559,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160846829}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24289,12 +24613,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799346462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 2044684156}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1804200766
 GameObject:
   m_ObjectHideFlags: 0
@@ -24381,8 +24705,8 @@ GameObject:
   - component: {fileID: 1805421466}
   - component: {fileID: 1805421469}
   - component: {fileID: 1805421467}
-  - component: {fileID: 1805421470}
   - component: {fileID: 1805421468}
+  - component: {fileID: 1805421470}
   m_Layer: 5
   m_Name: AntimatterRocket
   m_TagString: Untagged
@@ -24458,13 +24782,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1805421465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1829880500
 GameObject:
   m_ObjectHideFlags: 0
@@ -24476,8 +24800,8 @@ GameObject:
   - component: {fileID: 1829880501}
   - component: {fileID: 1829880504}
   - component: {fileID: 1829880502}
-  - component: {fileID: 1829880505}
   - component: {fileID: 1829880503}
+  - component: {fileID: 1829880505}
   m_Layer: 5
   m_Name: ReinforcedCarbon-carbon
   m_TagString: Untagged
@@ -24554,14 +24878,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1829880500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 72472512}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &1830179335
 GameObject:
   m_ObjectHideFlags: 0
@@ -25453,8 +25776,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1887777959}
   - component: {fileID: 1887777961}
-  - component: {fileID: 1887777962}
   - component: {fileID: 1887777960}
+  - component: {fileID: 1887777962}
   m_Layer: 5
   m_Name: Connector_2_3_t*
   m_TagString: TECH_t
@@ -25528,16 +25851,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1887777958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 2044684156}
-  groupConnecter:
-  - {fileID: 506670290}
-  - {fileID: 785578720}
-  - {fileID: 1960136670}
-  - {fileID: 592917625}
+  sprite0: {fileID: 21300000, guid: e265edb15ace36244b745066051f5bf4, type: 3}
+  sprite1: {fileID: 21300000, guid: 5475aa852c149c843aac0130d1731e49, type: 3}
+  sprite2: {fileID: 21300000, guid: 080ed9cd1e5e61f4a8f3a2e47bdcd9d6, type: 3}
 --- !u!1 &1889443296
 GameObject:
   m_ObjectHideFlags: 0
@@ -26019,6 +26338,7 @@ GameObject:
   - component: {fileID: 1960136671}
   - component: {fileID: 1960136673}
   - component: {fileID: 1960136672}
+  - component: {fileID: 1960136674}
   m_Layer: 5
   m_Name: Connector_2_3_c
   m_TagString: TECH_c
@@ -26083,6 +26403,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960136670}
   m_CullTransparentMesh: 1
+--- !u!114 &1960136674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960136670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &1969602789
 GameObject:
   m_ObjectHideFlags: 0
@@ -27131,8 +27466,8 @@ GameObject:
   - component: {fileID: 2044684157}
   - component: {fileID: 2044684161}
   - component: {fileID: 2044684158}
-  - component: {fileID: 2044684159}
   - component: {fileID: 2044684160}
+  - component: {fileID: 2044684159}
   m_Layer: 5
   m_Name: TitaniumAlloy
   m_TagString: Untagged
@@ -27188,14 +27523,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2044684156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 1705485321}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!222 &2044684160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27430,8 +27764,8 @@ GameObject:
   - component: {fileID: 2059425409}
   - component: {fileID: 2059425412}
   - component: {fileID: 2059425410}
-  - component: {fileID: 2059425413}
   - component: {fileID: 2059425411}
+  - component: {fileID: 2059425413}
   m_Layer: 5
   m_Name: SolarBattery
   m_TagString: Untagged
@@ -27510,13 +27844,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059425408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites: []
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &2060568556
 GameObject:
   m_ObjectHideFlags: 0
@@ -27688,8 +28022,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2065745530}
   - component: {fileID: 2065745532}
-  - component: {fileID: 2065745533}
   - component: {fileID: 2065745531}
+  - component: {fileID: 2065745533}
   m_Layer: 5
   m_Name: Connector_1_3_c
   m_TagString: TECH_c
@@ -27709,7 +28043,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160846829}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27763,12 +28097,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2065745529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b857a44e05b6f4bae674603f2def68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9547b7f777eab8c488711ec1e8bcc824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prerequisitesObject:
-  - {fileID: 2109891326}
-  groupConnecter: []
+  sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
+  sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
+  sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
 --- !u!1 &2067084085
 GameObject:
   m_ObjectHideFlags: 0
@@ -28065,8 +28399,8 @@ GameObject:
   - component: {fileID: 2109891327}
   - component: {fileID: 2109891330}
   - component: {fileID: 2109891328}
-  - component: {fileID: 2109891331}
   - component: {fileID: 2109891329}
+  - component: {fileID: 2109891331}
   m_Layer: 5
   m_Name: HRSI
   m_TagString: Untagged
@@ -28144,14 +28478,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2109891326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Script: {fileID: 11500000, guid: dfde53d7fccf3db44913d7eb0e2ce824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  prerequisites:
-  - {fileID: 2044684159}
-  starCost: 0
-  icon: {fileID: 0}
+  reference: {fileID: 0}
+  sprite0: {fileID: 21300000, guid: 19a97f0bd4380e94fb98461d336209dd, type: 3}
+  sprite1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  sprite2: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
 --- !u!1 &2115447829
 GameObject:
   m_ObjectHideFlags: 0

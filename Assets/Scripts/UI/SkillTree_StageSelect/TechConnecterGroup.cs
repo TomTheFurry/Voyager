@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class TechConnecterGroup : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class TechConnecterGroup : MonoBehaviour
 
     private void Start()
     {
+        if (TechStorage.instance == null) throw new Exception();
+        if (nextTech == null) nextTech = TechStorage.instance.getTechByIdentifier(gameObject.name);
+
         TechStorage.instance.onTechStatusChanged.AddListener(Refresh);
     }
 
