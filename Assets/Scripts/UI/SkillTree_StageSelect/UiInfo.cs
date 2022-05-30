@@ -15,19 +15,11 @@ public class UiInfo : MonoBehaviour
         location.moveBack();
     }
 
-    public static UiInfo getUiInfo(string key)
-    {
-        UiInfo temp;
-        uiInfos.TryGetValue(key, out temp);
-        return temp;
-    }
-
     public UiInfo(string key, GameObject startLocation)
     {
         Debug.Log("UiInfo created");
-        UiInfo temp = getUiInfo(key);
         
-        if (temp != null)
+        if (uiInfos.ContainsKey(key))
         {
             uiInfos.Remove(key);
         }
