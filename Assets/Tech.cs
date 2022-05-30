@@ -9,7 +9,7 @@ public class Tech : MonoBehaviour, IComparable
     public int starCost;
     public Sprite icon;
 
-    public Tech()
+    public void Start()
     {
         if (identifier == null || identifier.Length == 0) identifier = gameObject.name;
     }

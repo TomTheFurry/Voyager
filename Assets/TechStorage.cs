@@ -51,7 +51,7 @@ public class TechStorage : MonoBehaviour
         teches = new List<Tech>();
         techTable = new Hashtable();
 
-        Teches.AddRange(transform.GetComponentsInChildren<Tech>());
+        teches.AddRange(transform.GetComponentsInChildren<Tech>());
 
         foreach (Tech tech in teches)
         {
@@ -92,7 +92,7 @@ public class TechStorage : MonoBehaviour
         else
         {
             Debug.LogError("TechTree: multiple instances of TechTree");
-            Destroy();
+            Destroy(this);
             return;
         }
         initTechs();
@@ -135,7 +135,7 @@ public class TechStorage : MonoBehaviour
     // ONLY return true if tech is not unlocked, but can be unlocked
     public bool canTechBeUnlocked(Tech tech)
     {
-        if (isTechsUnlocked(tech)) return false;
+        if (isTechUnlocked(tech)) return false;
         foreach (Tech prereq in tech.prerequisites)
         {
             if (!isTechUnlocked(prereq))
@@ -160,7 +160,6 @@ public class TechStorage : MonoBehaviour
         techState.isUnlocked = true;
         techTable[tech] = techState;
         onTechStatusChanged.Invoke();
-        tech.updateConnectLine(); //added
         return true;
     }
 }

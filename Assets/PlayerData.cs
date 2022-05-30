@@ -4,7 +4,7 @@ using System;
 [Serializable]
 public class PlayerData
 {
-    public TechTree.TechData techData;
+    public TechStorage.TechData techData;
     public int stars;
 
     private static PlayerData activeData;
@@ -18,7 +18,7 @@ public class PlayerData
         else
         {
             activeData = new PlayerData();
-            activeData.techData = new TechTree.TechData();
+            activeData.techData = new TechStorage.TechData();
             activeData.stars = 0;
         }
     }

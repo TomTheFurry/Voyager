@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TechTree;
 
 public class TechConnecterGroup : MonoBehaviour
 {
-    Image[] groupConnecter;
-
     private int state = 0;
     public Tech nextTech;
 
@@ -25,7 +22,7 @@ public class TechConnecterGroup : MonoBehaviour
         else newState = 0;
         if (preState != newState) {
             state = newState;
-            foreach (TechConnecter tc in groupConnecter.transform.GetComponentsInChildren<TechConnecter>())
+            foreach (TechConnecter tc in transform.GetComponentsInChildren<TechConnecter>())
             {
                 tc.SetState(state);
             }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TechTree;
 
 public class TechConnecter : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class TechConnecter : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
 
-    public Start() {
+    public void Start() {
         image = GetComponent<Image>();
     }
 

@@ -52,7 +52,7 @@ public class SkillTreeInformation : MonoBehaviour
             else if (string.Equals(childName, "UnlockedButton"))
             {
                 bool canBeUnlock = true;
-                if (TechTree.instance.isTechUnlocked(myTech) || !TechTree.instance.canTechBeUnlocked(myTech))
+                if (TechStorage.instance.isTechUnlocked(myTech) || !TechStorage.instance.canTechBeUnlocked(myTech))
                 {
                     canBeUnlock = false;
                 }

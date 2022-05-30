@@ -28,8 +28,8 @@ public class TechIcon : MonoBehaviour
     {
         int preState = state;
         int newState;
-        if (TechStorage.instance.isTechUnlocked(nextTech)) newState = 2;
-        else if (TechStorage.instance.canTechBeUnlocked(nextTech)) newState = 1;
+        if (TechStorage.instance.isTechUnlocked(reference)) newState = 2;
+        else if (TechStorage.instance.canTechBeUnlocked(reference)) newState = 1;
         else newState = 0;
         if (preState != newState)
         {
@@ -45,13 +45,13 @@ public class TechIcon : MonoBehaviour
             case 0: _SetSprite(sprite0); break;
             case 1: _SetSprite(sprite1); break;
             case 2: _SetSprite(sprite2); break;
-            default: throw new System.Exception();
+            default: throw new Exception();
         }
     }
 
     private void _SetSprite(Sprite spr)
     {
-        bgButton.sprite = spr;
+        bgButton.image.sprite = spr;
     }
 
 
