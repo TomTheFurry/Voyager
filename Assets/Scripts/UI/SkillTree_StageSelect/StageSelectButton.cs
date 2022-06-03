@@ -22,7 +22,6 @@ public class StageSelectButton : MonoBehaviour
         information = Global.getChildByName(information, "Text");
         information.GetComponent<TextMeshProUGUI>().text =
             LangSystem.parseText(Global.langPath(langFile, level + "_Information"));
-        information.GetComponent<TooltipAuto>().addMyTooltips();
     }
 
     private void changeButtonState(bool btnState)

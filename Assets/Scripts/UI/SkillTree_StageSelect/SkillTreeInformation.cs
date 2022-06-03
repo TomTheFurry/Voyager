@@ -9,7 +9,7 @@ public class SkillTreeInformation : MonoBehaviour
     public GameObject information;
     public GameObject icon;
     public Sprite image;
-    public GameObject[] customTooltips;
+    public Transform customTooltips;
     public GameObject temp;
 
     public string langFile = "Information";
@@ -46,8 +46,7 @@ public class SkillTreeInformation : MonoBehaviour
                 int size = 0;
                 int.TryParse(LangSystem.parseText(Global.langPath(langFile, name + "_FontSize")), out size);
                 child.GetComponent<TextMeshProUGUI>().fontSize = (size != 0 ? size : 24);
-
-                child.GetComponent<TooltipAuto>().addTooltips(customTooltips);
+                child.GetComponent<TMPTooltip>().tooltipContainerHint = customTooltips;
             }
             else if (string.Equals(childName, "TechUnlockButton"))
             {

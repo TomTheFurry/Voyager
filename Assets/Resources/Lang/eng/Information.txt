@@ -6,39 +6,39 @@ Since a single-propellant rocket only needs to use a single fuel for propulsion,
 `~MetalMagneticMesh_FontSize
 18
 `~MetalMagneticMesh_Description
-Use aluminum wire and steek wire to make it and using magnetic force collects <u>space garbage</u>. After collecting a certain amount of space garbage, it will enter the atmosphere due to the earth’s gravity and burn out through the atmosphere, thereby disposing of space garbage. The advantage is that it is cheap, however it is difficult to accurately handle space garbage and when there is an excess of space garbage falling into the atmosphere with it, there is a chance that it will not burn out and hit the ground.
+Use aluminum wire and steek wire to make it and using magnetic force collects <link="Autotip">space garbage</link>. After collecting a certain amount of space garbage, it will enter the atmosphere due to the earth’s gravity and burn out through the atmosphere, thereby disposing of space garbage. The advantage is that it is cheap, however it is difficult to accurately handle space garbage and when there is an excess of space garbage falling into the atmosphere with it, there is a chance that it will not burn out and hit the ground.
 `~Laser_FontSize
 22
 `~Laser_Description
-Laser weapons are energy weapons that use high-energy lasers to accurately shoot long-distance targets or to defend against missiles. The same kind of technology can be applied to the processing of <u>space garbage</u>, and through this technology, some physical objects can be refined. Smaller space garbage, but the power consumption of laser technology is high.
+Laser weapons are energy weapons that use high-energy lasers to accurately shoot long-distance targets or to defend against missiles. The same kind of technology can be applied to the processing of <link="Autotip">space garbage</link>, and through this technology, some physical objects can be refined. Smaller space garbage, but the power consumption of laser technology is high.
 `~TitaniumAlloy_FontSize
 21
 `~TitaniumAlloy_Description
-Is a high-strength material started in the 1950s. until 1970s the technology is constantly being upgraded the strength of Titanium alloy have a further strengthen to widely use in aviation such as wings and aerospace technology, Titanium alloy compared to other metals are more corrosion and withstand higher temperature. The <u>Sputnik 1</u> is using titanium alloy for outer casing.
+Is a high-strength material started in the 1950s. until 1970s the technology is constantly being upgraded the strength of Titanium alloy have a further strengthen to widely use in aviation such as wings and aerospace technology, Titanium alloy compared to other metals are more corrosion and withstand higher temperature. The <link="autotip">Sputnik 1</link> is using titanium alloy for outer casing.
 `~BipropellantRocket_Description
 As the name implies, the rocket is powered by a mixture of two fuels. Since the power provided by the mixture of two fuels can effectively increase the proportion of fuel used, it is more complicated, and if it goes wrong, it will cause a major accident.
 `~IonThruster_Description
-The rocket is powered by ejecting <u>ionization</u> gas. Even though it can be driven by electricity without using fuel, its energy is very weak and not suitable for large spaceships.
+The rocket is powered by ejecting <link="autotip">ionization</link> gas. Even though it can be driven by electricity without using fuel, its energy is very weak and not suitable for large spaceships.
 `~SolarBattery_FontSize
 19
 `~SolarBattery_Description
-in 1954 the efficiency only has 6%, but with the development of science and technology, the efficiency has become higher and higher. For example, the <u>Vanguard 1</u> in the United States was the first artificial satellite equipped with solar panels, and more and more after that. spaceship Also installed solar panels, including Jupiter probe <u>Juno</u>, comet lander <u>Rosetta</u>, but for some deep-space exploration spacecraft, solar cells are not used in places far from the sun.
+in 1954 the efficiency only has 6%, but with the development of science and technology, the efficiency has become higher and higher. For example, the <link="autotip">Vanguard 1</link> in the United States was the first artificial satellite equipped with solar panels, and more and more after that. spaceship Also installed solar panels, including Jupiter probe <link="autotip">Juno</link>, comet lander <link="autotip">Rosetta</link>, but for some deep-space exploration spacecraft, solar cells are not used in places far from the sun.
 `~SmallMagneticSatellite_Description
-This is use the small artificial satellites to add the magnets for disposal of <u>space garbage</u>, with the development of space, the price of small artificial satellites is extremely low.
+This is use the small artificial satellites to add the magnets for disposal of <link="autotip">space garbage</link>, with the development of space, the price of small artificial satellites is extremely low.
 `~HRSI_Description
-HRSI is consists of high-purity silica fibers, very light, HRSI material is like plastic foam, but it has strong ability to withstand extreme temperatures, can ability temperatures between <u>absolute zero</u> and 1600 , widely used on <u>shuttles</u> but it is a fragile material, so it must extremely care.
+HRSI is consists of high-purity silica fibers, very light, HRSI material is like plastic foam, but it has strong ability to withstand extreme temperatures, can ability temperatures between <link="autotip">absolute zero</link> and 1600 , widely used on <link="autotip">shuttles</link> but it is a fragile material, so it must extremely care.
 `~TripropellantRocket_Description
 A rocket engine propelled by a mixture of three fuels can further improve energy efficiency and reduce the weight of spacecraft, but its complexity is lower because of its complexity and fault tolerance.
 `~VASMIREngine_Description
-Using <u>plasma</u> with a <u>magnetic field</u> to generate thrust, in theory, the rocket's design is simpler, and only requires electric power, but one of the bigger problems is that the magnetic field it produces may affect the spacecraft's electronics, requiring additional equipment to offset the effect of the magnetic field it produces.
+Using <link="autotip">plasma</link> with a <link="autotip">magnetic field</link> to generate thrust, in theory, the rocket's design is simpler, and only requires electric power, but one of the bigger problems is that the magnetic field it produces may affect the spacecraft's electronics, requiring additional equipment to offset the effect of the magnetic field it produces.
 `~AtomicBattery_Description
-These nuclear batteries do not use nuclear reactors to generate electricity in the traditional sense. They generate electricity through the energy of atomic decay. The lifespan is much longer than ordinary batteries, but the cost is relatively high. They are suitable for space probes with some light sources, such as <u>Voyager 1</u>.
+These nuclear batteries do not use nuclear reactors to generate electricity in the traditional sense. They generate electricity through the energy of atomic decay. The lifespan is much longer than ordinary batteries, but the cost is relatively high. They are suitable for space probes with some light sources, such as <link="autotip">Voyager 1</link>.
 `~MaintenanceSystem_FontSize
 22
 `~MaintenanceSystem_Description
-This technology was used as early as 2001. It is a well-known mechanical device in the <u>International Space Station</u>. It can bring astronauts or manipulators to repair the spacecraft, and astronauts on the International Space Station must also learn to use this technology to become Astronauts, this technology also extends the service life of international space.
+This technology was used as early as 2001. It is a well-known mechanical device in the <link="autotip">International Space Station</link>. It can bring astronauts or manipulators to repair the spacecraft, and astronauts on the International Space Station must also learn to use this technology to become Astronauts, this technology also extends the service life of international space.
 `~AblationMaterial_Description
-A process of removing impurities from objects, improve protection, Ablation material often use in spacecraft with <br><u>re-entry</u> requirements.
+A process of removing impurities from objects, improve protection, Ablation material often use in spacecraft with <br><link="autotip">re-entry</link> requirements.
 `~CarbonFiber_FontSize
 20
 `~CarbonFiber_Description
@@ -52,15 +52,15 @@ Even the general large-scale nuclear fusion reactor has not yet been put into op
 `~3DPrinter_FontSize
 20
 `~3DPrinter_Description
-Because the spacecraft may be damaged to varying degrees, but in the past, it needed special parts for the launch vehicle to be repaired. With the invention of the 3D printer, the necessary parts can be produced in space by itself, which greatly reduces the cost of the launch vehicle. Use requirements, and at the same time cooperate with <u>reusable rockets</u>, the cost of space exploration can be further reduced.
+Because the spacecraft may be damaged to varying degrees, but in the past, it needed special parts for the launch vehicle to be repaired. With the invention of the 3D printer, the necessary parts can be produced in space by itself, which greatly reduces the cost of the launch vehicle. Use requirements, and at the same time cooperate with <link="autotip">reusable rockets</link>, the cost of space exploration can be further reduced.
 `~Aerogel_Description
-It also call solid air, because it weighs three times as much as air, and also is an excellent insulator, such as, <u>Mars Pathfinder</u> is using this material, but this kind of object contains carcinogens and toxins and should not be touched directly.
+It also call solid air, because it weighs three times as much as air, and also is an excellent insulator, such as, <link="autotip">Mars Pathfinder</link> is using this material, but this kind of object contains carcinogens and toxins and should not be touched directly.
 `~FusionRocket_Description
 Powering rockets through nuclear fusion. Since nuclear fusion is already a very complex project, the complexity of fusion rockets cannot be solved by current technology.
 `~ReinforcedCarbon-carbon_FontSize
 22
 `~ReinforcedCarbon-carbon_Description
-This is a composite material is based on carbon fiber and then reinforced material, even it is a fragile material, but his heat resistant is more powerful, for example, the <u>Parker Solar Probe</u> is made of a reinforced carbon composite material with a diameter of 2.3 meters and a thickness of 11.4 cm as a material to withstand sunlight photo material.
+This is a composite material is based on carbon fiber and then reinforced material, even it is a fragile material, but his heat resistant is more powerful, for example, the <link="autotip">Parker Solar Probe</link> is made of a reinforced carbon composite material with a diameter of 2.3 meters and a thickness of 11.4 cm as a material to withstand sunlight photo material.
 `~AntimatterRocket_FontSize
 19
 `~AntimatterRocket_Description
@@ -115,8 +115,8 @@ It was the first spacecraft to be successfully launched by the United States, wi
 Voyager 1 is the farthest space probe in human history. Launched in 1977, it is accelerated by the gravity of Jupiter and Saturn. At present, it continues to move towards the center of the Milky Way. This space exploration has greatly improved human beings. Knowing about Jupiter, Saturn, Uranus, and Neptune, he took many of the planetary photos we are still looking at.
 `~Tutorial
 `~Tutorial_Information
-In space frequently in the <u>gravity-free</u> and <u>no friction status</u>.  
-Before you conduct the space mission, You must finish the <u>gravity-free training</u>.
+In space frequently in the <link="autotip">gravity-free</link> and <link="autotip">no friction status</link>.  
+Before you conduct the space mission, You must finish the <link="autotip">gravity-free training</link>.
 
 In this mission you need to follow the instruction to control the spaceship reach the destination, After you finish course you can select exit or higher level maze to earn rewards.
 `~Gravity-Free

@@ -5,12 +5,18 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 public class UICallback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    protected UnityEvent onHover = new UnityEvent();
-    protected UnityEvent onHoverEnter = new UnityEvent();
-    protected UnityEvent onHoverExit = new UnityEvent();
-    protected UnityEvent onClick = new UnityEvent();
-    private bool isHovering = false;
-
+    [HideInInspector]
+    public UnityEvent onHover = new UnityEvent();
+    [HideInInspector]
+    public UnityEvent onHoverEnter = new UnityEvent();
+    [HideInInspector]
+    public UnityEvent onHoverExit = new UnityEvent();
+    [HideInInspector]
+    public UnityEvent onClick = new UnityEvent();
+    [HideInInspector]
+    public bool isHovering = false;
+    [HideInInspector]
+    public PointerEventData lastData;
 
     void Update()
     {
@@ -41,6 +47,7 @@ public class UICallback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     // Internal Callback Hooks
     public void OnPointerEnter(PointerEventData eventData)
     {
+        lastData = eventData;
         if (!isHovering)
         {
             isHovering = true;
@@ -50,6 +57,7 @@ public class UICallback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        lastData = eventData;
         if (isHovering)
         {
             isHovering = false;
@@ -59,6 +67,7 @@ public class UICallback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        lastData = eventData;
         onClick.Invoke();
     }
 }

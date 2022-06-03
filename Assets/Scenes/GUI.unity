@@ -965,8 +965,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1286688996}
   image: {fileID: 21300000, guid: 88ee3e131d99bc648931f0e343523a4f, type: 3}
-  customTooltips:
-  - {fileID: 138805175}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &72472510
@@ -989,6 +988,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Ablation Material
 --- !u!114 &72472512
 MonoBehaviour:
@@ -1640,10 +1652,10 @@ GameObject:
   m_Component:
   - component: {fileID: 138805176}
   - component: {fileID: 138805178}
-  - component: {fileID: 138805179}
   - component: {fileID: 138805177}
+  - component: {fileID: 138805179}
   m_Layer: 5
-  m_Name: TooltipKeyword_Re-entry
+  m_Name: Re-entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1717,11 +1729,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 138805175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Re-entry
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &140564539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,8 +1865,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 2015054651}
   image: {fileID: 21300000, guid: 823a197c0c804304f869b5c5f5a1407b, type: 3}
-  customTooltips:
-  - {fileID: 1692969505}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &149652496
@@ -1864,6 +1888,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Ion Thruster
 --- !u!114 &149652498
 MonoBehaviour:
@@ -1894,10 +1931,10 @@ GameObject:
   m_Component:
   - component: {fileID: 151984400}
   - component: {fileID: 151984402}
-  - component: {fileID: 151984403}
   - component: {fileID: 151984401}
+  - component: {fileID: 151984403}
   m_Layer: 5
-  m_Name: TooltipKeyword_AbsoluteZero
+  m_Name: AbsoluteZero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1971,11 +2008,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 151984399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Absolute Zero
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &157138860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &230349604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2673,6 +2723,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Monopropellant Rocket
 --- !u!114 &240393463
 MonoBehaviour:
@@ -2689,7 +2752,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 929560301}
   image: {fileID: 21300000, guid: f324a04c825b5fd4eb91f43cb4a57d98, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!114 &240393464
@@ -2863,10 +2926,10 @@ GameObject:
   m_Component:
   - component: {fileID: 253444200}
   - component: {fileID: 253444202}
-  - component: {fileID: 253444203}
   - component: {fileID: 253444201}
+  - component: {fileID: 253444203}
   m_Layer: 5
-  m_Name: TooltipKeyword_SpaceGarbage
+  m_Name: SpaceGarbage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2940,11 +3003,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 253444199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Space Garbage
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &256197449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,7 +3545,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 510763814}
   image: {fileID: 21300000, guid: 1dba2cb6d9b60d04694295418ce50a0a, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &274391918
@@ -3492,6 +3568,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Fusion Rocket
 --- !u!114 &274391920
 MonoBehaviour:
@@ -3963,10 +4052,10 @@ GameObject:
   m_Component:
   - component: {fileID: 332175427}
   - component: {fileID: 332175429}
-  - component: {fileID: 332175430}
   - component: {fileID: 332175428}
+  - component: {fileID: 332175430}
   m_Layer: 5
-  m_Name: TooltipKeyword_GravityFree
+  m_Name: Gravity-free
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4040,11 +4129,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 332175426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Gravity-Free
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &332257255
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,6 +4402,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Save and Return
 --- !u!114 &349720484
 MonoBehaviour:
@@ -4513,7 +4628,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1990561022}
   image: {fileID: 21300000, guid: a8f5cb04358d6704aa9d28f47153423f, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &355322581
@@ -4536,6 +4651,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Nuclear Thermal Rocket
 --- !u!114 &355322583
 MonoBehaviour:
@@ -4686,7 +4814,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 580695214}
   image: {fileID: 21300000, guid: 9a029053690a834438e301f1d97ef544, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &366443994
@@ -4709,6 +4837,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Carbon Fiber
 --- !u!114 &366443996
 MonoBehaviour:
@@ -5709,7 +5850,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 836776868}
   image: {fileID: 21300000, guid: 574ebeeda73add74687623f355cabe1f, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &424040742
@@ -5732,6 +5873,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Bipropellant Rocket
 --- !u!114 &424040744
 MonoBehaviour:
@@ -6232,12 +6386,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 454380391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bb8b77fce8e654d9239d4bee10c80f, type: 3}
+  m_Script: {fileID: 11500000, guid: a119e3e6d766e1b42a622ca15bab3cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createWhenStart: 0
-  myCustomTooltips: []
-  highlighterPrefab: {fileID: 6252223433345306116, guid: 90d11b7dcc9184949a7c0fd9293f8932, type: 3}
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  tooltipContainerHint: {fileID: 0}
 --- !u!1 &455448939
 GameObject:
   m_ObjectHideFlags: 0
@@ -6339,10 +6504,10 @@ GameObject:
   m_Component:
   - component: {fileID: 460169220}
   - component: {fileID: 460169222}
-  - component: {fileID: 460169223}
   - component: {fileID: 460169221}
+  - component: {fileID: 460169223}
   m_Layer: 5
-  m_Name: TooltipKeyword_GravityFreeTraining
+  m_Name: Gravity-freeTraining
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6416,11 +6581,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 460169219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Gravity-Free Training
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &461077893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6507,10 +6685,10 @@ GameObject:
   m_Component:
   - component: {fileID: 466072994}
   - component: {fileID: 466072996}
-  - component: {fileID: 466072997}
   - component: {fileID: 466072995}
+  - component: {fileID: 466072997}
   m_Layer: 5
-  m_Name: TooltipKeyword_MarsPathfinder
+  m_Name: MarsPathfinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6584,11 +6762,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 466072993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Mars Pathfinder
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &472001892
 GameObject:
   m_ObjectHideFlags: 0
@@ -6641,6 +6832,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Don't save and Return
 --- !u!114 &472001895
 MonoBehaviour:
@@ -7239,9 +7443,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 7385318}
   image: {fileID: 21300000, guid: 8f6526c473ca62f43bc942e6ba0b1aec, type: 3}
-  customTooltips:
-  - {fileID: 1029938864}
-  - {fileID: 1842667145}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &511120266
@@ -7264,6 +7466,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: VASMIR Engine
 --- !u!114 &511120268
 MonoBehaviour:
@@ -7664,6 +7879,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Skill Tree <color=grey>(Read Only in Demo)</color>
 --- !u!1 &516100911
 GameObject:
@@ -8176,6 +8404,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: External device
 --- !u!114 &550932433
 MonoBehaviour:
@@ -9362,7 +9603,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1747670478}
   image: {fileID: 21300000, guid: 6f26e6c7a2ea132408fa5909582c9560, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &615110610
@@ -9385,6 +9626,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Nuclear Fusion Battery
 --- !u!114 &615110612
 MonoBehaviour:
@@ -10294,8 +10548,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1318314587}
   image: {fileID: 21300000, guid: ada5c88fcf4ab2748a9c6d8e70cb307d, type: 3}
-  customTooltips:
-  - {fileID: 820952745}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &692783536
@@ -10318,6 +10571,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Maintenance System
 --- !u!114 &692783538
 MonoBehaviour:
@@ -10390,7 +10656,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   text: Reset Equip
+=======
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: Reset Install
+>>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
 --- !u!114 &717319403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11967,8 +12250,8 @@ GameObject:
   m_Component:
   - component: {fileID: 817250879}
   - component: {fileID: 817250881}
-  - component: {fileID: 817250882}
   - component: {fileID: 817250880}
+  - component: {fileID: 817250882}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -12015,11 +12298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In space frequently in the <u>gravity-free</u> and <u>no friction status</u>. 
-    \r\nBefore you conduct the space mission, You must finish the <u>gravity-free
-    training</u>.\n\r\nIn this mission you need to follow the instruction to control
-    the spaceship reach the destination, After you finish course you can select exit
-    or higher level maze to earn rewards."
+  m_text: ERR Please enter via menu button to load text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12105,15 +12384,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 817250878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bb8b77fce8e654d9239d4bee10c80f, type: 3}
+  m_Script: {fileID: 11500000, guid: a119e3e6d766e1b42a622ca15bab3cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createWhenStart: 0
-  myCustomTooltips:
-  - {fileID: 332175426}
-  - {fileID: 1516977409}
-  - {fileID: 460169219}
-  highlighterPrefab: {fileID: 6252223433345306116, guid: 90d11b7dcc9184949a7c0fd9293f8932, type: 3}
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  tooltipContainerHint: {fileID: 397959609}
 --- !u!1 &820952745
 GameObject:
   m_ObjectHideFlags: 0
@@ -12124,10 +12411,10 @@ GameObject:
   m_Component:
   - component: {fileID: 820952746}
   - component: {fileID: 820952748}
-  - component: {fileID: 820952749}
   - component: {fileID: 820952747}
+  - component: {fileID: 820952749}
   m_Layer: 5
-  m_Name: TooltipKeyword_InternationalSpaceStation
+  m_Name: InternationalSpaceStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12201,11 +12488,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 820952745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: International Space Station
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &829807061
 GameObject:
   m_ObjectHideFlags: 0
@@ -12509,10 +12809,10 @@ GameObject:
   m_Component:
   - component: {fileID: 869306234}
   - component: {fileID: 869306236}
-  - component: {fileID: 869306237}
   - component: {fileID: 869306235}
+  - component: {fileID: 869306237}
   m_Layer: 5
-  m_Name: TooltipKeyword_ReusableRocket
+  m_Name: ReusableRocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12586,11 +12886,108 @@ MonoBehaviour:
   m_GameObject: {fileID: 869306233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   keyword: Reusable Rocket
   langFile: Information
+=======
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
+--- !u!1 &898622644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898622645}
+  - component: {fileID: 898622647}
+  - component: {fileID: 898622646}
+  m_Layer: 5
+  m_Name: Achievment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!224 &898622645
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898622644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 743297962}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -15}
+  m_SizeDelta: {x: 300, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &898622646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898622644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'reach the destination(must be done) '
+--- !u!222 &898622647
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898622644}
+  m_CullTransparentMesh: 1
+>>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
 --- !u!1 &929560301
 GameObject:
   m_ObjectHideFlags: 0
@@ -13811,7 +14208,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1486359122}
   image: {fileID: 21300000, guid: 59259c159bd0bc042a11bf441ddaf739, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1014825315
@@ -13834,6 +14231,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Tripropellant Rocket
 --- !u!114 &1014825317
 MonoBehaviour:
@@ -14220,6 +14630,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: External material
 --- !u!114 &1029191373
 MonoBehaviour:
@@ -14288,10 +14711,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1029938865}
   - component: {fileID: 1029938867}
-  - component: {fileID: 1029938868}
   - component: {fileID: 1029938866}
+  - component: {fileID: 1029938868}
   m_Layer: 5
-  m_Name: TooltipKeyword_Plasma
+  m_Name: Plasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14365,11 +14788,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1029938864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Plasma
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1033274517
 GameObject:
   m_ObjectHideFlags: 0
@@ -14380,10 +14816,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1033274518}
   - component: {fileID: 1033274520}
-  - component: {fileID: 1033274521}
   - component: {fileID: 1033274519}
+  - component: {fileID: 1033274521}
   m_Layer: 5
-  m_Name: TooltipKeyword_ParkerSolarProbe
+  m_Name: ParkerSolarProbe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14457,11 +14893,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033274517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Parker Solar Probe
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1040845876
 GameObject:
   m_ObjectHideFlags: 0
@@ -14829,8 +15278,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1889443296}
   image: {fileID: 21300000, guid: d27c8b473b5f11b4fa959d5fd823bcc5, type: 3}
-  customTooltips:
-  - {fileID: 253444199}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1059165478
@@ -14853,6 +15301,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Small Magnetic Satellite
 --- !u!114 &1059165480
 MonoBehaviour:
@@ -15181,6 +15642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110026669}
+  - component: {fileID: 1110026670}
   m_Layer: 5
   m_Name: CustomTooltips_SkillTree
   m_TagString: Untagged
@@ -15223,6 +15685,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1110026670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110026668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64a448cb45a3e14fa0f424a7c590489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  langFile: Information
 --- !u!1 &1110997859
 GameObject:
   m_ObjectHideFlags: 0
@@ -15956,10 +16431,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1194237140}
   - component: {fileID: 1194237142}
-  - component: {fileID: 1194237143}
   - component: {fileID: 1194237141}
+  - component: {fileID: 1194237143}
   m_Layer: 5
-  m_Name: TooltipKeyword_Shuttle
+  m_Name: Shuttle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16033,11 +16508,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1194237139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Shuttle
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1195062245
 GameObject:
   m_ObjectHideFlags: 0
@@ -16561,10 +17049,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1231642105}
   - component: {fileID: 1231642107}
-  - component: {fileID: 1231642108}
   - component: {fileID: 1231642106}
+  - component: {fileID: 1231642108}
   m_Layer: 5
-  m_Name: TooltipKeyword_Voyager1
+  m_Name: Voyager1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16638,11 +17126,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231642104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Voyager 1
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1233005692
 GameObject:
   m_ObjectHideFlags: 0
@@ -16653,10 +17154,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1233005693}
   - component: {fileID: 1233005695}
-  - component: {fileID: 1233005696}
   - component: {fileID: 1233005694}
+  - component: {fileID: 1233005696}
   m_Layer: 5
-  m_Name: TooltipKeyword_Juno
+  m_Name: Juno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16730,11 +17231,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1233005692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Juno
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1237790991
 GameObject:
   m_ObjectHideFlags: 0
@@ -17221,6 +17735,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: External device
 --- !u!114 &1282974099
 MonoBehaviour:
@@ -18467,6 +18994,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Go Back
 --- !u!1 &1363416858
 GameObject:
@@ -18523,8 +19063,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1216220980}
   image: {fileID: 21300000, guid: 7bcf5804d4d8cb245bccec5634b66386, type: 3}
-  customTooltips:
-  - {fileID: 466072993}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1363416861
@@ -18547,6 +19086,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Aerogel
 --- !u!114 &1363416863
 MonoBehaviour:
@@ -18974,6 +19526,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Quit
 --- !u!1 &1385788053
 GameObject:
@@ -19239,8 +19804,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 587918560}
   image: {fileID: 21300000, guid: 6fcc716b865012d479e54c9a06445288, type: 3}
-  customTooltips:
-  - {fileID: 253444199}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1426186107
@@ -19263,6 +19827,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Metal Magnetic Mesh
 --- !u!114 &1426186109
 MonoBehaviour:
@@ -20452,6 +21029,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Internal device
 --- !u!114 &1505933003
 MonoBehaviour:
@@ -20791,10 +21381,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1516977410}
   - component: {fileID: 1516977412}
-  - component: {fileID: 1516977413}
   - component: {fileID: 1516977411}
+  - component: {fileID: 1516977413}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: TooltipKeyword_NoFrictionStatus
+=======
+  m_Name: NoFrictionStatus
+>>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20868,11 +21462,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1516977409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   keyword: No Friction Status
   langFile: Information
+=======
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
+>>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
 --- !u!1 &1522894676
 GameObject:
   m_ObjectHideFlags: 0
@@ -21081,8 +21693,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1319000444}
   image: {fileID: 21300000, guid: aa53e905260f8f2499c74a6db0edbee1, type: 3}
-  customTooltips:
-  - {fileID: 1231642104}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1529734628
@@ -21105,6 +21716,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Atomic Battery
 --- !u!114 &1529734630
 MonoBehaviour:
@@ -21461,10 +22085,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1551969846}
   - component: {fileID: 1551969848}
-  - component: {fileID: 1551969849}
   - component: {fileID: 1551969847}
+  - component: {fileID: 1551969849}
   m_Layer: 5
-  m_Name: TooltipKeyword_Sputnik1
+  m_Name: Sputnik1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21538,11 +22162,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1551969845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Sputnik 1
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1565107828
 GameObject:
   m_ObjectHideFlags: 0
@@ -22994,6 +23631,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Engine
 --- !u!114 &1662478407
 MonoBehaviour:
@@ -23423,6 +24073,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: <color=red>Locked</color> <color=grey>(Not avalible in Demo)</color=gray>
 --- !u!1 &1692130720
 GameObject:
@@ -23509,10 +24172,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1692969506}
   - component: {fileID: 1692969508}
-  - component: {fileID: 1692969509}
   - component: {fileID: 1692969507}
+  - component: {fileID: 1692969509}
   m_Layer: 5
-  m_Name: TooltipKeyword_Ionization
+  m_Name: Ionization
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23586,11 +24249,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1692969505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Ionization
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1698569346
 GameObject:
   m_ObjectHideFlags: 0
@@ -23685,6 +24361,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: 'Stainless Steel '
 --- !u!114 &1705485320
 MonoBehaviour:
@@ -23701,7 +24390,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 257899348}
   image: {fileID: 21300000, guid: 1229ffe18e925cb4c9f648457961469d, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!114 &1705485321
@@ -24611,6 +25300,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Internal material
 --- !u!114 &1760694232
 MonoBehaviour:
@@ -25041,8 +25743,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1460339056}
   image: {fileID: 21300000, guid: b1c93e5807646504aa5f0dcbc9484afe, type: 3}
-  customTooltips:
-  - {fileID: 253444199}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1784175394
@@ -25065,6 +25766,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Laser
 --- !u!114 &1784175396
 MonoBehaviour:
@@ -25140,8 +25854,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 330548613}
   image: {fileID: 21300000, guid: 5bf6e030e7350834f9d0d543062c2d10, type: 3}
-  customTooltips:
-  - {fileID: 869306233}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1787647265
@@ -25164,6 +25877,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: 3D Printer
 --- !u!114 &1787647267
 MonoBehaviour:
@@ -25194,10 +25920,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1796124607}
   - component: {fileID: 1796124609}
-  - component: {fileID: 1796124610}
   - component: {fileID: 1796124608}
+  - component: {fileID: 1796124610}
   m_Layer: 5
-  m_Name: TooltipKeyword_Rosetta
+  m_Name: Rosetta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25271,11 +25997,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796124606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Rosetta
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1799346462
 GameObject:
   m_ObjectHideFlags: 0
@@ -25497,7 +26236,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 93757910}
   image: {fileID: 21300000, guid: a2777c2aaf4c59f49bc413af7af89fd1, type: 3}
-  customTooltips: []
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1805421468
@@ -25520,6 +26259,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Antimatter Rocket
 --- !u!114 &1805421470
 MonoBehaviour:
@@ -25595,8 +26347,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 958859658}
   image: {fileID: 21300000, guid: d821e9144e29339419b7022a772fa9af, type: 3}
-  customTooltips:
-  - {fileID: 1033274517}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &1829880503
@@ -25619,6 +26370,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Reinforced Carbon-carbon
 --- !u!114 &1829880505
 MonoBehaviour:
@@ -25727,6 +26491,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: 
   customTooltip: {fileID: 664556726}
 --- !u!1 &1842667145
@@ -25739,10 +26516,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1842667146}
   - component: {fileID: 1842667148}
-  - component: {fileID: 1842667149}
   - component: {fileID: 1842667147}
+  - component: {fileID: 1842667149}
   m_Layer: 5
-  m_Name: TooltipKeyword_MagneticField
+  m_Name: MagneticField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25816,11 +26593,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1842667145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Magnetic Field
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1844570465
 GameObject:
   m_ObjectHideFlags: 0
@@ -26075,10 +26865,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1852486221}
   - component: {fileID: 1852486223}
-  - component: {fileID: 1852486224}
   - component: {fileID: 1852486222}
+  - component: {fileID: 1852486224}
   m_Layer: 5
-  m_Name: TooltipKeyword_Vanguard1
+  m_Name: Vanguard1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26152,11 +26942,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1852486220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776394903f56d34f83da83a13b346db, type: 3}
+  m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Vanguard 1
-  langFile: Information
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
+  text: 
+  customTooltip: {fileID: 0}
 --- !u!1 &1859141132
 GameObject:
   m_ObjectHideFlags: 0
@@ -27638,6 +28441,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Return
 --- !u!1 &2013741656
 GameObject:
@@ -28202,8 +29018,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 2013948071}
   image: {fileID: 21300000, guid: 80fee46cba1cf894396c4c523c8cb7cc, type: 3}
-  customTooltips:
-  - {fileID: 1551969845}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!114 &2044684159
@@ -28245,6 +29060,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Titanium Alloy
 --- !u!1 &2051388952 stripped
 GameObject:
@@ -28491,10 +29319,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 1692130720}
   image: {fileID: 21300000, guid: f4450645671c2c748ba5c1139426bb6a, type: 3}
-  customTooltips:
-  - {fileID: 1852486220}
-  - {fileID: 1233005692}
-  - {fileID: 1796124606}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &2059425411
@@ -28517,6 +29342,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Solar Battery
 --- !u!114 &2059425413
 MonoBehaviour:
@@ -28697,6 +29535,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Play
 --- !u!1 &2065745529
 GameObject:
@@ -29218,9 +30069,7 @@ MonoBehaviour:
   information: {fileID: 1903271501}
   icon: {fileID: 187395399}
   image: {fileID: 21300000, guid: 289a05ceaa31fa243829c08805596500, type: 3}
-  customTooltips:
-  - {fileID: 151984399}
-  - {fileID: 1194237139}
+  customTooltips: {fileID: 1110026669}
   temp: {fileID: 0}
   langFile: Information
 --- !u!222 &2109891329
@@ -29243,6 +30092,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: HRSI
 --- !u!114 &2109891331
 MonoBehaviour:
@@ -34084,6 +34946,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: <color=red>Locked</color> <color=grey>(Not avalible in Demo)</color=gray>
 --- !u!222 &9160700875042621717
 CanvasRenderer:
@@ -34513,6 +35388,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Go Back
 --- !u!114 &9160700875687770350
 MonoBehaviour:
@@ -34777,7 +35665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &9160700876226769916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35176,6 +36064,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   text: Settings
 --- !u!1 &9160700876897684914
 GameObject:
