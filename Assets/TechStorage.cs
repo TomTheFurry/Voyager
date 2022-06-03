@@ -15,6 +15,8 @@ public class TechStorage : MonoBehaviour
     public struct TechState
     {
         public bool isUnlocked;
+        public bool isEquip;
+        public string equipType;
     }
     [Serializable]
     public struct TechData
@@ -29,6 +31,7 @@ public class TechStorage : MonoBehaviour
     }
 
     Dictionary<Tech,TechState> techTable; // Hashtable<Tech,TechState>
+    Dictionary<string, Tech> techEquips;
 
     public TechData collectTechData()
     {
@@ -52,6 +55,7 @@ public class TechStorage : MonoBehaviour
     {
         teches = new List<Tech>();
         techTable = new Dictionary<Tech, TechState>();
+        techEquips = new Dictionary<string, Tech>();
 
         teches.AddRange(transform.GetComponentsInChildren<Tech>());
 
@@ -59,14 +63,45 @@ public class TechStorage : MonoBehaviour
         {
             techTable.Add(tech, new TechState
             {
-                isUnlocked = false
+                isUnlocked = false,
+                isEquip = false,
+                equipType = null
             });
+        }
+
+        List<TechEquip> equips = new List<TechEquip>();
+        equips.AddRange(transform.GetComponentsInChildren<TechEquip>());
+        foreach (TechEquip equip in equips)
+        {
+            techEquips.Add(equip.name, null);
         }
     }
 
     public Tech getTechByIdentifier(string identifier)
     {
         return teches.Find((t) => t.identifier == identifier);
+    }
+
+    public List<Tech> getTechesIsUnlocked(string type)
+    {
+        List<Tech> techIsUnlocked = new List<Tech>();
+        foreach (Tech tech in teches)
+        {
+            if (!isTechUnlocked(tech))
+                continue;
+            if (type.Length != 0 && !techTypeIsMatch(tech, type))
+                continue;
+            techIsUnlocked.Add(tech);
+        }
+        return techIsUnlocked;
+    }
+    public List<Tech> getTechesIsUnlocked()
+    {
+        return getTechesIsUnlocked("");
+    }
+    public bool techTypeIsMatch(Tech tech, string type)
+    {
+        return tech.type.ToLower().Replace(" ", "").Equals(type.ToLower());
     }
 
     public void importTechData(TechData techData)
@@ -85,6 +120,12 @@ public class TechStorage : MonoBehaviour
             }
             techTable[tech] = pair.state;
             Debug.Log("Loaded " + pair.identifier + ": " + pair.state);
+
+            // load equip
+            if (pair.state.isEquip)
+            {
+                techEquips[pair.state.equipType] = tech;
+            }
         }
         Debug.Log("Loaded " + techData.entries.Length + " tech data entries.");
     }
@@ -130,14 +171,6 @@ public class TechStorage : MonoBehaviour
     {
         return getTechState(tech).isUnlocked;
     }
-    public bool isTechsUnlocked(Tech[] techs)
-    {
-        foreach (Tech tech in techs)
-            if (!instance.isTechUnlocked(tech))
-                return false;
-
-        return true;
-    }
 
     // ONLY return true if tech is not unlocked, but can be unlocked
     public bool canTechBeUnlocked(Tech tech)
@@ -168,5 +201,55 @@ public class TechStorage : MonoBehaviour
         techTable[tech] = techState;
         onTechStatusChanged.Invoke();
         return true;
+    }
+
+    public void techEquipSave()
+    {
+        techUnequip();
+        foreach (KeyValuePair<string, Tech> equip in techEquips)
+        {
+            Tech tech = equip.Value;
+            if (tech == null)
+                continue;
+            TechState ts = getTechState(tech);
+            ts.isEquip = true;
+            ts.equipType = equip.Key;
+            techTable[tech] = ts;
+        }
+    }
+
+    public void techEquipLoad()
+    {
+        foreach (Tech tech in teches)
+        {
+            TechState ts = getTechState(tech);
+            if (ts.isEquip)
+            {
+                techEquips[ts.equipType] = tech;
+            }
+        }
+    }
+
+    public bool techEquip(Tech tech, string equipType)
+    {
+        techEquips[equipType] = tech;
+        return true;
+    }
+
+    public bool techUnequip()
+    {
+        foreach (Tech tech in teches)
+        {
+            TechState ts = getTechState(tech);
+            ts.isEquip = false;
+            ts.equipType = null;
+            techTable[tech] = ts;
+        }
+        return true;
+    }
+
+    public Tech getEquip(string equipType)
+    {
+        return (Tech)techEquips[equipType];
     }
 }

@@ -123,7 +123,7 @@ In this mission you need to follow the instruction to control the spaceship reac
 <color=#00FFFF><size=28><b><u>Gravity-Free</u></b></size></color>
 Can call it weightlessness, earth have the gravity it will pull the object to center of the earth. 
 But when we far the earth the gravity will be decreased, so that the spaceship and the astronsuts will not be affected by gravity, to achieving a floating state.
-`~FrictionStatus
+`~NoFrictionStatus
 <color=#00FFFF><size=28><b><u>No Friction Status</u></b></size></color>
 Most time of the space  is a vacuum, without matter including air.
 Object do not slow down when no force is applied, also they will continue to accelerate when a small amount of force is applied. 

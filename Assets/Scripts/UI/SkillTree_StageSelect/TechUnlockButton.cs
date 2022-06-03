@@ -24,8 +24,9 @@ public class TechUnlockButton : MonoBehaviour
 
     public void ButtonClicked() {
         if (tech != null) {
-            TechStorage.instance.unlockTech(tech);    
+            bool unlock = TechStorage.instance.unlockTech(tech);
+            if (unlock) 
+                updateState(false, tech);
         }
-        
     }
 }

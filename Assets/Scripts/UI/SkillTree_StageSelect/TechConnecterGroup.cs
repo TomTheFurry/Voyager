@@ -15,6 +15,7 @@ public class TechConnecterGroup : MonoBehaviour
         if (nextTech == null) nextTech = TechStorage.instance.getTechByIdentifier(gameObject.name);
 
         TechStorage.instance.onTechStatusChanged.AddListener(Refresh);
+        Refresh();
     }
 
     void Refresh()

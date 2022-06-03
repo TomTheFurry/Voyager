@@ -17,6 +17,11 @@ public class TooltipAuto : MonoBehaviour
             addMyTooltips();
     }
 
+    private void OnDisable()
+    {
+        clearTooltips();
+    }
+
     private void addTooltip(GameObject customTooltip)
     {
         TextMeshProUGUI text = gameObject.GetComponent<TextMeshProUGUI>();

@@ -10,6 +10,9 @@ public class TechIcon : MonoBehaviour
     public Sprite sprite0;
     public Sprite sprite1;
     public Sprite sprite2;
+    public Sprite sprite3;
+    public Sprite sprite4;
+    public Sprite sprite5;
     private int state = -1;
 
     public void Start()
@@ -43,16 +46,21 @@ public class TechIcon : MonoBehaviour
     {
         switch (i)
         {
-            case 0: _SetSprite(sprite0); break;
-            case 1: _SetSprite(sprite1); break;
-            case 2: _SetSprite(sprite2); break;
+            case 0: _SetSprite(sprite0, sprite1); break;
+            case 1: _SetSprite(sprite2, sprite3); break;
+            case 2: _SetSprite(sprite4, sprite5); break;
             default: throw new Exception();
         }
     }
 
-    private void _SetSprite(Sprite spr)
+    private void _SetSprite(Sprite sprNormal, Sprite sprHighlight)
     {
-        bgButton.image.sprite = spr;
+        bgButton.image.sprite = sprNormal;
+        
+        SpriteState st = new SpriteState();
+        st.highlightedSprite = sprHighlight;
+        st.selectedSprite = sprHighlight;
+        bgButton.GetComponent<Button>().spriteState = st;
     }
 
 

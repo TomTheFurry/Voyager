@@ -15,8 +15,7 @@ public class ShipModifyButton : MonoBehaviour
 
     public void openShipModifyUi()
     {
-        UiInfo location = new UiInfo("Ship modify", transform.parent.gameObject);
-        location.moveToNext(shipModiftUi);
+        new UiInfo(transform.parent.gameObject, shipModiftUi);
     }
 
     public void changeButtonState()
