@@ -10656,9 +10656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   text: Reset Equip
-=======
   onHover:
     m_PersistentCalls:
       m_Calls: []
@@ -10672,8 +10670,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isHovering: 0
-  text: Reset Install
->>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
 --- !u!114 &717319403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12889,10 +12885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   keyword: Reusable Rocket
   langFile: Information
-=======
   onHover:
     m_PersistentCalls:
       m_Calls: []
@@ -12937,7 +12931,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 743297962}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -12987,7 +12981,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898622644}
   m_CullTransparentMesh: 1
->>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
 --- !u!1 &929560301
 GameObject:
   m_ObjectHideFlags: 0
@@ -21384,11 +21377,7 @@ GameObject:
   - component: {fileID: 1516977411}
   - component: {fileID: 1516977413}
   m_Layer: 5
-<<<<<<< HEAD
-  m_Name: TooltipKeyword_NoFrictionStatus
-=======
   m_Name: NoFrictionStatus
->>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21465,10 +21454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  keyword: No Friction Status
-  langFile: Information
-=======
   onHover:
     m_PersistentCalls:
       m_Calls: []
@@ -21484,7 +21469,6 @@ MonoBehaviour:
   isHovering: 0
   text: 
   customTooltip: {fileID: 0}
->>>>>>> 954eee37f6b21622a015ae23d2449eb6a66db705
 --- !u!1 &1522894676
 GameObject:
   m_ObjectHideFlags: 0
