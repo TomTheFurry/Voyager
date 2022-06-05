@@ -5,48 +5,51 @@ using UnityEngine.UI;
 
 public class TechEquipButton : MonoBehaviour
 {
-    public Tech tech;
     private Sprite defaultSpr;
 
     private void Start()
     {
         Button btn = GetComponent<Button>();
-        btn.onClick.AddListener(ButtonClicked);
+        btn.onClick.AddListener(openInterface);
         defaultSpr = transform.GetChild(0).GetComponent<Image>().sprite;
 
         TechEquipInterfaceController.instance.onResetEquip.AddListener(resetEquip);
-
         TechEquipInterfaceController.instance.onLoadEquip.AddListener(loadEquip);
-        loadEquip();
+
+        updateIcon();
     }
-    public void ButtonClicked()
+    public void openInterface()
     {
         TechEquipInterfaceController.instance.openInterface(this);
     }
 
     public void resetEquip()
     {
-        tech = null;
+        TechStorage.instance.techEquip(null, name);
         updateIcon();
-        TechStorage.instance.techEquip(tech, name);
+    }
+
+    public void loadEquip()
+    {
+        TechStorage.instance.loadEquip(name);
+        updateIcon();
     }
 
     public void techSelect(Tech tech)
     {
-        this.tech = tech;
-        updateIcon();
         TechStorage.instance.techEquip(tech, name);
+        updateIcon();
     }
 
     public void updateIcon()
     {
         Transform img = transform.GetChild(0);
-        img.GetComponent<Image>().sprite = tech != null ? tech.icon : defaultSpr;
+        Tech equip = getTechEquip().equip;
+        img.GetComponent<Image>().sprite = equip != null ? equip.icon : defaultSpr;
     }
 
-    public void loadEquip()
+    private TechEquip getTechEquip()
     {
-        tech = TechStorage.instance.getEquip(name);
-        updateIcon();
+        return TechStorage.instance.getEquipByIdentifier(name);
     }
 }

@@ -29,14 +29,13 @@ public class TechEquipInterfaceController : MonoBehaviour
 
     public void UnsaveEquip()
     {
-        TechStorage.instance.techEquipLoad();
         onLoadEquip.Invoke();
         leaveInterface();
     }
 
     public void saveEquip()
     {
-        TechStorage.instance.techEquipSave();
+        TechStorage.instance.saveEquipChange();
         leaveInterface();
     }
 
@@ -54,7 +53,7 @@ public class TechEquipInterfaceController : MonoBehaviour
         type = equipBtn.gameObject.name;
 
         Transform sti = Instantiate(selectedTechInterfacePrefab, transform).transform;
-        sti.transform.localPosition = Vector3.zero;
+        sti.localPosition = Vector3.zero;
         selectInterface = sti.gameObject;
     }
 

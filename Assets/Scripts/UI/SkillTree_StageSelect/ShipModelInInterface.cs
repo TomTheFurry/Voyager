@@ -9,15 +9,9 @@ public class ShipModelInInterface : MonoBehaviour
     public float swingSpeed = 1f;
 
     private float timer = 0.5f;
-    private bool reset = true;
-
-    private Vector3 startPos;
-    private Quaternion startRot;
 
     private void Start()
     {
-        startPos = transform.position;
-        startRot = transform.rotation;
         rotateSpeed /= 100f;
         swingSpeed /= 100f;
     }
