@@ -16,6 +16,7 @@ public class Global : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
         DontDestroyOnLoad(gameObject);
         LangSystem.LoadLang("eng");

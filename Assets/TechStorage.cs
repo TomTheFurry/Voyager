@@ -130,6 +130,8 @@ public class TechStorage : MonoBehaviour
         Debug.Log("Loaded " + techData.entries.Length + " tech data entries.");
     }
 
+    private bool hasSetup = false;
+
     void Start()
     {
         Debug.Log("TechTree creacted: " + this);
@@ -150,10 +152,12 @@ public class TechStorage : MonoBehaviour
             PlayerData.GetData().techData = collectTechData();
             PlayerData.Save();
         });
+        hasSetup = true;
     }
 
     void OnDestroy()
     {
+        if (!hasSetup) return;
         PlayerData.GetData().techData = collectTechData();
         PlayerData.Save();
         if (instance == this)

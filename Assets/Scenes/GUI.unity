@@ -10656,7 +10656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Reset Equip
   onHover:
     m_PersistentCalls:
       m_Calls: []
@@ -10670,6 +10669,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isHovering: 0
+  text: Reset Equip
 --- !u!114 &717319403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11270,6 +11270,7 @@ GameObject:
   - component: {fileID: 756869074}
   - component: {fileID: 756869076}
   - component: {fileID: 756869075}
+  - component: {fileID: 756869077}
   m_Layer: 5
   m_Name: StarPoint3
   m_TagString: Untagged
@@ -11334,6 +11335,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756869073}
   m_CullTransparentMesh: 1
+--- !u!114 &756869077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756869073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e3a1b2e4b54e946ab3539077d121b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completedStar: {fileID: 21300000, guid: 644cb16d4841b5841bb47c259f993e2c, type: 3}
+  incompleteStar: {fileID: 21300000, guid: 9943c1c83e6b8274c84df70694c0348b, type: 3}
+  targetLevel: 0
+  starIndex: 2
 --- !u!1 &762655777
 GameObject:
   m_ObjectHideFlags: 0
@@ -11721,7 +11738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &786790828
 AudioSource:
@@ -12885,8 +12902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217f7a702c47f9144ba61256031a0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: Reusable Rocket
-  langFile: Information
   onHover:
     m_PersistentCalls:
       m_Calls: []
@@ -13655,7 +13670,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -13711,7 +13726,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966639408
 GameObject:
@@ -23125,6 +23140,7 @@ GameObject:
   - component: {fileID: 1657823104}
   - component: {fileID: 1657823106}
   - component: {fileID: 1657823105}
+  - component: {fileID: 1657823107}
   m_Layer: 5
   m_Name: StarPoint2
   m_TagString: Untagged
@@ -23189,6 +23205,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657823103}
   m_CullTransparentMesh: 1
+--- !u!114 &1657823107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657823103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e3a1b2e4b54e946ab3539077d121b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completedStar: {fileID: 21300000, guid: 644cb16d4841b5841bb47c259f993e2c, type: 3}
+  incompleteStar: {fileID: 21300000, guid: 9943c1c83e6b8274c84df70694c0348b, type: 3}
+  targetLevel: 0
+  starIndex: 1
 --- !u!1 &1658019768
 GameObject:
   m_ObjectHideFlags: 0
@@ -23326,6 +23358,7 @@ GameObject:
   - component: {fileID: 1658760721}
   - component: {fileID: 1658760723}
   - component: {fileID: 1658760722}
+  - component: {fileID: 1658760724}
   m_Layer: 5
   m_Name: StarPoint1
   m_TagString: Untagged
@@ -23390,6 +23423,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658760720}
   m_CullTransparentMesh: 1
+--- !u!114 &1658760724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658760720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e3a1b2e4b54e946ab3539077d121b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completedStar: {fileID: 21300000, guid: 644cb16d4841b5841bb47c259f993e2c, type: 3}
+  incompleteStar: {fileID: 21300000, guid: 9943c1c83e6b8274c84df70694c0348b, type: 3}
+  targetLevel: 0
+  starIndex: 0
 --- !u!1 &1659950547
 GameObject:
   m_ObjectHideFlags: 0
@@ -25665,7 +25714,7 @@ RectTransform:
   - {fileID: 380819144}
   - {fileID: 1589567275}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29918,6 +29967,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8827badb57e8f9540a49eb7facf2262b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  isHovering: 0
   zoomRate: 500
   maxSize: 650
   minSize: 500
@@ -33069,7 +33131,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6081419982211131795, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6081419982211131795, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
       propertyPath: m_LocalPosition.x

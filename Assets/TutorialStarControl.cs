@@ -56,6 +56,7 @@ public class TutorialStarControl : MonoBehaviour
         PlayerData.GetData().stars += newStars;
         // TODO: Score based new stars
         Debug.Log("TutorialStarControl:\n  New stars: " + newStars + "\n  Time: " + timeTracker.GetTime());
+        PlayerData.Save();
     }
 
     private void Update()
