@@ -19,12 +19,17 @@ public class TMPTooltip : UICallback
     //     ...Hi here is a <link="Autotip">abc</link>.
     //
     // Which links to the tooltip object named 'abc'
-    // (Note that while keyword cases doesn't matter, the object name needs to match exactly.)
+    // (Note that while keyword cases doesn't matter, the object name needs to match exactly if not using AutoTip.)
     // The Matcher will first try and find the object in the hinted container,
     //   then it will search this object's child,
     //   then this object's parent,
     //   then globally find the object with the name,
     //   then if all else fails, throw Console error logs
+    //
+    // For autotip, the tip object format should be in this:
+    //   Hi here is a tip    ==>   HiHereIsATip
+    //   Space ship          ==>   SpaceShip
+    //   What-about this     ==>   What-aboutThis
 
 
 
