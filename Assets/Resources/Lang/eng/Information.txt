@@ -92,13 +92,13 @@ This is an unmanned solar exploration spacecraft. The goal of this spacecraft is
 `~Re-entry
 <color=#00FFFF><size=28><b><u>Re-entry</u></b></size></color>
 It means that the object leaves the atmosphere and then returns to the atmosphere. The ideal object that can re-enter the atmosphere is to have a stronger protective layer, otherwise it will be burned out by the atmosphere.
-`~ReusableRocket
+`~ReusableRockets
 <color=#00FFFF><size=28><b><u>Reusable rocket</u></b></size></color>
 For example, the Falcon Heavy Launch Vehicle is a reusable rocket. On the one hand, the design of the rocket is simpler than that of the shuttle, which can save production costs. On the other hand, the recyclable design of the rocket not only replaces the shuttle, but also reduces the cost of space transportation.
 `~Rosetta
 <color=#00FFFF><size=28><b><u>Rosetta</u></b></size></color>
 This is a comet probe. The Philae lander successfully achieved the first soft landing on a comet in human history. This space exploration found that the comet has many complex organic compounds, and life on Earth is very likely to be brought by the comet.
-`~Shuttle
+`~Shuttles
 <color=#00FFFF><size=28><b><u>Shuttle</u></b></size></color>
 Shuttle is a reusable low-Earth orbit spacecraft. The main function is put the spacecraft into space and return to the ground for repeated use. So far there are 5 shuttles has created all produced in the United States. However, the cost of shuttle is extremely high and a large number of precision parts are required to cooperate, otherwise it will easily lead to the destruction of the machine, so it was eliminated after completing the last mission in 2011.
 `~SpaceGarbage
