@@ -10,9 +10,11 @@ public class BonusTracker : MonoBehaviour
     private float timer = 0;
     public GameObject bonusUI;
 
-    public void AquireBonus() {
+    public void AquireBonus()
+    {
+        bonusUI.SetActive(false); // In case the last bonus UI is still active
         timer = displayTime;
-        bonusUI.SetActive(false);
+        bonuses++;
         bonusUI.SetActive(true);
     }
 
@@ -22,5 +24,10 @@ public class BonusTracker : MonoBehaviour
             bonusUI.SetActive(false);
         }
         timer -= Time.deltaTime;
+    }
+
+    public bool isAllBonusAquired()
+    {
+        return bonuses >= totalBonuses;
     }
 }
