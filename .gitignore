@@ -64,3 +64,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# notepad stuff
+*.bak
+
+# notepad + meta weirdness
+*.bak.meta
