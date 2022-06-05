@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class TechEquipInterface : MonoBehaviour
 {
     public int verticalSpacing = 62;
     public int horizontalSpacing = 74;
     public GameObject techIconPrefab;
+    public Sprite noramlIcon1;
+    public Sprite noramlIcon2;
+    public Sprite selectedIcon1;
+    public Sprite selectedIcon2;
 
     private Button btn;
     private GameObject img;
@@ -23,7 +28,7 @@ public class TechEquipInterface : MonoBehaviour
         btn.onClick.AddListener(closeInterface);
 
         type = TechEquipInterfaceController.type;
-        teches = TechStorage.instance.getTechesIsUnlocked(type);
+        teches = TechStorage.instance.techCanEquip(type);
 
         iconHeight = techIconPrefab.transform.GetComponent<RectTransform>().sizeDelta.y;
         lineNum = (int)Mathf.Ceil(((float)teches.Count) / 3);
@@ -31,9 +36,22 @@ public class TechEquipInterface : MonoBehaviour
         img.GetComponent<RectTransform>().sizeDelta = new Vector2(0, (line + 1) * verticalSpacing + iconHeight * line);
     }
 
+    public void setNormalIcon()
+    {
+        for (int i = 0; i < img.transform.childCount; i++)
+        {
+            TechEquipIcon teIcon = img.transform.GetChild(i).GetComponent<TechEquipIcon>();
+            teIcon.setIcon(noramlIcon1, noramlIcon2);
+        }
+    }
+    public void setSelectedIcon(TechEquipIcon teIcon)
+    {
+        teIcon.GetComponent<TechEquipIcon>().setIcon(selectedIcon1, selectedIcon2);
+    }
+
     public void createTechIcon()
     {
-        List<Tech> teches = TechStorage.instance.getTechesIsUnlocked(type);
+        List<Tech> teches = TechStorage.instance.techCanEquip(type);
         if (teches.Count == 0)
             return;
 
@@ -55,6 +73,7 @@ public class TechEquipInterface : MonoBehaviour
         }
 
         float yPos = (verticalSpacing + iconHeight) * line - iconHeight / 2;
+        Tech equiped = TechStorage.instance.getEquipByIdentifier(type).equip;
 
         while (count > 0)
         {
@@ -71,12 +90,18 @@ public class TechEquipInterface : MonoBehaviour
             icon.transform.GetChild(0).GetComponent<Image>().sprite = tech.icon;
             // add close method
             icon.GetComponent<Button>().onClick.AddListener(closeInterface);
+            // add reset icon
+            icon.GetComponent<Button>().onClick.AddListener(setNormalIcon);
             // set tech
             icon.GetComponent<TechEquipIcon>().tech = tech;
-            
+            //set selected icon
+            if (equiped == tech)
+                setSelectedIcon(icon.GetComponent<TechEquipIcon>());
+
             count--;
         }
     }
+
     public void closeInterface()
     {
         TechEquipInterfaceController.instance.closeInterface(gameObject, img);

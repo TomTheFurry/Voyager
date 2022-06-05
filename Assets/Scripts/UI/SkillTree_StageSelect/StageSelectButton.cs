@@ -10,6 +10,7 @@ public class StageSelectButton : MonoBehaviour
     public string langFile;
     public string level;
     public GameObject stageSelect;
+    public bool shipModifyIsLock = false;
     void Start()
     {
         updateButtonState();
@@ -22,6 +23,8 @@ public class StageSelectButton : MonoBehaviour
         information = Global.getChildByName(information, "Text");
         information.GetComponent<TextMeshProUGUI>().text =
             LangSystem.parseText(Global.langPath(langFile, level + "_Information"));
+
+        Global.getChildByName(stageSelect, "Ship").GetComponent<ShipModifyButton>().changeButtonState(shipModifyIsLock);
     }
 
     private void changeButtonState(bool btnState)

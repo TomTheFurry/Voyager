@@ -44,4 +44,12 @@ public class Global : MonoBehaviour
     {
         return "$lang/" + file + "/" + key + "$";
     }
+
+    public static Transform getCanvas(Transform ins)
+    {
+        while (ins.GetComponent<Canvas>() != null)
+            ins = ins.parent;
+
+        return ins;
+    }
 }

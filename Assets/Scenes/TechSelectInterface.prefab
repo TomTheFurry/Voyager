@@ -249,6 +249,10 @@ MonoBehaviour:
   verticalSpacing: 72
   horizontalSpacing: 84
   techIconPrefab: {fileID: 7244758894709152896, guid: 511f09540f5c61d40bd5fed659a4cfa6, type: 3}
+  noramlIcon1: {fileID: 21300000, guid: b1dd1461fdcbca2419a649fed6626f8d, type: 3}
+  noramlIcon2: {fileID: 21300000, guid: 0af40195abf780a4fab5f911e8461478, type: 3}
+  selectedIcon1: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
+  selectedIcon2: {fileID: 21300000, guid: e6b06a65d3d4385459f9fcd645d744c5, type: 3}
 --- !u!95 &4998698477153291845
 Animator:
   serializedVersion: 3

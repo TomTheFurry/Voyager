@@ -8,6 +8,7 @@ public class TechStorage : MonoBehaviour
 {
     public static TechStorage instance;
     public static List<Tech> teches = new List<Tech>();
+    public static List<TechEquip> techEquips = new List<TechEquip>();
 
     public UnityEvent onTechStatusChanged;
 
@@ -15,8 +16,11 @@ public class TechStorage : MonoBehaviour
     public struct TechState
     {
         public bool isUnlocked;
-        public bool isEquip;
-        public string equipType;
+    }
+    [Serializable]
+    public struct EquipState
+    {
+        public string equipIdentifier;
     }
     [Serializable]
     public struct TechData
@@ -27,17 +31,25 @@ public class TechStorage : MonoBehaviour
             public string identifier;
             public TechState state;
         }
+        [Serializable]
+        public struct EquipPair
+        {
+            public string identifier;
+            public EquipState state;
+        }
         public EntryPair[] entries;
+        public EquipPair[] equips;
     }
 
     Dictionary<Tech,TechState> techTable; // Hashtable<Tech,TechState>
-    Dictionary<string, Tech> techEquips;
+    Dictionary<TechEquip, EquipState> equipTable; // Hashtable<TechEquip,EquipState>
 
     public TechData collectTechData()
     {
         TechData techData = new TechData
         {
-            entries = new TechData.EntryPair[techTable.Count]
+            entries = new TechData.EntryPair[techTable.Count],
+            equips = new TechData.EquipPair[equipTable.Count],
         };
         int i = 0;
         foreach (KeyValuePair<Tech, TechState> pair in techTable)
@@ -48,6 +60,16 @@ public class TechStorage : MonoBehaviour
             ePair.state = pair.Value;
             techData.entries[i++] = ePair;
         }
+        //equip
+        i = 0;
+        foreach (KeyValuePair<TechEquip, EquipState> pair in equipTable)
+        {
+            TechData.EquipPair ePair = new TechData.EquipPair();
+
+            ePair.identifier = pair.Key.identifier;
+            ePair.state = pair.Value;
+            techData.equips[i++] = ePair;
+        }
         return techData;
     }
 
@@ -55,7 +77,6 @@ public class TechStorage : MonoBehaviour
     {
         teches = new List<Tech>();
         techTable = new Dictionary<Tech, TechState>();
-        techEquips = new Dictionary<string, Tech>();
 
         teches.AddRange(transform.GetComponentsInChildren<Tech>());
 
@@ -63,17 +84,22 @@ public class TechStorage : MonoBehaviour
         {
             techTable.Add(tech, new TechState
             {
-                isUnlocked = false,
-                isEquip = false,
-                equipType = null
+                isUnlocked = false
             });
         }
 
-        List<TechEquip> equips = new List<TechEquip>();
-        equips.AddRange(transform.GetComponentsInChildren<TechEquip>());
-        foreach (TechEquip equip in equips)
+        //equip
+        techEquips = new List<TechEquip>();
+        equipTable = new Dictionary<TechEquip, EquipState>();
+
+        techEquips.AddRange(transform.GetComponentsInChildren<TechEquip>());
+
+        foreach (TechEquip equip in techEquips)
         {
-            techEquips.Add(equip.name, null);
+            equipTable.Add(equip, new EquipState
+            {
+                equipIdentifier = null
+            });
         }
     }
 
@@ -82,26 +108,16 @@ public class TechStorage : MonoBehaviour
         return teches.Find((t) => t.identifier == identifier);
     }
 
-    public List<Tech> getTechesIsUnlocked(string type)
+    public List<Tech> getTechesIsUnlocked()
     {
         List<Tech> techIsUnlocked = new List<Tech>();
         foreach (Tech tech in teches)
         {
             if (!isTechUnlocked(tech))
                 continue;
-            if (type.Length != 0 && !techTypeIsMatch(tech, type))
-                continue;
             techIsUnlocked.Add(tech);
         }
         return techIsUnlocked;
-    }
-    public List<Tech> getTechesIsUnlocked()
-    {
-        return getTechesIsUnlocked("");
-    }
-    public bool techTypeIsMatch(Tech tech, string type)
-    {
-        return tech.type.ToLower().Replace(" ", "").Equals(type.ToLower());
     }
 
     public void importTechData(TechData techData)
@@ -120,12 +136,19 @@ public class TechStorage : MonoBehaviour
             }
             techTable[tech] = pair.state;
             Debug.Log("Loaded " + pair.identifier + ": " + pair.state);
-
-            // load equip
-            if (pair.state.isEquip)
+        }
+        // equip
+        foreach (TechData.EquipPair pair in techData.equips)
+        {
+            TechEquip techEquip = getEquipByIdentifier(pair.identifier);
+            if (techEquip == null)
             {
-                techEquips[pair.state.equipType] = tech;
+                Debug.LogWarning("TechTree: importTechData: techEquip not found: " + pair.identifier);
+                continue;
             }
+            equipTable[techEquip] = pair.state;
+            this.techEquip(getTechByIdentifier(pair.state.equipIdentifier), techEquip);
+            Debug.Log("Loaded Equip " + pair.identifier + ": " + pair.state.equipIdentifier);
         }
         Debug.Log("Loaded " + techData.entries.Length + " tech data entries.");
     }
@@ -207,53 +230,63 @@ public class TechStorage : MonoBehaviour
         return true;
     }
 
-    public void techEquipSave()
+    // equip
+    public TechEquip getEquipByIdentifier(string identifier)
     {
-        techUnequip();
-        foreach (KeyValuePair<string, Tech> equip in techEquips)
-        {
-            Tech tech = equip.Value;
-            if (tech == null)
-                continue;
-            TechState ts = getTechState(tech);
-            ts.isEquip = true;
-            ts.equipType = equip.Key;
-            techTable[tech] = ts;
-        }
-    }
-
-    public void techEquipLoad()
-    {
-        foreach (Tech tech in teches)
-        {
-            TechState ts = getTechState(tech);
-            if (ts.isEquip)
-            {
-                techEquips[ts.equipType] = tech;
-            }
-        }
-    }
-
-    public bool techEquip(Tech tech, string equipType)
-    {
-        techEquips[equipType] = tech;
-        return true;
-    }
-
-    public bool techUnequip()
-    {
-        foreach (Tech tech in teches)
-        {
-            TechState ts = getTechState(tech);
-            ts.isEquip = false;
-            ts.equipType = null;
-            techTable[tech] = ts;
-        }
-        return true;
+        return techEquips.Find((e) => e.identifier == identifier);
     }
 
     public Tech getEquip(string equipType)
     {
-        return (Tech)techEquips[equipType];
+        return getEquipByIdentifier(equipType).equip;
+    }
+
+    public EquipState getEquipState(TechEquip techEquip)
+    {
+        return (EquipState)equipTable[techEquip];
+    }
+
+    public bool techEquip(Tech tech, TechEquip equip)
+    {
+        equip.equip = tech;
+        return true;
+    }
+    public bool techEquip(Tech tech, string equipType)
+    {
+        TechEquip equip = getEquipByIdentifier(equipType);
+        return techEquip(tech, equip);
+    }
+
+    public bool saveEquipChange()
+    {
+        foreach (TechEquip techEquip in techEquips)
+        {
+            EquipState state = getEquipState(techEquip);
+            Tech tech = techEquip.equip;
+            state.equipIdentifier = tech == null ? null : tech.identifier;
+            equipTable[techEquip] = state;
+        }
+        return true;
+    }
+
+    public bool loadEquip(string equipType)
+    {
+        TechEquip equip = getEquipByIdentifier(equipType);
+        equip.equip = getTechByIdentifier(getEquipState(equip).equipIdentifier);
+        return true;
+    }
+
+    public List<Tech> techCanEquip(string equipType)
+    {
+        List<Tech> techCanEquip = new List<Tech>();
+        TechEquip techEquip = getEquipByIdentifier(equipType);
+        foreach (Tech tech in techEquip.teches)
+        {
+            if (!isTechUnlocked(tech))
+                continue;
+
+            techCanEquip.Add(tech);
+        }
+        return techCanEquip;
     }
 }

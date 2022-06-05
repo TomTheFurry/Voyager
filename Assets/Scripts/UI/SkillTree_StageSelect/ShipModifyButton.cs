@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ShipModifyButton : MonoBehaviour
 {
     public GameObject shipModiftUi;
-    public bool isLock = true;
+    public bool isLock = false;
 
     private void Start()
     {
@@ -21,6 +21,10 @@ public class ShipModifyButton : MonoBehaviour
     public void changeButtonState()
     {
         GetComponent<Button>().interactable = !isLock;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(!isLock);
+        }
     }
 
     public void changeButtonState(bool isLock)

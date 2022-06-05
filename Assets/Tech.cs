@@ -8,7 +8,6 @@ public class Tech : MonoBehaviour, IComparable
     public Tech[] prerequisites;
     public int starCost;
     public Sprite icon;
-    public string type;
 
     public void Start()
     {
