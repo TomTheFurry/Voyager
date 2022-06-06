@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class GoBackButton : MonoBehaviour
 {
-    public void moveBack(string key)
-    {
-        UiInfo.moveBack(key);
-    }
+    
 }

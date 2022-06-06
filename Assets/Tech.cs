@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tech : MonoBehaviour, IComparable
 {
+    public bool defaultUnlock = false;
     public string identifier;
     public Tech[] prerequisites;
     public int starCost;

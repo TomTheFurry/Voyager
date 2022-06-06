@@ -15,7 +15,7 @@ public class ShipModifyButton : MonoBehaviour
 
     public void openShipModifyUi()
     {
-        new UiInfo(transform.parent.gameObject, shipModiftUi);
+        new UiInfo("Equip or skill tree", gameObject, shipModiftUi);
     }
 
     public void changeButtonState()

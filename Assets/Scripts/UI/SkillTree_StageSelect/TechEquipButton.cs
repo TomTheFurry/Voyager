@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TechEquipButton : MonoBehaviour
 {
+    public bool canRepeat = true;
     private Sprite defaultSpr;
 
     private void Start()
@@ -20,7 +21,7 @@ public class TechEquipButton : MonoBehaviour
     }
     public void openInterface()
     {
-        TechEquipInterfaceController.instance.openInterface(this);
+        TechEquipInterfaceController.instance.openInterface(this, canRepeat);
     }
 
     public void resetEquip()

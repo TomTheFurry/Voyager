@@ -84,7 +84,7 @@ public class TechStorage : MonoBehaviour
         {
             techTable.Add(tech, new TechState
             {
-                isUnlocked = false
+                isUnlocked = tech.defaultUnlock
             });
         }
 
@@ -98,7 +98,7 @@ public class TechStorage : MonoBehaviour
         {
             equipTable.Add(equip, new EquipState
             {
-                equipIdentifier = null
+                equipIdentifier = equip.defaultEquip == null ? null : equip.defaultEquip.name
             });
         }
     }
@@ -236,6 +236,11 @@ public class TechStorage : MonoBehaviour
         return techEquips.Find((e) => e.identifier == identifier);
     }
 
+    public TechEquip getEquipByTech(Tech tech)
+    {
+        return techEquips.Find((e) => e.equip == tech);
+    }
+
     public Tech getEquip(string equipType)
     {
         return getEquipByIdentifier(equipType).equip;
@@ -248,6 +253,8 @@ public class TechStorage : MonoBehaviour
 
     public bool techEquip(Tech tech, TechEquip equip)
     {
+        if (tech == null)
+            tech = equip.defaultEquip;
         equip.equip = tech;
         return true;
     }
@@ -272,17 +279,19 @@ public class TechStorage : MonoBehaviour
     public bool loadEquip(string equipType)
     {
         TechEquip equip = getEquipByIdentifier(equipType);
-        equip.equip = getTechByIdentifier(getEquipState(equip).equipIdentifier);
+        techEquip(getTechByIdentifier(getEquipState(equip).equipIdentifier), equip);
         return true;
     }
 
-    public List<Tech> techCanEquip(string equipType)
+    public List<Tech> techCanEquip(string equipType, bool canRepeat)
     {
         List<Tech> techCanEquip = new List<Tech>();
         TechEquip techEquip = getEquipByIdentifier(equipType);
         foreach (Tech tech in techEquip.teches)
         {
             if (!isTechUnlocked(tech))
+                continue;
+            if (!canRepeat && getEquipByTech(tech) != null)
                 continue;
 
             techCanEquip.Add(tech);

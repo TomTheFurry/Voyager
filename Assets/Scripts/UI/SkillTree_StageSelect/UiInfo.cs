@@ -9,42 +9,37 @@ public class UiInfo
     private string key;
     private Stack<GameObject> uiLocation = new Stack<GameObject>();
 
-    public static void moveBack(GameObject thisLocation)
-    {
-        moveBack(getKey(thisLocation));
-    }
-    public static void moveBack(string key)
+    public static void moveBack(string key, GameObject thisLocation)
     {
         if (!uiInfos.ContainsKey(key)) return;
         UiInfo location = uiInfos[key];
-        location.moveBack();
+        thisLocation = getKeyObj(thisLocation);
+        location.moveBack(thisLocation);
     }
 
-    public static void moveToNext(GameObject thisLocation, GameObject nextLocation)
-    {
-        moveToNext(getKey(thisLocation), nextLocation);
-    }
     public static void moveToNext(string key, GameObject nextLocation)
     {
         if (!uiInfos.ContainsKey(key)) return;
         UiInfo location = uiInfos[key];
+        nextLocation = getKeyObj(nextLocation);
         location.moveToNext(nextLocation);
     }
 
-    public static string getKey(GameObject go)
+    public static GameObject getKeyObj(GameObject obj)
     {
-        Transform instance = go.transform;
+        Transform instance = obj.transform;
         while (!instance.parent.name.Equals("Canvas"))
         {
             instance = instance.parent;
         }
-        return instance.name;
+        return instance.gameObject;
     }
 
-    public UiInfo(GameObject startLocation, GameObject nextLocation)
+    public UiInfo(string key, GameObject startLocation, GameObject nextLocation)
     {
-        
-        this.key = getKey(nextLocation);
+        startLocation = getKeyObj(startLocation);
+        nextLocation = getKeyObj(nextLocation);
+        this.key = key;
 
         if (uiInfos.ContainsKey(key))
         {
@@ -60,14 +55,16 @@ public class UiInfo
     {
         uiLocation.Peek().SetActive(false);
         uiLocation.Push(nextLocation);
-        nextLocation.SetActive(true);
+        uiLocation.Peek().SetActive(true);
     }
 
-    public void moveBack()
+    public void moveBack(GameObject thisLocation)
     {
-        uiLocation.Peek().SetActive(false);
-        uiLocation.Pop();
+        thisLocation.SetActive(false);
+        if (uiLocation.Peek() == thisLocation)
+            uiLocation.Pop();
         uiLocation.Peek().SetActive(true);
+        uiLocation.Pop();
         if (uiLocation.Count == 1)
             uiInfos.Remove(key);
     }
