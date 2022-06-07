@@ -20,7 +20,7 @@ public class ShipModelInInterface : MonoBehaviour
     {
 
         ship.transform.Rotate(Vector3.up * rotateSpeed * 360 * Time.deltaTime);
-        ship.transform.Rotate(Vector3.back * swingSpeed * Mathf.Sin(timer * Mathf.PI));
+        ship.transform.Rotate(Vector3.back * swingSpeed * Mathf.Sin(timer * Mathf.PI) * Time.deltaTime);
         //ship.transform.Translate(Vector3.up * swingSpeed * 0.007f * Mathf.Sin(timer * Mathf.PI));
 
         timer += Time.deltaTime * 0.5f;

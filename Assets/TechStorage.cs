@@ -283,7 +283,7 @@ public class TechStorage : MonoBehaviour
         return true;
     }
 
-    public List<Tech> techCanEquip(string equipType, bool canRepeat)
+    public List<Tech> techCanEquip(string equipType, bool canRepeat, bool CanEmpty)
     {
         List<Tech> techCanEquip = new List<Tech>();
         TechEquip techEquip = getEquipByIdentifier(equipType);
@@ -296,6 +296,8 @@ public class TechStorage : MonoBehaviour
 
             techCanEquip.Add(tech);
         }
+        if (CanEmpty && techCanEquip.Count > 0)
+            techCanEquip.Insert(0, getTechByIdentifier("EmptyTech"));
         return techCanEquip;
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class TechEquipInterface : MonoBehaviour
 {
     public bool canRepeat;
+    public bool canEmpty;
     public int verticalSpacing = 62;
     public int horizontalSpacing = 74;
     public GameObject techIconPrefab;
@@ -24,13 +25,14 @@ public class TechEquipInterface : MonoBehaviour
     private int lineNum;
     void Start()
     {
-        canRepeat = TechEquipInterfaceController.canRepeat;
+        canRepeat = TechEquipInterfaceController.instance.canRepeat;
+        canEmpty = TechEquipInterfaceController.instance.canEmpty;
         btn = transform.GetChild(0).GetComponent<Button>();
         img = transform.GetChild(1).gameObject;
         btn.onClick.AddListener(closeInterface);
 
         type = TechEquipInterfaceController.type;
-        teches = TechStorage.instance.techCanEquip(type, canRepeat);
+        teches = TechStorage.instance.techCanEquip(type, canRepeat, canEmpty);
 
         iconHeight = techIconPrefab.transform.GetComponent<RectTransform>().sizeDelta.y;
         lineNum = (int)Mathf.Ceil(((float)teches.Count) / 3);
@@ -53,13 +55,12 @@ public class TechEquipInterface : MonoBehaviour
 
     public void createTechIcon()
     {
-        List<Tech> teches = TechStorage.instance.techCanEquip(type, canRepeat);
         if (teches.Count == 0)
             return;
 
-        instantiateTechIcon(teches, lineNum);
+        instantiateTechIcon(lineNum);
     }
-    public void instantiateTechIcon(List<Tech> teches, int line)
+    public void instantiateTechIcon(int line)
     {
         int count;
         if (line < 0) line = 0;
@@ -67,7 +68,7 @@ public class TechEquipInterface : MonoBehaviour
 
         if (lineNum > 1 && line > 1)
         {
-            instantiateTechIcon(teches, line - 1);
+            instantiateTechIcon(line - 1);
             count = 3;
         }
         else

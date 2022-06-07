@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Global : MonoBehaviour
 {
     public static Global instance;
+    public GameObject mainMenu;
 
     void Start()
     {

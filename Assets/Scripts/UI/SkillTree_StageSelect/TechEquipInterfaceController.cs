@@ -7,7 +7,8 @@ using UnityEngine.Events;
 public class TechEquipInterfaceController : MonoBehaviour
 {
     public static TechEquipInterfaceController instance;
-    public static bool canRepeat;
+    public bool canRepeat;
+    public bool canEmpty;
 
     public GameObject selectedTechInterfacePrefab;
     private GameObject selectInterface;
@@ -45,13 +46,14 @@ public class TechEquipInterfaceController : MonoBehaviour
         onResetEquip.Invoke();
     }
 
-    public void openInterface(TechEquipButton btn, bool canRep)
+    public void openInterface(TechEquipButton btn, bool canRep, bool canEmp)
     {
         if (selectInterface != null)
             Destroy(selectInterface);
 
         equipBtn = btn;
         canRepeat = canRep;
+        canEmpty = canEmp;
         type = equipBtn.gameObject.name;
 
         Transform sti = Instantiate(selectedTechInterfacePrefab, transform).transform;

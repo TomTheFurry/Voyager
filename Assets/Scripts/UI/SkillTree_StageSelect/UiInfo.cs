@@ -11,7 +11,12 @@ public class UiInfo
 
     public static void moveBack(string key, GameObject thisLocation)
     {
-        if (!uiInfos.ContainsKey(key)) return;
+        if (!uiInfos.ContainsKey(key))
+        {
+            thisLocation.SetActive(false);
+            Global.instance.mainMenu.SetActive(true);
+            return;
+        }
         UiInfo location = uiInfos[key];
         thisLocation = getKeyObj(thisLocation);
         location.moveBack(thisLocation);
@@ -65,7 +70,7 @@ public class UiInfo
             uiLocation.Pop();
         uiLocation.Peek().SetActive(true);
         uiLocation.Pop();
-        if (uiLocation.Count == 1)
+        if (uiLocation.Count == 0)
             uiInfos.Remove(key);
     }
 }

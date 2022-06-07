@@ -10,6 +10,7 @@ public class TechEquipIcon : MonoBehaviour
 
     private void Start()
     {
+        tech = TechStorage.instance.getTechByIdentifier("EmptyTech");
         GetComponent<Button>().onClick.AddListener(techSelect);
         anim = GetComponent<Animator>();
     }
