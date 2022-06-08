@@ -31,6 +31,12 @@ public class PlayerData
         return data.levelData[level].getBestTime();
     }
 
+    public static bool IsLevelCompleted(int level)
+    {
+        PlayerData data = GetData();
+        return (data.levelData != null && data.levelData.Length > level && (data.levelData[level].timeRecords != null && data.levelData[level].timeRecords.Length != 0));
+    }
+
     private static T[] AppendArray<T>(T[] source, T item)
     {
         if (source == null || source.Length==0)
