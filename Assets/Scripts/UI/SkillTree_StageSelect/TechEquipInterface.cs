@@ -19,7 +19,7 @@ public class TechEquipInterface : MonoBehaviour
     private Button btn;
     private GameObject img;
     private string type;
-    private List<Tech> teches;
+    public List<Tech> teches;
 
     private float iconHeight;
     private int lineNum;
@@ -58,9 +58,10 @@ public class TechEquipInterface : MonoBehaviour
         if (teches.Count == 0)
             return;
 
-        instantiateTechIcon(lineNum);
+        int index = teches.Count - 1;
+        instantiateTechIcon(lineNum, ref index);
     }
-    public void instantiateTechIcon(int line)
+    public void instantiateTechIcon(int line, ref int index)
     {
         int count;
         if (line < 0) line = 0;
@@ -68,7 +69,7 @@ public class TechEquipInterface : MonoBehaviour
 
         if (lineNum > 1 && line > 1)
         {
-            instantiateTechIcon(line - 1);
+            instantiateTechIcon(line - 1, ref index);
             count = 3;
         }
         else
@@ -81,13 +82,13 @@ public class TechEquipInterface : MonoBehaviour
 
         while (count > 0)
         {
-            int index = teches.Count - 1;
             if (index < 0)
                 break;
-            Tech tech = teches[index];
-            teches.Remove(tech);
+            Tech tech = teches[index--];
+            //teches.Remove(tech);
 
             GameObject icon = Instantiate(techIconPrefab, img.transform);
+            icon.name = tech.name;
             // set positon
             icon.GetComponent<RectTransform>().anchoredPosition = new Vector2((horizontalSpacing + iconHeight) * (count - 2), yPos);
             // set icon
