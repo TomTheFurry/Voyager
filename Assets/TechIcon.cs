@@ -46,9 +46,18 @@ public class TechIcon : MonoBehaviour
     {
         switch (i)
         {
-            case 0: _SetSprite(sprite0, sprite1); break;
-            case 1: _SetSprite(sprite2, sprite3); break;
-            case 2: _SetSprite(sprite4, sprite5); break;
+            case 0: 
+                _SetSprite(sprite0, sprite1);
+                setIcon(false);
+                break;
+            case 1: 
+                _SetSprite(sprite2, sprite3); 
+                setIcon(true);
+                break;
+            case 2: 
+                _SetSprite(sprite4, sprite5);
+                setIcon(true);
+                break;
             default: throw new Exception();
         }
     }
@@ -63,6 +72,12 @@ public class TechIcon : MonoBehaviour
         bgButton.GetComponent<Button>().spriteState = st;
     }
 
-
+    private void setIcon(bool isUnlock = true)
+    {
+        if (isUnlock)
+            icon.sprite = reference.icon;
+        else
+            icon.sprite = Global.instance.lockIcon;
+    }
 
 }

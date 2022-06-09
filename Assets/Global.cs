@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class Global : MonoBehaviour
 {
     public static Global instance;
     public GameObject mainMenu;
-
+    public Sprite lockIcon;
     void Start()
     {
         if (instance == null)
