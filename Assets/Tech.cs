@@ -50,5 +50,33 @@ public class Tech : MonoBehaviour, IComparable
             throw new ArgumentException("Invalid comparison");
     }
 
+    public string[] getAttributeDescription()
+    {
+        List<string> desc = new List<string>();
+        if (health != 0)
+            desc.Add("Health " + getAttributeDescString(health, healthPercentage));
+        if (fuelCapacity != 0)
+            desc.Add("Fuel Capacity " + getAttributeDescString(fuelCapacity, fuelCapacityPercentage));
+        if (fuelConsumption != 0)
+            desc.Add("Fuel Consuption " + getAttributeDescString(fuelConsumption, fuelConsumptionPercentage));
+        if (speed != 0)
+            desc.Add("Speed " + getAttributeDescString(speed, speedPercentage));
+        if (spinningSpeed != 0)
+            desc.Add("Spinning speed " + getAttributeDescString(spinningSpeed, spinningSpeedPercentage));
+        if (collisionDamage != 0)
+            desc.Add("Collision damage " + getAttributeDescString(collisionDamage, collisionDamagePercentage));
 
+        return desc.ToArray();
+    }
+
+    private string getAttributeDescString(float num, bool isPercentage)
+    {
+        string desc = "";
+        if (num < 0)
+            desc += num.ToString();
+        else
+            desc += "+" + num.ToString();
+
+        return desc + (isPercentage ? "%" : "");
+    }
 }

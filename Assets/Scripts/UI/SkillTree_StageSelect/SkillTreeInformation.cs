@@ -38,6 +38,32 @@ public class SkillTreeInformation : MonoBehaviour
             {
                 child.GetComponent<Image>().sprite = image;
             }
+            else if (string.Equals(childName, "Attribute"))
+            {
+                string[] desc = myTech.getAttributeDescription();
+                TextMeshProUGUI text = child.GetComponent<TextMeshProUGUI>();
+                int index = 1;
+                float baseLinePos;
+
+                text.text = "";
+                foreach (string str in desc)
+                {
+                    text.text += str;
+                    text.ForceMeshUpdate();
+                    int newIndex = text.textInfo.characterInfo.Length;
+                    baseLinePos = text.textInfo.characterInfo[index - 1].baseLine;
+                    float newBaseLinePos = text.textInfo.characterInfo[newIndex - 1].baseLine;
+
+                    if (baseLinePos != newBaseLinePos)
+                    {
+                        Debug.Log("new line");
+                        text.text = text.text.Insert(text.text.Length - str.Length, "\n");
+                    }
+                    text.text += "  ";
+                    text.ForceMeshUpdate();
+                    index = text.textInfo.characterInfo.Length;
+                }
+            }
             else if (string.Equals(childName, "Description"))
             {
 
