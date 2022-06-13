@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class TechUnlockButton : MonoBehaviour
 {
@@ -12,6 +13,14 @@ public class TechUnlockButton : MonoBehaviour
         if(tech == null) updateState(false, null);
         Button btn = GetComponent<Button>();
         btn.onClick.AddListener(ButtonClicked);
+    }
+
+    void OnSubmit()
+    {
+        //Debug.Log("Submit");
+        Button btn = GetComponent<Button>();
+        if (btn.interactable == true)
+            ButtonClicked();
     }
 
     public void updateState(bool state, Tech currentTech)

@@ -23,8 +23,11 @@ public class TechEquipInterface : MonoBehaviour
 
     private float iconHeight;
     private int lineNum;
+
     void Start()
     {
+        GoBackButton.enable = false;
+
         canRepeat = TechEquipInterfaceController.instance.canRepeat;
         canEmpty = TechEquipInterfaceController.instance.canEmpty;
         btn = transform.GetChild(0).GetComponent<Button>();
@@ -116,5 +119,18 @@ public class TechEquipInterface : MonoBehaviour
     public void destroyInterface()
     {
         Destroy(gameObject);
+    }
+
+    void OnRightClick(InputValue value)
+    {
+        if (!value.isPressed)
+            return;
+        if (btn.interactable)
+            btn.onClick.Invoke();
+    }
+
+    private void OnDestroy()
+    {
+        GoBackButton.enable = true;
     }
 }

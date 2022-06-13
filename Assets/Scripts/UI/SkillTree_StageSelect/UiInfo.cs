@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiInfo
 {
@@ -33,7 +34,7 @@ public class UiInfo
     public static GameObject getKeyObj(GameObject obj)
     {
         Transform instance = obj.transform;
-        while (!instance.parent.name.Equals("Canvas"))
+        while (instance.parent.GetComponent<Canvas>() == null)
         {
             instance = instance.parent;
         }
@@ -56,11 +57,12 @@ public class UiInfo
         moveToNext(nextLocation);
     }
 
-    public void moveToNext(GameObject nextLocation)
+    public void moveToNext(GameObject nextLocation, bool addIntoStack = true)
     {
         uiLocation.Peek().SetActive(false);
-        uiLocation.Push(nextLocation);
-        uiLocation.Peek().SetActive(true);
+        if (addIntoStack)
+            uiLocation.Push(nextLocation);
+        nextLocation.SetActive(true);
     }
 
     public void moveBack(GameObject thisLocation)
