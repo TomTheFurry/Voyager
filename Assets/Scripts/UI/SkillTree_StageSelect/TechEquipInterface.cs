@@ -26,7 +26,7 @@ public class TechEquipInterface : MonoBehaviour
 
     void Start()
     {
-        GoBackButton.enable = false;
+        GoBackButton.triggerEnable = false;
 
         canRepeat = TechEquipInterfaceController.instance.canRepeat;
         canEmpty = TechEquipInterfaceController.instance.canEmpty;
@@ -131,6 +131,6 @@ public class TechEquipInterface : MonoBehaviour
 
     private void OnDestroy()
     {
-        GoBackButton.enable = true;
+        GoBackButton.triggerEnable = true;
     }
 }

@@ -8,7 +8,9 @@ public class Global : MonoBehaviour
 {
     public static Global instance;
     public GameObject mainMenu;
-    public Sprite lockIcon;
+    public Sprite sprLocked;
+    public Sprite sprLock;
+    
     void Start()
     {
         if (instance == null)

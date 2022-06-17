@@ -189,6 +189,15 @@ public class TechStorage : MonoBehaviour
         }
     }
 
+    public Tech getNullTech()
+    {
+        return getTechByIdentifier("EmptyTech");
+    }
+
+    public bool isTechIsNull(Tech tech)
+    {
+        return tech == getNullTech();
+    }
     public TechState getTechState(Tech tech)
     {
         return (TechState)techTable[tech];

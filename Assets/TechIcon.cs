@@ -77,7 +77,6 @@ public class TechIcon : MonoBehaviour
         if (isUnlock)
             icon.sprite = reference.icon;
         else
-            icon.sprite = Global.instance.lockIcon;
+            icon.sprite = Global.instance.sprLocked;
     }
-
 }

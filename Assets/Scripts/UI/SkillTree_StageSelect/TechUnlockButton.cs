@@ -8,9 +8,11 @@ using UnityEngine.InputSystem;
 public class TechUnlockButton : MonoBehaviour
 {
     private Tech tech;
+    public Image icon;
+
     void Start()
     {
-        if(tech == null) updateState(false, null);
+        if(tech == null) updateState(TechStorage.instance.getTechByIdentifier("EmptyTech"));
         Button btn = GetComponent<Button>();
         btn.onClick.AddListener(ButtonClicked);
     }
@@ -23,19 +25,54 @@ public class TechUnlockButton : MonoBehaviour
             ButtonClicked();
     }
 
-    public void updateState(bool state, Tech currentTech)
+    public void updateState(Tech currentTech)
     {
         tech = currentTech;
-        Color disableColor = GetComponent<Button>().colors.disabledColor;
-        GetComponent<Button>().interactable = state;
-        Global.getChildByName(gameObject, "Text (TMP)").GetComponent<TextMeshProUGUI>().faceColor = state ? Color.white : disableColor;
+
+        Button btn = GetComponent<Button>();
+        
+        bool canUnlock = TechStorage.instance.canTechBeUnlocked(tech);
+        bool isUnlock = TechStorage.instance.isTechUnlocked(tech);
+
+        btn.image.sprite = tech.icon;
+        Color color = btn.image.color;
+
+        do {
+            icon.enabled = true;
+
+            if (!canUnlock && !isUnlock)
+            {
+                color.a = 0f;
+                btn.interactable = false;
+                icon.sprite = Global.instance.sprLocked; 
+                break;
+            }
+
+            if (!isUnlock)
+            {
+                color.a = 80f/256f;
+                btn.interactable = true;
+                icon.sprite = Global.instance.sprLock;
+                break;
+            }
+
+            if (isUnlock)
+            {
+                icon.enabled = false;
+                color.a = 1f;
+                btn.interactable = false;
+                break;
+            }
+        } while(false);
+        btn.image.color = color;
     }
 
     public void ButtonClicked() {
         if (tech != null) {
             bool unlock = TechStorage.instance.unlockTech(tech);
             if (unlock) 
-                updateState(false, tech);
+                updateState(tech);
         }
     }
+
 }
