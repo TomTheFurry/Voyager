@@ -10,26 +10,15 @@ public class GoBackButton : MonoBehaviour
 {
     public static bool triggerEnable = true;
 
-    private bool doButton = false;
     private void Start()
     {
         InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
         current.cancel.action.started += (cc) => {
             if (gameObject.activeInHierarchy && triggerEnable)
             {
-                doButton = true;
+                //Debug.Log("BackTriggered for " + GetInstanceID());
+                GetComponent<Button>().onClick.Invoke();
             }
         };
-    }
-
-    private void LateUpdate()
-    {
-        if (doButton)
-        {
-            doButton = false;
-            Debug.Log("BackTriggered for " + GetInstanceID());
-            GetComponent<Button>().onClick.Invoke();
-        }
-        
     }
 }

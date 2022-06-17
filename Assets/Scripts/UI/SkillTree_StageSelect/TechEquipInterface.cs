@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class TechEquipInterface : MonoBehaviour
 {
@@ -26,6 +27,15 @@ public class TechEquipInterface : MonoBehaviour
 
     void Start()
     {
+        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
+        current.cancel.action.started += (cc) => {
+            if (gameObject.activeInHierarchy)
+            {
+                if (btn.interactable)
+                    btn.onClick.Invoke();
+            }
+        };
+
         GoBackButton.triggerEnable = false;
 
         canRepeat = TechEquipInterfaceController.instance.canRepeat;
@@ -119,14 +129,6 @@ public class TechEquipInterface : MonoBehaviour
     public void destroyInterface()
     {
         Destroy(gameObject);
-    }
-
-    void OnRightClick(InputValue value)
-    {
-        if (!value.isPressed)
-            return;
-        if (btn.interactable)
-            btn.onClick.Invoke();
     }
 
     private void OnDestroy()
