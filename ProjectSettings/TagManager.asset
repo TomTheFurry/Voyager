@@ -8,6 +8,7 @@ TagManager:
   - TECH_f
   - TECH_t
   - CustomTooltips
+  - Junk
   layers:
   - Default
   - TransparentFX
