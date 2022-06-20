@@ -35,6 +35,11 @@ namespace Voyager
         // Camera to use for the child object
         public GameObject childCamera = null;
         public Camera childActualCamera = null;
+        public Camera fpCamera = null;
+        private bool inFp = false;
+
+        public UnityEvent onEnterFp;
+        public UnityEvent onLeaveFp;
 
         public PauseScript pauseScript = null;
 
@@ -270,23 +275,18 @@ namespace Voyager
             }
             //Debug.Log("RotationError: " + angle + " " + axis);
 
-            // Calculate PID
-            angle = (float)rotationPD.tick(angle);
-            angle = Mathf.DeltaAngle(0f, angle);
-
             //Debug.Log("RotationCorrection: " + angle + " " + axis);
-            Vector3 targetAngularVelocity = axis * angle;
-            Vector3 currentAngularVelocity = childObject.GetComponent<Rigidbody>().angularVelocity;
+            Vector3 targetAngularVelocity = axis * angle * (float)rotationPD.p;
+            Vector3 currentAngularVelocity = childObject.GetComponent<Rigidbody>().angularVelocity * (float)rotationPD.d;
             // Calculate torque to apply
             Vector3 torque = targetAngularVelocity - currentAngularVelocity;
             // Apply torque
-            childObject.GetComponent<Rigidbody>().AddTorque(torque, ForceMode.Acceleration);
+            childObject.GetComponent<Rigidbody>().AddTorque(torque, ForceMode.VelocityChange);
             //hildObject.transform.Rotate(axis, angle, Space.World);
         }
 
         private void updateZoom(float inputZoom)
         {
-
             zoomTarget = Mathf.Clamp(zoomTarget + inputZoom * zoomSpeed, zoomMin, zoomMax);
             
             float zoomTrueTarget = zoomTarget;
@@ -297,9 +297,8 @@ namespace Voyager
             float zoomError = zoomTrueTarget - currentZoom;
 
             // Calculate PID
-            zoomError = (float)zoomPD.tick(zoomError);
-            float value = currentZoom + zoomError;
-            
+            float value = currentZoom + (float)zoomPD.tick(zoomError);
+
             // Raycast to check if camera is not colliding with something
             Vector3 back = childActualCamera.transform.TransformDirection(Vector3.back);
             RaycastHit hit;
@@ -313,6 +312,17 @@ namespace Voyager
 
             // Apply zoom
             childActualCamera.transform.localPosition = new Vector3(0, 0, -value);
+
+            if (zoomTarget == zoomMin && !inFp) {
+                fpCamera.enabled = true;
+                childActualCamera.enabled = false;
+                onEnterFp.Invoke();
+            } else
+            {
+                fpCamera.enabled = false;
+                childActualCamera.enabled = true;
+                onLeaveFp.Invoke();
+            }
         }
 
         public void toggleFullScreen()
@@ -344,7 +354,27 @@ namespace Voyager
             }
         }
 
-        void Update()
+        float _inputZoom = 0;
+        private void Update()
+        {
+            PlayerInput input = GetComponent<PlayerInput>();
+
+            if (childObject == null || targetIndicator == null || Time.timeScale == 0)
+            {
+                return;
+            }
+            bool inputMiddle = input.actions["Middle"].triggered;
+            if (inputMiddle)
+            {
+                if (mouseLocked) unlockMouse(); else lockMouse();
+            }
+            bool inputClick = input.actions["Click"].triggered;
+            if (inputClick) onLeftTrigger.Invoke();
+
+            _inputZoom += -input.actions["Zoom"].ReadValue<float>();
+        }
+
+        void FixedUpdate()
         {
             PlayerInput input = GetComponent<PlayerInput>();
 
@@ -353,20 +383,10 @@ namespace Voyager
                 return;
             }
 
-            bool inputMiddle = input.actions["Middle"].triggered;
-            if (inputMiddle)
-            {
-                if (mouseLocked) unlockMouse(); else lockMouse();
-            }
+            float inputZoom = _inputZoom;
+            _inputZoom = 0f;
 
-            // bool inputTab = input.actions["Tab"].triggered;
-            bool inputClick = input.actions["Click"].triggered;
-            if (inputClick) onLeftTrigger.Invoke();
-            float inputZoom = -input.actions["Zoom"].ReadValue<float>();
             float inputStop = input.actions["Stop"].ReadValue<float>();
-
-            
-            //if (inputTab) snapCameraToTarget();
 
             qeAsRoll = input.actions["Focus"].ReadValue<float>() != 1.0f;
 
@@ -379,8 +399,6 @@ namespace Voyager
                 onForceApplied.Invoke(Vector3.zero);
                 return;
             }
-
-
 
             // Normalized
             Vector3 inputMove = input.actions["Move"].ReadValue<Vector3>();
