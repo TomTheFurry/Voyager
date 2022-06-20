@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class SoundValue : MonoBehaviour
 {
-    Slider slider;
+    public Slider slider;
     Text text;
+    private float maxValue;
+
     private void Start()
     {
-        slider = transform.parent.GetComponent<Slider>();
         text = GetComponent<Text>();
+        maxValue = slider.maxValue;
     }
     void Update()
     {
-        text.text = string.Format("{0,3}%", Mathf.Round(slider.value * 100 / 2));
+        text.text = string.Format("{0,3}%", Mathf.Round(slider.value * 100 / maxValue));
     }
 }

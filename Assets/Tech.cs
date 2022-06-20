@@ -69,7 +69,7 @@ public class Tech : MonoBehaviour, IComparable
 
         foreach (KeyValuePair<string, float> attribute in equipAttribute)
         {
-            desc.Add(attribute.Key + getAttributeDescString(attribute.Value));
+            desc.Add(attribute.Key + " " + getAttributeDescString(attribute.Value));
         }
 
         return desc.ToArray();
@@ -108,9 +108,7 @@ public class Tech : MonoBehaviour, IComparable
     {
         string desc = "";
 
-        bool isPercentage = false;
-        if (num > 0 && num < 10)
-            isPercentage = true;
+        bool isPercentage = isValueIsPercentage(num);
 
         if (num < 0 || (isPercentage && num < 1))
             desc += num.ToString();
@@ -118,5 +116,10 @@ public class Tech : MonoBehaviour, IComparable
             desc += "+" + num.ToString();
 
         return desc + (isPercentage ? "%" : "");
+    }
+
+    public static bool isValueIsPercentage(float num)
+    {
+        return num > 0 && num < 10;
     }
 }

@@ -11,7 +11,7 @@ public class TechStorage : MonoBehaviour
     public static List<TechEquip> techEquips = new List<TechEquip>();
 
     public UnityEvent onTechStatusChanged;
-    public UnityEvent<Tech> onTechEquipChanging;
+    public UnityEvent onTechEquipChanging;
 
     [Serializable]
     public struct TechState
@@ -41,6 +41,7 @@ public class TechStorage : MonoBehaviour
         public EntryPair[] entries;
         public EquipPair[] equips;
     }
+
 
     Dictionary<Tech,TechState> techTable; // Hashtable<Tech,TechState>
     Dictionary<TechEquip, EquipState> equipTable; // Hashtable<TechEquip,EquipState>
@@ -79,6 +80,7 @@ public class TechStorage : MonoBehaviour
     {
         teches = new List<Tech>();
         techTable = new Dictionary<Tech, TechState>();
+        equipAttribute = new Dictionary<string, float>();
 
         teches.AddRange(transform.GetComponentsInChildren<Tech>());
 
@@ -262,17 +264,21 @@ public class TechStorage : MonoBehaviour
         return (EquipState)equipTable[techEquip];
     }
 
-    public bool techEquip(Tech tech, TechEquip equip)
+    public bool techEquip(Tech tech, TechEquip equip, bool updateAttribute = true)
     {
         if (tech == null)
             tech = equip.defaultEquip;
         equip.equip = tech;
+
+        if (updateAttribute)
+            updateTotalAttribute();
+
         return true;
     }
-    public bool techEquip(Tech tech, string equipType)
+    public bool techEquip(Tech tech, string equipType, bool updateAttribute = true)
     {
         TechEquip equip = getEquipByIdentifier(equipType);
-        return techEquip(tech, equip);
+        return techEquip(tech, equip, updateAttribute);
     }
 
     public bool saveEquipChange()
@@ -290,7 +296,8 @@ public class TechStorage : MonoBehaviour
     public bool loadEquip(string equipType)
     {
         TechEquip equip = getEquipByIdentifier(equipType);
-        techEquip(getTechByIdentifier(getEquipState(equip).equipIdentifier), equip);
+        techEquip(getTechByIdentifier(getEquipState(equip).equipIdentifier), equip, false);
+        updateTotalAttribute();
         return true;
     }
 
@@ -310,5 +317,35 @@ public class TechStorage : MonoBehaviour
         if (CanEmpty && techCanEquip.Count > 0)
             techCanEquip.Insert(0, getTechByIdentifier("EmptyTech"));
         return techCanEquip;
+    }
+
+    // update total attribute
+    public Dictionary<string, float> updateTotalAttribute()
+    {
+        equipAttribute.Clear();
+        foreach (TechEquip equip in equipTable.Keys)
+        {
+            Dictionary<string, float> attributes = equip.equip.GetComponent<Tech>().getAttribute();
+            foreach (KeyValuePair<string, float> attribute in attributes)
+            {
+                float value = attribute.Value;
+                bool isPercentage = Tech.isValueIsPercentage(value);
+                string attributeType = attribute.Key + (isPercentage ? " Percentage" : "");
+
+                if (!equipAttribute.ContainsKey(attributeType))
+                    equipAttribute.Add(attributeType, value);
+                else
+                {
+                    if (!isPercentage)
+                        equipAttribute[attributeType] *= value;
+                    else
+                        equipAttribute[attributeType] += value;
+                }
+            }
+        }
+
+        onTechEquipChanging.Invoke();
+
+        return equipAttribute;
     }
 }
