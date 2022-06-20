@@ -3199,6 +3199,7 @@ GameObject:
   - component: {fileID: 251608579}
   - component: {fileID: 251608577}
   - component: {fileID: 251608576}
+  - component: {fileID: 251608580}
   m_Layer: 5
   m_Name: TechUnlockButton
   m_TagString: Untagged
@@ -3290,7 +3291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 56a53780ddab9d54dbfbccf5086c31c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e34b3ad11727e6b40869d81077322ae4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3321,6 +3322,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 2077476300}
+--- !u!95 &251608580
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251608574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 251a12ef073a225459ac9391c80090b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &252578869
 GameObject:
   m_ObjectHideFlags: 0
@@ -7255,6 +7275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onTechStatusChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onTechEquipChanging:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &466072993
@@ -31279,7 +31302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e34b3ad11727e6b40869d81077322ae4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56a53780ddab9d54dbfbccf5086c31c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32525,6 +32548,8 @@ MonoBehaviour:
   ship: {fileID: 919132148870903472}
   rotateSpeed: 5
   swingSpeed: 1
+  rend: {fileID: 5447058700917111675}
+  externalLayer: {fileID: 2100000, guid: 3fbc843663878ec4da47aafa414d5c1a, type: 2}
 --- !u!1 &1042603166190873991
 GameObject:
   m_ObjectHideFlags: 0

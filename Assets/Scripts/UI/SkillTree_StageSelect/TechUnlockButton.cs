@@ -25,7 +25,7 @@ public class TechUnlockButton : MonoBehaviour
             ButtonClicked();
     }
 
-    public void updateState(Tech currentTech)
+    public void updateState(Tech currentTech, bool playUnlockAnim = false)
     {
         tech = currentTech;
 
@@ -42,6 +42,7 @@ public class TechUnlockButton : MonoBehaviour
 
             if (!canUnlock && !isUnlock)
             {
+                GetComponent<Animator>().SetTrigger("Close");
                 color.a = 0f;
                 btn.interactable = false;
                 icon.sprite = Global.instance.sprLocked; 
@@ -50,6 +51,7 @@ public class TechUnlockButton : MonoBehaviour
 
             if (!isUnlock)
             {
+                GetComponent<Animator>().SetTrigger("On");
                 color.a = 80f/256f;
                 btn.interactable = true;
                 icon.sprite = Global.instance.sprLock;
@@ -58,7 +60,10 @@ public class TechUnlockButton : MonoBehaviour
 
             if (isUnlock)
             {
-                icon.enabled = false;
+                if (playUnlockAnim)
+                    GetComponent<Animator>().SetTrigger("Unlock");
+                else
+                    icon.enabled = false;
                 color.a = 1f;
                 btn.interactable = false;
                 break;
@@ -71,7 +76,7 @@ public class TechUnlockButton : MonoBehaviour
         if (tech != null) {
             bool unlock = TechStorage.instance.unlockTech(tech);
             if (unlock) 
-                updateState(tech);
+                updateState(tech, true);
         }
     }
 

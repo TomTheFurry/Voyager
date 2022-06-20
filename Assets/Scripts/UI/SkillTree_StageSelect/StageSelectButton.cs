@@ -25,6 +25,7 @@ public class StageSelectButton : MonoBehaviour
             LangSystem.parseText(Global.langPath(langFile, level + "_Information"));
 
         Global.getChildByName(stageSelect, "Ship").GetComponent<ShipModifyButton>().changeButtonState(shipModifyIsLock);
+        Global.getChildByName(stageSelect, "Play_button").GetComponent<LevelSwitch>().levelName = level;
     }
 
     private void changeButtonState(bool btnState)

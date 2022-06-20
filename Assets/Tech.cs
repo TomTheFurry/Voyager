@@ -53,26 +53,66 @@ public class Tech : MonoBehaviour, IComparable
     public string[] getAttributeDescription()
     {
         List<string> desc = new List<string>();
-        if (health != 0)
-            desc.Add("Health " + getAttributeDescString(health, healthPercentage));
-        if (fuelCapacity != 0)
-            desc.Add("Fuel Capacity " + getAttributeDescString(fuelCapacity, fuelCapacityPercentage));
-        if (fuelConsumption != 0)
-            desc.Add("Fuel Consuption " + getAttributeDescString(fuelConsumption, fuelConsumptionPercentage));
-        if (speed != 0)
-            desc.Add("Speed " + getAttributeDescString(speed, speedPercentage));
-        if (spinningSpeed != 0)
-            desc.Add("Spinning speed " + getAttributeDescString(spinningSpeed, spinningSpeedPercentage));
-        if (collisionDamage != 0)
-            desc.Add("Collision damage " + getAttributeDescString(collisionDamage, collisionDamagePercentage));
+        Dictionary<string, float> equipAttribute = getAttribute();
+        //if (health != 0)
+        //    desc.Add("Health " + getAttributeDescString(health, healthPercentage));
+        //if (fuelCapacity != 0)
+        //    desc.Add("Fuel Capacity " + getAttributeDescString(fuelCapacity, fuelCapacityPercentage));
+        //if (fuelConsumption != 0)
+        //    desc.Add("Fuel Consuption " + getAttributeDescString(fuelConsumption, fuelConsumptionPercentage));
+        //if (speed != 0)
+        //    desc.Add("Speed " + getAttributeDescString(speed, speedPercentage));
+        //if (spinningSpeed != 0)
+        //    desc.Add("Spinning speed " + getAttributeDescString(spinningSpeed, spinningSpeedPercentage));
+        //if (collisionDamage != 0)
+        //    desc.Add("Collision damage " + getAttributeDescString(collisionDamage, collisionDamagePercentage));
+
+        foreach (KeyValuePair<string, float> attribute in equipAttribute)
+        {
+            desc.Add(attribute.Key + getAttributeDescString(attribute.Value));
+        }
 
         return desc.ToArray();
+    }
+
+    public Dictionary<string, float> getAttribute()
+    {
+        Dictionary<string, float> equipAttribute = new Dictionary<string, float>();
+        if (health != 0)
+            equipAttribute.Add("Health", health);
+        if (fuelCapacity != 0)
+            equipAttribute.Add("Fuel Capacity", fuelCapacity);
+        if (fuelConsumption != 0)
+            equipAttribute.Add("Fuel Consuption", fuelConsumption);
+        if (speed != 0)
+            equipAttribute.Add("Speed" ,speed);
+        if (spinningSpeed != 0)
+            equipAttribute.Add("Spinning speed", spinningSpeed);
+        if (collisionDamage != 0)
+            equipAttribute.Add("Collision damage" ,collisionDamage);
+        return equipAttribute;
     }
 
     private string getAttributeDescString(float num, bool isPercentage)
     {
         string desc = "";
         if (num < 0)
+            desc += num.ToString();
+        else
+            desc += "+" + num.ToString();
+
+        return desc + (isPercentage ? "%" : "");
+    }
+
+    private string getAttributeDescString(float num)
+    {
+        string desc = "";
+
+        bool isPercentage = false;
+        if (num > 0 && num < 10)
+            isPercentage = true;
+
+        if (num < 0 || (isPercentage && num < 1))
             desc += num.ToString();
         else
             desc += "+" + num.ToString();
