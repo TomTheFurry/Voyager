@@ -16,6 +16,6 @@ public class SoundValue : MonoBehaviour
     }
     void Update()
     {
-        text.text = string.Format("{0,3}%", Mathf.Round(slider.value * 100 / maxValue));
+        text.text = string.Format("{0,3}%", Mathf.Round(slider.value * 100 / maxValue ));
     }
 }
