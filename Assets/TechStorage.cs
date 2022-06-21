@@ -13,6 +13,8 @@ public class TechStorage : MonoBehaviour
     public UnityEvent onTechStatusChanged;
     public UnityEvent onTechEquipChanging;
 
+    public int techNumCanBeUnlocked = 0;
+
     [Serializable]
     public struct TechState
     {
@@ -174,6 +176,7 @@ public class TechStorage : MonoBehaviour
         }
         initTechs();
         importTechData(PlayerData.GetData().techData);
+        collectTechNumCanBeUnlocked();
         onTechStatusChanged.AddListener(() =>
         {
             PlayerData.GetData().techData = collectTechData();
@@ -347,5 +350,16 @@ public class TechStorage : MonoBehaviour
         onTechEquipChanging.Invoke();
 
         return equipAttribute;
+    }
+
+    // tech number which can be unlocked
+    public void collectTechNumCanBeUnlocked()
+    {
+        techNumCanBeUnlocked = 0;
+        foreach (Tech tech in techTable.Keys)
+        {
+            if (canTechBeUnlocked(tech))
+                techNumCanBeUnlocked++;
+        }
     }
 }

@@ -21,4 +21,16 @@ public class GoBackButton : MonoBehaviour
             }
         };
     }
+
+    private void OnDestroy()
+    {
+        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
+        current.cancel.action.started -= (cc) => {
+            if (gameObject.activeInHierarchy && triggerEnable)
+            {
+                //Debug.Log("BackTriggered for " + GetInstanceID());
+                GetComponent<Button>().onClick.Invoke();
+            }
+        };
+    }
 }
