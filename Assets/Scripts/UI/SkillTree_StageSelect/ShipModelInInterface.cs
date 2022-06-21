@@ -30,10 +30,10 @@ public class ShipModelInInterface : MonoBehaviour
         ship.transform.Rotate(Vector3.back * swingSpeed * Mathf.Sin(timer * Mathf.PI) * Time.deltaTime);
         //ship.transform.Translate(Vector3.up * swingSpeed * 0.007f * Mathf.Sin(timer * Mathf.PI));
 
-        if (timer % 5 < 1)
-            rend.material = externalLayer;
-        else
-            rend.material = defaultExternalLayer;
+        //if (timer % 5 < 1)
+        //    rend.material = externalLayer;
+        //else
+        //    rend.material = defaultExternalLayer;
 
         timer += Time.deltaTime * 0.5f;
     }

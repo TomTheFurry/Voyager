@@ -4,25 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class TechUnlockButton : MonoBehaviour
 {
     private Tech tech;
     public Image icon;
 
+    private System.Action<InputAction.CallbackContext> inputAction;
+
     void Start()
     {
         if(tech == null) updateState(TechStorage.instance.getTechByIdentifier("EmptyTech"));
         Button btn = GetComponent<Button>();
         btn.onClick.AddListener(ButtonClicked);
+
+        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
+        inputAction = (cc) => {
+            if (gameObject.activeInHierarchy) 
+            {
+                Button btn = GetComponent<Button>();
+                if (btn.interactable == true)
+                    ButtonClicked();
+            }
+        };
+        current.submit.action.started += inputAction;
     }
 
-    void OnSubmit()
+    private void OnDestroy()
     {
-        //Debug.Log("Submit");
-        Button btn = GetComponent<Button>();
-        if (btn.interactable == true)
-            ButtonClicked();
+        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
+        current.submit.action.started -= inputAction;
     }
 
     public void updateState(Tech currentTech, bool playUnlockAnim = false)
@@ -41,11 +53,13 @@ public class TechUnlockButton : MonoBehaviour
 
         do {
             icon.enabled = true;
+            if (anim.GetInteger("State") == 2)
+                anim.SetTrigger("Reset State");
 
             if (!canUnlock && !isUnlock)
             {
                 anim.SetInteger("State", 0);
-                color.a = 0f;
+                //color.a = 0f;
                 btn.interactable = false;
                 icon.sprite = Global.instance.sprLocked; 
                 break;
@@ -54,7 +68,7 @@ public class TechUnlockButton : MonoBehaviour
             if (!isUnlock)
             {
                 anim.SetInteger("State", 1);
-                color.a = 80f/256f;
+                //color.a = 80f/256f;
                 btn.interactable = true;
                 icon.sprite = Global.instance.sprLock;
                 break;
@@ -64,12 +78,10 @@ public class TechUnlockButton : MonoBehaviour
             {
                 if (playUnlockAnim)
                 {
-                    anim.SetTrigger("Unlock");
-                    anim.SetInteger("State", 0);
+                    anim.SetTrigger("Unlock"); 
                 }
-                else
-                    icon.enabled = false;
-                color.a = 1f;
+                anim.SetInteger("State", 2);
+                //color.a = 1f;
                 btn.interactable = false;
                 break;
             }

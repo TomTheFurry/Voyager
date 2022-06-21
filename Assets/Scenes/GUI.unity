@@ -1202,6 +1202,7 @@ MonoBehaviour:
   - {fileID: 1510076468}
   starCost: 0
   icon: {fileID: 21300000, guid: fcd9fd6bc4d0dc34d88df9f7edf3fd34, type: 3}
+  material: {fileID: 0}
 --- !u!222 &82799344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2043,6 +2044,7 @@ MonoBehaviour:
   - {fileID: 353077661}
   starCost: 0
   icon: {fileID: 21300000, guid: 513f76798242f7545add0c18aa9915b6, type: 3}
+  material: {fileID: 0}
 --- !u!1 &149652493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,6 +2593,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 3ead9f16aeb2cc34abc736455092b646, type: 3}
+  material: {fileID: 0}
 --- !u!1 &205273510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3416,6 +3419,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: e34b3ad11727e6b40869d81077322ae4, type: 3}
+  material: {fileID: 0}
 --- !u!1 &253444199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5305,6 +5309,7 @@ MonoBehaviour:
   - {fileID: 1777212519}
   starCost: 0
   icon: {fileID: 21300000, guid: 77f1b669e3878fa4aacb7597b1b43c4f, type: 3}
+  material: {fileID: 0}
 --- !u!222 &353077662
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9642,6 +9647,7 @@ MonoBehaviour:
   - {fileID: 1712774243}
   starCost: 0
   icon: {fileID: 21300000, guid: 61ad761d9cbaae748ad29d7f3399601e, type: 3}
+  material: {fileID: 2100000, guid: 65def07fa3dfeb34aabe75ba70d712ee, type: 2}
 --- !u!222 &570159823
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11486,6 +11492,7 @@ MonoBehaviour:
   - {fileID: 140564542}
   starCost: 0
   icon: {fileID: 21300000, guid: dafed0348fed45842b6b686c2f9da44e, type: 3}
+  material: {fileID: 0}
 --- !u!1 &692265117
 GameObject:
   m_ObjectHideFlags: 0
@@ -12425,6 +12432,7 @@ MonoBehaviour:
   - {fileID: 956255812}
   starCost: 0
   icon: {fileID: 21300000, guid: e29f4461d4fc1814ab89b3f2909aa006, type: 3}
+  material: {fileID: 0}
 --- !u!1 &756869073
 GameObject:
   m_ObjectHideFlags: 0
@@ -14803,6 +14811,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: fa6f07aa882ced54099f61a93c0a8369, type: 3}
+  material: {fileID: 0}
 --- !u!222 &956255813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15870,6 +15879,7 @@ MonoBehaviour:
   - {fileID: 82799343}
   starCost: 0
   icon: {fileID: 21300000, guid: 0ef895110937a524da2c6af3915f7e0a, type: 3}
+  material: {fileID: 0}
 --- !u!222 &1018285170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18759,6 +18769,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 0d9b4f312035dcc409799a0c99da0f77, type: 3}
+  material: {fileID: 0}
 --- !u!1 &1248115987
 GameObject:
   m_ObjectHideFlags: 0
@@ -18919,6 +18930,7 @@ MonoBehaviour:
   - {fileID: 2135026637}
   starCost: 0
   icon: {fileID: 21300000, guid: 49ac9a03afa78944588bd5e79cd13f94, type: 3}
+  material: {fileID: 0}
 --- !u!222 &1250747594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22202,6 +22214,7 @@ MonoBehaviour:
   - {fileID: 570159822}
   starCost: 0
   icon: {fileID: 21300000, guid: 69af46f218641f544a5567e821a8e73f, type: 3}
+  material: {fileID: 2100000, guid: 961946c06ae088544beb0fdd585f608e, type: 2}
 --- !u!1 &1485196913
 GameObject:
   m_ObjectHideFlags: 0
@@ -22829,6 +22842,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: e7e68b3d26ab3604c9294131efb8e6b9, type: 3}
+  material: {fileID: 0}
 --- !u!222 &1510076469
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23142,6 +23156,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 8c8b647ebead8764599d2c30c368a10d, type: 3}
+  material: {fileID: 0}
 --- !u!222 &1522894678
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25016,6 +25031,7 @@ MonoBehaviour:
   - {fileID: 1522894677}
   starCost: 0
   icon: {fileID: 21300000, guid: 3ae521fa30e84fb4a834804355bf068f, type: 3}
+  material: {fileID: 0}
 --- !u!222 &1658019770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25118,6 +25134,7 @@ MonoBehaviour:
   - {fileID: 688645916}
   starCost: 0
   icon: {fileID: 21300000, guid: da790c161cca7b34b9212432f01efb18, type: 3}
+  material: {fileID: 0}
 --- !u!1 &1658760720
 GameObject:
   m_ObjectHideFlags: 0
@@ -26270,6 +26287,7 @@ MonoBehaviour:
   - {fileID: 1921246773}
   starCost: 0
   icon: {fileID: 21300000, guid: 90d71fc20e000694b8f36a9789fcc2a1, type: 3}
+  material: {fileID: 2100000, guid: aade89e55ccf6ec439ce0268c27505cf, type: 2}
 --- !u!222 &1712774244
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27283,6 +27301,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: aeedb31a2745d26479cfb146c82f726f, type: 3}
+  material: {fileID: 0}
 --- !u!222 &1777212520
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28812,6 +28831,7 @@ MonoBehaviour:
   - {fileID: 1250747593}
   starCost: 0
   icon: {fileID: 21300000, guid: 93be4e6099c4b184caacb580a7ad434f, type: 3}
+  material: {fileID: 0}
 --- !u!1 &1849197668
 GameObject:
   m_ObjectHideFlags: 0
@@ -29267,6 +29287,7 @@ MonoBehaviour:
   - {fileID: 353077661}
   starCost: 0
   icon: {fileID: 21300000, guid: bf5ece0ae3ce8c54ba59bbf7abe003d5, type: 3}
+  material: {fileID: 0}
 --- !u!222 &1902102461
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29480,6 +29501,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 0d3a7452824baba43b14839f4e4063c7, type: 3}
+  material: {fileID: 2100000, guid: 96d000ac0ad856f429a27d707f1a2d43, type: 2}
 --- !u!222 &1921246774
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32524,6 +32546,7 @@ MonoBehaviour:
   - {fileID: 1712774243}
   starCost: 0
   icon: {fileID: 21300000, guid: 0695d0ae5c0d94048ac8e16d217b2a96, type: 3}
+  material: {fileID: 0}
 --- !u!222 &2135026638
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32724,6 +32747,7 @@ MonoBehaviour:
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: aa9e2cf759f042347991d3532b5e1636, type: 3}
+  material: {fileID: 0}
 --- !u!1 &2144927645
 GameObject:
   m_ObjectHideFlags: 0
@@ -33152,6 +33176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 919132148870903473}
   - component: {fileID: 919132148870903474}
+  - component: {fileID: 919132148870903475}
+  - component: {fileID: 919132148870903476}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Untagged
@@ -33210,6 +33236,34 @@ MonoBehaviour:
   swingSpeed: 1
   rend: {fileID: 5447058700917111675}
   externalLayer: {fileID: 2100000, guid: 3fbc843663878ec4da47aafa414d5c1a, type: 2}
+--- !u!114 &919132148870903475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148870903472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2aa4a8d8f382ed4e86b1fa57910a0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalLayer: []
+--- !u!114 &919132148870903476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148870903472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2aa4a8d8f382ed4e86b1fa57910a0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalLayer:
+  - {fileID: 5447058700917111675}
+  - {fileID: 4407187375925365155}
 --- !u!1 &1042603166190873991
 GameObject:
   m_ObjectHideFlags: 0
