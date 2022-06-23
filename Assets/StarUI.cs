@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class StarUI : MonoBehaviour
 {
+    public static int targetLevel = 0;
+
     public Sprite completedStar;
     public Sprite incompleteStar;
-    public int targetLevel = 0;
+    //public int targetLevel = 0;
     public int starIndex = 0;
 
     private void Start()

@@ -29,6 +29,7 @@ public class Tech : MonoBehaviour, IComparable
 
     public bool defaultUnlock = false;
     public string identifier;
+    public string techName;
     public Tech[] prerequisites;
     public int starCost;
     public Sprite icon;

@@ -25,16 +25,19 @@ public class TechEquipInterface : MonoBehaviour
     private float iconHeight;
     private int lineNum;
 
+    private System.Action<InputAction.CallbackContext> callback;
+
     void Start()
     {
-        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        current.cancel.action.started += (cc) => {
+        callback = (cc) => {
             if (gameObject.activeInHierarchy)
             {
                 if (btn.interactable)
                     btn.onClick.Invoke();
             }
         };
+        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
+        current.cancel.action.started += callback;
 
         GoBackButton.triggerEnable = false;
 
@@ -112,6 +115,8 @@ public class TechEquipInterface : MonoBehaviour
             icon.GetComponent<Button>().onClick.AddListener(setNormalIcon);
             // set tech
             icon.GetComponent<TechEquipIcon>().tech = tech;
+            //set tooltip
+            icon.GetComponent<Tooltip>().text = tech.techName;
             //set selected icon
             if (equiped == tech)
                 setSelectedIcon(icon.GetComponent<TechEquipIcon>());
@@ -134,5 +139,8 @@ public class TechEquipInterface : MonoBehaviour
     private void OnDestroy()
     {
         GoBackButton.triggerEnable = true;
+
+        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
+        current.cancel.action.started -= callback;
     }
 }

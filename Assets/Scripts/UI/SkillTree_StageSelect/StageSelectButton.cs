@@ -8,9 +8,15 @@ public class StageSelectButton : MonoBehaviour
 {
     public bool enable;
     public string langFile;
+    public int targetLevel;
     public string level;
     public GameObject stageSelect;
     public bool shipModifyIsLock = false;
+
+    public TextMeshProUGUI information;
+    public ShipModifyButton shipModifyButton;
+    public LevelSwitch playButton;
+
     void Start()
     {
         updateButtonState();
@@ -18,14 +24,13 @@ public class StageSelectButton : MonoBehaviour
 
     public void changeToSelectUI()
     {
-        stageSelect.SetActive(true);
-        GameObject information = Global.getChildByName(stageSelect, "Information");
-        information = Global.getChildByName(information, "Text");
-        information.GetComponent<TextMeshProUGUI>().text =
-            LangSystem.parseText(Global.langPath(langFile, level + "_Information"));
+        StarUI.targetLevel = targetLevel;
 
-        Global.getChildByName(stageSelect, "Ship").GetComponent<ShipModifyButton>().changeButtonState(shipModifyIsLock);
-        Global.getChildByName(stageSelect, "Play_button").GetComponent<LevelSwitch>().levelName = level;
+        information.text = LangSystem.parseText(Global.langPath(langFile, level + "_Information"));
+        shipModifyButton.changeButtonState(shipModifyIsLock);
+        playButton.levelName = level;
+
+        stageSelect.SetActive(true);
     }
 
     private void changeButtonState(bool btnState)

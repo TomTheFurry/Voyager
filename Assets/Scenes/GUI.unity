@@ -552,12 +552,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 692265119}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1093628905}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -738,12 +738,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 2115447831}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1053800571}
+    m_SelectOnRight: {fileID: 1311865555}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1198,6 +1198,7 @@ MonoBehaviour:
   collisionDamagePercentage: 1
   defaultUnlock: 0
   identifier: 
+  techName: Bipropellant Rocket
   prerequisites:
   - {fileID: 1510076468}
   starCost: 0
@@ -1981,7 +1982,7 @@ GameObject:
   - component: {fileID: 140564542}
   - component: {fileID: 140564541}
   m_Layer: 5
-  m_Name: NuclearFusionBbattery
+  m_Name: NuclearFusionBattery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2040,6 +2041,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Nuclear Fusion Battery
   prerequisites:
   - {fileID: 353077661}
   starCost: 0
@@ -2590,6 +2592,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Laser
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 3ead9f16aeb2cc34abc736455092b646, type: 3}
@@ -3244,7 +3247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3416,6 +3419,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 1
   identifier: 
+  techName: Empty
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: e34b3ad11727e6b40869d81077322ae4, type: 3}
@@ -3577,12 +3581,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1015508639}
+    m_SelectOnDown: {fileID: 1682369855}
+    m_SelectOnLeft: {fileID: 1110997861}
+    m_SelectOnRight: {fileID: 2002684634}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -5305,6 +5309,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Atomic Battery
   prerequisites:
   - {fileID: 1777212519}
   starCost: 0
@@ -6719,12 +6724,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 625069298}
+    m_SelectOnLeft: {fileID: 1014763206}
+    m_SelectOnRight: {fileID: 1502622804}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -7756,7 +7761,7 @@ GameObject:
   - component: {fileID: 475843676}
   - component: {fileID: 475843675}
   m_Layer: 5
-  m_Name: NuclearFusionBbattery
+  m_Name: NuclearFusionBattery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9643,6 +9648,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Carbon Fiber
   prerequisites:
   - {fileID: 1712774243}
   starCost: 0
@@ -10590,7 +10596,7 @@ GameObject:
   - component: {fileID: 615110610}
   - component: {fileID: 615110612}
   m_Layer: 5
-  m_Name: NuclearFusionBbattery
+  m_Name: NuclearFusionBattery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10892,12 +10898,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 435674402}
+    m_SelectOnDown: {fileID: 1110997861}
+    m_SelectOnLeft: {fileID: 1014763206}
+    m_SelectOnRight: {fileID: 1015508639}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -11487,6 +11493,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Fusion Rocket
   prerequisites:
   - {fileID: 1902102460}
   - {fileID: 140564542}
@@ -11545,12 +11552,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 33261038}
+    m_SelectOnDown: {fileID: 946660375}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1598910475}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -12428,6 +12435,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: 3D Printer
   prerequisites:
   - {fileID: 956255812}
   starCost: 0
@@ -12523,7 +12531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completedStar: {fileID: 21300000, guid: 644cb16d4841b5841bb47c259f993e2c, type: 3}
   incompleteStar: {fileID: 21300000, guid: 9943c1c83e6b8274c84df70694c0348b, type: 3}
-  targetLevel: 0
   starIndex: 2
 --- !u!1 &762655777
 GameObject:
@@ -13137,12 +13144,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1014763206}
+    m_SelectOnDown: {fileID: 1456227370}
+    m_SelectOnLeft: {fileID: 2014247690}
+    m_SelectOnRight: {fileID: 1110997861}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -14250,7 +14257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -14608,12 +14615,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 692265119}
+    m_SelectOnDown: {fileID: 1053800571}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 2115447831}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -14808,6 +14815,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Maintenance System
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: fa6f07aa882ced54099f61a93c0a8369, type: 3}
@@ -15428,12 +15436,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 796257686}
+    m_SelectOnLeft: {fileID: 1598910475}
+    m_SelectOnRight: {fileID: 625069298}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -15671,12 +15679,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1502622804}
+    m_SelectOnDown: {fileID: 256197451}
+    m_SelectOnLeft: {fileID: 625069298}
+    m_SelectOnRight: {fileID: 2002684634}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -15875,6 +15883,7 @@ MonoBehaviour:
   collisionDamagePercentage: 1
   defaultUnlock: 0
   identifier: 
+  techName: Tripropellant Rocket
   prerequisites:
   - {fileID: 82799343}
   starCost: 0
@@ -16511,12 +16520,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 946660375}
+    m_SelectOnDown: {fileID: 1307451859}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 2115447831}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -16920,12 +16929,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 1598910475}
+    m_SelectOnLeft: {fileID: 33261038}
+    m_SelectOnRight: {fileID: 1014763206}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -17194,12 +17203,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 625069298}
+    m_SelectOnDown: {fileID: 1533145290}
+    m_SelectOnLeft: {fileID: 796257686}
+    m_SelectOnRight: {fileID: 256197451}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -18766,6 +18775,7 @@ MonoBehaviour:
   collisionDamagePercentage: 1
   defaultUnlock: 0
   identifier: 
+  techName: Small Magnetic Satellite
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 0d9b4f312035dcc409799a0c99da0f77, type: 3}
@@ -18926,6 +18936,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Ablation Material
   prerequisites:
   - {fileID: 2135026637}
   starCost: 0
@@ -19534,12 +19545,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1053800571}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 68671597}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -19958,12 +19969,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1456227370}
+    m_SelectOnDown: {fileID: 1844570467}
+    m_SelectOnLeft: {fileID: 68671597}
+    m_SelectOnRight: {fileID: 1533145290}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -20469,11 +20480,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1682369855}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 2002684634}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 2
   m_Colors:
@@ -20990,7 +21001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -21684,12 +21695,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 2014247690}
+    m_SelectOnDown: {fileID: 1311865555}
+    m_SelectOnLeft: {fileID: 2115447831}
+    m_SelectOnRight: {fileID: 1533145290}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -22210,6 +22221,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Aerogel
   prerequisites:
   - {fileID: 570159822}
   starCost: 0
@@ -22476,12 +22488,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 1015508639}
+    m_SelectOnLeft: {fileID: 435674402}
+    m_SelectOnRight: {fileID: 2002684634}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -22839,6 +22851,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 1
   identifier: 
+  techName: Monopropellant Rocket
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: e7e68b3d26ab3604c9294131efb8e6b9, type: 3}
@@ -23153,6 +23166,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Ion Thruster
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 8c8b647ebead8764599d2c30c368a10d, type: 3}
@@ -23437,12 +23451,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1110997861}
+    m_SelectOnDown: {fileID: 1311865555}
+    m_SelectOnLeft: {fileID: 1456227370}
+    m_SelectOnRight: {fileID: 1682369855}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -24122,9 +24136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580690439}
   - component: {fileID: 1580690441}
-  - component: {fileID: 1580690443}
   - component: {fileID: 1580690440}
-  - component: {fileID: 1580690442}
   m_Layer: 5
   m_Name: Ship
   m_TagString: Untagged
@@ -24144,6 +24156,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2135194718}
+  - {fileID: 1787656155}
   m_Father: {fileID: 2029571134}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24190,76 +24203,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580690438}
   m_CullTransparentMesh: 1
---- !u!114 &1580690442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580690438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: a11feb1fea7773f48aa6ba16ec1dc725, type: 3}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1580690440}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1580690443}
-        m_TargetAssemblyTypeName: ShipModifyButton, Assembly-CSharp
-        m_MethodName: openShipModifyUi
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1580690443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580690438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1779a4197c63d6428a27fd6def5e21e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipModiftUi: {fileID: 1698569346}
-  isLock: 0
 --- !u!1 &1588283569
 GameObject:
   m_ObjectHideFlags: 0
@@ -24440,12 +24383,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1093628905}
+    m_SelectOnDown: {fileID: 2014247690}
+    m_SelectOnLeft: {fileID: 692265119}
+    m_SelectOnRight: {fileID: 1014763206}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -24981,7 +24924,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completedStar: {fileID: 21300000, guid: 644cb16d4841b5841bb47c259f993e2c, type: 3}
   incompleteStar: {fileID: 21300000, guid: 9943c1c83e6b8274c84df70694c0348b, type: 3}
-  targetLevel: 0
   starIndex: 1
 --- !u!1 &1658019768
 GameObject:
@@ -25027,6 +24969,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: VASMIR Engine
   prerequisites:
   - {fileID: 1522894677}
   starCost: 0
@@ -25130,6 +25073,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Antimatter Rocket
   prerequisites:
   - {fileID: 688645916}
   starCost: 0
@@ -25225,7 +25169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completedStar: {fileID: 21300000, guid: 644cb16d4841b5841bb47c259f993e2c, type: 3}
   incompleteStar: {fileID: 21300000, guid: 9943c1c83e6b8274c84df70694c0348b, type: 3}
-  targetLevel: 0
   starIndex: 0
 --- !u!1 &1659950547
 GameObject:
@@ -25726,12 +25669,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 256197451}
+    m_SelectOnDown: {fileID: 2002684634}
+    m_SelectOnLeft: {fileID: 1533145290}
+    m_SelectOnRight: {fileID: 2002684634}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -26283,6 +26226,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Titanium Alloy
   prerequisites:
   - {fileID: 1921246773}
   starCost: 0
@@ -27298,6 +27242,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Solar Battery
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: aeedb31a2745d26479cfb146c82f726f, type: 3}
@@ -27754,6 +27699,153 @@ MonoBehaviour:
   sprite3: {fileID: 21300000, guid: 0af40195abf780a4fab5f911e8461478, type: 3}
   sprite4: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
   sprite5: {fileID: 21300000, guid: e6b06a65d3d4385459f9fcd645d744c5, type: 3}
+--- !u!1 &1787656154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787656155}
+  - component: {fileID: 1787656158}
+  - component: {fileID: 1787656157}
+  - component: {fileID: 1787656156}
+  - component: {fileID: 1787656159}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1787656155
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787656154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1580690439}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_SizeDelta: {x: 0.00012207, y: -0.000030518}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1787656156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787656154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: 323267af1a9fcdb4e9f67dd824a5c689, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: a11feb1fea7773f48aa6ba16ec1dc725, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1580690440}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1787656159}
+        m_TargetAssemblyTypeName: ShipModifyButton, Assembly-CSharp
+        m_MethodName: openShipModifyUi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1787656157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787656154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b5ec1728259d5fa4f8f608513c93ef70, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1787656158
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787656154}
+  m_CullTransparentMesh: 1
+--- !u!114 &1787656159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787656154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1779a4197c63d6428a27fd6def5e21e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipModiftUi: {fileID: 1698569346}
+  isLock: 0
 --- !u!1 &1787714403
 GameObject:
   m_ObjectHideFlags: 0
@@ -28675,12 +28767,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1311865555}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 68671597}
+    m_SelectOnRight: {fileID: 2002684634}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -28827,6 +28919,7 @@ MonoBehaviour:
   collisionDamagePercentage: 1
   defaultUnlock: 0
   identifier: 
+  techName: Reinforced Carbon-carbon
   prerequisites:
   - {fileID: 1250747593}
   starCost: 0
@@ -29281,6 +29374,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 0
   identifier: 
+  techName: Nuclear Thermal Rocket
   prerequisites:
   - {fileID: 1018285169}
   - {fileID: 1658019769}
@@ -29498,6 +29592,7 @@ MonoBehaviour:
   collisionDamagePercentage: 0
   defaultUnlock: 1
   identifier: 
+  techName: Stainless Steel
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: 0d3a7452824baba43b14839f4e4063c7, type: 3}
@@ -30512,12 +30607,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1682369855}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1844570467}
+    m_SelectOnRight: {fileID: 1361773762}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -30815,12 +30910,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1598910475}
+    m_SelectOnDown: {fileID: 1456227370}
+    m_SelectOnLeft: {fileID: 2115447831}
+    m_SelectOnRight: {fileID: 796257686}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -32342,12 +32437,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 692265119}
+    m_SelectOnDown: {fileID: 68671597}
+    m_SelectOnLeft: {fileID: 1053800571}
+    m_SelectOnRight: {fileID: 2014247690}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -32542,6 +32637,7 @@ MonoBehaviour:
   collisionDamagePercentage: 1
   defaultUnlock: 0
   identifier: 
+  techName: HRSI
   prerequisites:
   - {fileID: 1712774243}
   starCost: 0
@@ -32744,6 +32840,7 @@ MonoBehaviour:
   collisionDamagePercentage: 1
   defaultUnlock: 0
   identifier: 
+  techName: Metal Magnetic Mesh
   prerequisites: []
   starCost: 0
   icon: {fileID: 21300000, guid: aa9e2cf759f042347991d3532b5e1636, type: 3}
@@ -37337,9 +37434,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enable: 0
   langFile: Information
+  targetLevel: 2
   level: Level2
   stageSelect: {fileID: 2029571133}
   shipModifyIsLock: 0
+  information: {fileID: 817250880}
+  shipModifyButton: {fileID: 1787656159}
+  playButton: {fileID: 2060568561}
 --- !u!224 &9160700875077457664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37493,9 +37594,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enable: 1
   langFile: Information
+  targetLevel: 1
   level: Level1
   stageSelect: {fileID: 2029571133}
   shipModifyIsLock: 0
+  information: {fileID: 817250880}
+  shipModifyButton: {fileID: 1787656159}
+  playButton: {fileID: 2060568561}
 --- !u!222 &9160700875077457669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38135,9 +38240,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enable: 1
   langFile: Information
+  targetLevel: 0
   level: Tutorial
   stageSelect: {fileID: 2029571133}
   shipModifyIsLock: 1
+  information: {fileID: 817250880}
+  shipModifyButton: {fileID: 1787656159}
+  playButton: {fileID: 2060568561}
 --- !u!114 &9160700876466229738
 MonoBehaviour:
   m_ObjectHideFlags: 0

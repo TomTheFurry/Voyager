@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using UnityEngine.EventSystems;
 
 public class SkillTreeInformation : MonoBehaviour
 {
+    public static Button btnSelected;
+
     public SkillTreeInformationDisplay information;
     public GameObject icon;
     public Sprite image;
@@ -13,10 +15,32 @@ public class SkillTreeInformation : MonoBehaviour
     public GameObject temp;
 
     private Tech myTech;
+    private Button btn;
+
     private void Start()
     {
         myTech = GetComponent<TechIcon>().reference;
+        btn = transform.GetComponentInChildren<Button>();
     }
+
+    private void Update()
+    {
+        if (btnSelected == null)
+        {
+            if (EventSystem.current.currentSelectedGameObject == btn.gameObject)
+            {
+                btnSelected = btn;
+                showInformation();
+            }
+        }
+        else
+        {
+            if (EventSystem.current.currentSelectedGameObject != btnSelected.gameObject)
+                btnSelected = null;
+        }
+    }
+
+
 
     public void showInformation()
     {
