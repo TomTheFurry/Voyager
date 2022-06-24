@@ -7,6 +7,9 @@ public class ShipModifyButton : MonoBehaviour
 {
     public GameObject shipModiftUi;
     public bool isLock = false;
+    public bool showSuggest = false;
+    public bool keepSuggest = false;
+    public List<Tech> suggestTech = new List<Tech>();
 
     private void Start()
     {
@@ -15,6 +18,13 @@ public class ShipModifyButton : MonoBehaviour
 
     public void openShipModifyUi()
     {
+        if (!keepSuggest)
+        {
+            ShipModify shipModify = shipModiftUi.GetComponent<ShipModify>();
+            shipModify.showSuggestIcon = showSuggest;
+            shipModify.suggestTechs = suggestTech;
+        }
+            
         new UiInfo("Equip or skill tree", gameObject, shipModiftUi);
     }
 

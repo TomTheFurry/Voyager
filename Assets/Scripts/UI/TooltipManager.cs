@@ -16,13 +16,22 @@ public class TooltipManager : MonoBehaviour
     private TextResizer rs;
     private Image img;
 
+    private float alpha = 100f/255f;
+
     public GameObject tmpObj; //textMeshPro Obj
 
-    public void ShowTooltip(Tooltip t) {
+    public void ShowTooltip(Tooltip t, float alpha = 100f/255f)
+    {
+        Color color = img.color;
+        color.a = alpha;
+        img.color = color;
+
         if (currentTooltip != null && currentTooltip.GetType() == typeof(AdvancedTooltip)) {
-            ((AdvancedTooltip)currentTooltip).customTooltip.SetActive(false);
+            GameObject obj = ((AdvancedTooltip)currentTooltip).customTooltip;
+            obj.SetActive(false);
         }
         currentTooltip = t;
+        Update();
     }
 
     public void HideTooltip(Tooltip t)
@@ -34,6 +43,7 @@ public class TooltipManager : MonoBehaviour
                 ((AdvancedTooltip)currentTooltip).customTooltip.SetActive(false);
             }
             currentTooltip = null;
+            Update();
         }
     }
 
@@ -51,7 +61,6 @@ public class TooltipManager : MonoBehaviour
             img.enabled = false;
             tmpObj.SetActive(false);
             GameObject ui = ((AdvancedTooltip)currentTooltip).customTooltip;
-            ui.SetActive(true);
             RectTransform rect = ui.GetComponent<RectTransform>();
 
             // Get MousePos using new InputSystem
@@ -78,6 +87,7 @@ public class TooltipManager : MonoBehaviour
                 pos.x -= maxRect.x-maxWidths.x;
                 rect.position = pos;
             }
+            ui.SetActive(true);
         }
         else
         {
