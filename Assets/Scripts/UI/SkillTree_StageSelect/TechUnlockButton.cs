@@ -20,22 +20,22 @@ public class TechUnlockButton : MonoBehaviour
         btn.onClick.AddListener(ButtonClicked);
 
         InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        inputAction = (cc) => {
-            if (gameObject.activeInHierarchy) 
+        inputAction = (cc) =>
+        {
+            if (gameObject.activeInHierarchy)
             {
                 Button btn = GetComponent<Button>();
-                if (btn.interactable == true)
-                    ButtonClicked();
+                btn.onClick.Invoke();
             }
         };
         current.submit.action.started += inputAction;
     }
 
-    private void OnDestroy()
-    {
-        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        current.submit.action.started -= inputAction;
-    }
+    //private void OnDestroy()
+    //{
+    //    InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
+    //    current.submit.action.started -= inputAction;
+    //}
 
     public void updateState(Tech currentTech, bool playUnlockAnim = false)
     {
@@ -90,6 +90,9 @@ public class TechUnlockButton : MonoBehaviour
     }
 
     public void ButtonClicked() {
+        if (GetComponent<Button>().interactable == false)
+            return;
+
         if (tech != null) {
             bool unlock = TechStorage.instance.unlockTech(tech);
             if (unlock) 

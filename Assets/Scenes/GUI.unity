@@ -2875,6 +2875,7 @@ RectTransform:
   - {fileID: 1253751920}
   - {fileID: 763628025}
   - {fileID: 19587368}
+  - {fileID: 1371522328}
   - {fileID: 1778005098}
   m_Father: {fileID: 1782104355}
   m_RootOrder: 1
@@ -5672,7 +5673,7 @@ RectTransform:
   m_Children:
   - {fileID: 1721461665}
   m_Father: {fileID: 1782104355}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -18816,7 +18817,7 @@ RectTransform:
   - {fileID: 3383098508448947484}
   - {fileID: 956384977}
   m_Father: {fileID: 1782104355}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -20980,8 +20981,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1782104355}
-  m_RootOrder: 7
+  m_Father: {fileID: 230349604}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -24324,7 +24325,7 @@ RectTransform:
   - {fileID: 1830179336}
   - {fileID: 664556727}
   m_Father: {fileID: 1782104355}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -27305,7 +27306,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 230349604}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -27467,7 +27468,6 @@ RectTransform:
   - {fileID: 1698569347}
   - {fileID: 3826495999025811047}
   - {fileID: 2055631418}
-  - {fileID: 1371522328}
   - {fileID: 1248115988}
   - {fileID: 380819144}
   - {fileID: 1589567275}
@@ -27778,7 +27778,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1580690440}
+  m_TargetGraphic: {fileID: 1787656157}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
