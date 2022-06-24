@@ -582,19 +582,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 33261036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1705485320}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &65097839
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,19 +756,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 68671598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1363416860}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &68671598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,6 +977,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Ablation Material
+  alpha: 0.39215687
 --- !u!114 &72472512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,6 +1341,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Ship Modify
+  alpha: 0.39215687
 --- !u!114 &84714056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,6 +1947,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &140564539
 GameObject:
@@ -2047,6 +2026,81 @@ MonoBehaviour:
   starCost: 0
   icon: {fileID: 21300000, guid: 513f76798242f7545add0c18aa9915b6, type: 3}
   material: {fileID: 0}
+--- !u!1 &142931560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142931563}
+  - component: {fileID: 142931562}
+  - component: {fileID: 142931561}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &142931561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142931560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &142931562
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142931560}
+  m_CullTransparentMesh: 1
+--- !u!224 &142931563
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142931560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 370170706}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -188, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &149652493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2192,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Ion Thruster
+  alpha: 0.39215687
 --- !u!114 &149652498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,6 +2212,140 @@ MonoBehaviour:
   sprite3: {fileID: 21300000, guid: 0af40195abf780a4fab5f911e8461478, type: 3}
   sprite4: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
   sprite5: {fileID: 21300000, guid: e6b06a65d3d4385459f9fcd645d744c5, type: 3}
+--- !u!1 &150201048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150201049}
+  - component: {fileID: 150201051}
+  - component: {fileID: 150201050}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &150201049
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150201048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1505932999}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 105.00001}
+  m_SizeDelta: {x: 330, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &150201050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150201048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Internal device
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &150201051
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150201048}
+  m_CullTransparentMesh: 1
 --- !u!1 &151984399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,6 +2450,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &157138860
 GameObject:
@@ -2989,6 +3179,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Monopropellant Rocket
+  alpha: 0.39215687
 --- !u!114 &240393463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3529,6 +3720,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &256197449
 GameObject:
@@ -3612,19 +3804,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 256197452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 692783535}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &256197452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4004,9 +4184,8 @@ MonoBehaviour:
   teches:
   - {fileID: 1921246773}
   - {fileID: 1712774243}
-  - {fileID: 2135026637}
-  - {fileID: 1250747593}
-  - {fileID: 1845063606}
+  - {fileID: 570159822}
+  - {fileID: 1483761864}
   equip: {fileID: 0}
 --- !u!1 &274391915
 GameObject:
@@ -4099,6 +4278,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Fusion Rocket
+  alpha: 0.39215687
 --- !u!114 &274391920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,6 +5069,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &332257255
 GameObject:
@@ -5160,6 +5341,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Save and Return
+  alpha: 0.39215687
 --- !u!114 &349720484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5434,6 +5616,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Nuclear Thermal Rocket
+  alpha: 0.39215687
 --- !u!114 &355322583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5619,6 +5802,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Carbon Fiber
+  alpha: 0.39215687
 --- !u!114 &366443996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5638,6 +5822,43 @@ MonoBehaviour:
   sprite3: {fileID: 21300000, guid: 0af40195abf780a4fab5f911e8461478, type: 3}
   sprite4: {fileID: 21300000, guid: 4a7c0ec014f178746b641d9d8e4b123a, type: 3}
   sprite5: {fileID: 21300000, guid: e6b06a65d3d4385459f9fcd645d744c5, type: 3}
+--- !u!1 &370170705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370170706}
+  m_Layer: 5
+  m_Name: Suggestion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &370170706
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370170705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1994863875}
+  - {fileID: 142931563}
+  m_Father: {fileID: 2106874835}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.9619751, y: 338}
+  m_SizeDelta: {x: -936.292, y: -910}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &380819143
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,6 +6875,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Bipropellant Rocket
+  alpha: 0.39215687
 --- !u!114 &424040744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6755,19 +6977,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 435674403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1426186106}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &435674403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7403,6 +7613,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &461077893
 GameObject:
@@ -7589,6 +7800,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &472001892
 GameObject:
@@ -7656,6 +7868,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Don't save and Return
+  alpha: 0.39215687
 --- !u!114 &472001895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8289,6 +8502,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: VASMIR Engine
+  alpha: 0.39215687
 --- !u!114 &511120268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8702,6 +8916,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Skill Tree <color=grey>(Read Only in Demo)</color>
+  alpha: 0.39215687
 --- !u!114 &516058288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9194,6 +9409,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 953619645}
+  - {fileID: 1291568237}
   m_Father: {fileID: 508329506}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9266,6 +9482,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: External device
+  alpha: 1
 --- !u!114 &550932433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9654,7 +9871,7 @@ MonoBehaviour:
   - {fileID: 1712774243}
   starCost: 0
   icon: {fileID: 21300000, guid: 61ad761d9cbaae748ad29d7f3399601e, type: 3}
-  material: {fileID: 2100000, guid: 65def07fa3dfeb34aabe75ba70d712ee, type: 2}
+  material: {fileID: 0}
 --- !u!222 &570159823
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10445,6 +10662,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604460803}
   m_CullTransparentMesh: 1
+--- !u!1 &604588031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 604588032}
+  - component: {fileID: 604588034}
+  - component: {fileID: 604588033}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &604588032
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604588031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1760694228}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 105.00001}
+  m_SizeDelta: {x: 330, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &604588033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604588031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Internal material
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &604588034
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604588031}
+  m_CullTransparentMesh: 1
 --- !u!1 &608007077
 GameObject:
   m_ObjectHideFlags: 0
@@ -10674,6 +11025,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Nuclear Fusion Battery
+  alpha: 0.39215687
 --- !u!114 &615110612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10929,19 +11281,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 625069299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2059425410}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &625069299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11583,19 +11923,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 692265120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2044684158}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &692265120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11725,6 +12053,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Maintenance System
+  alpha: 0.39215687
 --- !u!114 &692783538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11810,6 +12139,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Reset Equip
+  alpha: 0.39215687
 --- !u!114 &717319403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13175,19 +13505,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 796257687}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 511120265}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &796257687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13700,6 +14018,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &829807061
 GameObject:
@@ -13994,6 +14313,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836776868}
   m_CullTransparentMesh: 1
+--- !u!1 &867561236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867561237}
+  - component: {fileID: 867561239}
+  - component: {fileID: 867561238}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &867561237
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867561236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1282974095}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 105.00001}
+  m_SizeDelta: {x: 330, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &867561238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867561236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: External device
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &867561239
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867561236}
+  m_CullTransparentMesh: 1
 --- !u!1 &869306233
 GameObject:
   m_ObjectHideFlags: 0
@@ -14098,6 +14551,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &898622644
 GameObject:
@@ -14646,19 +15100,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 946660376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2109891328}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &946660376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15467,19 +15909,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1014763207}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 149652495}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1014763207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15609,6 +16039,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Tripropellant Rocket
+  alpha: 0.39215687
 --- !u!114 &1014825317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15710,19 +16141,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1015508640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1059165477}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1015508640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15950,6 +16369,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1565107829}
+  - {fileID: 1703097973}
   m_Father: {fileID: 508329506}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16022,6 +16442,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: External material
+  alpha: 1
 --- !u!114 &1029191373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16184,6 +16605,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1033274517
 GameObject:
@@ -16289,6 +16711,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1040845876
 GameObject:
@@ -16551,19 +16974,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1053800572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 72472509}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1053800572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16693,6 +17104,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Small Magnetic Satellite
+  alpha: 0.39215687
 --- !u!114 &1059165480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16960,19 +17372,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1093628906}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 240393463}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1093628906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17234,19 +17634,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1110997862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1529734627}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1110997862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17981,6 +18369,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1195062245
 GameObject:
@@ -18599,6 +18988,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1233005692
 GameObject:
@@ -18704,6 +19094,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1237790991
 GameObject:
@@ -19174,6 +19565,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 941023298}
+  - {fileID: 867561237}
   m_Father: {fileID: 508329506}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19246,6 +19638,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: External device
+  alpha: 1
 --- !u!114 &1282974099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19415,6 +19808,140 @@ RectTransform:
   m_AnchoredPosition: {x: 2.3249207, y: 1.6000004}
   m_SizeDelta: {x: -138.03015, y: 2.3999999}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1291568236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1291568237}
+  - component: {fileID: 1291568239}
+  - component: {fileID: 1291568238}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1291568237
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291568236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 550932429}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 105}
+  m_SizeDelta: {x: 330, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1291568238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291568236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: External device
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1291568239
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291568236}
+  m_CullTransparentMesh: 1
 --- !u!1 &1306478733
 GameObject:
   m_ObjectHideFlags: 0
@@ -19576,19 +20103,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1307451860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1829880502}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1307451860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20000,19 +20515,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1311865556}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 274391917}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1311865556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20588,6 +21091,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Go Back
+  alpha: 0.39215687
 --- !u!114 &1361773766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20705,6 +21209,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Aerogel
+  alpha: 0.39215687
 --- !u!114 &1363416863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21121,6 +21626,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Quit
+  alpha: 0.39215687
 --- !u!1 &1385788053
 GameObject:
   m_ObjectHideFlags: 0
@@ -21459,6 +21965,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Metal Magnetic Mesh
+  alpha: 0.39215687
 --- !u!114 &1426186109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21726,19 +22233,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1456227371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 355322580}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1456227371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22227,7 +22722,7 @@ MonoBehaviour:
   - {fileID: 570159822}
   starCost: 0
   icon: {fileID: 21300000, guid: 69af46f218641f544a5567e821a8e73f, type: 3}
-  material: {fileID: 2100000, guid: 961946c06ae088544beb0fdd585f608e, type: 2}
+  material: {fileID: 0}
 --- !u!1 &1485196913
 GameObject:
   m_ObjectHideFlags: 0
@@ -22519,19 +23014,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1502622805}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1784175393}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1502622805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22603,6 +23086,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 223354692}
+  - {fileID: 150201049}
   m_Father: {fileID: 508329506}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22675,6 +23159,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Internal device
+  alpha: 1
 --- !u!114 &1505933003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23122,6 +23607,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1522894676
 GameObject:
@@ -23381,6 +23867,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Atomic Battery
+  alpha: 0.39215687
 --- !u!114 &1529734630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23482,19 +23969,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1533145291}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 615110609}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1533145291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23830,6 +24305,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1565107828
 GameObject:
@@ -24414,19 +24890,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1598910476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 424040741}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1598910476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25338,6 +25802,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 800610714}
+  - {fileID: 1967397158}
   m_Father: {fileID: 508329506}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25410,6 +25875,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Engine
+  alpha: 1
 --- !u!114 &1662478407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25700,19 +26166,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1682369856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1787647264}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1682369856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25853,6 +26307,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: <color=red>Locked</color> <color=grey>(Not avalible in Demo)</color=gray>
+  alpha: 0.39215687
 --- !u!1 &1692130720
 GameObject:
   m_ObjectHideFlags: 0
@@ -26032,6 +26487,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1698569346
 GameObject:
@@ -26042,13 +26498,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1698569347}
+  - component: {fileID: 1698569348}
   m_Layer: 5
   m_Name: ShipModify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698569347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26073,6 +26530,156 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1698569348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698569346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17e58790bf6324449908e1e6ed7bd15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSuggestIcon: 0
+  suggestion: {fileID: 370170705}
+  icon: {fileID: 142931560}
+  suggestTechs: []
+--- !u!1 &1703097972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703097973}
+  - component: {fileID: 1703097975}
+  - component: {fileID: 1703097974}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1703097973
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703097972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1029191369}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 105.00001}
+  m_SizeDelta: {x: 330, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1703097974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703097972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: External material
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1703097975
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703097972}
+  m_CullTransparentMesh: 1
 --- !u!1 &1705485317
 GameObject:
   m_ObjectHideFlags: 0
@@ -26139,6 +26746,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 'Stainless Steel '
+  alpha: 0.39215687
 --- !u!114 &1705485320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27019,6 +27627,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 796097532}
+  - {fileID: 604588032}
   m_Father: {fileID: 508329506}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27091,6 +27700,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Internal material
+  alpha: 1
 --- !u!114 &1760694232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27570,6 +28180,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Laser
+  alpha: 0.39215687
 --- !u!114 &1784175396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27680,6 +28291,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 3D Printer
+  alpha: 0.39215687
 --- !u!114 &1787647267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27846,6 +28458,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipModiftUi: {fileID: 1698569346}
   isLock: 0
+  showSuggest: 0
+  keepSuggest: 0
+  suggestTech: []
 --- !u!1 &1787714403
 GameObject:
   m_ObjectHideFlags: 0
@@ -28043,6 +28658,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1799346462
 GameObject:
@@ -28301,6 +28917,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Antimatter Rocket
+  alpha: 0.39215687
 --- !u!114 &1805421470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28488,6 +29105,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Reinforced Carbon-carbon
+  alpha: 0.39215687
 --- !u!114 &1829880505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28609,6 +29227,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 664556726}
 --- !u!1 &1842667145
 GameObject:
@@ -28714,6 +29333,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1844570465
 GameObject:
@@ -28797,19 +29417,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1844570468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1805421467}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1844570468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29084,6 +29692,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
   customTooltip: {fileID: 0}
 --- !u!1 &1859141132
 GameObject:
@@ -29859,6 +30468,140 @@ MonoBehaviour:
   sprite0: {fileID: 21300000, guid: b5b8d23689581eb4a849c277fe887969, type: 3}
   sprite1: {fileID: 21300000, guid: 9599d415e6b403a4084013dcbd11f085, type: 3}
   sprite2: {fileID: 21300000, guid: dcd9ac08ee3bc9c4cbb22f72d4de44b8, type: 3}
+--- !u!1 &1967397157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967397158}
+  - component: {fileID: 1967397160}
+  - component: {fileID: 1967397159}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1967397158
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967397157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1662478403}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 105.00001}
+  m_SizeDelta: {x: 330, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1967397159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967397157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Engine
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1967397160
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967397157}
+  m_CullTransparentMesh: 1
 --- !u!1 &1969602789
 GameObject:
   m_ObjectHideFlags: 0
@@ -30046,8 +30789,9 @@ MonoBehaviour:
   teches:
   - {fileID: 1921246773}
   - {fileID: 1712774243}
-  - {fileID: 570159822}
-  - {fileID: 1483761864}
+  - {fileID: 2135026637}
+  - {fileID: 1250747593}
+  - {fileID: 1845063606}
   equip: {fileID: 0}
 --- !u!1 &1985040063
 GameObject:
@@ -30224,17 +30968,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994863874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2106874835}
-  m_RootOrder: 1
+  m_Father: {fileID: 370170706}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -304.7, y: -161.20001}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -324.46225, y: 0}
+  m_SizeDelta: {x: -698.925, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994863876
 MonoBehaviour:
@@ -30542,6 +31286,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Return
+  alpha: 0.39215687
 --- !u!114 &1998352631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30688,6 +31433,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Ship Modify
+  alpha: 0.39215687
 --- !u!114 &2002684636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30940,19 +31686,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2014247691}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1014825314}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2014247691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31353,6 +32087,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Titanium Alloy
+  alpha: 0.39215687
 --- !u!1 &2055247341
 GameObject:
   m_ObjectHideFlags: 0
@@ -31604,6 +32339,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Solar Battery
+  alpha: 0.39215687
 --- !u!114 &2059425413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31797,6 +32533,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Play
+  alpha: 0.39215687
 --- !u!1 &2065745529
 GameObject:
   m_ObjectHideFlags: 0
@@ -32177,7 +32914,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087452645}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8827badb57e8f9540a49eb7facf2262b, type: 3}
   m_Name: 
@@ -32228,7 +32965,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2087452646}
-  - {fileID: 1994863875}
+  - {fileID: 370170706}
   m_Father: {fileID: 1698569347}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32366,6 +33103,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: HRSI
+  alpha: 0.39215687
 --- !u!114 &2109891331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32467,19 +33205,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2115447832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 366443993}
-        m_TargetAssemblyTypeName: SkillTreeInformation, Assembly-CSharp
-        m_MethodName: showInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2115447832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32769,6 +33495,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Ship Modify
+  alpha: 0.39215687
 --- !u!1 &2136589322
 GameObject:
   m_ObjectHideFlags: 0
@@ -37412,6 +38139,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: <color=red>Locked</color> <color=grey>(Not avalible in Demo)</color=gray>
+  alpha: 0.39215687
 --- !u!222 &9160700875042621717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37865,6 +38593,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Go Back
+  alpha: 0.39215687
 --- !u!114 &9160700875687770350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38558,6 +39287,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Settings
+  alpha: 0.39215687
 --- !u!1 &9160700876897684914
 GameObject:
   m_ObjectHideFlags: 0

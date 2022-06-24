@@ -56,23 +56,23 @@ public class Tech : MonoBehaviour, IComparable
     {
         List<string> desc = new List<string>();
         Dictionary<string, float> equipAttribute = getAttribute();
-        //if (health != 0)
-        //    desc.Add("Health " + getAttributeDescString(health, healthPercentage));
-        //if (fuelCapacity != 0)
-        //    desc.Add("Fuel Capacity " + getAttributeDescString(fuelCapacity, fuelCapacityPercentage));
-        //if (fuelConsumption != 0)
-        //    desc.Add("Fuel Consuption " + getAttributeDescString(fuelConsumption, fuelConsumptionPercentage));
-        //if (speed != 0)
-        //    desc.Add("Speed " + getAttributeDescString(speed, speedPercentage));
-        //if (spinningSpeed != 0)
-        //    desc.Add("Spinning speed " + getAttributeDescString(spinningSpeed, spinningSpeedPercentage));
-        //if (collisionDamage != 0)
-        //    desc.Add("Collision damage " + getAttributeDescString(collisionDamage, collisionDamagePercentage));
+        if (health != 0)
+            desc.Add("Health " + getAttributeDescString(health, healthPercentage));
+        if (fuelCapacity != 0)
+            desc.Add("Fuel Capacity " + getAttributeDescString(fuelCapacity, fuelCapacityPercentage));
+        if (fuelConsumption != 0)
+            desc.Add("Fuel Consuption " + getAttributeDescString(fuelConsumption, fuelConsumptionPercentage));
+        if (speed != 0)
+            desc.Add("Speed " + getAttributeDescString(speed, speedPercentage));
+        if (spinningSpeed != 0)
+            desc.Add("Spinning speed " + getAttributeDescString(spinningSpeed, spinningSpeedPercentage));
+        if (collisionDamage != 0)
+            desc.Add("Collision damage " + getAttributeDescString(collisionDamage, collisionDamagePercentage));
 
-        foreach (KeyValuePair<string, float> attribute in equipAttribute)
-        {
-            desc.Add(attribute.Key + " " + getAttributeDescString(attribute.Value));
-        }
+        //foreach (KeyValuePair<string, float> attribute in equipAttribute)
+        //{
+        //    desc.Add(attribute.Key + " " + getAttributeDescString(attribute.Value));
+        //}
 
         return desc.ToArray();
     }
