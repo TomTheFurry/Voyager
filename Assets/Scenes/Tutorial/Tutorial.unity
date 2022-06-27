@@ -1155,6 +1155,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
 --- !u!114 &225636788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,6 +1624,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
 --- !u!114 &488751726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,6 +1881,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
 --- !u!114 &517720194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4808,6 +4811,7 @@ MonoBehaviour:
   text: 'Next Level <color=grey>(Locked)
 
     (This is the end of the demo.)</color>'
+  alpha: 0.39215687
 --- !u!222 &1148124989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5685,6 +5689,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 'Skill: None avalible$lang/test/test2$'
+  alpha: 0.39215687
 --- !u!1 &1394059837
 GameObject:
   m_ObjectHideFlags: 0
@@ -7027,6 +7032,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Retry Level
+  alpha: 0.39215687
 --- !u!1 &1639829370 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8700617353114198275, guid: cc848085ac7e9e9499fc102a2286f09a, type: 3}
@@ -7621,8 +7627,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     texts:
-    - Good job! Now, you may have noticed already. The acceleration for your spaceship
-      is different in each axis.
+    - $lang/Tutorial/CP2_P1$
     - Because a spaceship is never designed to accelerate on all directions equally,
       which just waste precious space, it often is better to rotate your spaceship
       towards the direction you want to accelerate to.
@@ -8738,6 +8743,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Return to main menu
+  alpha: 0.39215687
 --- !u!222 &2122455087
 CanvasRenderer:
   m_ObjectHideFlags: 0
