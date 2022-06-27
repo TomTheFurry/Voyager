@@ -856,6 +856,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
 --- !u!114 &225636788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,6 +1350,7 @@ GameObject:
   - component: {fileID: 287795251}
   - component: {fileID: 287795250}
   - component: {fileID: 287795249}
+  - component: {fileID: 287795252}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -1363,13 +1365,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287795247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.99999934, y: -0, z: -0, w: -0.0011574931}
   m_LocalPosition: {x: 0, y: -0.05, z: -1.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 416681355}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180.133, y: 0, z: 0}
 --- !u!330 &287795249
 ParticleSystemForceField:
   m_ObjectHideFlags: 0
@@ -1381,9 +1383,9 @@ ParticleSystemForceField:
   m_Parameters:
     m_Shape: 2
     m_StartRange: 0
-    m_EndRange: 32.5
-    m_Length: 100
-    m_GravityFocus: 0
+    m_EndRange: 0.1
+    m_Length: 1
+    m_GravityFocus: 0.46
     m_RotationRandomness: {x: 0, y: 0}
     m_DirectionCurveX:
       serializedVersion: 2
@@ -1547,7 +1549,7 @@ ParticleSystemForceField:
     m_GravityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 85.45
+      scalar: 0.33
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1600,7 +1602,7 @@ ParticleSystemForceField:
     m_RotationSpeedCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 359
+      scalar: 2.18
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1653,7 +1655,7 @@ ParticleSystemForceField:
     m_RotationAttractionCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.48
+      scalar: 0.22
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1909,7 +1911,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 1
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -1950,7 +1952,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -2004,7 +2006,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -2014,7 +2016,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.31
+      scalar: 0.14
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2183,7 +2185,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.66
+      scalar: 0.44
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2499,7 +2501,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 50000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -2560,11 +2562,11 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 0
-    length: 100
+    length: 1
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0
     donutRadius: 0.2
-    m_Position: {x: 0, y: 50, z: 0}
+    m_Position: {x: 0, y: 0.5, z: 0}
     m_Rotation: {x: 90, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
@@ -2645,7 +2647,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.5
+      value: 0.03
       mode: 0
       spread: 0
       speed:
@@ -2764,7 +2766,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 47.12
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3202,24 +3204,24 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 1, g: 0.9219984, b: 0, a: 1}
+        key1: {r: 1, g: 0.41428658, b: 0, a: 1}
+        key2: {r: 1, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime1: 15420
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 59174
+        atime1: 42598
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -3227,7 +3229,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
+        m_NumColorKeys: 3
         m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
@@ -4467,7 +4469,7 @@ ParticleSystem:
         m_RotationOrder: 4
     magnitude:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4475,22 +4477,22 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
           value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -4577,11 +4579,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 1
+    enabled: 0
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 62.1
+      scalar: 0.05
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4738,7 +4740,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.2
+    frequency: 1.1
     damping: 1
     octaves: 4
     octaveMultiplier: 0.5
@@ -4747,7 +4749,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.05
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5127,14 +5129,23 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.775383
+          time: 0
           value: 0
-          inSlope: -1.0647286
-          outSlope: -1.0647286
+          inSlope: 1.6475972
+          outSlope: 1.6475972
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.5731423
+          outWeight: 0.041336514
+        - serializedVersion: 3
+          time: 0.73211676
+          value: 0.591202
+          inSlope: 0.43058246
+          outSlope: 0.43058246
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.34064603
+          outWeight: 0.5037923
         - serializedVersion: 3
           time: 0.87432355
           value: 1
@@ -5286,7 +5297,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    range: {x: 0, y: 25.3}
+    range: {x: 0, y: 1.47}
     separateAxes: 0
   RotationBySpeedModule:
     enabled: 0
@@ -6646,6 +6657,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &287795252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287795247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f7d68a23a28014d82d4a5cd63f42c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &416681353
 GameObject:
   m_ObjectHideFlags: 0
@@ -6678,10 +6701,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origin: {fileID: 1872533720}
   action: {fileID: 8483490821351011579, guid: 716507c2a50baf24194031bd7df00d90, type: 3}
-  maxDistance: 1000
+  maxDistance: 100
   layer:
     serializedVersion: 2
     m_Bits: 64
+  beam: {fileID: 287795252}
 --- !u!4 &416681355
 Transform:
   m_ObjectHideFlags: 0
@@ -6921,6 +6945,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
 --- !u!114 &488751726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7177,6 +7202,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 
+  alpha: 0.39215687
 --- !u!114 &517720194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8111,7 +8137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a653a636c3b549047959bf72dacf66c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  junkCount: 10000
+  junkCount: 1000
   container: {fileID: 233397349}
   sampleObj: {fileID: 538478443760665918}
   junkAssets:
@@ -8895,6 +8921,7 @@ MonoBehaviour:
   text: 'Next Level <color=grey>(Locked)
 
     (This is the end of the demo.)</color>'
+  alpha: 0.39215687
 --- !u!222 &1148124989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9592,6 +9619,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: 'Skill: None avalible$lang/test/test2$'
+  alpha: 0.39215687
 --- !u!1 &1394059837
 GameObject:
   m_ObjectHideFlags: 0
@@ -10774,6 +10802,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Retry Level
+  alpha: 0.39215687
 --- !u!1 &1679155052
 GameObject:
   m_ObjectHideFlags: 0
@@ -12256,6 +12285,7 @@ MonoBehaviour:
       m_Calls: []
   isHovering: 0
   text: Return to main menu
+  alpha: 0.39215687
 --- !u!222 &2122455087
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,0 +1,8 @@
+`~Junction_p1
+Good job!$p0.2$ You have reached the <color=yellow><b>end of the level</b></color>!
+`~Junction_p2
+You can complete the level by stopping at the
+<color=yellow><b>end marker</b></color> in the right.$p1
+$$s10$ Or...
+`~Junction_p3
+You can challage yourselves by going though <color=yellow><b>The Maze</b></color> in the left and getting as much <color=yellow><b>Bonuses</b></color> as possible!

@@ -1,0 +1,8 @@
+`~CPCurve_p1
+In space,$p0.2$ there is no atmospheric drag.$p0.2$ Following the Newton’s law of motion,$p0.2$ without external force,
+`~CPCurve_p2
+a stationary object always remains stationary,$p0.2$ and a moving object aways continue to move in a straight line.
+`~CPCurve_p3
+In this case,$p0.2$ you can notice that in order to ‘slow down’,$p0.2$ you need to act apron it,$p0.2$ and apply a force against the direction of your momentum.
+`~CPCurve_p4
+Here,$p0.2$ try to fly though this curve section.$p0.2$ Remember that managing your speed is very important.$p0.2$ You wouldn’t want to smash the spaceship to pieces after all…

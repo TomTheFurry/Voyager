@@ -1,0 +1,133 @@
+~`Skill_Tree
+`~StainlessSteel_Description
+Mix different elements to make steel harder to oxidize, because of stainless steel is a Corrosion-resistant high-strength material, so that the strength is not high as other material that came later, but the cost is cheaper, so many aircraft and spacecraft would select the stainless steel to become the second choose.
+`~MonopropellantRocket_Description
+Since a single-propellant rocket only needs to use a single fuel for propulsion, its structure is extremely simple, and its cost is very low. Even if its reliability is low, it is still an important research direction to reduce the cost of rocket launch.
+`~MetalMagneticMesh_FontSize
+18
+`~MetalMagneticMesh_Description
+Use aluminum wire and steek wire to make it and using magnetic force collects <link="Autotip">space garbage</link>. After collecting a certain amount of space garbage, it will enter the atmosphere due to the earth’s gravity and burn out through the atmosphere, thereby disposing of space garbage. The advantage is that it is cheap, however it is difficult to accurately handle space garbage and when there is an excess of space garbage falling into the atmosphere with it, there is a chance that it will not burn out and hit the ground.
+`~Laser_FontSize
+22
+`~Laser_Description
+Laser weapons are energy weapons that use high-energy lasers to accurately shoot long-distance targets or to defend against missiles. The same kind of technology can be applied to the processing of <link="Autotip">space garbage</link>, and through this technology, some physical objects can be refined. Smaller space garbage, but the power consumption of laser technology is high.
+`~TitaniumAlloy_FontSize
+21
+`~TitaniumAlloy_Description
+Is a high-strength material started in the 1950s. until 1970s the technology is constantly being upgraded the strength of Titanium alloy have a further strengthen to widely use in aviation such as wings and aerospace technology, Titanium alloy compared to other metals are more corrosion and withstand higher temperature. The <link="autotip">Sputnik 1</link> is using titanium alloy for outer casing.
+`~BipropellantRocket_Description
+As the name implies, the rocket is powered by a mixture of two fuels. Since the power provided by the mixture of two fuels can effectively increase the proportion of fuel used, it is more complicated, and if it goes wrong, it will cause a major accident.
+`~IonThruster_Description
+The rocket is powered by ejecting <link="autotip">ionization</link> gas. Even though it can be driven by electricity without using fuel, its energy is very weak and not suitable for large spaceships.
+`~SolarBattery_FontSize
+19
+`~SolarBattery_Description
+in 1954 the efficiency only has 6%, but with the development of science and technology, the efficiency has become higher and higher. For example, the <link="autotip">Vanguard 1</link> in the United States was the first artificial satellite equipped with solar panels, and more and more after that. spaceship Also installed solar panels, including Jupiter probe <link="autotip">Juno</link>, comet lander <link="autotip">Rosetta</link>, but for some deep-space exploration spacecraft, solar cells are not used in places far from the sun.
+`~SmallMagneticSatellite_Description
+This is use the small artificial satellites to add the magnets for disposal of <link="autotip">space garbage</link>, with the development of space, the price of small artificial satellites is extremely low.
+`~HRSI_Description
+HRSI is consists of high-purity silica fibers, very light, HRSI material is like plastic foam, but it has strong ability to withstand extreme temperatures, can ability temperatures between <link="autotip">absolute zero</link> and 1600 , widely used on <link="autotip">shuttles</link> but it is a fragile material, so it must extremely care.
+`~TripropellantRocket_Description
+A rocket engine propelled by a mixture of three fuels can further improve energy efficiency and reduce the weight of spacecraft, but its complexity is lower because of its complexity and fault tolerance.
+`~VASMIREngine_Description
+Using <link="autotip">plasma</link> with a <link="autotip">magnetic field</link> to generate thrust, in theory, the rocket's design is simpler, and only requires electric power, but one of the bigger problems is that the magnetic field it produces may affect the spacecraft's electronics, requiring additional equipment to offset the effect of the magnetic field it produces.
+`~AtomicBattery_Description
+These nuclear batteries do not use nuclear reactors to generate electricity in the traditional sense. They generate electricity through the energy of atomic decay. The lifespan is much longer than ordinary batteries, but the cost is relatively high. They are suitable for space probes with some light sources, such as <link="autotip">Voyager 1</link>.
+`~MaintenanceSystem_FontSize
+22
+`~MaintenanceSystem_Description
+This technology was used as early as 2001. It is a well-known mechanical device in the <link="autotip">International Space Station</link>. It can bring astronauts or manipulators to repair the spacecraft, and astronauts on the International Space Station must also learn to use this technology to become Astronauts, this technology also extends the service life of international space.
+`~AblationMaterial_Description
+A process of removing impurities from objects, improve protection, Ablation material often use in spacecraft with <br><link="autotip">re-entry</link> requirements.
+`~CarbonFiber_FontSize
+20
+`~CarbonFiber_Description
+Is a high hardness, high strength, light weight, high chemical resistance, high temperature resistance and low thermal expansion material, this material is transparent Composed by weaving carbon atoms, this material is widely used where high strength but lightweight materials are required. In aircraft and aerospace gases, it will also be used in medical, automotive, and textile applications.
+`~NuclearThermalRocket_Description
+By heating the object in a nuclear reactor and then ejecting it to power the rocket, but it will produce radioactive particles at the end, making the nuclear thermal rocket unsuitable for use in people's places.
+`~NuclearFusionBbattery_FontSize
+22
+`~NuclearFusionBbattery_Description
+Even the general large-scale nuclear fusion reactor has not yet been put into operation. The current problem is that it requires extremely high temperature to carry out nuclear fusion. Scientists need to use magnetic force or other non-contact methods to carry out nuclear fusion. But successfully invented, can produce more energy than nuclear fission.
+`~3DPrinter_FontSize
+20
+`~3DPrinter_Description
+Because the spacecraft may be damaged to varying degrees, but in the past, it needed special parts for the launch vehicle to be repaired. With the invention of the 3D printer, the necessary parts can be produced in space by itself, which greatly reduces the cost of the launch vehicle. Use requirements, and at the same time cooperate with <link="autotip">reusable rockets</link>, the cost of space exploration can be further reduced.
+`~Aerogel_Description
+It also call solid air, because it weighs three times as much as air, and also is an excellent insulator, such as, <link="autotip">Mars Pathfinder</link> is using this material, but this kind of object contains carcinogens and toxins and should not be touched directly.
+`~FusionRocket_Description
+Powering rockets through nuclear fusion. Since nuclear fusion is already a very complex project, the complexity of fusion rockets cannot be solved by current technology.
+`~ReinforcedCarbon-carbon_FontSize
+22
+`~ReinforcedCarbon-carbon_Description
+This is a composite material is based on carbon fiber and then reinforced material, even it is a fragile material, but his heat resistant is more powerful, for example, the <link="autotip">Parker Solar Probe</link> is made of a reinforced carbon composite material with a diameter of 2.3 meters and a thickness of 11.4 cm as a material to withstand sunlight photo material.
+`~AntimatterRocket_FontSize
+19
+`~AntimatterRocket_Description
+The rocket is powered by the huge energy in the collision of antimatter. Antimatter refers to a substance with the same mass, lifespan, and spin as normal particles, but with completely opposite charge, baryon number, singularity, etc. If normal particles and antiparticles collide, it will disappear and generate extremely huge energy, but antimatter hardly appears in nature, so the production of antimatter is the difficulty of antimatter engine.
+`~AbsoluteZero
+<color=#00FFFF><size=28><b><u>Absolute Zero</u></b></size></color>
+Temperature is based on particle vibration, when the particle of the kinetic energy reduced to a minimum that is the absolute zero come form, this temperature around -273<sup>o</sup>C.
+`~InternationalSpaceStation
+<color=#00FFFF><size=28><b><u>International Space Station</u></b></size></color>
+The International Space Station started construction in 1998 and was officially put into use in 2000. The International Space Station has many scientific research facilities. One of the research projects is to study whether the long-term life of various creatures in space will affect it, to conduct long-term space for future human beings. Explore Paving.
+`~Ionization
+<color=#00FFFF><size=28><b><u>Ionization</u></b></size></color>
+Ionization is also an effective way to improve the properties of objects by turning atoms into positive or negative charges through various methods and can also change the properties of objects.
+`~Juno
+<color=#00FFFF><size=28><b><u>Juno</u></b></size></color>
+Juno is a Jupiter probe that was launched in 2011 and reached Jupiter's orbit in 2016 to study Jupiter's composition, gravitational field, magnetic field, magnetosphere and magnetic poles and other information about Jupiter, greatly improving human understanding of Jupiter, one of the findings is that Jupiter has a lot of water, which is likely to be related to the birth of the solar system.
+`~MagneticField
+<color=#00FFFF><size=28><b><u>Magnetic field</u></b></size></color>
+Any magnet will also generate a magnetic field, and any magnetic object and current will also change direction due to the magnetic field. As for the earth's magnetic field, it can effectively prevent the charged particles in the solar wind and cosmic rays from destroying the upper atmosphere of the earth, providing sufficient conditions for the birth of life.
+`~MarsPathfinder
+<color=#00FFFF><size=28><b><u>Mars Pathfinder</u></b></size></color>
+This is a mechanical rover. In addition to increasing human knowledge of Mars, this space mission also proved that human beings can greatly reduce the cost of space exploration through technological progress. The cost of this space exploration together with the launch vehicle is about 280,000 Ten thousand dollars, one-fifteenth of the cost of another Mars exploration Viking.
+`~Plasma
+<color=#00FFFF><size=28><b><u>Plasma</u></b></size></color>
+A state other than solid, liquid, and gas, such as the sun, is basically composed of plasma, which conducts electricity almost perfectly and has many physical properties that other states fail to achieve.
+`~ParkerSolarProbe
+<color=#00FFFF><size=28><b><u>Parker Solar Probe</u></b></size></color>
+This is an unmanned solar exploration spacecraft. The goal of this spacecraft is to study the sun's magnetic field, solar wind and other information about the sun. Because it needs to be very close to the sun for research, this spacecraft has a strong ability to withstand aging.
+`~Re-entry
+<color=#00FFFF><size=28><b><u>Re-entry</u></b></size></color>
+It means that the object leaves the atmosphere and then returns to the atmosphere. The ideal object that can re-enter the atmosphere is to have a stronger protective layer, otherwise it will be burned out by the atmosphere.
+`~ReusableRockets
+<color=#00FFFF><size=28><b><u>Reusable rocket</u></b></size></color>
+For example, the Falcon Heavy Launch Vehicle is a reusable rocket. On the one hand, the design of the rocket is simpler than that of the shuttle, which can save production costs. On the other hand, the recyclable design of the rocket not only replaces the shuttle, but also reduces the cost of space transportation.
+`~Rosetta
+<color=#00FFFF><size=28><b><u>Rosetta</u></b></size></color>
+This is a comet probe. The Philae lander successfully achieved the first soft landing on a comet in human history. This space exploration found that the comet has many complex organic compounds, and life on Earth is very likely to be brought by the comet.
+`~Shuttles
+<color=#00FFFF><size=28><b><u>Shuttle</u></b></size></color>
+Shuttle is a reusable low-Earth orbit spacecraft. The main function is put the spacecraft into space and return to the ground for repeated use. So far there are 5 shuttles has created all produced in the United States. However, the cost of shuttle is extremely high and a large number of precision parts are required to cooperate, otherwise it will easily lead to the destruction of the machine, so it was eliminated after completing the last mission in 2011.
+`~SpaceGarbage
+<color=#00FFFF><size=28><b><u>Space garbage</u></b></size></color>
+With the exploration of space by human beings, the problem of junk left in the exploration map has an increasing impact on space exploration itself. These space junk include not only the junk brought by the life of astronauts, but also the residual parts of the spacecraft, and even the remaining parts of the spacecraft. Destroyed artificial satellites, these also pose a threat to space safety.
+`~Sputnik1
+<color=#00FFFF><size=28><b><u>Sputnik 1</u></b></size></color>
+is the first artificial satellite in human history to enter planetary orbit and was used by the Soviet Union on October4, 1957 Sputnik launched to space with rocket, and crashed after 22 days in orbit. This artificial satellite also witnessed the space race. And then the development of human space progressed by leaps and bounds until landing on the moon.
+`~Vanguard1
+<color=#00FFFF><size=28><b><u>Vanguard 1</u></b></size></color>
+It was the first spacecraft to be successfully launched by the United States, with the goal of exploring the magnetic fields of the Earth and the Moon, but after the probe failed to reach the theoretical maximum speed, Pioneer 1 crashed into the South Pacific after 43 hours of operation.
+`~Voyager1
+<color=#00FFFF><size=28><b><u>Voyager 1</u></b></size></color>
+Voyager 1 is the farthest space probe in human history. Launched in 1977, it is accelerated by the gravity of Jupiter and Saturn. At present, it continues to move towards the center of the Milky Way. This space exploration has greatly improved human beings. Knowing about Jupiter, Saturn, Uranus, and Neptune, he took many of the planetary photos we are still looking at.
+`~Tutorial
+`~Tutorial_Information
+In space frequently in the <link="autotip">gravity-free</link> and <link="autotip">no friction status</link>.  
+Before you conduct the space mission, You must finish the <link="autotip">gravity-free training</link>.
+
+In this mission you need to follow the instruction to control the spaceship reach the destination, After you finish course you can select exit or higher level maze to earn rewards.
+`~Gravity-Free
+<color=#00FFFF><size=28><b><u>Gravity-Free</u></b></size></color>
+Can call it weightlessness, earth have the gravity it will pull the object to center of the earth. 
+But when we far the earth the gravity will be decreased, so that the spaceship and the astronsuts will not be affected by gravity, to achieving a floating state.
+`~NoFrictionStatus
+<color=#00FFFF><size=28><b><u>No Friction Status</u></b></size></color>
+Most time of the space  is a vacuum, without matter including air.
+Object do not slow down when no force is applied, also they will continue to accelerate when a small amount of force is applied. 
+Therefore,it is possible to achieve faster speed in space, such as the fastest man-made object ever, the Parker Solar Probe with a speed of up to 200km/s, which s a spaceship.
+`~Gravity-FreeTraining
+<color=#00FFFF><size=28><b><u>Gravity-Free Training</u></b></size></color>
+Since it is difficult to achieve a gravity environment on earth, there are 2 ways to simulate this situation. The first is using the aircraft diving into the ground to cancel the gravitational force. The second is to practice underwater, simulating an environment where the influence of gravity is relatively low. It is more common to practice underwater, and it is also one of the exercises that astronauts must perform.

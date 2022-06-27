@@ -1,0 +1,22 @@
+`~Start_p1
+Greetings, Caption! You are in a virtual world designed for space flight training.$p1$
+<color=grey>(Left click to continue)</color>
+`~Start_p2
+You shall familiarize yourself with the basic controls of spaceship driving, and also the pitfalls new comers will get themselves in.
+`~Start_p3
+First, the most basic control, <color=yellow>‘W’</color>, <color=yellow>’A’</color>, <color=yellow>’S’</color>, <color=yellow>’D’</color> to move forwards, left, back, and right.
+Additionally, <color=yellow>‘Shift’</color> and <color=yellow>‘Space’</color> to move up and down.
+`~Start_p4
+Note that <color=red><b>any</color> accelerations will drain your fuel.
+$p1$ (See the yellow bar at the bottom? That's your fuel gage.)
+`~Start_p5
+<color=red>Drag</color> the <color=yellow>mouse</color> to change the direction of the spaceship.
+`~Start_p6
+<color=red>Press</color> the <color=yellow>right mouse button</color> and drag to rotate the ship.
+`~Start_p7
+The columns on the lower left indicate the <color=#FF2222>ship's damage distance (red bar)</color>, <color=green>skill bad</color>, <color=yellow>fuel bad (yellow bar)</color>, and <color=#00FFFF>speed dial</color>.
+You can <color=red>press</color> the <color=yellow>middle mouse button</color> and point to them to see detailed values.
+`~Start_p8
+Now, press the <color=yellow>[w] key</color> to accelerate forward.
+And move to the next checkpoint
+Then press the <color=yellow>[ctrl] key</color> to decelerate the ship to a standstill.

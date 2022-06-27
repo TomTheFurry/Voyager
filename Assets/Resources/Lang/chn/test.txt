@@ -1,0 +1,14 @@
+`~test1
+Here is a paragraph to test this lang system.
+`~test2
+Do it work with multiline?
+Yes. It should.
+
+...
+(I hope.)
+`~test3
+Err
+
+
+
+so. Here. abc.... I'm out of stuff to write...

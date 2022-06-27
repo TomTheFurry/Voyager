@@ -1,0 +1,12 @@
+`~CP2_P1
+Good job! Now, you may have noticed already. The acceleration for your spaceship is different in each axis.
+`~CP2_P2
+Because a spaceship is never designed to accelerate on all directions equally, which just waste precious space, it often is better to rotate your spaceship towards the direction you want to accelerate to.
+`~CP2_P3
+See that main engine? That pointing backwards are why you can accelerate forwards much faster than any other directions.
+`~CP2_P4
+Keen eyes will also see tiny, clustered sets of 6 thrusters installed on the surface of the spaceship. Those are called Reaction Control System, or RCS in short. They help you to rotate and move in directions that aren’t forward.
+`~CP2_P5
+Fun fact: RCS thrusters are quite different from the main engine, in that they are tiny.
+`~CP2_P6
+Due to the space limitation, and the small thrust requirements, they sometimes use cold gas thrusters. It is basically thrusters that operates purely based on pressure, instead of combustible fuel. 
