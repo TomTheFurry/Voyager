@@ -27,17 +27,69 @@ public class Tech : MonoBehaviour, IComparable
     public float collisionDamage;
     public bool collisionDamagePercentage;
 
+    public struct Attribute
+    {
+        public float attribute;
+        public bool isPercentage;
+    }
+
+    public Dictionary<string, Attribute> equipAttribute = new Dictionary<string, Attribute>();
+
     public bool defaultUnlock = false;
     public string identifier;
     public string techName;
     public Tech[] prerequisites;
     public int starCost;
     public Sprite icon;
-    public Material material;
+
+    public Material[] shippartMaterial;
 
     public void Start()
     {
         if (identifier == null || identifier.Length == 0) identifier = gameObject.name;
+
+        initTech();
+    }
+
+    private void initTech()
+    {
+        // equipAttribute
+        if (health != 0)
+            equipAttribute.Add("Health", new Attribute()
+            {
+                attribute = health,
+                isPercentage = healthPercentage
+            });
+        if (fuelCapacity != 0)
+            equipAttribute.Add("Fuel Capacity", new Attribute()
+            {
+                attribute = fuelCapacity,
+                isPercentage = fuelCapacityPercentage
+            });
+        if (fuelConsumption != 0)
+            equipAttribute.Add("Fuel Consuption", new Attribute()
+            {
+                attribute = fuelConsumption,
+                isPercentage = fuelConsumptionPercentage
+            });
+        if (speed != 0)
+            equipAttribute.Add("Speed", new Attribute()
+            {
+                attribute = speed,
+                isPercentage = speedPercentage
+            });
+        if (spinningSpeed != 0)
+            equipAttribute.Add("Spinning speed", new Attribute()
+            {
+                attribute = spinningSpeed,
+                isPercentage = spinningSpeedPercentage
+            });
+        if (collisionDamage != 0)
+            equipAttribute.Add("Collision damage", new Attribute()
+            {
+                attribute = collisionDamage,
+                isPercentage = collisionDamagePercentage
+            });
     }
 
     public int CompareTo(object obj)
@@ -55,43 +107,31 @@ public class Tech : MonoBehaviour, IComparable
     public string[] getAttributeDescription()
     {
         List<string> desc = new List<string>();
-        Dictionary<string, float> equipAttribute = getAttribute();
-        if (health != 0)
-            desc.Add("Health " + getAttributeDescString(health, healthPercentage));
-        if (fuelCapacity != 0)
-            desc.Add("Fuel Capacity " + getAttributeDescString(fuelCapacity, fuelCapacityPercentage));
-        if (fuelConsumption != 0)
-            desc.Add("Fuel Consuption " + getAttributeDescString(fuelConsumption, fuelConsumptionPercentage));
-        if (speed != 0)
-            desc.Add("Speed " + getAttributeDescString(speed, speedPercentage));
-        if (spinningSpeed != 0)
-            desc.Add("Spinning speed " + getAttributeDescString(spinningSpeed, spinningSpeedPercentage));
-        if (collisionDamage != 0)
-            desc.Add("Collision damage " + getAttributeDescString(collisionDamage, collisionDamagePercentage));
+        Dictionary<string, Attribute> equipAttributes = getAttribute();
+        //if (health != 0)
+        //    desc.Add("Health " + getAttributeDescString(health, healthPercentage));
+        //if (fuelCapacity != 0)
+        //    desc.Add("Fuel Capacity " + getAttributeDescString(fuelCapacity, fuelCapacityPercentage));
+        //if (fuelConsumption != 0)
+        //    desc.Add("Fuel Consuption " + getAttributeDescString(fuelConsumption, fuelConsumptionPercentage));
+        //if (speed != 0)
+        //    desc.Add("Speed " + getAttributeDescString(speed, speedPercentage));
+        //if (spinningSpeed != 0)
+        //    desc.Add("Spinning speed " + getAttributeDescString(spinningSpeed, spinningSpeedPercentage));
+        //if (collisionDamage != 0)
+        //    desc.Add("Collision damage " + getAttributeDescString(collisionDamage, collisionDamagePercentage));
 
-        //foreach (KeyValuePair<string, float> attribute in equipAttribute)
-        //{
-        //    desc.Add(attribute.Key + " " + getAttributeDescString(attribute.Value));
-        //}
+        foreach (KeyValuePair<string, Attribute> equipAttribute in equipAttributes)
+        {
+            Attribute attribute = equipAttribute.Value;
+            desc.Add(equipAttribute.Key + " " + getAttributeDescString(attribute.attribute, attribute.isPercentage));
+        }
 
         return desc.ToArray();
     }
 
-    public Dictionary<string, float> getAttribute()
+    public Dictionary<string, Attribute> getAttribute()
     {
-        Dictionary<string, float> equipAttribute = new Dictionary<string, float>();
-        if (health != 0)
-            equipAttribute.Add("Health", health);
-        if (fuelCapacity != 0)
-            equipAttribute.Add("Fuel Capacity", fuelCapacity);
-        if (fuelConsumption != 0)
-            equipAttribute.Add("Fuel Consuption", fuelConsumption);
-        if (speed != 0)
-            equipAttribute.Add("Speed" ,speed);
-        if (spinningSpeed != 0)
-            equipAttribute.Add("Spinning speed", spinningSpeed);
-        if (collisionDamage != 0)
-            equipAttribute.Add("Collision damage" ,collisionDamage);
         return equipAttribute;
     }
 
@@ -99,20 +139,6 @@ public class Tech : MonoBehaviour, IComparable
     {
         string desc = "";
         if (num < 0)
-            desc += num.ToString();
-        else
-            desc += "+" + num.ToString();
-
-        return desc + (isPercentage ? "%" : "");
-    }
-
-    private string getAttributeDescString(float num)
-    {
-        string desc = "";
-
-        bool isPercentage = isValueIsPercentage(num);
-
-        if (num < 0 || (isPercentage && num < 1))
             desc += num.ToString();
         else
             desc += "+" + num.ToString();

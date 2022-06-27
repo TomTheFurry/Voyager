@@ -15,6 +15,8 @@ public class ShipModelChange : MonoBehaviour
 
         if (!instances.Contains(this))
             instances.Add(this);
+
+        updateMaterial();
     }
 
     private void OnDestroy()
@@ -25,10 +27,17 @@ public class ShipModelChange : MonoBehaviour
     public void updateMaterial()
     {
         Tech equip = TechStorage.instance.getEquip("ExternalMaterial");
-        foreach (Renderer renderer in externalLayer)
-        {
-            renderer.material = equip.material;
-        }
+        ShipModelMaterialData.ShipMaterial material = ShipModelMaterialData.instance.getMaterial(equip);
+
+        externalLayer[0].material = material.apex;
+        externalLayer[1].material = material.body;
+        externalLayer[2].material = material.door;
+        externalLayer[3].material = material.ring1;
+        externalLayer[4].material = material.ring2;
+        externalLayer[5].material = material.tank1;
+        externalLayer[6].material = material.tank2;
+        externalLayer[7].material = material.threeQuarterRing;
+        externalLayer[8].material = material.window;
     }
 
     public static void updateShipModel()

@@ -328,11 +328,11 @@ public class TechStorage : MonoBehaviour
         equipAttribute.Clear();
         foreach (TechEquip equip in equipTable.Keys)
         {
-            Dictionary<string, float> attributes = equip.equip.GetComponent<Tech>().getAttribute();
-            foreach (KeyValuePair<string, float> attribute in attributes)
+            Dictionary<string, Tech.Attribute> attributes = equip.equip.getAttribute();
+            foreach (KeyValuePair<string, Tech.Attribute> attribute in attributes)
             {
-                float value = attribute.Value;
-                bool isPercentage = Tech.isValueIsPercentage(value);
+                float value = attribute.Value.attribute;
+                bool isPercentage = attribute.Value.isPercentage;
                 string attributeType = attribute.Key + (isPercentage ? " Percentage" : "");
 
                 if (!equipAttribute.ContainsKey(attributeType))
