@@ -587,38 +587,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     texts:
-    - 'Greetings, Caption! You are in a virtual world designed for space flight training.$p1$
-
-      <color=grey>(Left
-      click to continue)</color>'
-    - You shall familiarize yourself with the basic controls of spaceship driving,
-      and also the pitfalls new comers will get themselves in.
-    - "First, the most basic control, <color=yellow>\u2018W\u2019</color>, <color=yellow>\u2019A\u2019</color>,
-      <color=yellow>\u2019S\u2019</color>, <color=yellow>\u2019D\u2019</color> to
-      move forwards, left, back, and right.\r\nAdditionally, <color=yellow>\u2018Shift\u2019</color>
-      and <color=yellow>\u2018Space\u2019</color> to move up and down."
-    - 'Note that <color=red><b>any</color> accelerations will drain your fuel.
-
-      $p1$
-      (See the yellow bar at the bottom? That''s your fuel gage.)'
-    - <color=red>Drag</color> the <color=yellow>mouse</color> to change the direction
-      of the spaceship.
-    - <color=red>Press</color> the <color=yellow>right mouse button</color> and drag
-      to rotate the ship.
-    - 'The columns on the lower left indicate the <color=#FF2222>ship''s damage distance
-      (red bar)</color>, <color=green>skill bad</color>, <color=yellow>fuel bad (yellow
-      bar)</color>, and <color=#00FFFF>speed dial</color>.
-
-      You can <color=red>press</color>
-      the <color=yellow>middle mouse button</color> and point to them to see detailed
-      values.'
-    - 'Now, press the <color=yellow>[w] key</color> to accelerate forward.
-
-      And
-      move to the next checkpoint
-
-      Then press the <color=yellow>[ctrl] key</color>
-      to decelerate the ship to a standstill.'
+    - $lang/start/Start_p1$
+    - $lang/start/Start_p2$
+    - $lang/start/Start_p3$
+    - $lang/start/Start_p4$
+    - $lang/start/Start_p5$
+    - $lang/start/Start_p6$
+    - $lang/start/Start_p7$
+    - $lang/start/Start_p8$
   triggerOnce: 0
 --- !u!64 &134439614
 MeshCollider:
@@ -3948,11 +3924,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     texts:
-    - Good job!$p0.2$ You have reached the <color=yellow><b>end of the level</b></color>!
-    - "You can complete the level by stopping at the\n<color=yellow><b>end marker</b></color>
-      in the right.$p1\r$$s10$ Or..."
-    - You can challage yourselves by going though <color=yellow><b>The Maze</b></color>
-      in the left and getting as much <color=yellow><b>Bonuses</b></color> as possible!
+    - $lang/Junction/Junction_p1$
+    - $lang/Junction/Junction_p2$
+    - $lang/Junction/Junction_p3$
   triggerOnce: 1
 --- !u!64 &1062206219
 MeshCollider:
@@ -6275,16 +6249,10 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     texts:
-    - "In space,$p0.2$ there is no atmospheric drag.$p0.2$ Following the Newton\u2019s
-      law of motion,$p0.2$ without external force,"
-    - a stationary object always remains stationary,$p0.2$ and a moving object aways
-      continue to move in a straight line.
-    - "In this case,$p0.2$ you can notice that in order to \u2018slow down\u2019,$p0.2$
-      you need to act apron it,$p0.2$ and apply a force against the direction of
-      your momentum."
-    - "Here,$p0.2$ try to fly though this curve section.$p0.2$ Remember that managing
-      your speed is very important.$p0.2$ You wouldn\u2019t want to smash the spaceship
-      to pieces after all\u2026"
+    - $lang/Curve/CPCurve_p1$
+    - $lang/Curve/CPCurve_p2$
+    - $lang/Curve/CPCurve_p3$
+    - $lang/Curve/CPCurve_p4$
   triggerOnce: 1
 --- !u!23 &1487302243
 MeshRenderer:
@@ -7116,10 +7084,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     texts:
-    - 'Well you have mastered the basic operation.
-
-      Now, try to get through
-      this training segment.'
+    - $lang/CP1/CP1UNUSED_p1$
   triggerOnce: 1
 --- !u!23 &1675981424
 MeshRenderer:
@@ -7628,19 +7593,11 @@ MonoBehaviour:
         m_Calls: []
     texts:
     - $lang/Tutorial/CP2_P1$
-    - Because a spaceship is never designed to accelerate on all directions equally,
-      which just waste precious space, it often is better to rotate your spaceship
-      towards the direction you want to accelerate to.
-    - See that main engine? That pointing backwards are why you can accelerate forwards
-      much faster than any other directions.
-    - "Keen eyes will also see tiny, clustered sets of 6 thrusters installed on the
-      surface of the spaceship. Those are called Reaction Control System, or RCS
-      in short. They help you to rotate and move in directions that aren\u2019t forward."
-    - 'Fun fact: RCS thrusters are quite different from the main engine, in that
-      they are tiny.'
-    - 'Due to the space limitation, and the small thrust requirements, they sometimes
-      use cold gas thrusters. It is basically thrusters that operates purely based
-      on pressure, instead of combustible fuel. '
+    - $lang/Tutorial/CP2_P2$
+    - $lang/Tutorial/CP2_P3$
+    - $lang/Tutorial/CP2_P4$
+    - $lang/Tutorial/CP2_P5$
+    - $lang/Tutorial/CP2_P6$
   triggerOnce: 1
 --- !u!23 &1757525504
 MeshRenderer:
