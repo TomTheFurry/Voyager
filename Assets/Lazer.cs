@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-[RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(LineRenderer), typeof(PrefabSpawner))]
 public class Lazer : MonoBehaviour
 { 
     public Transform origin;
@@ -14,16 +14,21 @@ public class Lazer : MonoBehaviour
     private bool hitted = false;
     private Vector3 targetPos = Vector3.zero;
     private LineRenderer lineRenderer;
+    private PrefabSpawner prefab;
 
     public BeamEffect beam;
+    public FuelControl fuel;
+    public float fuelUsage;
 
     private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        prefab = GetComponent<PrefabSpawner>();
     }
 
     private void SetBeam(Vector3[] pos)
     {
+        fuel.RecordUseFuel(fuelUsage);
         lineRenderer.SetPositions(pos);
         lineRenderer.enabled = true;
         Vector3 center = (pos[0] + pos[1]) / 2;
@@ -34,11 +39,12 @@ public class Lazer : MonoBehaviour
 
     private void Update()
     {
-        if (action.action.IsPressed()) {
+        if (action.action.IsPressed() && fuel.HasFuel()) {
             RaycastHit hit;
             Physics.Raycast(origin.position, origin.forward, out hit, maxDistance,
                 layer.value, QueryTriggerInteraction.Ignore);
             if (hit.collider != null) {
+                prefab.Spawn(hit.transform);
                 Destroy(hit.collider.gameObject);
                 Vector3[] pos = new Vector3[2];
                 pos[0] = origin.position;

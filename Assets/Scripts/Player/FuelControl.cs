@@ -29,6 +29,22 @@ public class FuelControl : MonoBehaviour
         }
     }
 
+    public bool HasFuel() {
+        return fuel > 0;
+    }
+
+    public bool RecordUseFuel(float fuelUsed) {
+        if (fuel == 0) return false;
+        fuel -= fuelUsed;
+        if (fuel < 0) { 
+            fuel = 0;
+            Debug.Log("Out Of fuel!");
+            onOutOfFuel.Invoke();
+            return false;
+        }
+        return true;
+    }
+
     public void RecordForce(Vector3 force) { // public facing function
         float fuelUsed = Mathf.Abs(force.x) + Mathf.Abs(force.y) + Mathf.Abs(force.z);
         fuelUsed = Mathf.Pow(fuelUsed, fuelExpValue);
