@@ -6,16 +6,14 @@ using UnityEngine.Events;
 public class ShipModelChange : MonoBehaviour
 {
     static List<ShipModelChange> instances = new List<ShipModelChange>();
-
+    
     public Renderer[] externalLayer;
 
     private void Start()
     {
         TechStorage.instance.onTechEquipChanging.AddListener(updateShipModel);
-
         if (!instances.Contains(this))
             instances.Add(this);
-
         updateMaterial();
     }
 

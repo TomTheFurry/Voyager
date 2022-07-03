@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
 public class BonusText : MonoBehaviour
 {
+    public TextMeshProUGUI text;
+    float disableTimer = -1f;
+    public void setDisableTimer(float f) => disableTimer = f;
+    
     private void OnEnable()
     {
         BonusTracker tracker = FindObjectOfType<BonusTracker>();
@@ -16,7 +19,12 @@ public class BonusText : MonoBehaviour
         }
         int total = tracker.totalBonuses;
         int current = tracker.bonuses;
-        var text = GetComponent<TextMeshProUGUI>();
         text.text = $"{current}/{total}";
+    }
+
+    private void Update()
+    {
+        disableTimer -= Time.unscaledDeltaTime;
+        if (disableTimer < 0f) gameObject.SetActive(false);
     }
 }

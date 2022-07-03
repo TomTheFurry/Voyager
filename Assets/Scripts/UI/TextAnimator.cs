@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Text;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TextAnimator : MonoBehaviour
@@ -26,7 +27,15 @@ public class TextAnimator : MonoBehaviour
     public Image panel;
 
     private Coroutine _currentAnimation = null;
+    public InputActionReference clickAction;
+
     public int _currentTriggerIndex = 0;
+    public void OnTrigger()
+    {
+        if (_msg == null) return;
+        _currentTriggerIndex++;
+    }
+    private void _OnTrigger(InputAction.CallbackContext ctx) => OnTrigger();
     void Start()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
@@ -38,6 +47,11 @@ public class TextAnimator : MonoBehaviour
             priority = int.MinValue,
         };
         textMesh.useMaxVisibleDescender = true;
+        clickAction.action.performed += _OnTrigger;
+    }
+    void OnDestroy()
+    {
+        clickAction.action.performed -= _OnTrigger;
     }
 
     // setter calls triggerAnimation()
@@ -252,9 +266,5 @@ public class TextAnimator : MonoBehaviour
         textMesh.enabled = false;
     }
 
-    public void OnTrigger() {
-        if (_msg == null) return;
-        _currentTriggerIndex++;
-    }
 
 }

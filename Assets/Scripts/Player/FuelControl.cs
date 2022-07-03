@@ -4,23 +4,32 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(MovementControl2))]
 public class FuelControl : MonoBehaviour
 {
     public float maxFuel = 1000;
     public float fuel = 1000;
     public float fuelPerForce = 0.002f;
     public float fuelExpValue = 2.0f;
-
-    public Tooltip textObj = null;
-    public UIBar bar = null;
-
     public UnityEvent onOutOfFuel;
     // Note: Only triggers if privously out of fuel
     public UnityEvent onRestoreFuel;
+    MovementControl2 control2;
+    CanvasHandler canvas;
+    Tooltip tooltip;
+    UIBar bar;
+
+    private void Start()
+    {
+        control2 = GetComponent<MovementControl2>();
+        canvas = FindObjectOfType<CanvasHandler>();
+        tooltip = canvas.cornerHud.fuelBar.GetComponent<Tooltip>();
+        bar = canvas.cornerHud.fuelBar.GetComponent<UIBar>();
+    }
 
     void Update()
     {
-        if (textObj != null) textObj.text = "Fuel: " + fuel.ToString("F2") + " / " + maxFuel.ToString();
+        if (tooltip != null) tooltip.text = "Fuel: " + fuel.ToString("F2") + " / " + maxFuel.ToString();
         if (bar != null)
         {
             bar.SetValue(fuel);
@@ -39,6 +48,8 @@ public class FuelControl : MonoBehaviour
         if (fuel < 0) { 
             fuel = 0;
             Debug.Log("Out Of fuel!");
+            control2.DisableSpaceshipInput();
+            canvas.OnFail();
             onOutOfFuel.Invoke();
             return false;
         }
@@ -53,6 +64,8 @@ public class FuelControl : MonoBehaviour
         {
             fuel = 0;
             Debug.Log("Out of fuel!");
+            control2.DisableSpaceshipInput();
+            canvas.OnFail();
             onOutOfFuel.Invoke();
         }
     }
@@ -64,6 +77,8 @@ public class FuelControl : MonoBehaviour
             bool triggerCallback = fuel == 0;
             fuel = maxFuel;
             Debug.Log("Refueled!");
+            control2.EnableSpaceshipInput();
+            FindObjectOfType<CanvasHandler>().DebugUndoFail();
             if (triggerCallback) onRestoreFuel.Invoke();
         }
     }

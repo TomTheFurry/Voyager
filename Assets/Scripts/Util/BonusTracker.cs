@@ -7,23 +7,19 @@ public class BonusTracker : MonoBehaviour
     public int bonuses = 0;
     public int totalBonuses = 0;
     public float displayTime = 2;
-    private float timer = 0;
-    public GameObject bonusUI;
+
+    private CanvasHandler canvas;
+
+    private void Start()
+    {
+        canvas = FindObjectOfType<CanvasHandler>();
+    }
+
 
     public void AquireBonus()
     {
-        bonusUI.SetActive(false); // In case the last bonus UI is still active
-        timer = displayTime;
         bonuses++;
-        bonusUI.SetActive(true);
-    }
-
-    void Update()
-    {
-        if (timer < 0) {
-            bonusUI.SetActive(false);
-        }
-        timer -= Time.deltaTime;
+        canvas.OnBonusPopup(displayTime);
     }
 
     public bool isAllBonusAquired()

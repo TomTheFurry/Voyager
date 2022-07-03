@@ -5,18 +5,32 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(MovementControl2), typeof(PrefabSpawner))]
 public class HealthSystem : MonoBehaviour
 {
     public float maxHealth = 1000;
     public float health = 1000;
     public float healthPerForce = 0.1f;
     public float healthExpValue = 2.0f;
-
-    public Tooltip textObj = null;
-    public UIBar bar = null;
-    public GameObject player;
     public UnityEvent onDeath;
     public UnityEvent onRespawn;
+
+    Tooltip textObj;
+    UIBar bar;
+    GameObject player;
+    MovementControl2 control2;
+    CanvasHandler canvas;
+    PrefabSpawner prefabSpawner;
+
+    void Start()
+    {
+        control2 = GetComponent<MovementControl2>();
+        player = control2.childObject;
+        canvas = FindObjectOfType<CanvasHandler>();
+        textObj = canvas.cornerHud.healthBar.GetComponent<Tooltip>();
+        bar = canvas.cornerHud.healthBar.GetComponent<UIBar>();
+        prefabSpawner = GetComponent<PrefabSpawner>();
+    }
 
     void Update()
     {
@@ -35,7 +49,9 @@ public class HealthSystem : MonoBehaviour
         health -= Mathf.Pow(damage, healthExpValue);
         if (health <= 0)
         {
+            prefabSpawner.Spawn(player.transform);
             player.SetActive(false);
+            canvas.OnFail();
             onDeath.Invoke();
         }
     }
@@ -48,9 +64,9 @@ public class HealthSystem : MonoBehaviour
             if (health <= 0)
             {
                 health = maxHealth;
-                player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                player.GetComponent<RigidbodyCallback>().ResetRigidBody();
                 player.SetActive(true);
+                canvas.DebugUndoFail();
                 onRespawn.Invoke();
             }
             else

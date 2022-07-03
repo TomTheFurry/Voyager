@@ -7,6 +7,9 @@ public class LevelSwitch : MonoBehaviour
 {
     public string levelName;
     public void Trigger() {
-        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+        if (levelName.Length == 0)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        else
+            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }
 }

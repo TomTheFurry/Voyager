@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &666605240
 Transform:
   m_ObjectHideFlags: 0
@@ -39,7 +39,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666605239}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -352,22 +352,9 @@ MonoBehaviour:
   onLeaveFp:
     m_PersistentCalls:
       m_Calls: []
-  pauseScript: {fileID: 0}
   onForceApplied:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 560941333062440976}
-        m_TargetAssemblyTypeName: FuelControl, Assembly-CSharp
-        m_MethodName: RecordForce
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   inputRotationSpeed: 0.2
   rotationPD:
     p: 0.01
@@ -384,21 +371,6 @@ MonoBehaviour:
   maxForce: {x: 0.1, y: 0.15, z: 0.25}
   maxNegForce: {x: -0.1, y: -0.15, z: -0.2}
   qeAsRoll: 1
-  onLeftTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TextAnimator, Assembly-CSharp
-        m_MethodName: OnTrigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   upEmissionHookup:
   - {fileID: 4220132406965314230}
   - {fileID: 4220132408390276814}
@@ -432,38 +404,12 @@ MonoBehaviour:
   fuel: 1000
   fuelPerForce: 0.04
   fuelExpValue: 1.5
-  textObj: {fileID: 0}
-  bar: {fileID: 0}
   onOutOfFuel:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 560941333062440979}
-        m_TargetAssemblyTypeName: Voyager.MovementControl2, Assembly-CSharp
-        m_MethodName: DisableSpaceshipInput
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onRestoreFuel:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 560941333062440979}
-        m_TargetAssemblyTypeName: Voyager.MovementControl2, Assembly-CSharp
-        m_MethodName: EnableSpaceshipInput
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &560941333062440978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,87 +426,12 @@ MonoBehaviour:
   health: 1000
   healthPerForce: 2
   healthExpValue: 2.5
-  textObj: {fileID: 0}
-  bar: {fileID: 0}
-  player: {fileID: 560941334595147132}
   onDeath:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 560941334595147132}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 560941333062441005}
-        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 560941334595147129}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onRespawn:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 560941334595147132}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 560941334595147134}
-        m_TargetAssemblyTypeName: RigidBodyHookup, Assembly-CSharp
-        m_MethodName: ResetRigidBody
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &560941333062441005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6571,9 +6442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 560941334517420101}
-  speedBar: {fileID: 0}
-  speedBarTooltip: {fileID: 0}
-  target: {fileID: 560941334595147132}
 --- !u!114 &560941334595147134
 MonoBehaviour:
   m_ObjectHideFlags: 0
