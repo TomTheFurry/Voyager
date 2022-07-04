@@ -8,20 +8,29 @@ public class ShipModelMaterialData : MonoBehaviour
     public static ShipModelMaterialData instance;
 
     public ShipMaterial[] techMaterials;
+    public TechEquip externalMaterial;
 
     [Serializable]
     public struct ShipMaterial
     {
+        [Serializable]
+        public struct MaterialNode
+        {
+            public string identifier;
+            public Material mat;
+        }
+
         public Tech tech;
-        public Material apex;
-        public Material body;
-        public Material door;
-        public Material ring1;
-        public Material ring2;
-        public Material tank1;
-        public Material tank2;
-        public Material threeQuarterRing;
-        public Material window;
+        public MaterialNode[] materials;
+
+        public Material getMat(string identifier)
+        {
+            foreach (MaterialNode material in materials)
+                if (identifier.Equals(material.identifier.ToLower()))
+                    return material.mat;
+
+            return new Material(Shader.Find("Specular"));
+        }
     }
 
     public ShipMaterial getMaterial(string identifier)
@@ -36,7 +45,7 @@ public class ShipModelMaterialData : MonoBehaviour
             if (material.tech == tech)
                 return material;
         }
-        return new ShipMaterial();
+        return getMaterial(externalMaterial.defaultEquip);
     }
 
     private void Start()

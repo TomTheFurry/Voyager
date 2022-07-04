@@ -61,6 +61,8 @@ public class TooltipManager : MonoBehaviour
             img.enabled = false;
             tmpObj.SetActive(false);
             GameObject ui = ((AdvancedTooltip)currentTooltip).customTooltip;
+            if (ui == null)
+                Debug.LogError(currentTooltip.gameObject.name);
             RectTransform rect = ui.GetComponent<RectTransform>();
 
             // Get MousePos using new InputSystem
