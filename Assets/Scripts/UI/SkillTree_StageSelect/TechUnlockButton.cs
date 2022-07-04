@@ -11,7 +11,16 @@ public class TechUnlockButton : MonoBehaviour
     private Tech tech;
     public Image icon;
 
-    private System.Action<InputAction.CallbackContext> inputAction;
+    private InputActionReference action;
+
+    private void _onSubmit(InputAction.CallbackContext cc)
+    {
+        if (gameObject.activeInHierarchy)
+        {
+            Button btn = GetComponent<Button>();
+            btn.onClick.Invoke();
+        }
+    }
 
     void Start()
     {
@@ -19,23 +28,14 @@ public class TechUnlockButton : MonoBehaviour
         Button btn = GetComponent<Button>();
         btn.onClick.AddListener(ButtonClicked);
 
-        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        inputAction = (cc) =>
-        {
-            if (gameObject.activeInHierarchy)
-            {
-                Button btn = GetComponent<Button>();
-                btn.onClick.Invoke();
-            }
-        };
-        current.submit.action.started += inputAction;
+        action = FindObjectOfType<InputSystemUIInputModule>().submit;
+        action.action.started += _onSubmit;
     }
 
-    //private void OnDestroy()
-    //{
-    //    InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-    //    current.submit.action.started -= inputAction;
-    //}
+    private void OnDestroy()
+    {
+        action.action.started -= _onSubmit;
+    }
 
     public void updateState(Tech currentTech, bool playUnlockAnim = false)
     {

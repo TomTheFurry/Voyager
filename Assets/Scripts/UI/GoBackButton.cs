@@ -9,24 +9,25 @@ using UnityEngine.EventSystems;
 public class GoBackButton : MonoBehaviour
 {
     public static bool triggerEnable = true;
-    private System.Action<InputAction.CallbackContext> inputAction;
+    private InputActionReference action;
+
+    private void _onCancel(InputAction.CallbackContext cc)
+    {
+        if (gameObject.activeInHierarchy && triggerEnable)
+        {
+            Debug.Log("BackTriggered for " + GetInstanceID() + " : " + name);
+            GetComponent<Button>().onClick.Invoke();
+        }
+    }
 
     private void Start()
     {
-        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        inputAction = (cc) => {
-            if (gameObject.activeInHierarchy && triggerEnable)
-            {
-                //Debug.Log("BackTriggered for " + GetInstanceID());
-                GetComponent<Button>().onClick.Invoke();
-            }
-        };
-        current.cancel.action.started += inputAction;
+        action = FindObjectOfType<InputSystemUIInputModule>().cancel;
+        action.action.started += _onCancel;
     }
 
     private void OnDestroy()
     {
-        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        current.cancel.action.started -= inputAction;
+        action.action.started -= _onCancel;
     }
 }

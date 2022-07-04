@@ -1,5 +1,2415 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &82799342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82799345}
+  - component: {fileID: 82799343}
+  - component: {fileID: 82799344}
+  m_Layer: 5
+  m_Name: BipropellantRocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &82799345
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82799342}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 405.34167, y: 539.29584}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &82799343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82799342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 15
+  fuelCapacityPercentage: 1
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 5
+  collisionDamagePercentage: 1
+  defaultUnlock: 0
+  identifier: 
+  techName: Bipropellant Rocket
+  prerequisites:
+  - {fileID: 1510076468}
+  starCost: 0
+  icon: {fileID: 21300000, guid: fcd9fd6bc4d0dc34d88df9f7edf3fd34, type: 3}
+  shippartMaterial: []
+--- !u!222 &82799344
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82799342}
+  m_CullTransparentMesh: 1
+--- !u!1 &140564539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140564540}
+  - component: {fileID: 140564542}
+  - component: {fileID: 140564541}
+  m_Layer: 5
+  m_Name: NuclearFusionBattery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &140564540
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140564539}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 843.39795, y: 325.45416}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &140564542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140564539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 20
+  fuelCapacityPercentage: 1
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Nuclear Fusion Battery
+  prerequisites:
+  - {fileID: 353077661}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 513f76798242f7545add0c18aa9915b6, type: 3}
+  shippartMaterial: []
+--- !u!222 &140564541
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140564539}
+  m_CullTransparentMesh: 1
+--- !u!1 &198962573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198962574}
+  - component: {fileID: 198962576}
+  - component: {fileID: 198962575}
+  m_Layer: 5
+  m_Name: Laser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &198962574
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198962573}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 989.4166, y: 646.2167}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &198962576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198962573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: -5
+  speedPercentage: 1
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Laser
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: 3ead9f16aeb2cc34abc736455092b646, type: 3}
+  shippartMaterial: []
+--- !u!222 &198962575
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198962573}
+  m_CullTransparentMesh: 1
+--- !u!1 &252578869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252578870}
+  - component: {fileID: 252578872}
+  - component: {fileID: 252578871}
+  m_Layer: 5
+  m_Name: EmptyTech
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &252578870
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252578869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 113.3042, y: 646.2167}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &252578872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252578869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 1
+  identifier: 
+  techName: Empty
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: e34b3ad11727e6b40869d81077322ae4, type: 3}
+  shippartMaterial: []
+--- !u!222 &252578871
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252578869}
+  m_CullTransparentMesh: 1
+--- !u!1 &270212750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270212751}
+  - component: {fileID: 270212752}
+  m_Layer: 5
+  m_Name: InternalMaterial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &270212751
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270212750}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42135, y: 0.42135, z: 0.42135}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 533.013, y: 333.14218}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &270212752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270212750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5b8437dd73ed248ab213d5f26a378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 
+  defaultEquip: {fileID: 1921246773}
+  teches:
+  - {fileID: 1921246773}
+  - {fileID: 1712774243}
+  - {fileID: 570159822}
+  - {fileID: 1483761864}
+  equip: {fileID: 0}
+--- !u!1 &353077660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353077663}
+  - component: {fileID: 353077661}
+  - component: {fileID: 353077662}
+  m_Layer: 5
+  m_Name: AtomicBattery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &353077663
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353077660}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 843.39795, y: 432.375}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &353077661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353077660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 10
+  fuelCapacityPercentage: 1
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Atomic Battery
+  prerequisites:
+  - {fileID: 1777212519}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 77f1b669e3878fa4aacb7597b1b43c4f, type: 3}
+  shippartMaterial: []
+--- !u!222 &353077662
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353077660}
+  m_CullTransparentMesh: 1
+--- !u!1 &461077893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461077894}
+  - component: {fileID: 461077895}
+  - component: {fileID: 461077896}
+  m_Layer: 0
+  m_Name: Tech
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461077894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461077893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 252578870}
+  - {fileID: 1921246775}
+  - {fileID: 1712774245}
+  - {fileID: 2135026639}
+  - {fileID: 1250747595}
+  - {fileID: 1845063604}
+  - {fileID: 570159824}
+  - {fileID: 1483761862}
+  - {fileID: 1510076470}
+  - {fileID: 82799345}
+  - {fileID: 1018285171}
+  - {fileID: 1522894679}
+  - {fileID: 1658019771}
+  - {fileID: 1902102462}
+  - {fileID: 688645914}
+  - {fileID: 1658536693}
+  - {fileID: 353077663}
+  - {fileID: 140564540}
+  - {fileID: 756202585}
+  - {fileID: 2136589323}
+  - {fileID: 1777212521}
+  - {fileID: 198962574}
+  - {fileID: 1237790992}
+  - {fileID: 956255814}
+  - {fileID: 1141263693}
+  - {fileID: 270212751}
+  - {fileID: 1984947732}
+  - {fileID: 545985236}
+  - {fileID: 1849197669}
+  - {fileID: 2013741657}
+  - {fileID: 511994787}
+  m_Father: {fileID: 6081419982211131795}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &461077895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461077893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc8067436242cb43bd47dc88041ecc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTechStatusChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onTechEquipChanging:
+    m_PersistentCalls:
+      m_Calls: []
+  techNumCanBeUnlocked: 0
+--- !u!114 &461077896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461077893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd57fcf42a97274d8ca9b23ae803525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  techMaterials:
+  - tech: {fileID: 1921246773}
+    materials:
+    - identifier: Apex
+      mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
+    - identifier: Body
+      mat: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
+    - identifier: Door
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Ring1
+      mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
+    - identifier: Ring2
+      mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
+    - identifier: Tank1
+      mat: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
+    - identifier: Tank2
+      mat: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
+    - identifier: Three-Quarter_Ring
+      mat: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
+    - identifier: Window
+      mat: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
+  - tech: {fileID: 1712774243}
+    materials:
+    - identifier: Apex
+      mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
+    - identifier: Body
+      mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
+    - identifier: Door
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Ring1
+      mat: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+    - identifier: Ring2
+      mat: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+    - identifier: Tank1
+      mat: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
+    - identifier: Tank2
+      mat: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
+    - identifier: Three-Quarter_Ring
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Window
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+  - tech: {fileID: 2135026637}
+    materials:
+    - identifier: Apex
+      mat: {fileID: 2100000, guid: d3a36d48e2285af45bec120ab45177fd, type: 2}
+    - identifier: Body
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Door
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Ring1
+      mat: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+    - identifier: Ring2
+      mat: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+    - identifier: Tank1
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Tank2
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Three-Quarter_Ring
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Window
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+  - tech: {fileID: 1250747593}
+    materials:
+    - identifier: Apex
+      mat: {fileID: 2100000, guid: 9c17b5dd5e97eb6468c3d250734ae7dc, type: 2}
+    - identifier: Body
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Door
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Ring1
+      mat: {fileID: 2100000, guid: 9c17b5dd5e97eb6468c3d250734ae7dc, type: 2}
+    - identifier: Ring2
+      mat: {fileID: 2100000, guid: 9c17b5dd5e97eb6468c3d250734ae7dc, type: 2}
+    - identifier: Tank1
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Tank2
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Three-Quarter_Ring
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+    - identifier: Window
+      mat: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
+  - tech: {fileID: 1845063606}
+    materials:
+    - identifier: Apex
+      mat: {fileID: 2100000, guid: 32da19b7a286d8b489d6aa6bce477c40, type: 2}
+    - identifier: Body
+      mat: {fileID: 2100000, guid: 32da19b7a286d8b489d6aa6bce477c40, type: 2}
+    - identifier: Door
+      mat: {fileID: 2100000, guid: 32da19b7a286d8b489d6aa6bce477c40, type: 2}
+    - identifier: Ring1
+      mat: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+    - identifier: Ring2
+      mat: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+    - identifier: Tank1
+      mat: {fileID: 2100000, guid: 32da19b7a286d8b489d6aa6bce477c40, type: 2}
+    - identifier: Tank2
+      mat: {fileID: 2100000, guid: 32da19b7a286d8b489d6aa6bce477c40, type: 2}
+    - identifier: Three-Quarter_Ring
+      mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
+    - identifier: Window
+      mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
+  externalMaterial: {fileID: 1984947733}
+--- !u!1 &511994786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511994787}
+  - component: {fileID: 511994788}
+  m_Layer: 5
+  m_Name: ExternalDevice2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &511994787
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511994786}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42135, y: 0.42135, z: 0.42135}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 658.57654, y: 82.85781}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &511994788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511994786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5b8437dd73ed248ab213d5f26a378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 
+  defaultEquip: {fileID: 252578872}
+  teches:
+  - {fileID: 2136589325}
+  - {fileID: 1777212519}
+  - {fileID: 198962576}
+  - {fileID: 1237790994}
+  - {fileID: 956255812}
+  equip: {fileID: 0}
+--- !u!1 &545985235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545985236}
+  - component: {fileID: 545985237}
+  m_Layer: 5
+  m_Name: Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &545985236
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545985235}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42135, y: 0.42135, z: 0.42135}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 533.01306, y: 82.85781}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &545985237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545985235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5b8437dd73ed248ab213d5f26a378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 
+  defaultEquip: {fileID: 1510076468}
+  teches:
+  - {fileID: 1510076468}
+  - {fileID: 82799343}
+  - {fileID: 1018285169}
+  - {fileID: 1522894677}
+  - {fileID: 1658019769}
+  - {fileID: 1902102460}
+  - {fileID: 688645916}
+  - {fileID: 1658536695}
+  equip: {fileID: 0}
+--- !u!1 &570159821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 570159824}
+  - component: {fileID: 570159822}
+  - component: {fileID: 570159823}
+  m_Layer: 5
+  m_Name: CarbonFiber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &570159824
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570159821}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 259.32294, y: 325.45416}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &570159822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570159821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 250
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 10
+  spinningSpeedPercentage: 1
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Carbon Fiber
+  prerequisites:
+  - {fileID: 1712774243}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 61ad761d9cbaae748ad29d7f3399601e, type: 3}
+  shippartMaterial: []
+--- !u!222 &570159823
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570159821}
+  m_CullTransparentMesh: 1
+--- !u!1 &688645913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688645914}
+  - component: {fileID: 688645916}
+  - component: {fileID: 688645915}
+  m_Layer: 5
+  m_Name: FusionRocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &688645914
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688645913}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 551.3604, y: 218.53334}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &688645916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688645913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 40
+  fuelCapacityPercentage: 1
+  fuelConsumption: -10
+  fuelConsumptionPercentage: 1
+  speed: 20
+  speedPercentage: 1
+  spinningSpeed: 15
+  spinningSpeedPercentage: 1
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Fusion Rocket
+  prerequisites:
+  - {fileID: 1902102460}
+  - {fileID: 140564542}
+  starCost: 0
+  icon: {fileID: 21300000, guid: dafed0348fed45842b6b686c2f9da44e, type: 3}
+  shippartMaterial: []
+--- !u!222 &688645915
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688645913}
+  m_CullTransparentMesh: 1
+--- !u!1 &756202584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 756202585}
+  - component: {fileID: 756202587}
+  - component: {fileID: 756202586}
+  m_Layer: 5
+  m_Name: 3DPrinter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &756202585
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756202584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 989.4166, y: 325.45416}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &756202587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756202584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: -3
+  speedPercentage: 1
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: 3D Printer
+  prerequisites:
+  - {fileID: 956255812}
+  starCost: 0
+  icon: {fileID: 21300000, guid: e29f4461d4fc1814ab89b3f2909aa006, type: 3}
+  shippartMaterial: []
+--- !u!222 &756202586
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756202584}
+  m_CullTransparentMesh: 1
+--- !u!1 &956255811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956255814}
+  - component: {fileID: 956255812}
+  - component: {fileID: 956255813}
+  m_Layer: 5
+  m_Name: MaintenanceSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &956255814
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956255811}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 989.4166, y: 432.375}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &956255812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956255811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: -5
+  speedPercentage: 1
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Maintenance System
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: fa6f07aa882ced54099f61a93c0a8369, type: 3}
+  shippartMaterial: []
+--- !u!222 &956255813
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956255811}
+  m_CullTransparentMesh: 1
+--- !u!1 &1018285168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018285171}
+  - component: {fileID: 1018285169}
+  - component: {fileID: 1018285170}
+  m_Layer: 5
+  m_Name: TripropellantRocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1018285171
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018285168}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 405.34167, y: 432.375}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1018285169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018285168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 25
+  fuelCapacityPercentage: 1
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 10
+  speedPercentage: 1
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 5
+  collisionDamagePercentage: 1
+  defaultUnlock: 0
+  identifier: 
+  techName: Tripropellant Rocket
+  prerequisites:
+  - {fileID: 82799343}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 0ef895110937a524da2c6af3915f7e0a, type: 3}
+  shippartMaterial: []
+--- !u!222 &1018285170
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018285168}
+  m_CullTransparentMesh: 1
+--- !u!1 &1141263692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1141263693}
+  m_Layer: 0
+  m_Name: '**Equip**'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1141263693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141263692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1237790991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237790992}
+  - component: {fileID: 1237790994}
+  - component: {fileID: 1237790993}
+  m_Layer: 5
+  m_Name: SmallMagneticSatellite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1237790992
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237790991}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 989.4166, y: 539.29584}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1237790994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237790991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: -10
+  collisionDamagePercentage: 1
+  defaultUnlock: 0
+  identifier: 
+  techName: Small Magnetic Satellite
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: 0d9b4f312035dcc409799a0c99da0f77, type: 3}
+  shippartMaterial: []
+--- !u!222 &1237790993
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237790991}
+  m_CullTransparentMesh: 1
+--- !u!1 &1250747592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250747595}
+  - component: {fileID: 1250747593}
+  - component: {fileID: 1250747594}
+  m_Layer: 5
+  m_Name: AblationMaterial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1250747595
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250747592}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 113.3042, y: 325.45416}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1250747593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250747592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 750
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Ablation Material
+  prerequisites:
+  - {fileID: 2135026637}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 49ac9a03afa78944588bd5e79cd13f94, type: 3}
+  shippartMaterial: []
+--- !u!222 &1250747594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250747592}
+  m_CullTransparentMesh: 1
+--- !u!1 &1483761861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483761862}
+  - component: {fileID: 1483761864}
+  - component: {fileID: 1483761863}
+  m_Layer: 5
+  m_Name: Aerogel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1483761862
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483761861}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 259.32294, y: 218.53334}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1483761864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483761861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: -10
+  speedPercentage: 1
+  spinningSpeed: 15
+  spinningSpeedPercentage: 1
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Aerogel
+  prerequisites:
+  - {fileID: 570159822}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 69af46f218641f544a5567e821a8e73f, type: 3}
+  shippartMaterial: []
+--- !u!222 &1483761863
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483761861}
+  m_CullTransparentMesh: 1
+--- !u!1 &1510076467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1510076470}
+  - component: {fileID: 1510076468}
+  - component: {fileID: 1510076469}
+  m_Layer: 5
+  m_Name: MonopropellantRocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1510076470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510076467}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 405.34167, y: 646.2167}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1510076468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510076467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 1
+  identifier: 
+  techName: Monopropellant Rocket
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: e7e68b3d26ab3604c9294131efb8e6b9, type: 3}
+  shippartMaterial: []
+--- !u!222 &1510076469
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510076467}
+  m_CullTransparentMesh: 1
+--- !u!1 &1522894676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522894679}
+  - component: {fileID: 1522894677}
+  - component: {fileID: 1522894678}
+  m_Layer: 5
+  m_Name: IonThruster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1522894679
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522894676}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 697.37915, y: 539.29584}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1522894677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522894676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 5
+  fuelCapacityPercentage: 1
+  fuelConsumption: -10
+  fuelConsumptionPercentage: 1
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Ion Thruster
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: 8c8b647ebead8764599d2c30c368a10d, type: 3}
+  shippartMaterial: []
+--- !u!222 &1522894678
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522894676}
+  m_CullTransparentMesh: 1
+--- !u!1 &1658019768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1658019771}
+  - component: {fileID: 1658019769}
+  - component: {fileID: 1658019770}
+  m_Layer: 5
+  m_Name: VASMIREngine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1658019771
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658019768}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 697.37915, y: 432.375}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1658019769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658019768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 5
+  fuelCapacityPercentage: 1
+  fuelConsumption: -10
+  fuelConsumptionPercentage: 1
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: VASMIR Engine
+  prerequisites:
+  - {fileID: 1522894677}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 3ae521fa30e84fb4a834804355bf068f, type: 3}
+  shippartMaterial: []
+--- !u!222 &1658019770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658019768}
+  m_CullTransparentMesh: 1
+--- !u!1 &1658536692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1658536693}
+  - component: {fileID: 1658536695}
+  - component: {fileID: 1658536694}
+  m_Layer: 5
+  m_Name: AntimatterRocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1658536693
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658536692}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 551.3604, y: 111.61252}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1658536695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658536692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 50
+  fuelCapacityPercentage: 1
+  fuelConsumption: -15
+  fuelConsumptionPercentage: 1
+  speed: 30
+  speedPercentage: 1
+  spinningSpeed: 20
+  spinningSpeedPercentage: 1
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Antimatter Rocket
+  prerequisites:
+  - {fileID: 688645916}
+  starCost: 0
+  icon: {fileID: 21300000, guid: da790c161cca7b34b9212432f01efb18, type: 3}
+  shippartMaterial: []
+--- !u!222 &1658536694
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658536692}
+  m_CullTransparentMesh: 1
+--- !u!1 &1712774242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712774245}
+  - component: {fileID: 1712774243}
+  - component: {fileID: 1712774244}
+  m_Layer: 5
+  m_Name: TitaniumAlloy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1712774245
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712774242}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 113.3042, y: 539.29584}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1712774243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712774242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: -5
+  speedPercentage: 1
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Titanium Alloy
+  prerequisites:
+  - {fileID: 1921246773}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 90d71fc20e000694b8f36a9789fcc2a1, type: 3}
+  shippartMaterial: []
+--- !u!222 &1712774244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712774242}
+  m_CullTransparentMesh: 1
+--- !u!1 &1777212518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1777212521}
+  - component: {fileID: 1777212519}
+  - component: {fileID: 1777212520}
+  m_Layer: 5
+  m_Name: SolarBattery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1777212521
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777212518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 843.39795, y: 539.29584}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1777212519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777212518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 5
+  fuelCapacityPercentage: 1
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Solar Battery
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: aeedb31a2745d26479cfb146c82f726f, type: 3}
+  shippartMaterial: []
+--- !u!222 &1777212520
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777212518}
+  m_CullTransparentMesh: 1
+--- !u!1 &1845063603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1845063604}
+  - component: {fileID: 1845063606}
+  - component: {fileID: 1845063605}
+  m_Layer: 5
+  m_Name: ReinforcedCarbon-carbon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1845063604
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845063603}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 113.3042, y: 111.61252}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1845063606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845063603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 5
+  collisionDamagePercentage: 1
+  defaultUnlock: 0
+  identifier: 
+  techName: Reinforced Carbon-carbon
+  prerequisites:
+  - {fileID: 1250747593}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 93be4e6099c4b184caacb580a7ad434f, type: 3}
+  shippartMaterial: []
+--- !u!222 &1845063605
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845063603}
+  m_CullTransparentMesh: 1
+--- !u!1 &1849197668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1849197669}
+  - component: {fileID: 1849197670}
+  m_Layer: 5
+  m_Name: InternalDevice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1849197669
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849197668}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42135, y: 0.42135, z: 0.42135}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 658.57654, y: 333.14218}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1849197670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849197668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5b8437dd73ed248ab213d5f26a378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 
+  defaultEquip: {fileID: 252578872}
+  teches:
+  - {fileID: 353077661}
+  - {fileID: 140564542}
+  - {fileID: 756202587}
+  equip: {fileID: 0}
+--- !u!1 &1902102459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902102462}
+  - component: {fileID: 1902102460}
+  - component: {fileID: 1902102461}
+  m_Layer: 5
+  m_Name: NuclearThermalRocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1902102462
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902102459}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 551.3604, y: 325.45416}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1902102460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902102459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 30
+  fuelCapacityPercentage: 1
+  fuelConsumption: -10
+  fuelConsumptionPercentage: 1
+  speed: 10
+  speedPercentage: 1
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 0
+  identifier: 
+  techName: Nuclear Thermal Rocket
+  prerequisites:
+  - {fileID: 1018285169}
+  - {fileID: 1658019769}
+  - {fileID: 353077661}
+  starCost: 0
+  icon: {fileID: 21300000, guid: bf5ece0ae3ce8c54ba59bbf7abe003d5, type: 3}
+  shippartMaterial: []
+--- !u!222 &1902102461
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902102459}
+  m_CullTransparentMesh: 1
+--- !u!1 &1921246772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921246775}
+  - component: {fileID: 1921246773}
+  - component: {fileID: 1921246774}
+  m_Layer: 5
+  m_Name: StainlessSteel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1921246775
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921246772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 113.3042, y: 646.2167}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1921246773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921246772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 0
+  collisionDamagePercentage: 0
+  defaultUnlock: 1
+  identifier: 
+  techName: Stainless Steel
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: 0d3a7452824baba43b14839f4e4063c7, type: 3}
+  shippartMaterial: []
+--- !u!222 &1921246774
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921246772}
+  m_CullTransparentMesh: 1
+--- !u!1 &1984947731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1984947732}
+  - component: {fileID: 1984947733}
+  m_Layer: 5
+  m_Name: ExternalMaterial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1984947732
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984947731}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42135, y: 0.42135, z: 0.42135}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 533.01306, y: 208}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1984947733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984947731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5b8437dd73ed248ab213d5f26a378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 
+  defaultEquip: {fileID: 1921246773}
+  teches:
+  - {fileID: 1921246773}
+  - {fileID: 1712774243}
+  - {fileID: 2135026637}
+  - {fileID: 1250747593}
+  - {fileID: 1845063606}
+  equip: {fileID: 0}
+--- !u!1 &2013741656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013741657}
+  - component: {fileID: 2013741658}
+  m_Layer: 5
+  m_Name: ExternalDevice1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2013741657
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013741656}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42135, y: 0.42135, z: 0.42135}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 658.57654, y: 208}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2013741658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013741656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5b8437dd73ed248ab213d5f26a378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 
+  defaultEquip: {fileID: 252578872}
+  teches:
+  - {fileID: 2136589325}
+  - {fileID: 1777212519}
+  - {fileID: 198962576}
+  - {fileID: 1237790994}
+  - {fileID: 956255812}
+  equip: {fileID: 0}
+--- !u!1 &2135026636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2135026639}
+  - component: {fileID: 2135026637}
+  - component: {fileID: 2135026638}
+  m_Layer: 5
+  m_Name: HRSI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2135026639
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135026636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 113.3042, y: 432.375}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2135026637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135026636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: 10
+  collisionDamagePercentage: 1
+  defaultUnlock: 0
+  identifier: 
+  techName: HRSI
+  prerequisites:
+  - {fileID: 1712774243}
+  starCost: 0
+  icon: {fileID: 21300000, guid: 0695d0ae5c0d94048ac8e16d217b2a96, type: 3}
+  shippartMaterial: []
+--- !u!222 &2135026638
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135026636}
+  m_CullTransparentMesh: 1
+--- !u!1 &2136589322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136589323}
+  - component: {fileID: 2136589325}
+  - component: {fileID: 2136589324}
+  m_Layer: 5
+  m_Name: MetalMagneticMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2136589323
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136589322}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461077894}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 843.39795, y: 646.2167}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2136589325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136589322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56512a60428d4341801d6fdd61ceadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 150
+  healthPercentage: 0
+  fuelCapacity: 0
+  fuelCapacityPercentage: 0
+  fuelConsumption: 0
+  fuelConsumptionPercentage: 0
+  speed: 0
+  speedPercentage: 0
+  spinningSpeed: 0
+  spinningSpeedPercentage: 0
+  collisionDamage: -5
+  collisionDamagePercentage: 1
+  defaultUnlock: 0
+  identifier: 
+  techName: Metal Magnetic Mesh
+  prerequisites: []
+  starCost: 0
+  icon: {fileID: 21300000, guid: aa9e2cf759f042347991d3532b5e1636, type: 3}
+  shippartMaterial: []
+--- !u!222 &2136589324
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136589322}
+  m_CullTransparentMesh: 1
 --- !u!1 &6081419981811366366
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +2514,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6081419981811366355}
+  - {fileID: 461077894}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -119,3 +2530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9955a477c3d704247b23187c29a74e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  sprLocked: {fileID: 21300000, guid: 70d8c1d01511d9c418fd16df0244f088, type: 3}
+  sprLock: {fileID: 21300000, guid: 56a53780ddab9d54dbfbccf5086c31c2, type: 3}

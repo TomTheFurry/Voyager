@@ -25,19 +25,22 @@ public class TechEquipInterface : MonoBehaviour
     private float iconHeight;
     private int lineNum;
 
+    private InputActionReference action;
     private System.Action<InputAction.CallbackContext> callback;
+
+    private void _onCancel(InputAction.CallbackContext cc)
+    {
+        if (gameObject.activeInHierarchy)
+        {
+            if (btn.interactable)
+                btn.onClick.Invoke();
+        }
+    }
 
     void Start()
     {
-        callback = (cc) => {
-            if (gameObject.activeInHierarchy)
-            {
-                if (btn.interactable)
-                    btn.onClick.Invoke();
-            }
-        };
-        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        current.cancel.action.started += callback;
+        action = FindObjectOfType<InputSystemUIInputModule>().cancel;
+        action.action.started += _onCancel;
 
         GoBackButton.triggerEnable = false;
 
@@ -140,7 +143,6 @@ public class TechEquipInterface : MonoBehaviour
     {
         GoBackButton.triggerEnable = true;
 
-        InputSystemUIInputModule current = FindObjectOfType<InputSystemUIInputModule>();
-        current.cancel.action.started -= callback;
+        action.action.started -= _onCancel;
     }
 }

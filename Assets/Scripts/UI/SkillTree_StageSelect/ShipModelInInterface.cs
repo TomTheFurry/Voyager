@@ -8,17 +8,12 @@ public class ShipModelInInterface : MonoBehaviour
     public float rotateSpeed = 6f;
     public float swingSpeed = 1f;
 
-    public Renderer rend;
-
-    private Material defaultExternalLayer;
-    public Material externalLayer;
-
     private float timer = 0.5f;
 
     private void Start()
     {
-        defaultExternalLayer = rend.material;
-
+        if (ship == null)
+            ship = gameObject;
         rotateSpeed /= 100f;
         swingSpeed /= 100f;
     }
@@ -29,11 +24,6 @@ public class ShipModelInInterface : MonoBehaviour
         ship.transform.Rotate(Vector3.up * rotateSpeed * 360 * Time.deltaTime);
         ship.transform.Rotate(Vector3.back * swingSpeed * Mathf.Sin(timer * Mathf.PI) * Time.deltaTime);
         //ship.transform.Translate(Vector3.up * swingSpeed * 0.007f * Mathf.Sin(timer * Mathf.PI));
-
-        //if (timer % 5 < 1)
-        //    rend.material = externalLayer;
-        //else
-        //    rend.material = defaultExternalLayer;
 
         timer += Time.deltaTime * 0.5f;
     }
