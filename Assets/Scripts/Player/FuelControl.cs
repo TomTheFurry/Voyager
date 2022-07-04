@@ -1,7 +1,6 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(MovementControl2))]
@@ -11,6 +10,7 @@ public class FuelControl : MonoBehaviour
     public float fuel = 1000;
     public float fuelPerForce = 0.002f;
     public float fuelExpValue = 2.0f;
+    public float fuelDeathTimer = 3f;
     public UnityEvent onOutOfFuel;
     // Note: Only triggers if privously out of fuel
     public UnityEvent onRestoreFuel;
@@ -18,6 +18,7 @@ public class FuelControl : MonoBehaviour
     CanvasHandler canvas;
     Tooltip tooltip;
     UIBar bar;
+    private float _deathTime = 0;
 
     private void Start()
     {
@@ -36,6 +37,12 @@ public class FuelControl : MonoBehaviour
             bar.SetMinValue(0);
             bar.SetMaxValue(maxFuel);
         }
+
+        if (_deathTime != 0 && Time.time - _deathTime >= fuelDeathTimer)
+        {
+            canvas.OnFail();
+            _deathTime = 0;
+        }
     }
 
     public bool HasFuel() {
@@ -45,11 +52,11 @@ public class FuelControl : MonoBehaviour
     public bool RecordUseFuel(float fuelUsed) {
         if (fuel == 0) return false;
         fuel -= fuelUsed;
-        if (fuel < 0) { 
+        if (fuel < 0) {
             fuel = 0;
             Debug.Log("Out Of fuel!");
             control2.DisableSpaceshipInput();
-            canvas.OnFail();
+            _deathTime = Time.time;
             onOutOfFuel.Invoke();
             return false;
         }
@@ -65,7 +72,7 @@ public class FuelControl : MonoBehaviour
             fuel = 0;
             Debug.Log("Out of fuel!");
             control2.DisableSpaceshipInput();
-            canvas.OnFail();
+            _deathTime = Time.time;
             onOutOfFuel.Invoke();
         }
     }
@@ -78,7 +85,8 @@ public class FuelControl : MonoBehaviour
             fuel = maxFuel;
             Debug.Log("Refueled!");
             control2.EnableSpaceshipInput();
-            FindObjectOfType<CanvasHandler>().DebugUndoFail();
+            if (_deathTime == 0) FindObjectOfType<CanvasHandler>().DebugUndoFail();
+            _deathTime = 0;
             if (triggerCallback) onRestoreFuel.Invoke();
         }
     }

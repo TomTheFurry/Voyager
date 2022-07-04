@@ -19,18 +19,14 @@ public class CanvasHandler : MonoBehaviour
             if (value == prev) return;
             if (value)
             {
-                lastCursorMode = Cursor.lockState;
-                lastCursorVisible = Cursor.visible;
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                _pushMouseState();
                 Time.timeScale = 0f;
                 pauseMenu.SetActive(true);
                 //hud.SetActive(false);
             }
             else
             {
-                Cursor.lockState = lastCursorMode;
-                Cursor.visible = lastCursorVisible;
+                _popMouseState();
                 Time.timeScale = 1f;
                 pauseMenu.SetActive(false);
                 //hud.SetActive(true);
@@ -43,29 +39,45 @@ public class CanvasHandler : MonoBehaviour
     public GameObject hud;
     public BonusText bonusPopup;
 
+    private void _pushMouseState()
+    {
+        lastCursorMode = Cursor.lockState;
+        lastCursorVisible = Cursor.visible;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    private void _popMouseState()
+    {
+        Cursor.lockState = lastCursorMode;
+        Cursor.visible = lastCursorVisible;
+    }
+
     public void OnFail()
     {
-        if (!failMenu.activeSelf)
+        if (failMenu.activeSelf)
         {
             Debug.LogWarning("OnFail already called before!");
             return;
         }
+        _pushMouseState();
         failMenu.SetActive(true);
         hud.SetActive(false);
     }
     public void DebugUndoFail()
     {
+        _popMouseState();
         failMenu.SetActive(false);
         hud.SetActive(true);
     }
 
     public void OnSuccess()
     {
-        if (!successMenu.activeSelf)
+        if (successMenu.activeSelf)
         {
             Debug.LogWarning("OnSuccess already called before!");
             return;
         }
+        _pushMouseState();
         successMenu.SetActive(true);
         hud.SetActive(false);
     }
@@ -79,12 +91,6 @@ public class CanvasHandler : MonoBehaviour
 
     private void _OnPause(InputAction.CallbackContext ctx) => isPaused = !isPaused;
 
-    private void OnDisable()
-    {
-        Debug.LogWarning("CanvasHandler SHOULD NEVER be disabled!");
-    }
-
-
     private void Start()
     {
         actionPause.action.performed += _OnPause;
@@ -92,7 +98,9 @@ public class CanvasHandler : MonoBehaviour
     private void OnDestroy()
     {
         actionPause.action.performed -= _OnPause;
-        isPaused = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 1f;
     }
 
 }

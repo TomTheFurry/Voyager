@@ -343,8 +343,9 @@ public class MovementControl2 : MonoBehaviour
         {
             return;
         }
+
         bool inputMiddle = input.actions["Middle"].triggered;
-        if (inputMiddle)
+        if (inputMiddle && readSpaceshipInput)
         {
             if (mouseLocked) unlockMouse(); else lockMouse();
         }
@@ -371,7 +372,7 @@ public class MovementControl2 : MonoBehaviour
         if (!readSpaceshipInput)
         {
             snapPositionToChild();
-            updateRotation();
+            //updateRotation();
             updateZoom(mouseLocked ? inputZoom : 0);
             setAllEmissionHookups(Vector3.zero);
             onForceApplied.Invoke(Vector3.zero);

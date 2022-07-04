@@ -7,7 +7,7 @@ public class JunkRemover : MonoBehaviour
 {
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Obj exited");
+        //Debug.Log("Obj exited");
         if (other.gameObject.CompareTag("Junk"))
         {
             Destroy(other.gameObject);

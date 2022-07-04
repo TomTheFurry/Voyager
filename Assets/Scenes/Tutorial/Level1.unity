@@ -5750,7 +5750,7 @@ MonoBehaviour:
     m_Bits: 64
   beam: {fileID: 287795252}
   fuel: {fileID: 962833310}
-  fuelUsage: 1
+  fuelUsage: 6.32
 --- !u!4 &416681355
 Transform:
   m_ObjectHideFlags: 0
