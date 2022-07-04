@@ -28,6 +28,7 @@ public class TooltipManager : MonoBehaviour
 
         if (currentTooltip != null && currentTooltip.GetType() == typeof(AdvancedTooltip)) {
             GameObject obj = ((AdvancedTooltip)currentTooltip).customTooltip;
+            if (obj == null) obj = currentTooltip.gameObject;
             obj.SetActive(false);
         }
         currentTooltip = t;
@@ -40,7 +41,9 @@ public class TooltipManager : MonoBehaviour
         {
             if (currentTooltip != null && currentTooltip.GetType() == typeof(AdvancedTooltip))
             {
-                ((AdvancedTooltip)currentTooltip).customTooltip.SetActive(false);
+                GameObject obj = ((AdvancedTooltip)currentTooltip).customTooltip;
+                if (obj == null) obj = currentTooltip.gameObject;
+                obj.SetActive(false);
             }
             currentTooltip = null;
             Update();
@@ -61,8 +64,9 @@ public class TooltipManager : MonoBehaviour
             img.enabled = false;
             tmpObj.SetActive(false);
             GameObject ui = ((AdvancedTooltip)currentTooltip).customTooltip;
-            if (ui == null)
-                Debug.LogError(currentTooltip.gameObject.name);
+            if (ui == null){
+                ui = currentTooltip.gameObject;
+            }
             RectTransform rect = ui.GetComponent<RectTransform>();
 
             // Get MousePos using new InputSystem

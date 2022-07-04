@@ -16,6 +16,7 @@ public class UiInfo
         {
             thisLocation.SetActive(false);
             Global.instance.mainMenu.SetActive(true);
+            Debug.Log("UiInfo: no contain key - " + key);
             return;
         }
         UiInfo location = uiInfos[key];

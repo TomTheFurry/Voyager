@@ -13,11 +13,6 @@ public class AdvancedTooltip : Tooltip
         onHoverExit.AddListener(_OnPointerExit);
     }
 
-    void Start()
-    {
-        if (customTooltip == null) customTooltip = gameObject;
-    }
-
     void _OnPointerEnter()
     {
         Debug.Log("Activating Tooltip: " + text);

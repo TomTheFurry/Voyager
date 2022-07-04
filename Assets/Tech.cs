@@ -127,6 +127,9 @@ public class Tech : MonoBehaviour, IComparable
             desc.Add(equipAttribute.Key + " " + getAttributeDescString(attribute.attribute, attribute.isPercentage));
         }
 
+        if (desc.Count == 0)
+            desc.Add("Default");
+
         return desc.ToArray();
     }
 
