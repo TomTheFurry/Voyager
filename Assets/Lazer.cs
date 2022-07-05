@@ -11,8 +11,6 @@ public class Lazer : MonoBehaviour
     public InputActionReference action;
     public float maxDistance;
     public LayerMask layer;
-    private bool hitted = false;
-    private Vector3 targetPos = Vector3.zero;
     private LineRenderer lineRenderer;
     private PrefabSpawner prefab;
 

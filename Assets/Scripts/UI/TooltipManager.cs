@@ -16,7 +16,7 @@ public class TooltipManager : MonoBehaviour
     private TextResizer rs;
     private Image img;
 
-    private float alpha = 100f/255f;
+    //private float alpha = 100f/255f;
 
     public GameObject tmpObj; //textMeshPro Obj
 

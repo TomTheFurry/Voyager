@@ -128,10 +128,8 @@ public class TechStorage : MonoBehaviour
 
     public void importTechData(TechData techData)
     {
-        if (techData.entries == null) {
-            Debug.Log("No player tech data detected.");
-            return;
-        }
+        // Tech
+        if (techData.entries == null) techData.entries = new TechData.EntryPair[0];
         foreach (TechData.EntryPair pair in techData.entries)
         {
             Tech tech = getTechByIdentifier(pair.identifier);
@@ -143,7 +141,8 @@ public class TechStorage : MonoBehaviour
             techTable[tech] = pair.state;
             Debug.Log("Loaded " + pair.identifier + ": " + pair.state);
         }
-        // equip
+        // Equip
+        if (techData.equips == null) techData.equips = new TechData.EquipPair[0];
         foreach (TechData.EquipPair pair in techData.equips)
         {
             TechEquip techEquip = getEquipByIdentifier(pair.identifier);
