@@ -635,6 +635,25 @@ MonoBehaviour:
     - identifier: Window
       mat: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
   externalMaterial: {fileID: 1984947733}
+  techEngines:
+  - tech: {fileID: 1510076468}
+    engine: {fileID: 4422275664745342317, guid: d1cb5faf22fd60f458614f8f95583463, type: 3}
+  - tech: {fileID: 82799343}
+    engine: {fileID: 4422275664745342317, guid: d1cb5faf22fd60f458614f8f95583463, type: 3}
+  - tech: {fileID: 1018285169}
+    engine: {fileID: 4422275664745342317, guid: d1cb5faf22fd60f458614f8f95583463, type: 3}
+  - tech: {fileID: 1522894677}
+    engine: {fileID: 1676457195351647608, guid: ead86ec171d349c478b58656823f8c2b, type: 3}
+  - tech: {fileID: 1658019769}
+    engine: {fileID: 7525831875438519769, guid: 7efa08d96af1f4246abfa0ce82d1addd, type: 3}
+  - tech: {fileID: 1902102460}
+    engine: {fileID: 2280140196731972059, guid: d33532ad725340d4b94b73ae673963e2, type: 3}
+  - tech: {fileID: 688645916}
+    engine: {fileID: 2280140196731972059, guid: d33532ad725340d4b94b73ae673963e2, type: 3}
+  - tech: {fileID: 1658536695}
+    engine: {fileID: 3205199513444967547, guid: e5658e44b49ab9548a88ee116a52eeac, type: 3}
+  engine: {fileID: 545985237}
+  defaultEngine: {fileID: 919132149155446097, guid: 77d5af55ffffd7e46aabac26b30ae12b, type: 3}
 --- !u!1 &511994786
 GameObject:
   m_ObjectHideFlags: 0

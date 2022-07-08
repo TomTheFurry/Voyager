@@ -8,13 +8,15 @@ public class ShipModelChange : MonoBehaviour
     static List<ShipModelChange> instances = new List<ShipModelChange>();
     
     public Renderer[] externalLayer;
+    public Transform engine;
+    public UnityEvent<Tech> onModelUpdate; 
 
     private void Start()
     {
         TechStorage.instance.onTechEquipChanging.AddListener(updateShipModel);
         if (!instances.Contains(this))
             instances.Add(this);
-        updateMaterial();
+        updateModel();
     }
 
     private void OnDestroy()
@@ -22,32 +24,32 @@ public class ShipModelChange : MonoBehaviour
         instances.Remove(this);
     }
 
-    public void updateMaterial()
+    public void updateModel()
     {
-        Tech equip = TechStorage.instance.getEquip("ExternalMaterial");
-        ShipModelMaterialData.ShipMaterial material = ShipModelMaterialData.instance.getMaterial(equip);
+        Tech equipExternalMat = TechStorage.instance.getEquip("ExternalMaterial");
+        ShipModelMaterialData.ShipMaterial material = ShipModelMaterialData.instance.getMaterial(equipExternalMat);
 
         for (int i = 0; i < externalLayer.Length; ++i)
         {
             externalLayer[i].material = material.getMat(externalLayer[i].gameObject.name.ToLower());
         }
 
-        //externalLayer[0].material = material.apex;
-        //externalLayer[1].material = material.body;
-        //externalLayer[2].material = material.door;
-        //externalLayer[3].material = material.ring1;
-        //externalLayer[4].material = material.ring2;
-        //externalLayer[5].material = material.tank1;
-        //externalLayer[6].material = material.tank2;
-        //externalLayer[7].material = material.threeQuarterRing;
-        //externalLayer[8].material = material.window;
+        Tech equipEngine = TechStorage.instance.getEquip("Engine");
+        ShipModelMaterialData.shipEngine techEngine = ShipModelMaterialData.instance.getEngine(equipEngine);
+
+        for (int i = 0; i < engine.childCount; ++i)
+        {
+            Destroy(engine.GetChild(i).gameObject);
+        }
+        Instantiate(techEngine.getEngine(), engine);
+        onModelUpdate.Invoke(equipEngine);
     }
 
     public static void updateShipModel()
     {
         foreach (ShipModelChange ship in instances)
         {
-            ship.updateMaterial();
+            ship.updateModel();
         }
     }
 }

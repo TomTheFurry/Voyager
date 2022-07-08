@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 503a89248800e3f41ab1259d1cfcdd31
+guid: de2e78875a9bc8b4f9d5c96e34c114e6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,50 +7,25 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Ablation
-    second: {fileID: 2100000, guid: 9c17b5dd5e97eb6468c3d250734ae7dc, type: 2}
+      name: 01 - Default
+    second: {fileID: 2100000, guid: 96d000ac0ad856f429a27d707f1a2d43, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 1a2906bb4b200f343b13151fba26bcbd, type: 2}
+      name: 02 - Default
+    second: {fileID: 2100000, guid: bf4384061c0534542a89280663a297b0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Light
-    second: {fileID: 2100000, guid: 1a2906bb4b200f343b13151fba26bcbd, type: 2}
+      name: 03 - Default
+    second: {fileID: 2100000, guid: d5f5ed8f6b514e546a670ce7e7b9c98a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Stainless_steel
-    second: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Titanium
-    second: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: White
-    second: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "carbon\u2013carbon"
-    second: {fileID: 2100000, guid: 32da19b7a286d8b489d6aa6bce477c40, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: material
-    second: {fileID: 2100000, guid: d3a36d48e2285af45bec120ab45177fd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: side
-    second: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+      name: 04 - Default
+    second: {fileID: 2100000, guid: e214f927a3d42874bbc417a8bbced636, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -111,7 +86,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -130,7 +105,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.05
+    globalScale: 0.00127
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

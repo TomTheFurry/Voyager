@@ -1,54 +1,9 @@
 fileFormatVersion: 2
-guid: 503a89248800e3f41ab1259d1cfcdd31
+guid: 240f30ce6a6be424d887694d3dd3b29c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ablation
-    second: {fileID: 2100000, guid: 9c17b5dd5e97eb6468c3d250734ae7dc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 1a2906bb4b200f343b13151fba26bcbd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Light
-    second: {fileID: 2100000, guid: 1a2906bb4b200f343b13151fba26bcbd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stainless_steel
-    second: {fileID: 2100000, guid: 9bc1a4a7a4728db4e88ecb4b5ef00ff6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Titanium
-    second: {fileID: 2100000, guid: 3357fc7327c6d574f95dbd2e5c53a9c8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: White
-    second: {fileID: 2100000, guid: bdfaafcac96eace408a73c48df0fec41, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "carbon\u2013carbon"
-    second: {fileID: 2100000, guid: 32da19b7a286d8b489d6aa6bce477c40, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: material
-    second: {fileID: 2100000, guid: d3a36d48e2285af45bec120ab45177fd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: side
-    second: {fileID: 2100000, guid: e03f3fdb7785b9440a60db3e6b81550c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -111,7 +66,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -130,7 +85,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.05
+    globalScale: 0.00127
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -9,6 +9,9 @@ public class ShipModelMaterialData : MonoBehaviour
 
     public ShipMaterial[] techMaterials;
     public TechEquip externalMaterial;
+    public shipEngine[] techEngines;
+    public TechEquip engine;
+    public GameObject defaultEngine;
 
     [Serializable]
     public struct ShipMaterial
@@ -33,6 +36,22 @@ public class ShipModelMaterialData : MonoBehaviour
         }
     }
 
+    [Serializable]
+    public struct shipEngine
+    {
+        public Tech tech;
+        public GameObject engine;
+
+        public GameObject getEngine()
+        {
+            if (engine != null)
+                return engine;
+            else
+                return instance.defaultEngine;
+        }
+    }
+
+    //material
     public ShipMaterial getMaterial(string identifier)
     {
         return getMaterial(TechStorage.instance.getTechByIdentifier(identifier));
@@ -46,6 +65,22 @@ public class ShipModelMaterialData : MonoBehaviour
                 return material;
         }
         return getMaterial(externalMaterial.defaultEquip);
+    }
+
+    //engine
+    public shipEngine getEngine(string identifier)
+    {
+        return getEngine(TechStorage.instance.getTechByIdentifier(identifier));
+    }
+
+    public shipEngine getEngine(Tech tech)
+    {
+        foreach (shipEngine techEngine in techEngines)
+        {
+            if (techEngine.tech == tech)
+                return techEngine;
+        }
+        return getEngine(engine.defaultEquip);
     }
 
     private void Start()
