@@ -79,9 +79,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -296384945418193601, guid: 240f30ce6a6be424d887694d3dd3b29c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 103196287432431731, guid: 240f30ce6a6be424d887694d3dd3b29c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 240f30ce6a6be424d887694d3dd3b29c, type: 3}
       propertyPath: m_Name
       value: Prefab_antimatter
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 240f30ce6a6be424d887694d3dd3b29c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779683447901355293, guid: 240f30ce6a6be424d887694d3dd3b29c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 240f30ce6a6be424d887694d3dd3b29c, type: 3}
