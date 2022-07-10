@@ -295,8 +295,8 @@ public class MovementControl2 : MonoBehaviour
         // Raycast to check if camera is not colliding with something
         Vector3 back = childActualCamera.transform.TransformDirection(Vector3.back);
         RaycastHit hit;
-        // Raycast but ignore player & UI layer
-        if (Physics.Raycast(childCamera.transform.position, back, out hit, value + camOffset,
+        // Raycast but ignore player & UI layerp
+        if (Physics.SphereCast(childCamera.transform.position, camOffset, back, out hit, value,
             ~LayerMask.GetMask("Player", "UI", "Ignore Raycast")))
         {
             //Debug.Log("Zoom collision: " + hit.distance);
@@ -311,7 +311,37 @@ public class MovementControl2 : MonoBehaviour
             childActualCamera.gameObject.SetActive(false);
             fpCamera.gameObject.SetActive(true);
             onEnterFp.Invoke();
-        } else
+            inFp = true;
+        } else if (zoomTarget != zoomMin && inFp)
+        {
+            fpCamera.gameObject.SetActive(false);
+            childActualCamera.gameObject.SetActive(true);
+            onLeaveFp.Invoke();
+            inFp = false;
+        }
+    }
+
+    public void spaceshipTerminated()
+    {
+        readSpaceshipInput = false;
+        zoomTarget = 5f;
+        
+        // Raycast to check if camera is not colliding with something
+        Vector3 back = childActualCamera.transform.TransformDirection(Vector3.back);
+        RaycastHit hit;
+        // Raycast but ignore player & UI layer
+        if (Physics.SphereCast(childCamera.transform.position, camOffset, back, out hit, zoomTarget,
+            ~LayerMask.GetMask("Player", "UI", "Ignore Raycast")))
+        {
+            //Debug.Log("Zoom collision: " + hit.distance);
+            zoomTarget = hit.distance - camOffset;
+        }
+
+        // Apply zoom
+        childActualCamera.transform.localPosition = new Vector3(0, 0, -zoomTarget);
+        zoomPD.reset();
+
+        if (zoomTarget != zoomMin && inFp)
         {
             fpCamera.gameObject.SetActive(false);
             childActualCamera.gameObject.SetActive(true);

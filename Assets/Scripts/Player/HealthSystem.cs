@@ -50,6 +50,7 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0)
         {
             prefabSpawner.Spawn(player.transform);
+            control2.spaceshipTerminated();
             player.SetActive(false);
             canvas.OnFail();
             onDeath.Invoke();

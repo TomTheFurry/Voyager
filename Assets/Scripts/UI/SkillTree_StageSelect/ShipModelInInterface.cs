@@ -8,7 +8,7 @@ public class ShipModelInInterface : MonoBehaviour
     public GameObject ship;
     public float rotateSpeed = 6f;
     public float swingSpeed = 1f;
-    public Transform camera;
+    public Transform cam;
     public List<CamPos> positions;
 
     private float timer = 0.5f;
@@ -23,7 +23,7 @@ public class ShipModelInInterface : MonoBehaviour
 
     private void Start()
     {
-        startLocalPos = camera.localPosition;
+        startLocalPos = cam.localPosition;
 
         if (ship == null)
             ship = gameObject;
@@ -53,10 +53,10 @@ public class ShipModelInInterface : MonoBehaviour
         {
             if (camPos.tech == tech)
             {
-                camera.localPosition = camPos.localPos;
+                cam.localPosition = camPos.localPos;
                 return;
             }
         }
-        camera.localPosition = startLocalPos;
+        cam.localPosition = startLocalPos;
     }
 }
