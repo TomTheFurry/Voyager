@@ -12,6 +12,7 @@ public class ShipModelMaterialData : MonoBehaviour
     public shipEngine[] techEngines;
     public TechEquip engine;
     public GameObject defaultEngine;
+    public SolarBattery[] numSolarBatterys;
 
     [Serializable]
     public struct ShipMaterial
@@ -51,6 +52,18 @@ public class ShipModelMaterialData : MonoBehaviour
         }
     }
 
+    [Serializable]
+    public struct SolarBattery
+    {
+        public int num;
+        public GameObject battery;
+
+        public GameObject getBattery()
+        {
+            return battery;
+        }
+    }
+
     //material
     public ShipMaterial getMaterial(string identifier)
     {
@@ -81,6 +94,17 @@ public class ShipModelMaterialData : MonoBehaviour
                 return techEngine;
         }
         return getEngine(engine.defaultEquip);
+    }
+
+    //SolarBattery
+    public GameObject getSolarBattery(int num = 0)
+    {
+        foreach (SolarBattery battery in numSolarBatterys)
+        {
+            if (battery.num == num)
+                return battery.getBattery();
+        }
+        return null;
     }
 
     private void Start()

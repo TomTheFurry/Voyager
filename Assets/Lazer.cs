@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(LineRenderer), typeof(PrefabSpawner))]
 public class Lazer : MonoBehaviour
 { 
+    public Transform laserModle;
     public Transform origin;
     public InputActionReference action;
     public float maxDistance;
@@ -104,12 +105,22 @@ public class Lazer : MonoBehaviour
             }
         } else
         {
-            OnDisable();
+            lineRenderer.enabled = false;
+            beam.StopEffect();
+            if (lazerLights != null)
+                foreach (Light light in lazerLights)
+                    light.gameObject.SetActive(false);
         }
+    }
+
+    private void OnEnable()
+    {
+        laserModle.gameObject.SetActive(true);
     }
 
     private void OnDisable()
     {
+        laserModle.gameObject.SetActive(false);
         lineRenderer.enabled = false;
         beam.StopEffect();
         if (lazerLights != null)

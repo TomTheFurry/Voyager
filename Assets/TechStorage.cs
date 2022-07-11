@@ -282,6 +282,25 @@ public class TechStorage : MonoBehaviour
         TechEquip equip = getEquipByIdentifier(equipType);
         return techEquip(tech, equip, updateAttribute);
     }
+    // tech equip
+    public bool isEquipedLaser()
+    {
+        if (getEquip("ExternalDevice1") == getTechByIdentifier("Laser"))
+            return true;
+        if (getEquip("ExternalDevice2") == getTechByIdentifier("Laser"))
+            return true;
+        return false;
+    }
+    public int getSolarCellNum()
+    {
+        int num = 0;
+        if (getEquip("ExternalDevice1") == getTechByIdentifier("SolarBattery"))
+            ++num;
+        if (getEquip("ExternalDevice2") == getTechByIdentifier("SolarBattery"))
+            ++num;
+        return num;
+    }
+    // tech equip end
 
     public bool saveEquipChange()
     {

@@ -33,6 +33,7 @@ public class ShipModelInInterface : MonoBehaviour
         ShipModelChange shipModelChange = GetComponent<ShipModelChange>();
         if (shipModelChange != null)
         {
+            updatePos(TechStorage.instance.getEquip("Engine"));
             shipModelChange.onModelUpdate.AddListener(updatePos);
         }
     }
