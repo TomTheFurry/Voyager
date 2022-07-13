@@ -43,7 +43,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: 393e581a368ace7439ae9bb103910cef, type: 3}
+  m_Motion: {fileID: 1827226128182048838, guid: 6ddf675b211b8514d979731bbc96efba, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -178,7 +178,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SolarCell_1
+  m_Name: SolarCell_2
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -215,7 +215,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: 393e581a368ace7439ae9bb103910cef, type: 3}
+  m_Motion: {fileID: 1827226128182048838, guid: 6ddf675b211b8514d979731bbc96efba, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

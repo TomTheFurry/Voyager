@@ -67,6 +67,8 @@ public class ShipModelMaterialData : MonoBehaviour
     //material
     public ShipMaterial getMaterial(string identifier)
     {
+        if (identifier == "default")
+            return getMaterial(externalMaterial.defaultEquip);
         return getMaterial(TechStorage.instance.getTechByIdentifier(identifier));
     }
 
@@ -83,6 +85,8 @@ public class ShipModelMaterialData : MonoBehaviour
     //engine
     public shipEngine getEngine(string identifier)
     {
+        if (identifier == "default")
+            return getEngine(engine.defaultEquip);
         return getEngine(TechStorage.instance.getTechByIdentifier(identifier));
     }
 

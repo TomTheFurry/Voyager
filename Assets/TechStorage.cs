@@ -300,6 +300,14 @@ public class TechStorage : MonoBehaviour
             ++num;
         return num;
     }
+    public bool isEquipedServicing()
+    {
+        if (getEquip("ExternalDevice1") == getTechByIdentifier("SmallMagneticSatellite"))
+            return true;
+        if (getEquip("ExternalDevice2") == getTechByIdentifier("SmallMagneticSatellite"))
+            return true;
+        return false;
+    }
     // tech equip end
 
     public bool saveEquipChange()

@@ -654,6 +654,11 @@ MonoBehaviour:
     engine: {fileID: 3205199513444967547, guid: e5658e44b49ab9548a88ee116a52eeac, type: 3}
   engine: {fileID: 545985237}
   defaultEngine: {fileID: 919132149155446097, guid: 77d5af55ffffd7e46aabac26b30ae12b, type: 3}
+  numSolarBatterys:
+  - num: 1
+    battery: {fileID: 5213029733158869850, guid: 5cf0339b29b4b1f4d92e177ca399651b, type: 3}
+  - num: 2
+    battery: {fileID: 919132149155446097, guid: 6ddf675b211b8514d979731bbc96efba, type: 3}
 --- !u!1 &511994786
 GameObject:
   m_ObjectHideFlags: 0
