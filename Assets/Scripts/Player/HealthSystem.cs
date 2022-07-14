@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System;
 
 [RequireComponent(typeof(MovementControl2), typeof(PrefabSpawner))]
 public class HealthSystem : MonoBehaviour
@@ -32,6 +33,19 @@ public class HealthSystem : MonoBehaviour
         prefabSpawner = GetComponent<PrefabSpawner>();
     }
 
+    internal void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            prefabSpawner.Spawn(player.transform);
+            control2.spaceshipTerminated();
+            player.SetActive(false);
+            canvas.OnFail();
+            onDeath.Invoke();
+        }
+    }
+
     void Update()
     {
         if (textObj != null) textObj.text = "Health: " + health.ToString("F2") + " / " + maxHealth.ToString();
@@ -46,15 +60,7 @@ public class HealthSystem : MonoBehaviour
     public void RecordCollision(Collision collision) // Public facing function
     {
         float damage = collision.relativeVelocity.magnitude * healthPerForce;
-        health -= Mathf.Pow(damage, healthExpValue);
-        if (health <= 0)
-        {
-            prefabSpawner.Spawn(player.transform);
-            control2.spaceshipTerminated();
-            player.SetActive(false);
-            canvas.OnFail();
-            onDeath.Invoke();
-        }
+        TakeDamage(Mathf.Pow(damage, healthExpValue));
     }
 
     public void OnCheatHeal(InputValue value) //InputSystem event

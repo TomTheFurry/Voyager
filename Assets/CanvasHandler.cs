@@ -38,6 +38,7 @@ public class CanvasHandler : MonoBehaviour
     public GameObject failMenu;
     public GameObject hud;
     public BonusText bonusPopup;
+    public Timer timer;
 
     private void _pushMouseState()
     {

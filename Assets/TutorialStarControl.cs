@@ -19,7 +19,7 @@ public class TutorialStarControl : MonoBehaviour
         bonusTracker = FindObjectOfType<BonusTracker>(true);
         if (bonusTracker == null)
             throw new System.Exception("TutorialStarControl: BonusTracker not found");
-        timeTracker = FindObjectOfType<TimeTracker>(true); //TODO Make timeTracker class
+        timeTracker = FindObjectOfType<TimeTracker>(true);
         if (timeTracker == null)
             throw new System.Exception("TutorialStarControl: TimeTracker not found");
         hasStartRan = true;
@@ -68,7 +68,7 @@ public class TutorialStarControl : MonoBehaviour
         }
     }
 
-        private void OnEnable()
+    private void OnEnable()
     {
         if (hasStartRan) doUpdate(); else delayedRefresh = true;
     }

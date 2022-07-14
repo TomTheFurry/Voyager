@@ -2,33 +2,32 @@
 using System;
 using TMPro;
 
+[RequireComponent(typeof(MovementControl2))]
 public class TimeTracker : MonoBehaviour
 {
     public float deltaTime = 0;
     public bool isPaused = false;
-    public TextMeshProUGUI tmpText;
+    public float levelMaxTime = 0f;
+
+    private Timer timer;
+
+    void Start()
+    {
+        timer = FindObjectOfType<CanvasHandler>().timer;
+        timer.setTime(0);
+    }
 
     public void Update()
     {
-        if (!isPaused) deltaTime += Time.deltaTime; //TODO: Improve this???? Somehow?
-        if (tmpText != null)
+        if (isPaused) return;
+        deltaTime += Time.deltaTime;
+        timer.setTime(deltaTime, levelMaxTime);
+
+        if (levelMaxTime != 0f && deltaTime >= levelMaxTime)
         {
-            string formatedTime; //Format should be: 1:24
-            if (deltaTime < 60)
-            {
-                if (deltaTime < 10)
-                    formatedTime = "0:0" + Mathf.FloorToInt(deltaTime % 60);
-                else
-                    formatedTime = "0:" + Mathf.FloorToInt(deltaTime % 60);
-            }
-            else
-            {
-                if (deltaTime % 60 < 10)
-                    formatedTime = Mathf.FloorToInt(deltaTime / 60) + ":0" + Mathf.FloorToInt(deltaTime % 60);
-                else
-                    formatedTime = Mathf.FloorToInt(deltaTime / 60) + ":" + Mathf.FloorToInt(deltaTime % 60);
-            }
-            tmpText.text = formatedTime;
+            isPaused = true;
+            GetComponent<MovementControl2>().DisableSpaceshipInput();
+            FindObjectOfType<CanvasHandler>().OnFail();
         }
     }
 
@@ -36,5 +35,4 @@ public class TimeTracker : MonoBehaviour
     {
         return deltaTime;
     }
-
 }

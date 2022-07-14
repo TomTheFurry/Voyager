@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(LineRenderer), typeof(PrefabSpawner))]
 public class Lazer : MonoBehaviour
@@ -24,6 +25,8 @@ public class Lazer : MonoBehaviour
     public float perLightObjMaxDistance = 1;
     public float lightFlicker = 0.1f;
     public float lineFlicker = 0.01f;
+
+    public UnityEvent<GameObject> onDestroyObject;
 
     private void Start()
     {
@@ -97,6 +100,7 @@ public class Lazer : MonoBehaviour
                 layer.value, QueryTriggerInteraction.Ignore);
             if (hit.collider != null) {
                 prefab.Spawn(hit.transform);
+                onDestroyObject.Invoke(hit.collider.gameObject);
                 Destroy(hit.collider.gameObject);
                 SetBeam(origin.position, hit.point);
             } else

@@ -1956,6 +1956,68 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!1 &1729532953162773072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7488527022280155881}
+  - component: {fileID: 87961632420690214}
+  - component: {fileID: 9015785265898790606}
+  m_Layer: 5
+  m_Name: TimerBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7488527022280155881
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729532953162773072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5830346312218777257}
+  m_Father: {fileID: 7733664546736002906}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0.000061035156}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.50000006, y: 0.4999999}
+--- !u!114 &87961632420690214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729532953162773072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2ad4211b4f6264f9a4d7332e18a49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 6788710538448594805}
+  maxValue: 1
+  currentValue: 1
+  minValue: 0
+--- !u!222 &9015785265898790606
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729532953162773072}
+  m_CullTransparentMesh: 1
 --- !u!1 &1843991682047328607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,6 +3225,78 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Texture: {fileID: 2800000, guid: a380696ac88dd9243a2193e87e891bb5, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!1 &4963437201451478821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5830346312218777257}
+  - component: {fileID: 5816857746920438840}
+  - component: {fileID: 6788710538448594805}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5830346312218777257
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963437201451478821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7488527022280155881}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0006866455, y: -0.000015258789}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.000000059308952, y: 0.49999994}
+--- !u!222 &5816857746920438840
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963437201451478821}
+  m_CullTransparentMesh: 1
+--- !u!114 &6788710538448594805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963437201451478821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: b7cf4a9d5cc315441bdc2d173f726365, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5135,7 +5269,7 @@ GameObject:
   - component: {fileID: 7733664546736002906}
   - component: {fileID: 7733664546736002900}
   - component: {fileID: 7733664546736002907}
-  - component: {fileID: 7733664546736002901}
+  - component: {fileID: 6357279032072217192}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -5156,6 +5290,7 @@ RectTransform:
   m_Children:
   - {fileID: 7733664546212952786}
   - {fileID: 7733664547409392422}
+  - {fileID: 7488527022280155881}
   m_Father: {fileID: 6766243396235962891}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5202,7 +5337,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7733664546736002901
+--- !u!114 &6357279032072217192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5211,12 +5346,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7733664546736002905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ba498d6df7b343a88f340287417f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 00b53bf53e78b8840a279e90527298e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deltaTime: 0
-  isPaused: 0
-  tmpText: {fileID: 7733664546212952787}
+  timeText: {fileID: 7733664546212952787}
+  timeDisabledText: {fileID: 7733664547409392423}
+  timeBar: {fileID: 87961632420690214}
 --- !u!1 &7733664546750873988
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,7 +6168,7 @@ GameObject:
   - component: {fileID: 7733664547409392416}
   - component: {fileID: 7733664547409392423}
   m_Layer: 5
-  m_Name: TimeBarText
+  m_Name: TimerDisabledText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6770,6 +6905,7 @@ MonoBehaviour:
   failMenu: {fileID: 214302757744152462}
   hud: {fileID: 8559103177680444337}
   bonusPopup: {fileID: 6905436545671837717}
+  timer: {fileID: 6357279032072217192}
 --- !u!1 &7733664547712567908
 GameObject:
   m_ObjectHideFlags: 0
