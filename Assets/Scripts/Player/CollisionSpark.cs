@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionSpark : MonoBehaviour
 {
     public ParticleSystem particle;
+    ParticleSystem current = null;
 
     // Update is called once per frame
     void Update()

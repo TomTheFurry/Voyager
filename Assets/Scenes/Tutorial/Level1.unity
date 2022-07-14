@@ -652,6 +652,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3758538854293726031, guid: d3caaade1f697374d82ddc52a95bd053, type: 3}
+--- !u!1 &543415743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8482502018204523834, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
+  m_PrefabInstance: {fileID: 1145801187}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &543415745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543415743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d2e000effa09d4e9de1ef6b89310db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &547649985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a41de6ed2a4ceb42b60c43b9bc493f0, type: 3}
@@ -1085,9 +1102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55457b6e0d1615541a763eb94fd84424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+  text: {fileID: 2074076072}
   lazer: {fileID: 596967743}
   targetCount: 200
+  count: 0
 --- !u!1 &858028353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,7 +1531,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  minSpeed: 10
+  minSpeed: 10000000
 --- !u!65 &1122936656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1621,6 +1639,30 @@ PrefabInstance:
     - target: {fileID: 7733664547711757605, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
       propertyPath: m_Name
       value: InLevelCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482502017772281604, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
+      propertyPath: m_text
+      value: Destroy 200 Sapce Junks
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482502017971982013, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
+      propertyPath: text
+      value: Complete under 2.5 Minutes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482502018094021267, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
+      propertyPath: text
+      value: Destroy 200 Sapce Junks
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482502018385197046, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
+      propertyPath: m_text
+      value: Reach The Finish in 5 minutes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482502018426567908, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
+      propertyPath: m_text
+      value: Complete under 2.5 Minutes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482502019005180707, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
+      propertyPath: text
+      value: Reach The Finish in 5 minutes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
@@ -1775,32 +1817,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1246084759 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 560941333062440983, guid: f2dab8dab0496f44bb21f5687242435c, type: 3}
-  m_PrefabInstance: {fileID: 1524913039}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1246084760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246084759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ba498d6df7b343a88f340287417f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deltaTime: 0
-  isPaused: 0
-  levelMaxTime: 600
 --- !u!114 &1246084761 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 560941333062440978, guid: f2dab8dab0496f44bb21f5687242435c, type: 3}
   m_PrefabInstance: {fileID: 1524913039}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246084759}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 832e22f382c3f4444a7d70e6e74f5dab, type: 3}

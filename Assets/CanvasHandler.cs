@@ -60,6 +60,7 @@ public class CanvasHandler : MonoBehaviour
             Debug.LogWarning("OnFail already called before!");
             return;
         }
+        if (successMenu.activeInHierarchy) return;
         _pushMouseState();
         failMenu.SetActive(true);
         hud.SetActive(false);

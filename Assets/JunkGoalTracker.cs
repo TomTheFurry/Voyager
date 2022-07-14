@@ -9,7 +9,7 @@ public class JunkGoalTracker : MonoBehaviour
     public Lazer lazer;
 
     public int targetCount = 200;
-    private int count = 0;
+    public int count = 0;
     
     private void Start()
     {

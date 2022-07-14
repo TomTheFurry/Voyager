@@ -3,12 +3,14 @@ using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using System;
 
 [RequireComponent(typeof(FuelControl), typeof(HealthSystem))]
 public class MovementControl2 : MonoBehaviour
 {
     private FuelControl fuelControl;
     private HealthSystem healthSystem;
+    private bool isSlowingPlayer = false;
 
     private void OnEnable()
     {
@@ -27,6 +29,11 @@ public class MovementControl2 : MonoBehaviour
             Cursor.visible = true;
             mouseLocked = false;
         }
+    }
+
+    public void SlowPlayer()
+    {
+        isSlowingPlayer = true;
     }
 
     // Child Object. Requires a Rigidbody component
@@ -247,7 +254,22 @@ public class MovementControl2 : MonoBehaviour
         setAllEmissionHookups(moveForce);
         fuelControl.RecordForce(moveForce);
         onForceApplied.Invoke(moveForce);
-            
+
+    }
+    private void quickStop()
+    {
+        Vector3 stopForce = Vector3.zero;
+        // Stop
+        stopForce = -childObject.GetComponent<Rigidbody>().velocity;
+        stopForce = childObject.transform.InverseTransformVector(stopForce);
+        stopForce *= 0.1f;
+        // Note: This is not needed for now because the value is already scaled to maxForce
+        childObject.GetComponent<Rigidbody>().AddForce(childObject.transform.TransformVector(stopForce),
+            ForceMode.Acceleration);
+        // Send event OnForceApplied for other scripts to use if needed
+        setAllEmissionHookups(stopForce);
+        onForceApplied.Invoke(stopForce);
+
     }
 
     private void updateRotation()
@@ -392,15 +414,18 @@ public class MovementControl2 : MonoBehaviour
             return;
         }
 
+
         float inputZoom = _inputZoom;
         _inputZoom = 0f;
 
         float inputStop = input.actions["Stop"].ReadValue<float>();
-
+        
         qeAsRoll = input.actions["Focus"].ReadValue<float>() != 1.0f;
 
         if (!readSpaceshipInput)
         {
+            if (isSlowingPlayer) quickStop();
+
             snapPositionToChild();
             //updateRotation();
             updateZoom(mouseLocked ? inputZoom : 0);

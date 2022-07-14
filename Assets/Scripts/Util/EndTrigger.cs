@@ -7,11 +7,25 @@ public class EndTrigger : MonoBehaviour
 {
     public UnityEvent onEndTrigger;
     public float minSpeed = float.MaxValue;
+    MovementControl2 control;
+    CanvasHandler canvas;
+
+    private void Start()
+    {
+        control = FindObjectOfType<MovementControl2>();
+        canvas = FindObjectOfType<CanvasHandler>();
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player" && other.attachedRigidbody.velocity.magnitude < minSpeed) {
             onEndTrigger.Invoke();
             enabled = false;
+
+            control.DisableSpaceshipInput();
+            control.SlowPlayer();
+            canvas.OnSuccess();
+
         }
     }
 
