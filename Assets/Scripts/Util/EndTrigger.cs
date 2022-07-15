@@ -16,16 +16,17 @@ public class EndTrigger : MonoBehaviour
         canvas = FindObjectOfType<CanvasHandler>();
     }
 
+
+    private bool triggered = false;
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && other.attachedRigidbody.velocity.magnitude < minSpeed) {
+        if (other.tag == "Player" && other.attachedRigidbody.velocity.magnitude < minSpeed&&
+            !triggered) {
             onEndTrigger.Invoke();
-            enabled = false;
-
+            triggered = true;
             control.DisableSpaceshipInput();
             control.SlowPlayer();
             canvas.OnSuccess();
-
         }
     }
 

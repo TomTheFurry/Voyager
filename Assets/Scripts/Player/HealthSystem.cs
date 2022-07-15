@@ -35,6 +35,7 @@ public class HealthSystem : MonoBehaviour
 
     internal void TakeDamage(float damage)
     {
+        if (health <= 0) return;
         health -= damage;
         if (health <= 0)
         {
@@ -48,7 +49,9 @@ public class HealthSystem : MonoBehaviour
 
     void Update()
     {
-        if (textObj != null) textObj.text = "Health: " + health.ToString("F2") + " / " + maxHealth.ToString();
+        string langText = LangSystem.GetLang("UI", "HudHealthTip");
+
+        if (textObj != null) textObj.text = langText + " " + health.ToString("F2") + " / " + maxHealth.ToString();
         if (bar != null)
         {
             bar.SetValue(health);
@@ -59,6 +62,7 @@ public class HealthSystem : MonoBehaviour
     
     public void RecordCollision(Collision collision) // Public facing function
     {
+        if (health <= 0) return;
         float damage = collision.relativeVelocity.magnitude * healthPerForce;
         TakeDamage(Mathf.Pow(damage, healthExpValue));
     }

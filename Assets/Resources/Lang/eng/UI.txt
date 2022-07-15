@@ -1,0 +1,11 @@
+`~OutOfBounds
+Out Of Bounds!
+`~HudFuelTip
+Fuel:
+`~HudHealthTip
+Health:
+`~HudSpeedTip
+Speed:
+`~HudSpeedTipUnit
+m/s
+

@@ -12,6 +12,7 @@ public class TextFlash : MonoBehaviour
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
+        text.text = LangSystem.parseText(text.text);
     }
 
     void Update()

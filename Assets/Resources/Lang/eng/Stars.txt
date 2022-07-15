@@ -1,0 +1,12 @@
+`~Level0Star0
+Reach The Finish
+`~Level0Star1
+Collect All The Bonus Stars
+`~Level0Star2
+Complete The Level In Under 5 Minutes
+`~Level1Star0
+Reach The Finish In 4 Minutes
+`~Level1Star1
+Destroy 200 Space Junks
+`~Level1Star2
+Complete The Level In Under 2 Minutes

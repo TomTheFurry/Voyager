@@ -11,6 +11,10 @@ public class Level1StarControl : MonoBehaviour
     bool hasStartRan = false;
     bool delayedRefresh = false;
 
+    public Scoreboard scoreboard;
+    const string langFile = "Stars";
+    const string langPrefix = "Level1Star";
+
     void Start()
     {
         Debug.Log("Level1StarControl Start");
@@ -22,6 +26,9 @@ public class Level1StarControl : MonoBehaviour
         timeTracker = FindObjectOfType<TimeTracker>(true);
         if (timeTracker == null)
             throw new System.Exception("Level1StarControl: TimeTracker not found");
+        childStars[0].text = LangSystem.GetLang(langFile, langPrefix + "0");
+        childStars[1].text = LangSystem.GetLang(langFile, langPrefix + "1");
+        childStars[2].text = LangSystem.GetLang(langFile, langPrefix + "2");
         hasStartRan = true;
     }
 
@@ -51,12 +58,15 @@ public class Level1StarControl : MonoBehaviour
                 doneStars[i] = true;
             }
         }
+        float time = timeTracker.GetTime();
 
-        int newStars = PlayerData.AddLevelData(1, doneStars, timeTracker.GetTime());
+        int newStars = PlayerData.AddLevelData(1, doneStars, time);
         PlayerData.GetData().stars += newStars;
         // TODO: Score based new stars
-        Debug.Log("Level1StarControl:\n  New stars: " + newStars + "\n  Time: " + timeTracker.GetTime());
+        Debug.Log("Level1StarControl:\n  New stars: " + newStars + "\n  Time: " + time);
         PlayerData.Save();
+
+        scoreboard.DisplayUpdate(time);
     }
 
     private void Update()
@@ -70,7 +80,8 @@ public class Level1StarControl : MonoBehaviour
 
     private void OnEnable()
     {
-        if (hasStartRan) doUpdate(); else delayedRefresh = true;
+        if (hasStartRan) doUpdate();
+        else delayedRefresh = true;
     }
 
     public void OnDisable()

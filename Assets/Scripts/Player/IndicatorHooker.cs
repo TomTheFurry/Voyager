@@ -20,6 +20,8 @@ public class IndicatorHooker : MonoBehaviour
         Vector3 localVelocity = transform.InverseTransformVector(GetComponent<Rigidbody>().velocity);
         indicator.setValue(localVelocity);
         speedBar.SetValue(localVelocity.magnitude);
-        speedBarTooltip.text = string.Format("Speed: {0:0} m/s", localVelocity.magnitude);
+        string langStr = LangSystem.GetLang("UI", "HudSpeedTip");
+        string langStr2 = LangSystem.GetLang("UI", "HudSpeedTipUnit");
+        speedBarTooltip.text = langStr + " " + string.Format("{0:0} ", localVelocity.magnitude) + langStr2;
     }
 }

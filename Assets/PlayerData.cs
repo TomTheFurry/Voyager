@@ -81,6 +81,9 @@ public class PlayerData
     {
         Debug.Log("Reseting all data...");
         PlayerPrefs.DeleteKey("PlayerData");
+        activeData = new PlayerData();
+        activeData.techData = new TechStorage.TechData();
+        activeData.stars = 0;
     }
 
     public static PlayerData GetData()

@@ -11,6 +11,10 @@ public class TutorialStarControl : MonoBehaviour
     bool hasStartRan = false;
     bool delayedRefresh = false;
 
+    public Scoreboard scoreboard;
+    const string langFile = "Stars";
+    const string langPrefix = "Level0Star";
+
     void Start()
     {
         Debug.Log("TutorialStarControl Start");
@@ -22,6 +26,9 @@ public class TutorialStarControl : MonoBehaviour
         timeTracker = FindObjectOfType<TimeTracker>(true);
         if (timeTracker == null)
             throw new System.Exception("TutorialStarControl: TimeTracker not found");
+        childStars[0].text = LangSystem.GetLang(langFile, langPrefix+"0");
+        childStars[1].text = LangSystem.GetLang(langFile, langPrefix + "1");
+        childStars[2].text = LangSystem.GetLang(langFile, langPrefix + "2");
         hasStartRan = true;
     }
 
@@ -51,12 +58,15 @@ public class TutorialStarControl : MonoBehaviour
                 doneStars[i] = true;
             }
         }
+        float time = timeTracker.GetTime();
 
-        int newStars = PlayerData.AddLevelData(0, doneStars, timeTracker.GetTime());
+        int newStars = PlayerData.AddLevelData(0, doneStars, time);
         PlayerData.GetData().stars += newStars;
         // TODO: Score based new stars
-        Debug.Log("TutorialStarControl:\n  New stars: " + newStars + "\n  Time: " + timeTracker.GetTime());
+        Debug.Log("TutorialStarControl:\n  New stars: " + newStars + "\n  Time: " + time);
         PlayerData.Save();
+
+        scoreboard.DisplayUpdate(time);
     }
 
     private void Update()

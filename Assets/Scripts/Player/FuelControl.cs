@@ -30,7 +30,8 @@ public class FuelControl : MonoBehaviour
 
     void Update()
     {
-        if (tooltip != null) tooltip.text = "Fuel: " + fuel.ToString("F2") + " / " + maxFuel.ToString();
+        string langString = LangSystem.GetLang("UI","HudFuelTip");
+        if (tooltip != null) tooltip.text = langString + " " + fuel.ToString("F2") + " / " + maxFuel.ToString();
         if (bar != null)
         {
             bar.SetValue(fuel);

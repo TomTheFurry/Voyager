@@ -29,11 +29,14 @@ public class Star : MonoBehaviour
             }
         }
     }
-    public string text;
+    public string text {
+        get { return tmpText.text; }
+        set { tmpText.text = value; }
+    }
+
 
     public void Start() {
         childImg = transform.GetComponentInChildren<Image>();
         tmpText = transform.GetComponentInChildren<TextMeshProUGUI>();
-        tmpText.text = LangSystem.parseText(text);
     }
 }
