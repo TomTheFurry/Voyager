@@ -44,10 +44,9 @@ public class TechStorage : MonoBehaviour
         public EquipPair[] equips;
     }
 
-
     Dictionary<Tech,TechState> techTable; // Hashtable<Tech,TechState>
     Dictionary<TechEquip, EquipState> equipTable; // Hashtable<TechEquip,EquipState>
-    Dictionary<string, float> equipAttribute; // Hashtable<AttributeName, Attribute>
+    public Dictionary<string, float> equipAttribute; // Hashtable<AttributeName, Attribute>
 
     public TechData collectTechData()
     {
