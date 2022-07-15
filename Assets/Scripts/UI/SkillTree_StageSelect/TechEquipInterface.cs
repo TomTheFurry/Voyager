@@ -7,7 +7,6 @@ using UnityEngine.InputSystem.UI;
 
 public class TechEquipInterface : MonoBehaviour
 {
-    public bool canRepeat;
     public bool canEmpty;
     public int verticalSpacing = 62;
     public int horizontalSpacing = 74;
@@ -44,14 +43,13 @@ public class TechEquipInterface : MonoBehaviour
 
         GoBackButton.triggerEnable = false;
 
-        canRepeat = TechEquipInterfaceController.instance.canRepeat;
         canEmpty = TechEquipInterfaceController.instance.canEmpty;
         btn = transform.GetChild(0).GetComponent<Button>();
         img = transform.GetChild(1).gameObject;
         btn.onClick.AddListener(closeInterface);
 
         type = TechEquipInterfaceController.type;
-        teches = TechStorage.instance.techCanEquip(type, canRepeat, canEmpty);
+        teches = TechStorage.instance.techCanEquip(type, canEmpty);
 
         iconHeight = techIconPrefab.transform.GetComponent<RectTransform>().sizeDelta.y;
         lineNum = (int)Mathf.Ceil(((float)teches.Count) / 3);

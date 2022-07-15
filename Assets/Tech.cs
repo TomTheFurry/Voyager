@@ -35,6 +35,7 @@ public class Tech : MonoBehaviour, IComparable
 
     public Dictionary<string, Attribute> equipAttribute = new Dictionary<string, Attribute>();
 
+    public bool canRepeat = true;
     public bool defaultUnlock = false;
     public string identifier;
     public string techName;
