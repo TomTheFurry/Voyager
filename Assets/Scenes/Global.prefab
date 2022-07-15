@@ -61,6 +61,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 5
   collisionDamagePercentage: 1
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Bipropellant Rocket
@@ -138,6 +139,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Nuclear Fusion Battery
@@ -215,6 +217,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 0
   defaultUnlock: 0
   identifier: 
   techName: Laser
@@ -291,6 +294,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 1
   identifier: 
   techName: Empty
@@ -423,6 +427,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Atomic Battery
@@ -837,6 +842,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 1
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Carbon Fiber
@@ -914,6 +920,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 1
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Fusion Rocket
@@ -992,6 +999,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: 3D Printer
@@ -1069,6 +1077,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 0
   defaultUnlock: 0
   identifier: 
   techName: Maintenance System
@@ -1145,6 +1154,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 5
   collisionDamagePercentage: 1
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Tripropellant Rocket
@@ -1252,6 +1262,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: -10
   collisionDamagePercentage: 1
+  canRepeat: 0
   defaultUnlock: 0
   identifier: 
   techName: Small Magnetic Satellite
@@ -1328,6 +1339,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Ablation Material
@@ -1405,6 +1417,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 1
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Aerogel
@@ -1482,6 +1495,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 1
   identifier: 
   techName: Monopropellant Rocket
@@ -1558,6 +1572,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Ion Thruster
@@ -1634,6 +1649,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: VASMIR Engine
@@ -1711,6 +1727,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 1
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Antimatter Rocket
@@ -1788,6 +1805,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Titanium Alloy
@@ -1865,6 +1883,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Solar Battery
@@ -1941,6 +1960,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 5
   collisionDamagePercentage: 1
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Reinforced Carbon-carbon
@@ -2073,6 +2093,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: Nuclear Thermal Rocket
@@ -2152,6 +2173,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 0
   collisionDamagePercentage: 0
+  canRepeat: 1
   defaultUnlock: 1
   identifier: 
   techName: Stainless Steel
@@ -2342,6 +2364,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: 10
   collisionDamagePercentage: 1
+  canRepeat: 1
   defaultUnlock: 0
   identifier: 
   techName: HRSI
@@ -2419,6 +2442,7 @@ MonoBehaviour:
   spinningSpeedPercentage: 0
   collisionDamage: -5
   collisionDamagePercentage: 1
+  canRepeat: 0
   defaultUnlock: 0
   identifier: 
   techName: Metal Magnetic Mesh

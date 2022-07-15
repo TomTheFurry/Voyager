@@ -329,12 +329,13 @@ public class TechStorage : MonoBehaviour
         return true;
     }
 
-    public List<Tech> techCanEquip(string equipType, bool canRepeat, bool CanEmpty)
+    public List<Tech> techCanEquip(string equipType, bool CanEmpty)
     {
         List<Tech> techCanEquip = new List<Tech>();
         TechEquip techEquip = getEquipByIdentifier(equipType);
         foreach (Tech tech in techEquip.teches)
         {
+            bool canRepeat = tech.canRepeat;
             if (!isTechUnlocked(tech))
                 continue;
             if (!canRepeat && getEquipByTech(tech) != null)

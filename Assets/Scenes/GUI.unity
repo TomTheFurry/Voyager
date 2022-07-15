@@ -9554,7 +9554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309e33dddb598a4f9b829022e638eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 0
   canEmpty: 1
 --- !u!1 &551408096
 GameObject:
@@ -16338,7 +16337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309e33dddb598a4f9b829022e638eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 1
   canEmpty: 0
 --- !u!1 &1029938864
 GameObject:
@@ -17635,7 +17633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26cdbb947bd5234db158c42901504a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 0
   canEmpty: 0
   selectedTechInterfacePrefab: {fileID: 7751329721458780292, guid: 0292c0e007ed1e44ba80137d4adb468b, type: 3}
   onResetEquip:
@@ -19460,7 +19457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309e33dddb598a4f9b829022e638eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 0
   canEmpty: 1
 --- !u!1 &1286688996
 GameObject:
@@ -22958,7 +22954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309e33dddb598a4f9b829022e638eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 1
   canEmpty: 1
 --- !u!1 &1507740641
 GameObject:
@@ -25826,7 +25821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309e33dddb598a4f9b829022e638eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 1
   canEmpty: 0
 --- !u!1 &1669399317
 GameObject:
@@ -27574,7 +27568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e309e33dddb598a4f9b829022e638eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 1
   canEmpty: 0
 --- !u!1 &1776453811
 GameObject:
@@ -34583,6 +34576,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 461077896, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: numSolarBatterys.Array.data[1].battery
+      value: 
+      objectReference: {fileID: 3494805247426857312, guid: 8dd721901a50de241ac0bbaf07976cfa, type: 3}
     - target: {fileID: 6081419982211131794, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
       propertyPath: mainMenu
       value: 
