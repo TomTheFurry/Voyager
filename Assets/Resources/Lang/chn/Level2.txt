@@ -1,0 +1,18 @@
+`~Voyager_P1
+航行者1號於1977年發射升空，部分功能截至目前依然正常運作，並持續與NASA的深空網絡通訊。
+`~Voyager_P2
+它是有史以來距離地球最遠的人造飛行器，也是第一個離開太陽系的人造飛行器。
+`~Voyager_P3
+受惠於幾次的引力加速，航行者1號的飛行速度比現有任何一個飛行器都要快些，這使得較它早兩星期發射的姊妹船航行者2號永遠都不會超越它。
+`~Voyager_P4
+它的主要任務在1979年經過木星系統、1980年經過土星系統之後，結束於1980年。
+`~Voyager_P5
+它也是第一個提供了木星、土星以及其衛星詳細相片的探測器。2012年，航行者1號成為第一個穿越太陽圈並進入星際媒介的宇宙飛船。
+`~Start_P1
+In this level, you are required to use the several planets around the path to do gravitational accelerations and redirections.
+`~Start_P2
+There are multiple optional checkpoints guiding you though the path. Be careful not to stay too far away fronm it!
+`~Start_P3
+Additionally, try to accelerate as fast as possible and hit the center of the goal to get bonus stars.
+`~Start_P4
+You can also find one hidden object out there which you can fly past as a hard challange!

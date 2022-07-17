@@ -1,0 +1,18 @@
+`~Voyager_P1
+Voyager 1 was launched in 1977, and some of its functions are still functional to this day, and it continues to communicate with NASA's Deep Space Network.
+`~Voyager_P2
+It is the farthest man-made vehicle ever to travel from Earth, and the first to leave the solar system.
+`~Voyager_P3
+Thanks to several gravitational accelerations, Voyager 1 is traveling faster than any existing vehicle, preventing its sister ship Voyager 2, which launched two weeks earlier, from ever surpassing it.
+`~Voyager_P4
+Its main mission ended in 1980 after passing through the Jupiter system in 1979 and the Saturn system in 1980. It was also the first probe to provide detailed pictures of Jupiter, Saturn and their moons.
+`~Voyager_P5
+In 2012, Voyager 1 became the first spacecraft to cross the heliosphere and into the interstellar medium.
+`~Start_P1
+In this level, you are required to use the several planets around the path to do gravitational accelerations and redirections.
+`~Start_P2
+There are multiple optional checkpoints guiding you though the path. Be careful not to stay too far away fronm it!
+`~Start_P3
+Additionally, try to accelerate as fast as possible and hit the center of the goal to get bonus stars.
+`~Start_P4
+You can also find one hidden object out there which you can fly past as a hard challange!
