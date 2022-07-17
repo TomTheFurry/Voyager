@@ -16,6 +16,8 @@ public class EndTrigger : MonoBehaviour
         canvas = FindObjectOfType<CanvasHandler>();
     }
 
+    public void SetTriggered() { triggered = true; }
+
 
     private bool triggered = false;
     private void OnTriggerStay(Collider other)
