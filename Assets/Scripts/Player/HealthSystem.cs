@@ -33,7 +33,7 @@ public class HealthSystem : MonoBehaviour
         prefabSpawner = GetComponent<PrefabSpawner>();
     }
 
-    internal void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         if (health <= 0) return;
         health -= damage;

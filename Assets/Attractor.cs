@@ -22,6 +22,9 @@ public class Attractor : MonoBehaviour
                 Vector3 direction = transform.position - rb.position;
                 float distance = direction.magnitude;
                 float force = attractionForce / (distance * distance);
+
+                
+
                 rb.AddForce(direction.normalized * force);
             }
         }

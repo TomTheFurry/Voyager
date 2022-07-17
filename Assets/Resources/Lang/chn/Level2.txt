@@ -9,10 +9,10 @@
 `~Voyager_P5
 它也是第一個提供了木星、土星以及其衛星詳細相片的探測器。2012年，航行者1號成為第一個穿越太陽圈並進入星際媒介的宇宙飛船。
 `~Start_P1
-In this level, you are required to use the several planets around the path to do gravitational accelerations and redirections.
+在這個關卡中，您需要使用路徑上周圍的幾個行星來進行重力加速和重定向。
 `~Start_P2
-There are multiple optional checkpoints guiding you though the path. Be careful not to stay too far away fronm it!
+會有多個可選檢查點引導您通過路徑。小心不要離它太遠！
 `~Start_P3
-Additionally, try to accelerate as fast as possible and hit the center of the goal to get bonus stars.
+此外，嘗試盡可能快地加速並擊中目標的中心以獲得獎勵星星。
 `~Start_P4
-You can also find one hidden object out there which you can fly past as a hard challange!
+您還可以在那裡找到一個隱藏的物體，您可以飛過去作為一項艱鉅的挑戰！
