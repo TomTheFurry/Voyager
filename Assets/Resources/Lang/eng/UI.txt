@@ -82,3 +82,5 @@ Fuel Consuption
 Speed
 `~AttributeSpinningSpeed
 Spinning speed
+`~Default
+Default

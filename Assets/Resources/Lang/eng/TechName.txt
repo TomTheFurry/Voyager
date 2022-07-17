@@ -1,0 +1,48 @@
+`~TechStainlessSteel
+Stainless Steel
+`~TechTitaniumAlloy
+Titanium Alloy
+`~TechHRSI
+HRSI
+`~TechAblationMaterial
+Ablation Material
+`~TechReinforcedCarbon-carbon
+Reinforced Carbon-carbon
+`~TechCarbonFiber
+Carbon Fiber
+`~TechAerogel
+Aerogel
+`~TechMonopropellantRocket
+Monopropellant Rocket
+`~TechBipropellantRocket
+Bipropellant Rocket
+`~TechTripropellantRocket
+Tripropellant Rocket
+`~TechIonThruster
+Ion Thruster
+`~TechVASMIREngine
+VASMIR Engine
+`~TechNuclearThermalRocket
+Nuclear Thermal Rocket
+`~TechFusionRocket
+Fusion Rocket
+`~TechAntimatterRocket
+Antimatter Rocket
+`~TechAtomicBattery
+Atomic Battery
+`~TechNuclearFusionBattery
+Nuclear Fusion Battery
+`~Tech3DPrinter
+3D Printer
+`~TechMetalMagneticMesh
+Metal Magnetic Mesh
+`~TechSolarBattery
+Solar Battery
+`~TechLaser
+Laser
+`~TechSmallMagneticSatellite
+Small Magnetic Satellite
+`~TechMaintenanceSystem
+Maintenance System
+`~TechEmptyTech
+Unequip

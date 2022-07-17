@@ -82,3 +82,5 @@ Resume
 速度
 `~AttributeSpinningSpeed
 旋轉速度
+`~Default
+默認

@@ -47,6 +47,7 @@ public class Tech : MonoBehaviour, IComparable
     public void Start()
     {
         if (identifier == null || identifier.Length == 0) identifier = gameObject.name;
+        techName = LangSystem.GetLang("TechName", "Tech" + identifier);
 
         initTech();
     }
@@ -79,7 +80,7 @@ public class Tech : MonoBehaviour, IComparable
                 isPercentage = speedPercentage
             });
         if (spinningSpeed != 0)
-            equipAttribute.Add("Spinning speed", new Attribute()
+            equipAttribute.Add("Spinning Speed", new Attribute()
             {
                 attribute = spinningSpeed,
                 isPercentage = spinningSpeedPercentage
@@ -118,11 +119,12 @@ public class Tech : MonoBehaviour, IComparable
         foreach (KeyValuePair<string, Attribute> equipAttribute in equipAttributes)
         {
             Attribute attribute = equipAttribute.Value;
-            desc.Add(equipAttribute.Key + " " + getAttributeDescString(attribute.attribute, attribute.isPercentage));
+            desc.Add(LangSystem.GetLang("UI", "Attribute" + equipAttribute.Key.Replace(" ", "")) + 
+                " " + getAttributeDescString(attribute.attribute, attribute.isPercentage));
         }
 
         if (desc.Count == 0)
-            desc.Add("Default");
+            desc.Add(LangSystem.GetLang("UI", "Default"));
 
         return desc.ToArray();
     }
