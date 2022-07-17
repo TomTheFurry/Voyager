@@ -6,8 +6,8 @@ using TMPro;
 
 public class Star : MonoBehaviour
 {
-    private Image childImg;
-    private TextMeshProUGUI tmpText;
+    private Image childImg = null;
+    private TextMeshProUGUI tmpText = null;
 
     public Sprite completeStar;
     public Sprite incompleteStar;
@@ -15,28 +15,32 @@ public class Star : MonoBehaviour
     {
         get
         {
-            return childImg.sprite == completeStar;
+            return getImg().sprite == completeStar;
         }
         set
         {
             if (value)
             {
-                childImg.sprite = completeStar;
+                getImg().sprite = completeStar;
             }
             else
             {
-                childImg.sprite = incompleteStar;
+                getImg().sprite = incompleteStar;
             }
         }
     }
     public string text {
-        get { return tmpText.text; }
-        set { tmpText.text = value; }
+        get { return getText().text; }
+        set { getText().text = LangSystem.parseText(value); }
     }
 
-
-    public void Start() {
-        childImg = transform.GetComponentInChildren<Image>();
-        tmpText = transform.GetComponentInChildren<TextMeshProUGUI>();
+    private TextMeshProUGUI getText() {
+        if (tmpText == null) tmpText = transform.GetComponentInChildren<TextMeshProUGUI>();
+        return tmpText;
+    }
+    private Image getImg()
+    {
+        if (childImg == null) childImg = transform.GetComponentInChildren<Image>();
+        return childImg;
     }
 }

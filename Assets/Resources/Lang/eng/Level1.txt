@@ -1,0 +1,16 @@
+`~Start_P1
+In this level, your main goal is to reach the end though a field of space junks.
+`~Start_P2
+You can also challange yourself by finding and reaching the two special space objects located inside the field.
+`~Start_P3
+Additionally, if you have <b>Laser</b> equiped, you should try and destroy 200 junks. Be careful with your fuel level!
+`~JWST_P1
+The James Webb Space Telescope is an infrared space telescope that has been launched. This is the successor to the Hubble Space Telescope and the Spitzer Space Telescope.
+`~JWST_P2
+It is designed to provide higher infrared resolution and sensitivity than the Hubble Space Telescope, observing objects 100 times less bright than the faintest objects detected by Hubble.
+`~JWST_P3
+This will enable a wide range of studies in astronomy and cosmology, such as observations of some of the oldest and most distant objects and events in the universe,
+`~JWST_P4
+as well as detailed atmospheric signatures of potentially habitable exoplanets.
+`~GPS_P1
+GPS
