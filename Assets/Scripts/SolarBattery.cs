@@ -8,10 +8,10 @@ using UnityEngine.InputSystem.UI;
 public class SolarBattery : MonoBehaviour
 {
     public bool openWhenStart = false;
+    public InputActionReference[] actionSkills;
 
     private Animator anim;
-    private InputActionReference actionPlayer;
-    private InputActionReference actionUi;
+    
 
     private float timer = 0f;
     private void Start()
@@ -20,12 +20,8 @@ public class SolarBattery : MonoBehaviour
 
         //transform.Rotate(new Vector3(0, -45f, 0), Space.Self);
         // adding
-        actionPlayer = new InputActionReference();
-        actionUi = new InputActionReference();
-        actionPlayer.Set(FindObjectOfType<InputSystemUIInputModule>().actionsAsset.FindActionMap("Player").FindAction("Skill"));
-        actionUi.Set(FindObjectOfType<InputSystemUIInputModule>().actionsAsset.FindActionMap("UI").FindAction("Skill"));
-        actionPlayer.action.started += _onClick;
-        actionUi.action.started += _onClick;
+        foreach (InputActionReference actionSkill in actionSkills)
+            actionSkill.action.performed += _onClick;
         // adding end
 
         if (openWhenStart)
@@ -44,8 +40,8 @@ public class SolarBattery : MonoBehaviour
 
     private void OnDestroy()
     {
-        actionPlayer.action.started -= _onClick;
-        actionUi.action.started -= _onClick;
+        foreach (InputActionReference actionSkill in actionSkills)
+            actionSkill.action.performed -= _onClick;
     }
 
     public void _onClick(InputAction.CallbackContext cc)

@@ -46,7 +46,13 @@ public class TechStorage : MonoBehaviour
 
     Dictionary<Tech,TechState> techTable; // Hashtable<Tech,TechState>
     Dictionary<TechEquip, EquipState> equipTable; // Hashtable<TechEquip,EquipState>
-    public Dictionary<string, float> equipAttribute; // Hashtable<AttributeName, Attribute>
+
+    public Dictionary<string, TotalAttribute> equipAttribute; // Hashtable<AttributeName, TotalAttribute>
+    public struct TotalAttribute
+    {
+        public float atteributeAdd;
+        public float atteributePercentage;
+    }
 
     public TechData collectTechData()
     {
@@ -81,7 +87,7 @@ public class TechStorage : MonoBehaviour
     {
         teches = new List<Tech>();
         techTable = new Dictionary<Tech, TechState>();
-        equipAttribute = new Dictionary<string, float>();
+        equipAttribute = new Dictionary<string, TotalAttribute>();
 
         teches.AddRange(transform.GetComponentsInChildren<Tech>());
 
@@ -349,7 +355,7 @@ public class TechStorage : MonoBehaviour
     }
 
     // update total attribute
-    public Dictionary<string, float> updateTotalAttribute()
+    public Dictionary<string, TotalAttribute> updateTotalAttribute()
     {
         equipAttribute.Clear();
         foreach (TechEquip equip in equipTable.Keys)
@@ -359,16 +365,31 @@ public class TechStorage : MonoBehaviour
             {
                 float value = attribute.Value.attribute;
                 bool isPercentage = attribute.Value.isPercentage;
-                string attributeType = attribute.Key + (isPercentage ? " Percentage" : "");
+                string attributeType = attribute.Key;
 
                 if (!equipAttribute.ContainsKey(attributeType))
-                    equipAttribute.Add(attributeType, value);
+                {
+                    equipAttribute.Add(attributeType, new TotalAttribute()
+                    {
+                        atteributeAdd = isPercentage ? 0 : value,
+                        atteributePercentage = isPercentage ? value / 100f : 1
+                    });
+                }
                 else
                 {
                     if (!isPercentage)
-                        equipAttribute[attributeType] *= value;
+                    {
+                        TotalAttribute temp = equipAttribute[attributeType];
+                        temp.atteributePercentage *= value / 100f;
+                        equipAttribute[attributeType] = temp;
+                    }
                     else
-                        equipAttribute[attributeType] += value;
+                    {
+                        TotalAttribute temp = equipAttribute[attributeType];
+                        temp.atteributeAdd += value;
+                        equipAttribute[attributeType] = temp;
+                    }
+                        
                 }
             }
         }
@@ -376,6 +397,18 @@ public class TechStorage : MonoBehaviour
         onTechEquipChanging.Invoke();
 
         return equipAttribute;
+    }
+
+    public TotalAttribute getTotalAttribute(string identify)
+    {
+        if (!equipAttribute.ContainsKey(identify))
+            return new TotalAttribute()
+            {
+                atteributeAdd = 0,
+                atteributePercentage = 1
+            };
+        else
+            return equipAttribute[identify];
     }
 
     // number of teches which can be unlocked

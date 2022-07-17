@@ -72,3 +72,13 @@ Exit to Main Menu
 Restart Level
 `~TipLevelResume
 Resume
+`~AttributeHealth
+Health
+`~AttributeFuelCapacity
+Fuel Capacity
+`~AttributeFuelConsuption
+Fuel Consuption
+`~AttributeSpeed
+Speed
+`~AttributeSpinningSpeed
+Spinning speed

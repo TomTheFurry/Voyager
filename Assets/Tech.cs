@@ -24,9 +24,8 @@ public class Tech : MonoBehaviour, IComparable
     public bool speedPercentage;
     public float spinningSpeed;
     public bool spinningSpeedPercentage;
-    public float collisionDamage;
-    public bool collisionDamagePercentage;
 
+    [Serializable]
     public struct Attribute
     {
         public float attribute;
@@ -84,12 +83,6 @@ public class Tech : MonoBehaviour, IComparable
             {
                 attribute = spinningSpeed,
                 isPercentage = spinningSpeedPercentage
-            });
-        if (collisionDamage != 0)
-            equipAttribute.Add("Collision damage", new Attribute()
-            {
-                attribute = collisionDamage,
-                isPercentage = collisionDamagePercentage
             });
     }
 

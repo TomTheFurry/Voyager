@@ -32,6 +32,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openWhenStart: 1
+  actionSkills:
+  - {fileID: 2935784466213759363, guid: 716507c2a50baf24194031bd7df00d90, type: 3}
+  - {fileID: -8452406206022764463, guid: 716507c2a50baf24194031bd7df00d90, type: 3}
 --- !u!65 &7516143614297858613
 BoxCollider:
   m_ObjectHideFlags: 0
