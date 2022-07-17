@@ -13,4 +13,10 @@ This will enable a wide range of studies in astronomy and cosmology, such as obs
 `~JWST_P4
 as well as detailed atmospheric signatures of potentially habitable exoplanets.
 `~GPS_P1
-GPS
+The Global Positioning System (GPS) is one of the global navigation satellite systems
+`~GPS_P2
+that provides geolocation and time information to a GPS receiver anywhere on or near the Earth where there is an unobstructed line of sight to four or more GPS satellites.
+`~GPS_P3
+It does not require the user to transmit any data, and operates independently of any telephonic or Internet reception, though these technologies can enhance the usefulness of the GPS positioning information.
+`~GPS_P4
+It provides critical positioning capabilities to military, civil, and commercial users around the world.
