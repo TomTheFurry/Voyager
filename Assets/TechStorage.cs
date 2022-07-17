@@ -371,16 +371,16 @@ public class TechStorage : MonoBehaviour
                 {
                     equipAttribute.Add(attributeType, new TotalAttribute()
                     {
-                        atteributeAdd = isPercentage ? 0 : value,
-                        atteributePercentage = isPercentage ? value / 100f : 1
+                        atteributeAdd = isPercentage ? 0f : value,
+                        atteributePercentage = isPercentage ? (value / 100f) + 1f : 1f
                     });
                 }
                 else
                 {
-                    if (!isPercentage)
+                    if (isPercentage)
                     {
                         TotalAttribute temp = equipAttribute[attributeType];
-                        temp.atteributePercentage *= value / 100f;
+                        temp.atteributePercentage += (value / 100f);
                         equipAttribute[attributeType] = temp;
                     }
                     else

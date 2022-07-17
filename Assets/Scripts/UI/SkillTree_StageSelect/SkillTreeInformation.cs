@@ -16,11 +16,14 @@ public class SkillTreeInformation : MonoBehaviour
 
     private Tech myTech;
     private Button btn;
+    private Tooltip tooltip;
 
     private void Start()
     {
         myTech = GetComponent<TechIcon>().reference;
         btn = transform.GetComponentInChildren<Button>();
+        tooltip = GetComponent<Tooltip>();
+        tooltip.text = myTech.techName;
     }
 
     private void Update()
@@ -45,7 +48,7 @@ public class SkillTreeInformation : MonoBehaviour
     public void showInformation()
     {
         information.updateInformation(
-            gameObject.GetComponent<Tooltip>().text,
+            myTech.techName,
             image,
             myTech,
             customTooltips

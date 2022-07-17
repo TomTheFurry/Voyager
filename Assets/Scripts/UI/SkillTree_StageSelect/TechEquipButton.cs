@@ -50,16 +50,9 @@ public class TechEquipButton : MonoBehaviour
 
         string[] descs = equip.getAttributeDescription();
         string desc = "";
-        int length = 0;
         foreach (string str in descs)
         {
-            length += str.Length + 1;
-            if (length > 20)
-            {
-                desc += "\n";
-                length = 0;
-            }
-            desc += str + " ";
+            desc += str + "\n";
         }
         GetComponent<Tooltip>().text = desc;
     }

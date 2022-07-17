@@ -117,7 +117,14 @@ public class TechEquipInterface : MonoBehaviour
             // set tech
             icon.GetComponent<TechEquipIcon>().tech = tech;
             //set tooltip
-            icon.GetComponent<Tooltip>().text = tech.techName;
+            Tooltip tooltip = icon.GetComponent<Tooltip>();
+            tooltip.alpha = 1;
+            tooltip.text = tech.techName + ":";
+            string[] descs = tech.getAttributeDescription();
+            foreach (string str in descs)
+            {
+                tooltip.text += "\n" + str;
+            }
             //set selected icon
             if (equiped == tech)
                 setSelectedIcon(icon.GetComponent<TechEquipIcon>());

@@ -30,6 +30,11 @@ public class Lazer : MonoBehaviour
 
     private void Start()
     {
+        setComponent();
+    }
+
+    private void setComponent()
+    {
         lineRenderer = GetComponent<LineRenderer>();
         prefab = GetComponent<PrefabSpawner>();
     }
@@ -124,6 +129,9 @@ public class Lazer : MonoBehaviour
 
     private void OnDisable()
     {
+        if (lineRenderer == null)
+            setComponent();
+
         laserModle.gameObject.SetActive(false);
         lineRenderer.enabled = false;
         beam.StopEffect();
