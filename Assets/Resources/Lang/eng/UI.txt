@@ -64,3 +64,11 @@ Don't save and Return
 Save and Return
 `~TipHints
 Hints
+`~LevelFailText
+Vehicle Destroyed
+`~TipLevelExit
+Exit to Main Menu
+`~TipLevelRestart
+Restart Level
+`~TipLevelResume
+Resume

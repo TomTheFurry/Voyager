@@ -1,0 +1,24 @@
+`~Pause
+PAUSE
+`~CtrlMouse1
+Move the cursor /
+Pitch Up/Down/Yaw Left/Right
+`~CtrlMouse2
+Unlock the cursor
+`~CtrlMouse3
+Zoom in/out
+`~CtrlMouse4
+Row Left/Right
+`~CtrlMouse5
+Click on button objects / 
+Advance the Dialog
+`~CtrlWASD
+Accelerate front / back / left and right
+`~CtrlTilda
+Pause
+`~CtrlCtrl
+Show Down
+`~CtrlShiftSpace
+Accelerate up and down
+`~CtrlF11
+Full Screen

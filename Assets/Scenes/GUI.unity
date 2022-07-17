@@ -34654,6 +34654,7 @@ GameObject:
   - component: {fileID: 6783006612704228698}
   - component: {fileID: 6783006612704228700}
   - component: {fileID: 6783006612704228701}
+  - component: {fileID: 6783006612704228702}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -34703,6 +34704,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: $lang/ShipModHints/Hint1$
+--- !u!114 &6783006612704228702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783006612704228699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df9b030fcb2f714d8f08f6744a9819a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &6783006612761967072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35536,6 +35549,7 @@ GameObject:
   - component: {fileID: 6783006613611360189}
   - component: {fileID: 6783006613611360191}
   - component: {fileID: 6783006613611360188}
+  - component: {fileID: 6783006613611360187}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -35543,6 +35557,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6783006613611360187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783006613611360186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df9b030fcb2f714d8f08f6744a9819a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6783006613611360188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35775,6 +35801,7 @@ GameObject:
   - component: {fileID: 6783006613630612884}
   - component: {fileID: 6783006613630612886}
   - component: {fileID: 6783006613630612887}
+  - component: {fileID: 6783006613630612888}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -35824,6 +35851,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: $lang/ShipModHints/Hint2$
+--- !u!114 &6783006613630612888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783006613630612885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df9b030fcb2f714d8f08f6744a9819a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6783006613632665458
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,24 @@
+`~Pause
+暫停介面
+`~CtrlMouse1
+移動鼠標 /
+向上/向下/向左/向右偏航
+`~CtrlMouse2
+解鎖鼠標
+`~CtrlMouse3
+放大/縮小
+`~CtrlMouse4
+向左/右
+`~CtrlMouse5
+單擊按鈕 / 
+推進對話框
+`~CtrlWASD
+前後左右移動
+`~CtrlTilda
+暫停
+`~CtrlCtrl
+減速
+`~CtrlShiftSpace
+上/下移動
+`~CtrlF11
+全螢幕

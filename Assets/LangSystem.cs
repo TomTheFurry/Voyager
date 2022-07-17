@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,19 +62,21 @@ public class LangSystem
         string currentValue = "";
         foreach (string line in lines)
         {
-            if (line.StartsWith("`~"))
+            string lineWithoutRt = RemoveCartageReturnAtEnd(line);
+
+            if (lineWithoutRt.StartsWith("`~"))
             {
                 if (currentKey != "")
                 {
                     subFile.Add(currentKey, currentValue);
                 }
-                currentKey = line.Substring(2).Trim();
+                currentKey = lineWithoutRt.Substring(2).Trim();
                 currentValue = "";
             }
             else
             {
                 if (currentValue != "") currentValue += "\n";
-                currentValue += line;
+                currentValue += lineWithoutRt;
             }
         }
         if (currentKey != "")
@@ -87,6 +90,14 @@ public class LangSystem
         }
         activeLang[file] = subFile;
         return true;
+    }
+
+    private static string RemoveCartageReturnAtEnd(string currentValue)
+    {
+        // Remove the \r
+        if (currentValue.EndsWith("\r"))
+            return currentValue.Substring(0, currentValue.Length - 1);
+        return currentValue;
     }
 
     // turn all $lang/file/key$ into the value

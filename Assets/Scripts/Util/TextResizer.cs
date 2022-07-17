@@ -20,5 +20,6 @@ public class TextResizer : MonoBehaviour
         }
         targetTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, size.x + textBuffer * 2);
         targetTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, size.y + textBuffer * 2);
+        tmp.ForceMeshUpdate(true);
     }
 }
