@@ -1,3 +1,5 @@
+`~CompletionCondition
+完成條件：
 `~Level0Star0
 到達終點
 `~Level0Star1

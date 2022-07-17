@@ -1,2 +1,16 @@
 `~fail
 <color#FF0000><b>Vehicle Destroyed</b></color> \\ 飛船被毀
+`~FailCondition
+失敗條件： 
+`~Level0Fail0
+飛船損毀
+`~Level0Fail1
+燃料用完
+`~Level0Fail2
+超過10分鐘
+`~Level1Fail0
+飛船損毀
+`~Level1Fail1
+燃料用完
+`~Level1Fail2
+超過4分鐘
