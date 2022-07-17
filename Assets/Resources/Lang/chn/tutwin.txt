@@ -1,0 +1,25 @@
+`~win1
+<color#28FF28><b>Level Completed</b></color>
+`~wintxt1
+<b>Reached The Finish</b>
+`~wintxt2
+<b>Collected all the Bonus stars</b>
+`~wintxt3
+<b>Complete the level in under 5 minutes</b>
+
+~Level_1
+`~win4
+<b>Reach The Finish in 5 minutes</b>
+`~win5
+<b>Destroy 200 Sapce Junks</b>
+`~win6
+<b>Complete under 2.5 Minutes</b>
+
+~buttontext
+`~re
+<b>Retry Level</b>
+`~nextlev
+<b>Next Level <color=grey>(Locked)
+(This is the end of the demo.)</color></b>
+`~home
+<b>Return to main menu</b>

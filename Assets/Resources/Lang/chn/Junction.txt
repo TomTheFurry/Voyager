@@ -1,0 +1,8 @@
+`~Junction_p1
+太好了！$p0.2$ 你到達了<color=yellow><b>關卡的終點</b></color>！
+`~Junction_p2
+您可以通過右邊的
+<color=yellow><b>結束標記</b></color>結束關卡。$p1
+$$s10$ 或...
+`~Junction_p3
+您可以通過左側的 <color=yellow><b>迷宮</b></color> 挑戰自己並獲得盡可能多的 <color=yellow><b>獎勵</b></color>！

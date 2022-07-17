@@ -1,0 +1,2 @@
+`~fail
+<color#FF0000><b>Vehicle Destroyed</b></color> \\ 飛船被毀

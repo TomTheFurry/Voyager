@@ -1,0 +1,22 @@
+`~Start_p1
+你好，船長！你現在身處一個專為太空飛行訓練而設計的虛擬世界中。$p1$
+<color=grey>（左鍵繼續）</color>
+`~Start_p2
+您將熟悉飛船駕駛的基本控制，以及新手會陷入的陷阱。
+`~Start_p3
+一、最基本的控制，<color=yellow>'W'</color>、<color=yellow>'A'</color>、<color=yellow>'S'</color>、<color=yellow>'D'</color> 向前、向左、向後和向右移動。
+此外，<color=yellow>'Shift'</color> 和 <color=yellow>'Space'</color> 可以上下移動。
+`~Start_p4
+請注意，<color=red><b>任何</color>加速都會消耗您的燃料。
+$p1$（看到左下的黃色條了嗎?那是你的燃料量。）
+`~Start_p5
+<color=red>移動</color><color=yellow>鼠標</color>改變飛船的方向。
+`~Start_p6
+<color=red>按</color><color=yellow>鼠標右鍵</color>並拖動以旋轉飛船。
+`~Start_p7
+左下角的列表示<color=#FF2222>艦船的傷害距離（紅色條）</color>、<color=green>技能不良</color>、<color=yellow>燃料不良（黃色條）</color> 和 <color=#00FFFF>快速撥號</color>。
+您可以<color=red>按</color> <color=yellow>鼠標中鍵</color> 並指向它們以查看詳細值。
+`~Start_p8
+現在，按下 <color=yellow>[w] 鍵</color> 加速前進。
+並移動到下一個檢查點
+然後按 <color=yellow>[ctrl] 鍵</color> 使船減速到靜止。

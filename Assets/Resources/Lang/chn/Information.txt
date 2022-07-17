@@ -1,133 +1,150 @@
 ~`Skill_Tree
 `~StainlessSteel_Description
-Mix different elements to make steel harder to oxidize, because of stainless steel is a Corrosion-resistant high-strength material, so that the strength is not high as other material that came later, but the cost is cheaper, so many aircraft and spacecraft would select the stainless steel to become the second choose.
+透過加入各種元素使鋼鐵更難氧化，由於不銹鋼是一種耐腐蝕高強度的材料，縱使他的強度不如其他後來出現的材料高，但是因為它的價格比較低廉不少飛機和航天器也使用不銹鋼作為強度要求較低的部位材料。
 `~MonopropellantRocket_Description
-Since a single-propellant rocket only needs to use a single fuel for propulsion, its structure is extremely simple, and its cost is very low. Even if its reliability is low, it is still an important research direction to reduce the cost of rocket launch.
+由於單機推進劑火箭，只需使用單一的燃料進行推進，因此他的結構極為簡單，成本亦非常低，縱使他的可靠性比較低，但依然是降低火箭發射成本的重要研究方向。 
 `~MetalMagneticMesh_FontSize
-18
+
 `~MetalMagneticMesh_Description
-Use aluminum wire and steek wire to make it and using magnetic force collects <link="Autotip">space garbage</link>. After collecting a certain amount of space garbage, it will enter the atmosphere due to the earth’s gravity and burn out through the atmosphere, thereby disposing of space garbage. The advantage is that it is cheap, however it is difficult to accurately handle space garbage and when there is an excess of space garbage falling into the atmosphere with it, there is a chance that it will not burn out and hit the ground.
+以鋁絲和鋼絲織成的大網，透過磁力收集<link="Tip:SpaceGarbage">太空垃圾</link>，當收集一定的太空垃圾後便會因為地球引力進入太氣層，透過大氣層燃燒殆盡，從而處理太空垃圾。它的優點是價格低廉，但是它較難精準處理太空垃圾，而且當有過量的太空垃圾連同它墮入大氣層，有機會未能燃燒殆盡，砸向地面
 `~Laser_FontSize
 22
 `~Laser_Description
-Laser weapons are energy weapons that use high-energy lasers to accurately shoot long-distance targets or to defend against missiles. The same kind of technology can be applied to the processing of <link="Autotip">space garbage</link>, and through this technology, some physical objects can be refined. Smaller space garbage, but the power consumption of laser technology is high.
+雷射武器就是用高能的雷射對遠距離目標進行精確射擊或用於防禦導彈等的能量武器，同樣這種科技也能應用在處理<link="Tip:SpaceGarbage">太空垃圾</link>之上，透過這種科技能夠精準處理一些體型較小的太空垃圾，但是雷射技術對電力的消耗較高。
 `~TitaniumAlloy_FontSize
 21
 `~TitaniumAlloy_Description
-Is a high-strength material started in the 1950s. until 1970s the technology is constantly being upgraded the strength of Titanium alloy have a further strengthen to widely use in aviation such as wings and aerospace technology, Titanium alloy compared to other metals are more corrosion and withstand higher temperature. The <link="autotip">Sputnik 1</link> is using titanium alloy for outer casing.
+鈦合金是一種20世紀50年代開始興起的高強度材料，直到七八十年代技術不斷升級鈦合金的強度得到進一步的加強更廣泛地在航空如機翼和航天科技中使用，鈦合金比起其他金屬有更強的、耐腐蝕性和承受更高溫差的能力。著名的<link="Tip:Sputnik1">史撥尼克1號</link>就是使用鈦合金作為外殼。
 `~BipropellantRocket_Description
-As the name implies, the rocket is powered by a mixture of two fuels. Since the power provided by the mixture of two fuels can effectively increase the proportion of fuel used, it is more complicated, and if it goes wrong, it will cause a major accident.
+顧名思義是透過兩種燃料混合餵火箭提供動力，由於是透過兩種燃料混合提供動力能夠有效提升燃料的使用比例，但是他更為複雜，倘若出錯會造成重大的事故。 
 `~IonThruster_Description
-The rocket is powered by ejecting <link="autotip">ionization</link> gas. Even though it can be driven by electricity without using fuel, its energy is very weak and not suitable for large spaceships.
+透過噴出<link="Tip:Ionization">離子</link> 氣體為火箭提供動力，縱使他不用使用燃料只需要電力便可以驅動，但是他的能量非常弱小，不太適合大型的太空船。
 `~SolarBattery_FontSize
-19
+
 `~SolarBattery_Description
-in 1954 the efficiency only has 6%, but with the development of science and technology, the efficiency has become higher and higher. For example, the <link="autotip">Vanguard 1</link> in the United States was the first artificial satellite equipped with solar panels, and more and more after that. spaceship Also installed solar panels, including Jupiter probe <link="autotip">Juno</link>, comet lander <link="autotip">Rosetta</link>, but for some deep-space exploration spacecraft, solar cells are not used in places far from the sun.
+太陽能電池在1954年時效率只有6%，但隨著科技發展效率越來越高，例如美國的<link="Tip:Vanguard1">先鋒一號</link>就是第一顆裝有太陽能板的人造衛星，在此之後越來越多的太空飛船也裝上太陽能板，包括木星探測器<link=Tip:Juno">朱諾號</link>、彗星登陸器<link="Tip:Rosetta">羅塞塔號</link> ，但是對於一些進行深空探索的飛船，遠離陽光的地方則未能使用太陽能電池。
 `~SmallMagneticSatellite_Description
-This is use the small artificial satellites to add the magnets for disposal of <link="autotip">space garbage</link>, with the development of space, the price of small artificial satellites is extremely low.
+隨著太空發展，大批量生產的小型人造衛星價格極為低廉，因此我們可以為小型人造衛星加上強力磁石，作處理<link="Tip:SpaceGarbage">太空垃圾</link>之用，特別適合處理大型的太空垃圾。
 `~HRSI_Description
-HRSI is consists of high-purity silica fibers, very light, HRSI material is like plastic foam, but it has strong ability to withstand extreme temperatures, can ability temperatures between <link="autotip">absolute zero</link> and 1600 , widely used on <link="autotip">shuttles</link> but it is a fragile material, so it must extremely care.
+HRSI瓦片由高純度二氧化矽纖維組成，十分輕， HRSI材質類似塑膠泡沫，但是他有極強的承受極端溫度能力，最低能夠承受<link="Tip:AbsoluteZero">絕對零度</link>，最高能夠承受1,600 °C ，這種材料廣泛地在<link="Tip:Shuttles">穿梭機</link>上使用，但是這種材料卻是一種易碎的材料，要極其小心地處理。
 `~TripropellantRocket_Description
-A rocket engine propelled by a mixture of three fuels can further improve energy efficiency and reduce the weight of spacecraft, but its complexity is lower because of its complexity and fault tolerance.
+由三種燃料混合推進的火箭引擎，能夠進一步提高能源使用效率，減輕航天器重量，但他的複雜程度因為複雜，容錯率更低。
 `~VASMIREngine_Description
-Using <link="autotip">plasma</link> with a <link="autotip">magnetic field</link> to generate thrust, in theory, the rocket's design is simpler, and only requires electric power, but one of the bigger problems is that the magnetic field it produces may affect the spacecraft's electronics, requiring additional equipment to offset the effect of the magnetic field it produces.
+利用<link="Tip:Plasma">等離子體</link>，配合一個<link="Tip:MagneticField">磁場</link>產生推力，理論上這種這種火箭的設計更為簡單，同樣也只是需要電力驅動，但是其中一個較大的問題就是它所產生的磁場可能會影響太空船的電子設備，需要額外的設備去抵銷他所產生磁場的影響。 
 `~AtomicBattery_Description
-These nuclear batteries do not use nuclear reactors to generate electricity in the traditional sense. They generate electricity through the energy of atomic decay. The lifespan is much longer than ordinary batteries, but the cost is relatively high. They are suitable for space probes with some light sources, such as <link="autotip">Voyager 1</link>.
+這些核電池並非傳統意義上利用核反應堆進行發電，是透過原子衰變時的能量來產生電力，壽命比普通電磁長很多，但成本相對較高，適合一些光源的太空探測器，例如<link="Tip:Voyager1">航行者一號</link>。
 `~MaintenanceSystem_FontSize
 22
 `~MaintenanceSystem_Description
-This technology was used as early as 2001. It is a well-known mechanical device in the <link="autotip">International Space Station</link>. It can bring astronauts or manipulators to repair the spacecraft, and astronauts on the International Space Station must also learn to use this technology to become Astronauts, this technology also extends the service life of international space.
+這項科技早於2001年加入開始使用，是<link="Tip:InternationalSpaceStation">國際太空站</link>一個著名的機械設備，能夠帶同太空人或機械手為飛船進行維修，而且國際太空站的太空人亦要學習使用這項技術才能成為太空人，這項技術也為國際太空站的使用壽命延長。
 `~AblationMaterial_Description
-A process of removing impurities from objects, improve protection, Ablation material often use in spacecraft with <br><link="autotip">re-entry</link> requirements.
+燒蝕是一種去除物體雜質的過程，這樣能夠提升降天氣的保護能力，燒食材料經常會在有<br><link="Tip:Re-entry">重返</link>需求的航天飛行器使用。
 `~CarbonFiber_FontSize
 20
 `~CarbonFiber_Description
-Is a high hardness, high strength, light weight, high chemical resistance, high temperature resistance and low thermal expansion material, this material is transparent Composed by weaving carbon atoms, this material is widely used where high strength but lightweight materials are required. In aircraft and aerospace gases, it will also be used in medical, automotive, and textile applications.
+是一種高硬度，高強度，重量輕，高耐化學性，耐高溫和低的熱膨脹的材料，這種材料是透過把碳原子編織而組成，這種材料廣泛地使用於一些需要高強度但輕巧材料的地方，除了各種飛機和航天氣，更會應用在醫療、汽車、紡織之上。 
 `~NuclearThermalRocket_Description
-By heating the object in a nuclear reactor and then ejecting it to power the rocket, but it will produce radioactive particles at the end, making the nuclear thermal rocket unsuitable for use in people's places.
+透過把物體在核反應堆中加熱然後噴出為火箭提供動力，但是會在尾端產生放射性微粒，導致核熱力火箭不適宜在有人的地方使用。
 `~NuclearFusionBbattery_FontSize
 22
 `~NuclearFusionBbattery_Description
-Even the general large-scale nuclear fusion reactor has not yet been put into operation. The current problem is that it requires extremely high temperature to carry out nuclear fusion. Scientists need to use magnetic force or other non-contact methods to carry out nuclear fusion. But successfully invented, can produce more energy than nuclear fission.
+即使是一般的大型核融合反應堆至今依然未能投入運作，目前他的難題是需要極高的溫度才能進行核融合，科學家需要透過磁力或其他非接觸的方式才能進行核融合，但若果他一旦成功發明，就能生產比核分裂更多的能量。
 `~3DPrinter_FontSize
 20
 `~3DPrinter_Description
-Because the spacecraft may be damaged to varying degrees, but in the past, it needed special parts for the launch vehicle to be repaired. With the invention of the 3D printer, the necessary parts can be produced in space by itself, which greatly reduces the cost of the launch vehicle. Use requirements, and at the same time cooperate with <link="autotip">reusable rockets</link>, the cost of space exploration can be further reduced.
+由於太空船可能會有不同程度的損毀，但在過去損毀後就需要運載火箭運載專門的配件行維修，隨著3d打印機的發明，就能夠在太空自行生產所需的配件，極大減低運載火箭的使用需求，同時配合<link="Tip:ReusableRockets">可重複使用火箭</link>，太空探索的成本能夠再進一步降低。
 `~Aerogel_Description
-It also call solid air, because it weighs three times as much as air, and also is an excellent insulator, such as, <link="autotip">Mars Pathfinder</link> is using this material, but this kind of object contains carcinogens and toxins and should not be touched directly.
+氣凝膠有固體空氣的名稱，主要因為它的重量僅為空氣的三倍，同時也是極好的絕緣體，例如<link="Tip:MarsPathfinder">火星探路者號</link>就應用了這一種材料，但是這一種物體含有致癌物和毒素，不適宜直接觸碰這一種物體。
 `~FusionRocket_Description
-Powering rockets through nuclear fusion. Since nuclear fusion is already a very complex project, the complexity of fusion rockets cannot be solved by current technology.
+透過核融合為火箭提供動力，由於核聚變已經是一項非常複雜的工程，因此聚變火箭的複雜程度並非目前的技術能夠解決。
 `~ReinforcedCarbon-carbon_FontSize
 22
 `~ReinforcedCarbon-carbon_Description
-This is a composite material is based on carbon fiber and then reinforced material, even it is a fragile material, but his heat resistant is more powerful, for example, the <link="autotip">Parker Solar Probe</link> is made of a reinforced carbon composite material with a diameter of 2.3 meters and a thickness of 11.4 cm as a material to withstand sunlight photo material.
+這一種複合材料是基於碳纖維再進行加強的材料，縱使他非常易碎，但他的耐熱能力更加強，例如<link="Tip:ParkerSolarProbe">派克太陽探測器</link>就由直徑是2.3米，厚11.4厘米的強化碳複合材料作為承受太陽光照的材料
 `~AntimatterRocket_FontSize
 19
 `~AntimatterRocket_Description
-The rocket is powered by the huge energy in the collision of antimatter. Antimatter refers to a substance with the same mass, lifespan, and spin as normal particles, but with completely opposite charge, baryon number, singularity, etc. If normal particles and antiparticles collide, it will disappear and generate extremely huge energy, but antimatter hardly appears in nature, so the production of antimatter is the difficulty of antimatter engine.
+透過反物質碰撞時的巨大能量為火箭提供動力，反物質是指一種質量、壽命、自旋都與正常粒子相同但是電荷、重子數、奇異數等完全相反的物質，倘若正常粒子和反粒子碰撞時便會消失同時產生極為巨大的能量，但是反物質在自然之中幾乎不會出現，因此生產反物質是反物質引擎的難點
 `~AbsoluteZero
-<color=#00FFFF><size=28><b><u>Absolute Zero</u></b></size></color>
-Temperature is based on particle vibration, when the particle of the kinetic energy reduced to a minimum that is the absolute zero come form, this temperature around -273<sup>o</sup>C.
+<color=#00FFFF><size=28><b><u>絕對零度 </u></b></size></color>
+由於溫度是基於粒子振動所產生，粒子動能降到最低時就是絕對零度的溫度，這個溫度大約等於−273<sup>o</sup>C。
 `~InternationalSpaceStation
-<color=#00FFFF><size=28><b><u>International Space Station</u></b></size></color>
-The International Space Station started construction in 1998 and was officially put into use in 2000. The International Space Station has many scientific research facilities. One of the research projects is to study whether the long-term life of various creatures in space will affect it, to conduct long-term space for future human beings. Explore Paving.
+<color=#00FFFF><size=28><b><u>國際太空站</u></b></size></color>
+國際太空站於1998年開始建造，2000年正式使用，國際太空站有大量的科研設施，當中的一項研究就是研究各種生物在太空的長期生活是否會對其進行影響，為未來人類進行長期太空探索鋪路。
 `~Ionization
-<color=#00FFFF><size=28><b><u>Ionization</u></b></size></color>
-Ionization is also an effective way to improve the properties of objects by turning atoms into positive or negative charges through various methods and can also change the properties of objects.
+<color=#00FFFF><size=28><b><u>離子化</u></b></size></color>
+透過各種方法吧原子變成正電荷或負電荷，電離化也是一種有效提高物體屬性的方法，也能夠改變物體屬性。
 `~Juno
-<color=#00FFFF><size=28><b><u>Juno</u></b></size></color>
-Juno is a Jupiter probe that was launched in 2011 and reached Jupiter's orbit in 2016 to study Jupiter's composition, gravitational field, magnetic field, magnetosphere and magnetic poles and other information about Jupiter, greatly improving human understanding of Jupiter, one of the findings is that Jupiter has a lot of water, which is likely to be related to the birth of the solar system.
+<color=#00FFFF><size=28><b><u>朱諾號</u></b></size></color>
+朱諾號是一顆木星探測器，於2011年發射升空，於2016年到達木星軌道，研究木星的組成、重力場、磁場、磁層和磁極等木星的資訊，大幅提升人類對木星的認知，其中一個發現便是木星有大量的水分，這很有可能與太陽系的誕生有關
 `~MagneticField
-<color=#00FFFF><size=28><b><u>Magnetic field</u></b></size></color>
-Any magnet will also generate a magnetic field, and any magnetic object and current will also change direction due to the magnetic field. As for the earth's magnetic field, it can effectively prevent the charged particles in the solar wind and cosmic rays from destroying the upper atmosphere of the earth, providing sufficient conditions for the birth of life.
+<color=#00FFFF><size=28><b><u>磁場</u></b></size></color>
+任何的磁石也會產生磁場，任何磁性物體和電流也會因為磁場而改變方向。至於地球的磁場能夠有效阻止太陽風和宇宙射線中的帶電粒子損毀地球大氣上層，為生命的誕生提供充足條件。
 `~MarsPathfinder
-<color=#00FFFF><size=28><b><u>Mars Pathfinder</u></b></size></color>
-This is a mechanical rover. In addition to increasing human knowledge of Mars, this space mission also proved that human beings can greatly reduce the cost of space exploration through technological progress. The cost of this space exploration together with the launch vehicle is about 280,000 Ten thousand dollars, one-fifteenth of the cost of another Mars exploration Viking.
+<color=#00FFFF><size=28><b><u>火星探路者號</u></b></size></color>
+這是一輛機械火星車，這次太空任務除了增加了人類對火星的認知之外，也證明了人類能夠透過科技進步大幅降低太空探索的成本，這次太空探索連同運載火箭的成本大約為2億8000萬美金，另一次的火星探索維京人號費用的十五分之一。
 `~Plasma
-<color=#00FFFF><size=28><b><u>Plasma</u></b></size></color>
-A state other than solid, liquid, and gas, such as the sun, is basically composed of plasma, which conducts electricity almost perfectly and has many physical properties that other states fail to achieve.
+<color=#00FFFF><size=28><b><u>等離子體</u></b></size></color>
+固態、液態和氣態以外的一種狀態，例如太陽就基本上是由等離子體所組成，等離子體的導電能力近乎完美，也有很多其他狀態未能實現的物理特性。
 `~ParkerSolarProbe
-<color=#00FFFF><size=28><b><u>Parker Solar Probe</u></b></size></color>
-This is an unmanned solar exploration spacecraft. The goal of this spacecraft is to study the sun's magnetic field, solar wind and other information about the sun. Because it needs to be very close to the sun for research, this spacecraft has a strong ability to withstand aging.
+<color=#00FFFF><size=28><b><u>派克太陽探測器</u></b></size></color>
+這是一架無人太陽探測飛船，這個太空船的目標是研究有關太陽的磁場太陽風及其他有關太陽的資訊，由於他需要非常接近太陽進行研究由因此這架太空船擁有極強的耐熱能力。
 `~Re-entry
-<color=#00FFFF><size=28><b><u>Re-entry</u></b></size></color>
-It means that the object leaves the atmosphere and then returns to the atmosphere. The ideal object that can re-enter the atmosphere is to have a stronger protective layer, otherwise it will be burned out by the atmosphere.
+<color=#00FFFF><size=28><b><u>重返</u></b></size></color>
+是指物體離開大氣層後再返回大氣層，能夠進行重返的物體最理想是擁有更強的保護層，否則會被大氣層燃燒殆盡。
 `~ReusableRockets
-<color=#00FFFF><size=28><b><u>Reusable rocket</u></b></size></color>
-For example, the Falcon Heavy Launch Vehicle is a reusable rocket. On the one hand, the design of the rocket is simpler than that of the shuttle, which can save production costs. On the other hand, the recyclable design of the rocket not only replaces the shuttle, but also reduces the cost of space transportation.
+<color=#00FFFF><size=28><b><u>可重複使用火箭</u></b></size></color>
+例如獵鷹重型運載火箭，就是可重複使用火箭，一方面火箭的設計比穿梭機簡單，能夠節省生產成本，一方面為火箭進行可回收設計，不但取代了穿梭機，也減低了太空運輸成本。
 `~Rosetta
-<color=#00FFFF><size=28><b><u>Rosetta</u></b></size></color>
-This is a comet probe. The Philae lander successfully achieved the first soft landing on a comet in human history. This space exploration found that the comet has many complex organic compounds, and life on Earth is very likely to be brought by the comet.
+<color=#00FFFF><size=28><b><u>羅塞塔號</u></b></size></color>
+這是一枚彗星探測器，所搭載的菲萊登陸器成功實現人類史上第一次在彗星上的軟著陸，這次的太空探索發現彗星常有大量複雜的有機化合物，地球的生命很有可能就是透過彗星帶來。
 `~Shuttles
-<color=#00FFFF><size=28><b><u>Shuttle</u></b></size></color>
-Shuttle is a reusable low-Earth orbit spacecraft. The main function is put the spacecraft into space and return to the ground for repeated use. So far there are 5 shuttles has created all produced in the United States. However, the cost of shuttle is extremely high and a large number of precision parts are required to cooperate, otherwise it will easily lead to the destruction of the machine, so it was eliminated after completing the last mission in 2011.
+<color=#00FFFF><size=28><b><u>穿梭機</u></b></size></color>
+穿梭機是一種可重複使用的近地軌道太空船，主要功能是把太空船運上太空並返回地面重複使用，至今為止一共製造了五架穿梭機，全數由美國生產，但是由於穿梭機的製造成本極高，同時需要大批的精密零件配合否則容易導致機毀人亡，因此穿梭機在2011年完成最後一次任務後被淘汰。 
 `~SpaceGarbage
-<color=#00FFFF><size=28><b><u>Space garbage</u></b></size></color>
-With the exploration of space by human beings, the problem of junk left in the exploration map has an increasing impact on space exploration itself. These space junk include not only the junk brought by the life of astronauts, but also the residual parts of the spacecraft, and even the remaining parts of the spacecraft. Destroyed artificial satellites, these also pose a threat to space safety.
+<color=#00FFFF><size=28><b><u>太空垃圾</u></b></size></color>
+隨著人類對太空的探索，在探索圖中所遺留的垃圾問題對太空探索本身的影響越來越大，這些太空垃圾不但包括太空人的生活垃圾亦包括航天器的殘留部件，甚至包括損毀的人造衛星，這些也對航天安全帶來威脅。
 `~Sputnik1
-<color=#00FFFF><size=28><b><u>Sputnik 1</u></b></size></color>
-is the first artificial satellite in human history to enter planetary orbit and was used by the Soviet Union on October4, 1957 Sputnik launched to space with rocket, and crashed after 22 days in orbit. This artificial satellite also witnessed the space race. And then the development of human space progressed by leaps and bounds until landing on the moon.
+<color=#00FFFF><size=28><b><u>史撥尼克1號</u></b></size></color>
+史撥尼克1號是人類史上第一顆進入行星軌道的人造衛星，由蘇聯於1957年10月4日使用史撥尼克運載火箭發射升空，他在軌道上運行了22日後墜毀，這顆人造衛星也見證著太空競賽的展開，之後人類的太空發展突飛猛進直到登陸月球。
 `~Vanguard1
-<color=#00FFFF><size=28><b><u>Vanguard 1</u></b></size></color>
-It was the first spacecraft to be successfully launched by the United States, with the goal of exploring the magnetic fields of the Earth and the Moon, but after the probe failed to reach the theoretical maximum speed, Pioneer 1 crashed into the South Pacific after 43 hours of operation.
+<color=#00FFFF><size=28><b><u>先鋒一號</u></b></size></color>
+這是美國成功發射的第一個太空船，目標是探索有關地球和月球的磁場，但由於探測器未能達到理論的最高速度，先鋒1號運行了43小時後墜落到南太平洋。 
 `~Voyager1
-<color=#00FFFF><size=28><b><u>Voyager 1</u></b></size></color>
-Voyager 1 is the farthest space probe in human history. Launched in 1977, it is accelerated by the gravity of Jupiter and Saturn. At present, it continues to move towards the center of the Milky Way. This space exploration has greatly improved human beings. Knowing about Jupiter, Saturn, Uranus, and Neptune, he took many of the planetary photos we are still looking at.
+<color=#00FFFF><size=28><b><u>航行者一號</u></b></size></color>
+航行者一號是人類似上利地球最遠的太空探測器，於1977年發射的他透過木星和土星的重力進行加速，目前他繼續向銀河系的中心繼續進發，這次的太空探索大幅提升人類對木星、土星、天王星及海王星的認識，有不少現在我們依然在看的行星照片就是由他拍攝。
+
+
+
 `~Tutorial
 `~Tutorial_Information
-In space frequently in the <link="autotip">gravity-free</link> and <link="autotip">no friction status</link>.  
-Before you conduct the space mission, You must finish the <link="autotip">gravity-free training</link>.
+在太空中經常處於<link="Tip:Gravity-free">無重力</link>和<link="Tip:NoFrictionStatus">無摩擦狀態</link>。
+在執行太空任務之前，您必須完成<link="Tip:Gravity-freeTraining">無重力訓練</link>。
+在此任務中您需要按照指令控制飛船到達目的地，完成課程後您可以選擇退出或更高級別的迷宮來獲得獎勵。
 
-In this mission you need to follow the instruction to control the spaceship reach the destination, After you finish course you can select exit or higher level maze to earn rewards.
-`~Gravity-Free
-<color=#00FFFF><size=28><b><u>Gravity-Free</u></b></size></color>
-Can call it weightlessness, earth have the gravity it will pull the object to center of the earth. 
-But when we far the earth the gravity will be decreased, so that the spaceship and the astronsuts will not be affected by gravity, to achieving a floating state.
+`~Gravity-free
+<color=#00FFFF><size=28><b><u>無重力</u></b></size></color>
+可以稱之為失重，地球有重力會將物體拉到地心。
+但是當我們遠離地球時，重力會降低，使飛船和宇航員不受重力影響，達到漂浮狀態。
+
 `~NoFrictionStatus
-<color=#00FFFF><size=28><b><u>No Friction Status</u></b></size></color>
-Most time of the space  is a vacuum, without matter including air.
-Object do not slow down when no force is applied, also they will continue to accelerate when a small amount of force is applied. 
-Therefore,it is possible to achieve faster speed in space, such as the fastest man-made object ever, the Parker Solar Probe with a speed of up to 200km/s, which s a spaceship.
+<color=#00FFFF><size=28><b><u>無摩擦狀態</u></b></size></color>
+空間的大部分時間都是真空的，沒有包括空氣在內的物質。
+物體在不施加力時不會減速，並且在施加少量力時它們會繼續加速。
+因此，有可能在太空中實現更快的速度，例如有史以來最快的人造物體，速度高達200公里/秒的帕克太陽探測器。
 `~Gravity-FreeTraining
-<color=#00FFFF><size=28><b><u>Gravity-Free Training</u></b></size></color>
-Since it is difficult to achieve a gravity environment on earth, there are 2 ways to simulate this situation. The first is using the aircraft diving into the ground to cancel the gravitational force. The second is to practice underwater, simulating an environment where the influence of gravity is relatively low. It is more common to practice underwater, and it is also one of the exercises that astronauts must perform.
+<color=#00FFFF><size=28><b><u>無重力訓練</u></b></size></color>
+由於在地球上很難實現重力環境，因此有兩種方法可以模擬這種情況。一是利用飛機潛入地面來抵消重力。二是在水下練習，模擬重力影響相對較小的環境。水下練習比較常見，也是宇航員必須進行的練習之一。
+
+
+
+
+
+
+
+
+
+
+
+
+ 
