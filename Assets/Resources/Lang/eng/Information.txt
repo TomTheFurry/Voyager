@@ -45,9 +45,9 @@ A process of removing impurities from objects, improve protection, Ablation mate
 Is a high hardness, high strength, light weight, high chemical resistance, high temperature resistance and low thermal expansion material, this material is transparent Composed by weaving carbon atoms, this material is widely used where high strength but lightweight materials are required. In aircraft and aerospace gases, it will also be used in medical, automotive, and textile applications.
 `~NuclearThermalRocket_Description
 By heating the object in a nuclear reactor and then ejecting it to power the rocket, but it will produce radioactive particles at the end, making the nuclear thermal rocket unsuitable for use in people's places.
-`~NuclearFusionBbattery_FontSize
+`~NuclearFusionBattery_FontSize
 22
-`~NuclearFusionBbattery_Description
+`~NuclearFusionBattery_Description
 Even the general large-scale nuclear fusion reactor has not yet been put into operation. The current problem is that it requires extremely high temperature to carry out nuclear fusion. Scientists need to use magnetic force or other non-contact methods to carry out nuclear fusion. But successfully invented, can produce more energy than nuclear fission.
 `~3DPrinter_FontSize
 20

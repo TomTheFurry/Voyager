@@ -1,5 +1,5 @@
 `~OutOfBounds
-過界!
+越界!
 `~HudFuelTip
 燃料:
 `~HudHealthTip
@@ -65,13 +65,13 @@ m/s
 `~TipHints
 提示
 `~LevelFailText
-飛船被毀
+飛船毀壞
 `~TipLevelExit
-Exit to Main Menu
+返回主選單
 `~TipLevelRestart
-Restart Level
+重新遊戲
 `~TipLevelResume
-Resume
+繼續
 `~AttributeHealth
 生命值
 `~AttributeFuelCapacity

@@ -18,9 +18,11 @@ public class ShowTotalAttribute : MonoBehaviour
     {
         TechStorage.TotalAttribute attribute =  TechStorage.instance.getTotalAttribute(attributeType);
         text.text = LangSystem.GetLang("UI", "Attribute" + attributeType.Replace(" ", "")) + ":\n";
-        string atteributeAdd = attribute.atteributeAdd < 0 ? Mathf.Round(attribute.atteributeAdd).ToString() : "+" + Mathf.Round(attribute.atteributeAdd).ToString();
-        string atteributePercentage = attribute.atteributePercentage < 0 ? attribute.atteributePercentage.ToString("F2") : "+" + attribute.atteributePercentage.ToString("F2");
+        float atteributeAdd = attribute.atteributeAdd;
+        float atteributePercentage = (attribute.atteributePercentage - 1f) * 100f;
+        string strAtteributeAdd = atteributeAdd < 0 ? Mathf.Round(atteributeAdd).ToString() : "+" + Mathf.Round(atteributeAdd).ToString();
+        string strAtteributePercentage = atteributePercentage < 0 ? atteributePercentage.ToString("F2") : "+" + atteributePercentage.ToString("F2");
 
-        text.text += string.Format("({0}) ({1}%)", atteributeAdd, atteributePercentage);
+        text.text += string.Format("({0}) ({1}%)", strAtteributeAdd, strAtteributePercentage);
     }
 }

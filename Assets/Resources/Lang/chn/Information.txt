@@ -45,9 +45,9 @@ HRSI瓦片由高純度二氧化矽纖維組成，十分輕， HRSI材質類似�
 是一種高硬度，高強度，重量輕，高耐化學性，耐高溫和低的熱膨脹的材料，這種材料是透過把碳原子編織而組成，這種材料廣泛地使用於一些需要高強度但輕巧材料的地方，除了各種飛機和航天氣，更會應用在醫療、汽車、紡織之上。 
 `~NuclearThermalRocket_Description
 透過把物體在核反應堆中加熱然後噴出為火箭提供動力，但是會在尾端產生放射性微粒，導致核熱力火箭不適宜在有人的地方使用。
-`~NuclearFusionBbattery_FontSize
+`~NuclearFusionBattery_FontSize
 22
-`~NuclearFusionBbattery_Description
+`~NuclearFusionBattery_Description
 即使是一般的大型核融合反應堆至今依然未能投入運作，目前他的難題是需要極高的溫度才能進行核融合，科學家需要透過磁力或其他非接觸的方式才能進行核融合，但若果他一旦成功發明，就能生產比核分裂更多的能量。
 `~3DPrinter_FontSize
 20

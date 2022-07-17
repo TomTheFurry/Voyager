@@ -1,0 +1,12 @@
+`~Level0Star0
+到達終點
+`~Level0Star1
+找到全部的星星
+`~Level0Star2
+5分鐘內完成關卡
+`~Level1Star0
+4分鐘內到達終點
+`~Level1Star1
+摧毀200個太空垃圾
+`~Level1Star2
+2分鐘內完成關卡
