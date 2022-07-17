@@ -77,7 +77,7 @@ public class TMPTooltip : UICallback
         if (activeTooltip != null)
         {
             activeTooltip.OnPointerExit(lastData);
-            Debug.Log("Unselecting TMP Tooltip " + activeTooltip);
+            //Debug.Log("Unselecting TMP Tooltip " + activeTooltip);
             activeTooltip.gameObject.SetActive(false);
             activeTooltip = null;
         }
@@ -88,7 +88,7 @@ public class TMPTooltip : UICallback
         _Unselect();
         activeTooltip = newTip;
         activeTooltip.gameObject.SetActive(true);
-        Debug.Log("Selecting TMP Tooltip " + activeTooltip);
+        //Debug.Log("Selecting TMP Tooltip " + activeTooltip);
         activeTooltip.OnPointerEnter(lastData);
     }
 

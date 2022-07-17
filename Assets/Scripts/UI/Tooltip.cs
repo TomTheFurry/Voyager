@@ -15,7 +15,7 @@ public class Tooltip : UICallback {
     {
         if (text.Trim().Length == 0)
             return;
-        Debug.Log("Activating Tooltip: " + text);
+        //Debug.Log("Activating Tooltip: " + text);
         if (TooltipManager.Instance != null) TooltipManager.Instance.ShowTooltip(this, alpha);
     }
 
@@ -23,7 +23,7 @@ public class Tooltip : UICallback {
     {
         if (text.Trim().Length == 0)
             return;
-        Debug.Log("Deactivating Tooltip: " + text);
+        //Debug.Log("Deactivating Tooltip: " + text);
         if (TooltipManager.Instance != null) TooltipManager.Instance.HideTooltip(this);
     }
 }

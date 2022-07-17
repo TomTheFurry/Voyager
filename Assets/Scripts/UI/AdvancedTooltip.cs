@@ -15,13 +15,13 @@ public class AdvancedTooltip : Tooltip
 
     void _OnPointerEnter()
     {
-        Debug.Log("Activating Tooltip: " + text);
+        //Debug.Log("Activating Tooltip: " + text);
         if (TooltipManager.Instance != null) TooltipManager.Instance.ShowTooltip(this);
     }
 
     void _OnPointerExit()
     {
-        Debug.Log("Deactivating Tooltip: " + text);
+        //Debug.Log("Deactivating Tooltip: " + text);
         if (TooltipManager.Instance != null) TooltipManager.Instance.HideTooltip(this);
     }
 }

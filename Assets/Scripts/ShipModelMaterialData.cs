@@ -119,7 +119,7 @@ public class ShipModelMaterialData : MonoBehaviour
         }
         else
         {
-            Debug.LogError("TechTree: multiple instances of TechTree");
+            Debug.LogWarning("TechTree: multiple instances of TechTree");
             Destroy(this);
             return;
         }

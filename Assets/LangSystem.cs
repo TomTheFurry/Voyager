@@ -83,7 +83,7 @@ public class LangSystem
         Debug.Log("Loaded lang file: " + file + ".txt with " + subFile.Count + " entries.");
         foreach (KeyValuePair<string, string> entry in subFile)
         {
-            Debug.Log(entry.Key + ": " + entry.Value);
+            //Debug.Log(entry.Key + ": " + entry.Value);
         }
         activeLang[file] = subFile;
         return true;

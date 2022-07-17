@@ -138,7 +138,7 @@ public class TechStorage : MonoBehaviour
                 continue;
             }
             techTable[tech] = pair.state;
-            Debug.Log("Loaded " + pair.identifier + ": " + pair.state);
+            //Debug.Log("Loaded " + pair.identifier + ": " + pair.state);
         }
         // Equip
         if (techData.equips == null) techData.equips = new TechData.EquipPair[0];
@@ -152,7 +152,7 @@ public class TechStorage : MonoBehaviour
             }
             equipTable[techEquip] = pair.state;
             this.techEquip(getTechByIdentifier(pair.state.equipIdentifier), techEquip);
-            Debug.Log("Loaded Equip " + pair.identifier + ": " + pair.state.equipIdentifier);
+            //Debug.Log("Loaded Equip " + pair.identifier + ": " + pair.state.equipIdentifier);
         }
         Debug.Log("Loaded " + techData.entries.Length + " tech data entries.");
     }
@@ -378,7 +378,7 @@ public class TechStorage : MonoBehaviour
         return equipAttribute;
     }
 
-    // tech number which can be unlocked
+    // number of teches which can be unlocked
     public void collectTechNumCanBeUnlocked()
     {
         techNumCanBeUnlocked = 0;
@@ -388,4 +388,19 @@ public class TechStorage : MonoBehaviour
                 techNumCanBeUnlocked++;
         }
     }
+
+    public static void ResetData()
+    {
+        if (instance != null)
+        {
+            instance.techTable.Clear();
+            instance.equipTable.Clear();
+            instance.equipAttribute.Clear();
+            instance.techNumCanBeUnlocked = 0;
+            instance.hasSetup = false;
+            instance = null;
+        }
+        
+    }
+    
 }

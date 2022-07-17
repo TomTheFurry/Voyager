@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Global : MonoBehaviour
 {
@@ -23,7 +24,20 @@ public class Global : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        LangSystem.LoadLang("eng");
+        string lang = PlayerPrefs.GetString("lang","eng");
+        if (lang != "eng" && lang != "chn")
+        {
+            Debug.Log("Lang not supported: " + lang);
+            lang = "eng";
+            PlayerPrefs.SetString("lang", lang);
+        }
+        LangSystem.LoadLang(lang);
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+            instance = null;
     }
 
     public static Transform getChildByName(Transform instance, string name)
@@ -55,5 +69,22 @@ public class Global : MonoBehaviour
             ins = ins.parent;
 
         return ins;
+    }
+
+    public static void ResetDataAndRestart()
+    {
+        TechStorage.ResetData();
+        PlayerData.Reset();
+        PlayerPrefs.DeleteAll();
+        Restart();
+    }
+    
+    public static void Restart()
+    {
+        if (instance != null)
+        {
+            instance.gameObject.transform.parent = (new GameObject("DestroyOnLoad")).transform;
+        }
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }
