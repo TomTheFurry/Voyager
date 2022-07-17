@@ -8,4 +8,59 @@ Health:
 Speed:
 `~HudSpeedTipUnit
 m/s
-
+`~Settings
+Settings
+`~MainVolume
+Main Voumne:
+`~Background
+Background:
+`~SFX
+SFX:
+`~FOV
+FOV:
+`~TipLang
+Change Language (Will restart the game!)
+`~TipResetData
+<b>Clear All Data!</b> (Will restart the game!)
+`~TitlePressAnyKey
+Press Any Key To Enter
+`~TipQuitButton
+Quit
+`~QuitText
+Are You Sure To Leave?
+`~MenuLv0
+Tutorial
+`~MenuLv1
+Level 1
+`~MenuLv2
+Level 2
+`~TipGoBack
+Go Back
+`~TipSettings
+Settings
+`~TipSkillTree
+Skill Tree
+`~TipShipModify
+Modify Ship
+`~TipPlay
+Play
+`~ShipModTipSuggest
+Suggest: 
+`~ShipModInternalMaterial
+Internal Material
+`~ShipModExternalMaterial
+External Material
+`~ShipModEngine
+Engine
+`~ShipModInternalDevice
+Internal Device
+`~ShipModExternalDevice
+External Device
+`~ShipModTipClear
+Reset Equipments
+`~TipCancelReturn
+Don't save and Return
+`~TipSaveGoBack
+Save and Return
+`~TipHints
+Hints
