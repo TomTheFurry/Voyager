@@ -19383,7 +19383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -22.000763}
+  m_AnchoredPosition: {x: 0, y: -22.000732}
   m_SizeDelta: {x: -720, y: -146.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1248115989
@@ -39009,7 +39009,6 @@ GameObject:
   - component: {fileID: 9160700875042621718}
   - component: {fileID: 9160700875042621714}
   - component: {fileID: 9160700875042621715}
-  - component: {fileID: 9160700875042621716}
   m_Layer: 5
   m_Name: Level 2_button
   m_TagString: Untagged
@@ -39076,7 +39075,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 4e08d642e26ce5d42a48e77e1dde272e, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 333486a5992e42249a5646c5233c1d0e, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -39103,33 +39102,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9160700875042621716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9160700875042621713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e5fa3597f100c488238e68e90d8829, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHover:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverExit:
-    m_PersistentCalls:
-      m_Calls: []
-  onClick:
-    m_PersistentCalls:
-      m_Calls: []
-  isHovering: 0
-  text: <color=red>Locked</color> <color=grey>(Not avalible in Demo)</color=gray>
-  alpha: 0.39215687
+      - m_Target: {fileID: 9160700876226769914}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &9160700875042621717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39150,7 +39134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0556b2aac3eb4534695f12971382360f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enable: 0
+  enable: 1
   langFile: Information
   targetLevel: 2
   level: Level2
