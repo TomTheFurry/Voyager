@@ -1,3 +1,5 @@
+`~CompletionCondition
+Completion Condition: 
 `~Level0Star0
 Reach The Finish
 `~Level0Star1

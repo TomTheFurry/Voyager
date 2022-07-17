@@ -1,0 +1,16 @@
+`~fail
+<color#FF0000><b>Vehicle Destroyed</b></color> \\ 飛船被毀
+`~FailCondition
+Fail Condition: 
+`~Level0Fail0
+Spaceship crush
+`~Level0Fail1
+Fuel deplete
+`~Level0Fail2
+Over 10 minute 
+`~Level1Fail0
+Spaceship crush
+`~Level1Fail1
+Fuel deplete
+`~Level1Fail2
+Over 4 minute 
