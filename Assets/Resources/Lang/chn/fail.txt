@@ -14,3 +14,9 @@
 燃料用完
 `~Level1Fail2
 超過4分鐘
+`~Level2Fail0
+飛船損毀
+`~Level2Fail1
+燃料用完
+`~Level2Fail2
+超過4分鐘

@@ -12,3 +12,9 @@
 摧毀200個太空垃圾
 `~Level1Star2
 2分鐘內完成關卡
+`~Level2Star0
+4分鐘內到達終點
+`~Level2Star1
+發現隱藏的物品
+`~Level2Star2
+2分鐘內完成關卡

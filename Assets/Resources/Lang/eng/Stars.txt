@@ -12,3 +12,9 @@ Reach The Finish In 4 Minutes
 Destroy 200 Space Junks
 `~Level1Star2
 Complete The Level In Under 2 Minutes
+`~Level2Star0
+Reach The Finish In 4 Minutes
+`~Level2Star1
+Find hidden objects
+`~Level2Star2
+Complete The Level In Under 2 Minutes

@@ -13,4 +13,10 @@ Spaceship crush
 `~Level1Fail1
 Fuel deplete
 `~Level1Fail2
+Over 4 minute
+`~Level2Fail0
+Spaceship crush
+`~Level2Fail1
+Fuel deplete
+`~Level2Fail2
 Over 4 minute 
