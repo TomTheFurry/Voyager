@@ -18,7 +18,9 @@ public class JunkField : MonoBehaviour
 
     private void SpawnObj()
     {
-        int index = Random.Range(0, computedSample.Length);
+        int index;
+        do { index = Random.Range(0, computedSample.Length); }
+        while (computedSample[index] == null);
         Vector3 pos = new Vector3(
             Random.Range(lifeArea.bounds.min.x, lifeArea.bounds.max.x),
             Random.Range(lifeArea.bounds.min.y, lifeArea.bounds.max.y),
@@ -50,10 +52,15 @@ public class JunkField : MonoBehaviour
             GameObject obj = Instantiate(sampleObj);
             obj.SetActive(false);
             obj.GetComponent<MeshCollider>().convex = true;
-            obj.GetComponent<MeshFilter>().mesh = junkAssets[i].GetComponent<MeshFilter>().sharedMesh;
-            obj.GetComponent<MeshRenderer>().materials = junkAssets[i].GetComponent<MeshRenderer>().sharedMaterials;
-            obj.GetComponent<MeshCollider>().sharedMesh = junkAssets[i].GetComponent<MeshFilter>().sharedMesh;
-            computedSample[i] = obj;
+            try
+            {
+                obj.GetComponent<MeshFilter>().mesh = junkAssets[i].GetComponent<MeshFilter>().sharedMesh;
+                obj.GetComponent<MeshRenderer>().materials = junkAssets[i].GetComponent<MeshRenderer>().sharedMaterials;
+                obj.GetComponent<MeshCollider>().sharedMesh = junkAssets[i].GetComponent<MeshFilter>().sharedMesh;
+                computedSample[i] = obj;
+            } catch {
+               
+            }
         }
 
         for (int i = 0; i < junkCount; i++) SpawnObj();

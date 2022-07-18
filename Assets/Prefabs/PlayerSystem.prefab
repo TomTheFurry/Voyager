@@ -172,7 +172,7 @@ MonoBehaviour:
   fuel: {fileID: 560941333062440976}
   lightPrefab: {fileID: 5289154695726633668}
   lightContainer: {fileID: 7896625281686156434}
-  fuelUsage: 0.1
+  fuelUsage: 0.2
   lineSectments: 64
   perLightObjMaxDistance: 7.5
   lightFlicker: 0.2
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deltaTime: 0
   isPaused: 0
-  levelMaxTime: 300
+  levelMaxTime: 240
 --- !u!1 &560941333072578131
 GameObject:
   m_ObjectHideFlags: 0

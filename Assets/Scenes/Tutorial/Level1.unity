@@ -1398,6 +1398,33 @@ MonoBehaviour:
   junkAssets:
   - {fileID: 919132149155446097, guid: b78ee776b6a7991458d67fe769b94c23, type: 3}
   - {fileID: 919132149155446097, guid: dd0aac66ccdf13c4c81d33bdc5b77d56, type: 3}
+  - {fileID: 919132149155446097, guid: 303380675568340479778f032820dd7e, type: 3}
+  - {fileID: 919132149155446097, guid: 1b2229f3cee17584a9e93e89c063e06f, type: 3}
+  - {fileID: 919132149155446097, guid: 8b31527ec55099e4b9a59ba670cc7915, type: 3}
+  - {fileID: 919132149155446097, guid: 3d028e9c03bad3640b5082b3f316c865, type: 3}
+  - {fileID: 919132149155446097, guid: 55fabea5577410e48a1257693eadec9e, type: 3}
+  - {fileID: 919132149155446097, guid: 86cbf4a10f1dba24eb611ca970b99554, type: 3}
+  - {fileID: 919132149155446097, guid: 1cd17dc283e90c040befd3d9cedee98e, type: 3}
+  - {fileID: 919132149155446097, guid: f27c91460410dff4aa28e6ce89486e03, type: 3}
+  - {fileID: 919132149155446097, guid: e4b9ad94107b60642afe972e41d08e49, type: 3}
+  - {fileID: 919132149155446097, guid: 7d77e6675cf0e084bb85e892073e66aa, type: 3}
+  - {fileID: 919132149155446097, guid: 3943311cb95300b488b6551e342a4428, type: 3}
+  - {fileID: 919132149155446097, guid: 978b86f20ff79794886ca91eeff85d85, type: 3}
+  - {fileID: 919132149155446097, guid: 6bee5a466af0a1c4b874c7a33914086f, type: 3}
+  - {fileID: 919132149155446097, guid: 5f58595c3aa898945a627e7b2de187b5, type: 3}
+  - {fileID: 919132149155446097, guid: a366b2904ed5eb646b7c27bfa911c732, type: 3}
+  - {fileID: 919132149155446097, guid: 0aacd1dbf7d172244aa9fb40ec39f718, type: 3}
+  - {fileID: 919132149155446097, guid: 7904d3910bb1457488a3a8c3d546e28d, type: 3}
+  - {fileID: 919132149155446097, guid: d6921113e81803242b5c0595393ff671, type: 3}
+  - {fileID: 919132149155446097, guid: 2c1fbe1d85bbd7747912766374ecbcb9, type: 3}
+  - {fileID: 919132149155446097, guid: 73e1737f22c61a6489873d4965997721, type: 3}
+  - {fileID: 919132149155446097, guid: 9eda1584a7b20c349998235cd77ab9d6, type: 3}
+  - {fileID: 919132149155446097, guid: 3b74a8acf73ea8d43ac15b4b1daf7a17, type: 3}
+  - {fileID: 919132149155446097, guid: 974c2c9e352de3b4ba57d4e4cfd7d4a6, type: 3}
+  - {fileID: 919132149155446097, guid: 409daa81a96d06642914ad0c28e59258, type: 3}
+  - {fileID: 919132149155446097, guid: 4dc0e7fcfbaa0364086a4bf3061305bf, type: 3}
+  - {fileID: 919132149155446097, guid: f7f14cadeaf9fed4b826b19bc4f8b8b3, type: 3}
+  - {fileID: 919132149155446097, guid: 8fc350b8024782c4e99f8ac1462de5e2, type: 3}
   lifeArea: {fileID: 1495134185}
   speedBound:
     m_Center: {x: 0, y: 0, z: 0}
@@ -2626,10 +2653,6 @@ PrefabInstance:
       propertyPath: prefab
       value: 
       objectReference: {fileID: 1654367931}
-    - target: {fileID: 8167703215840605605, guid: f2dab8dab0496f44bb21f5687242435c, type: 3}
-      propertyPath: levelMaxTime
-      value: 240
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2dab8dab0496f44bb21f5687242435c, type: 3}
 --- !u!1001 &1525126507
