@@ -1416,6 +1416,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1373048578}
   lazer: {fileID: 596967743}
+  seenJWST: 0
+  seenGPS: 0
   targetCount: 200
   count: 0
 --- !u!1 &858028353
@@ -1868,7 +1870,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7733664545928954755, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7733664547711757601, guid: cc640d9ef00068f42819964df61c5b0b, type: 3}
       propertyPath: m_Pivot.x
@@ -2249,7 +2251,19 @@ MonoBehaviour:
   triggerOnce: 1
   onTrigger:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 829287094}
+        m_TargetAssemblyTypeName: JunkGoalTracker, Assembly-CSharp
+        m_MethodName: SetSeenGPS
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &1368974701
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4394,7 +4408,19 @@ MonoBehaviour:
   triggerOnce: 1
   onTrigger:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 829287094}
+        m_TargetAssemblyTypeName: JunkGoalTracker, Assembly-CSharp
+        m_MethodName: SetSeenJWST
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &1884684715
 SphereCollider:
   m_ObjectHideFlags: 0

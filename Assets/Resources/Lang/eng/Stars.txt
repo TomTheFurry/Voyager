@@ -5,7 +5,7 @@ Reach The Goal
 `~Level0Star1
 Collect All The Bonus Stars
 `~Level0Star2
-Complete The Level In Under 5 Minutes
+Find The Two Hidden Space Objects
 `~Level1Star0
 Reach The Goal In 4 Minutes
 `~Level1Star1
@@ -15,6 +15,6 @@ Complete The Level In Under 2 Minutes
 `~Level2Star0
 Reach The Goal
 `~Level2Star1
-Reach The Goal With More Than 15m/s
+Hit The Middle Of The Goal With More Than 15m/s
 `~Level2Star2
 Fly Past The Voyager1 Within A Close Distance

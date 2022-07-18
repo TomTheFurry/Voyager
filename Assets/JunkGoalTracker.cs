@@ -7,6 +7,10 @@ public class JunkGoalTracker : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public Lazer lazer;
+    public bool seenJWST = false;
+    public bool seenGPS = false;
+    public void SetSeenJWST() { seenJWST = true; }
+    public void SetSeenGPS() { seenGPS = true; }
 
     public int targetCount = 200;
     public int count = 0;

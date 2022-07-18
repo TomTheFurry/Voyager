@@ -47,8 +47,8 @@ public class Level1StarControl : MonoBehaviour
         // star[1]: Destroyed 200 space junks
         childStars[1].isCompleted = junkTracker.count >= junkTracker.targetCount;
 
-        // star[2]: Complete level under 50% of allocated time
-        childStars[2].isCompleted = timeTracker.GetTime() <= timeTracker.levelMaxTime * 0.5f;
+        // star[2]: Find the two hidden space object
+        childStars[2].isCompleted = junkTracker.seenGPS && junkTracker.seenJWST;
 
         bool[] doneStars = new bool[childStars.Length];
         for (int i = 0; i < childStars.Length; i++)

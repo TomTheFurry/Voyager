@@ -5,7 +5,7 @@
 `~Level0Star1
 找到全部的星星
 `~Level0Star2
-5分鐘內完成關卡
+找到兩個隱藏的物體
 `~Level1Star0
 4分鐘內到達終點
 `~Level1Star1
@@ -17,4 +17,4 @@
 `~Level2Star1
 以超過15m/s的速度到達終點
 `~Level2Star2
-近距離飛越航行者1號
+以超過 15m/s 的速度到達中間的目標
