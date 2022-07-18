@@ -230,7 +230,7 @@ public class TechStorage : MonoBehaviour
                 return false;
             }
         }
-        return true;
+        return PlayerData.GetData().stars >= tech.starCost;
     }
 
     public bool unlockTech(Tech tech)
@@ -246,6 +246,7 @@ public class TechStorage : MonoBehaviour
         TechState techState = getTechState(tech);
         techState.isUnlocked = true;
         techTable[tech] = techState;
+        PlayerData.GetData().stars -= tech.starCost;
         onTechStatusChanged.Invoke();
         return true;
     }

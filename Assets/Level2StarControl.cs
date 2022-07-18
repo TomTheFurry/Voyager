@@ -66,7 +66,8 @@ public class Level2StarControl : MonoBehaviour
         float time = timeTracker.GetTime();
 
         int newStars = PlayerData.AddLevelData(2, doneStars, time);
-        PlayerData.GetData().stars += newStars;
+        int points = newStars * 3;
+        PlayerData.GetData().stars += points;
         // TODO: Score based new stars
         Debug.Log("Level2StarControl:\n  New stars: " + newStars + "\n  Time: " + time);
         PlayerData.Save();

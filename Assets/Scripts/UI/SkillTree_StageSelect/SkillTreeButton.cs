@@ -11,11 +11,20 @@ public class SkillTreeButton : MonoBehaviour
     {
         txtTechNum.text = TechStorage.instance.techNumCanBeUnlocked.ToString();
         TechStorage.instance.onTechStatusChanged.AddListener(updateNumber);
+        updateNumber();
     }
 
     public void updateNumber()
     {
         TechStorage.instance.collectTechNumCanBeUnlocked();
-        txtTechNum.text = TechStorage.instance.techNumCanBeUnlocked.ToString();
+        int num = TechStorage.instance.techNumCanBeUnlocked;
+        if (num == 0)
+        {
+            txtTechNum.transform.parent.gameObject.SetActive(false);
+        } else
+        {
+            txtTechNum.transform.parent.gameObject.SetActive(true);
+            txtTechNum.text = num.ToString();
+        }
     }
 }

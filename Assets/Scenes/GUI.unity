@@ -20589,7 +20589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -22.000732}
+  m_AnchoredPosition: {x: 0, y: -22.000763}
   m_SizeDelta: {x: -720, y: -146.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1248115989
@@ -36945,10 +36945,102 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 82799343, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 140564542, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198962576, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 353077661, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 461077896, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
       propertyPath: numSolarBatterys.Array.data[1].battery
       value: 
       objectReference: {fileID: 3494805247426857312, guid: 8dd721901a50de241ac0bbaf07976cfa, type: 3}
+    - target: {fileID: 570159822, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 688645916, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756202587, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 956255812, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018285169, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237790994, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250747593, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483761864, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510076468, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522894677, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658019769, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658536695, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712774243, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777212519, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845063606, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902102460, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921246773, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135026637, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136589325, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
+      propertyPath: starCost
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6081419982211131794, guid: bf322fe967391034dbca31d7e439b9f0, type: 3}
       propertyPath: mainMenu
       value: 

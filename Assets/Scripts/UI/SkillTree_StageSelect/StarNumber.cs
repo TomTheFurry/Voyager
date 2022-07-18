@@ -16,6 +16,12 @@ public class StarNumber : MonoBehaviour
     {
         int stars = PlayerData.GetData().stars;
         Text text = GetComponent<Text>();
-        text.text = stars.ToString();
+        if (stars == 0)
+        {
+            text.text = "<color=red>" + stars + "</color>";
+        } else
+        {
+            text.text = stars.ToString();
+        }
     }
 }
