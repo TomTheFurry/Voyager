@@ -84,3 +84,9 @@ m/s
 旋轉速度
 `~Default
 默認
+`~LevelCompletedText
+已完成關卡
+`~LevelScoreboardText
+記分板
+`~TipRetryLevel
+重試本關

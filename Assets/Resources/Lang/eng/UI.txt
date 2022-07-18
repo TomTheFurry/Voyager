@@ -84,3 +84,9 @@ Speed
 Spinning speed
 `~Default
 Default
+`~LevelCompletedText
+Level Completed
+`~LevelScoreboardText
+Scoreboard
+`~TipRetryLevel
+Retry Level
