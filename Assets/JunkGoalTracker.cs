@@ -14,6 +14,7 @@ public class JunkGoalTracker : MonoBehaviour
     private void Start()
     {
         lazer.onDestroyObject.AddListener(UpdateText);
+        text.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
@@ -24,6 +25,7 @@ public class JunkGoalTracker : MonoBehaviour
     void UpdateText(GameObject obj)
     {
         count++;
+        text.gameObject.SetActive(true);
         text.text = string.Format("{0}/{1}", count, targetCount);
     }
 }
