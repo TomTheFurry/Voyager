@@ -4,7 +4,6 @@
 `~MonopropellantRocket_Description
 由於單機推進劑火箭，只需使用單一的燃料進行推進，因此他的結構極為簡單，成本亦非常低，縱使他的可靠性比較低，但依然是降低火箭發射成本的重要研究方向。 
 `~MetalMagneticMesh_FontSize
-
 `~MetalMagneticMesh_Description
 以鋁絲和鋼絲織成的大網，透過磁力收集<link="Tip:SpaceGarbage">太空垃圾</link>，當收集一定的太空垃圾後便會因為地球引力進入太氣層，透過大氣層燃燒殆盡，從而處理太空垃圾。它的優點是價格低廉，但是它較難精準處理太空垃圾，而且當有過量的太空垃圾連同它墮入大氣層，有機會未能燃燒殆盡，砸向地面
 `~Laser_FontSize
@@ -20,9 +19,8 @@
 `~IonThruster_Description
 透過噴出<link="Tip:Ionization">離子</link> 氣體為火箭提供動力，縱使他不用使用燃料只需要電力便可以驅動，但是他的能量非常弱小，不太適合大型的太空船。
 `~SolarBattery_FontSize
-
 `~SolarBattery_Description
-太陽能電池在1954年時效率只有6%，但隨著科技發展效率越來越高，例如美國的<link="Tip:Vanguard1">先鋒一號</link>就是第一顆裝有太陽能板的人造衛星，在此之後越來越多的太空飛船也裝上太陽能板，包括木星探測器<link=Tip:Juno">朱諾號</link>、彗星登陸器<link="Tip:Rosetta">羅塞塔號</link> ，但是對於一些進行深空探索的飛船，遠離陽光的地方則未能使用太陽能電池。
+太陽能電池在1954年時效率只有6%，但隨著科技發展效率越來越高，例如美國的<link="Tip:Vanguard1">先鋒一號</link>就是第一顆裝有太陽能板的人造衛星，在此之後越來越多的太空飛船也裝上太陽能板，包括木星探測器<link="Tip:Juno">朱諾號</link>、彗星登陸器<link="Tip:Rosetta">羅塞塔號</link> ，但是對於一些進行深空探索的飛船，遠離陽光的地方則未能使用太陽能電池。
 `~SmallMagneticSatellite_Description
 隨著太空發展，大批量生產的小型人造衛星價格極為低廉，因此我們可以為小型人造衛星加上強力磁石，作處理<link="Tip:SpaceGarbage">太空垃圾</link>之用，特別適合處理大型的太空垃圾。
 `~HRSI_Description
@@ -113,38 +111,12 @@ HRSI瓦片由高純度二氧化矽纖維組成，十分輕， HRSI材質類似�
 `~Voyager1
 <color=#00FFFF><size=28><b><u>航行者一號</u></b></size></color>
 航行者一號是人類似上利地球最遠的太空探測器，於1977年發射的他透過木星和土星的重力進行加速，目前他繼續向銀河系的中心繼續進發，這次的太空探索大幅提升人類對木星、土星、天王星及海王星的認識，有不少現在我們依然在看的行星照片就是由他拍攝。
-
-
-
 `~Tutorial
 `~Tutorial_Information
 在太空中經常處於<link="Tip:Gravity-free">無重力</link>和<link="Tip:NoFrictionStatus">無摩擦狀態</link>。
 在執行太空任務之前，您必須完成<link="Tip:Gravity-freeTraining">無重力訓練</link>。
 在此任務中您需要按照指令控制飛船到達目的地，完成課程後您可以選擇退出或更高級別的迷宮來獲得獎勵。
-
-`~Gravity-free
-<color=#00FFFF><size=28><b><u>無重力</u></b></size></color>
-可以稱之為失重，地球有重力會將物體拉到地心。
-但是當我們遠離地球時，重力會降低，使飛船和宇航員不受重力影響，達到漂浮狀態。
-
-`~NoFrictionStatus
-<color=#00FFFF><size=28><b><u>無摩擦狀態</u></b></size></color>
-空間的大部分時間都是真空的，沒有包括空氣在內的物質。
-物體在不施加力時不會減速，並且在施加少量力時它們會繼續加速。
-因此，有可能在太空中實現更快的速度，例如有史以來最快的人造物體，速度高達200公里/秒的帕克太陽探測器。
-`~Gravity-FreeTraining
-<color=#00FFFF><size=28><b><u>無重力訓練</u></b></size></color>
-由於在地球上很難實現重力環境，因此有兩種方法可以模擬這種情況。一是利用飛機潛入地面來抵消重力。二是在水下練習，模擬重力影響相對較小的環境。水下練習比較常見，也是宇航員必須進行的練習之一。
-
-
-
-
-
-
-
-
-
-
-
-
- 
+`~Level1_Information
+在這個關卡中，玩家開始執行太空任務。這一關的目標是從空間站出發，穿過有很多<link="Tip:SpaceGarbage">太空垃圾</link>的區域。玩家可以解鎖飾品破壞太空垃圾繼續前進，如果玩家在途中發現<link="Tip:GlobalPositioningSystem">GPS衛星</link>和<link="Tip:JamesWebbSpaceTelescope">韋伯太空望遠鏡</link>，就可以完成一個獎勵目標。一個額外的獎勵目標是，如果您在沒有損壞的情況下通關。
+`~Level2_Information
+設計目標是讓玩家了解<link="Tip:GravityAssist">重力彈弓</link>的操作，玩家需要穿越小行星帶到達木星附近的地方並指定一個彎曲的軌道進行加速，之後玩家還可以繼續利用重力進行加速其他三個氣態行星。玩家還因他們的速度有多高以及他們離開太陽係時所處的角度而獲得獎勵目標。

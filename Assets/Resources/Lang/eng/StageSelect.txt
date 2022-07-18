@@ -1,0 +1,24 @@
+`~TipGravity-free
+<color=#00FFFF><size=28><b><u>Gravity-Free</u></b></size></color>
+Can call it weightlessness, earth have the gravity it will pull the object to center of the earth. 
+But when we far the earth the gravity will be decreased, so that the spaceship and the astronsuts will not be affected by gravity, to achieving a floating state.
+`~TipNoFrictionStatus
+<color=#00FFFF><size=28><b><u>No Friction Status</u></b></size></color>
+Most time of the space  is a vacuum, without matter including air.
+Object do not slow down when no force is applied, also they will continue to accelerate when a small amount of force is applied. 
+Therefore,it is possible to achieve faster speed in space, such as the fastest man-made object ever, the Parker Solar Probe with a speed of up to 200km/s, which s a spaceship.
+`~TipGravity-freeTraining
+<color=#00FFFF><size=28><b><u>Gravity-Free Training</u></b></size></color>
+Since it is difficult to achieve a gravity environment on earth, there are 2 ways to simulate this situation. The first is using the aircraft diving into the ground to cancel the gravitational force. The second is to practice underwater, simulating an environment where the influence of gravity is relatively low. It is more common to practice underwater, and it is also one of the exercises that astronauts must perform.
+`~TipGravityAssist
+<color=#00FFFF><size=28><b><u>Gravity Assist</u></b></size></color>
+It uses the relative motion and gravity of planets or other celestial bodies to change the orbit and speed of an aircraft to save fuel, time and planning costs. Gravity assist can be used both to accelerate tand to slow it down. 
+The first time the craft approaches the planet from a distance, the resulting motion is as if the craft were bouncing off the planet. Scientists call this an elastic collision, but there is no physical contact between the two.
+`~TipGlobalPositioningSystem
+<color=#00FFFF><size=28><b><u>Global Positioning System</u></b></size></color>
+The Global Positioning System (GPS) is one of the global navigation satellite systems that provides geolocation and time information to a GPS receiver anywhere on or near the Earth where there is an unobstructed line of sight to four or more GPS satellites. 
+It does not require the user to transmit any data, and operates independently of any telephonic or Internet reception, though these technologies can enhance the usefulness of the GPS positioning information. It provides critical positioning capabilities to military, civil, and commercial users around the world.
+`~TipJamesWebbSpaceTelescope
+<color=#00FFFF><size=28><b><u>占士‧韋伯太空望遠鏡</u></b></size></color>
+The James Webb Space Telescope is an infrared space telescope that has been launched. This is the successor to the Hubble Space Telescope and the Spitzer Space Telescope. It is designed to provide higher infrared resolution and sensitivity than the Hubble Space Telescope, observing objects 100 times less bright than the faintest objects detected by Hubble. 
+This will enable a wide range of studies in astronomy and cosmology, such as observations of some of the oldest and most distant objects and events in the universe, as well as detailed atmospheric signatures of potentially habitable exoplanets.

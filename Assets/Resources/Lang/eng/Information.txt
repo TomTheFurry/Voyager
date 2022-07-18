@@ -119,15 +119,7 @@ In space frequently in the <link="autotip">gravity-free</link> and <link="autoti
 Before you conduct the space mission, You must finish the <link="autotip">gravity-free training</link>.
 
 In this mission you need to follow the instruction to control the spaceship reach the destination, After you finish course you can select exit or higher level maze to earn rewards.
-`~Gravity-Free
-<color=#00FFFF><size=28><b><u>Gravity-Free</u></b></size></color>
-Can call it weightlessness, earth have the gravity it will pull the object to center of the earth. 
-But when we far the earth the gravity will be decreased, so that the spaceship and the astronsuts will not be affected by gravity, to achieving a floating state.
-`~NoFrictionStatus
-<color=#00FFFF><size=28><b><u>No Friction Status</u></b></size></color>
-Most time of the space  is a vacuum, without matter including air.
-Object do not slow down when no force is applied, also they will continue to accelerate when a small amount of force is applied. 
-Therefore,it is possible to achieve faster speed in space, such as the fastest man-made object ever, the Parker Solar Probe with a speed of up to 200km/s, which s a spaceship.
-`~Gravity-FreeTraining
-<color=#00FFFF><size=28><b><u>Gravity-Free Training</u></b></size></color>
-Since it is difficult to achieve a gravity environment on earth, there are 2 ways to simulate this situation. The first is using the aircraft diving into the ground to cancel the gravitational force. The second is to practice underwater, simulating an environment where the influence of gravity is relatively low. It is more common to practice underwater, and it is also one of the exercises that astronauts must perform.
+`~Level1_Information
+In this level, the player starts to perform a space mission. The goal of this level is to start from the space station, pass through the area with a lot of <link="Tip:SpaceGarbage">space junk</link>. Players can unlock Accessories to destroy space junk to keep moving forward, if the player finds <link="Tip:GlobalPositioningSystem">GPS satellites</link> and <link="Tip:JamesWebbSpaceTelescope">Webb space telescope</link> on the way, you can complete a bonus goal. One additional bonus goal is if you clear the level without damage.
+`~Level2_Information
+The design goal is to let the player understand the operation of the <link="Tip:GravityAssist">gravity slingshot</link>, Players need to travel through the asteroid belt to a place near Jupiter and assign a curved orbit to accelerate, After that, the player can also continue to accelerate with the gravity of the other three gaseous planets. Players are additionally awarded bonus goals for how high their velocity is and what angle they are in when they leave the solar system.
